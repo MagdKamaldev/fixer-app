@@ -5,8 +5,9 @@ class OnBoardingViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Container(
-        // TODO: implement onBoarding body UI 
-      );
+    return Container(
+        // TODO: implement onBoarding body UI
+        //NOTE:  to navigate to login Screen : context.pushReplacementNamed(Routes.login);
+        );
   }
 }
