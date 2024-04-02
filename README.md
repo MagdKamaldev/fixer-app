@@ -1,8 +1,8 @@
 # fixer  
+<img src="assets/images/logo12.png" width="200" height="200">
 
 ## Fixer is a system primarily utilized as a mobile application, catering to individuals seeking craftsmen to address various household repair needs.
 
-![fixer logo](assets/images/logo12.png)
 
 ## App Architecture (MVVM)
 ### core:
@@ -22,9 +22,12 @@ this layer is responsible for handling the UI and the user interactions.
 
 ### 1. Splash Screen:
 #### A) IOS and android till 11 version
-![alt text](assets/docs/IMG-20240331-WA0091.jpg)
+
+<img src="assets/docs/IMG-20240331-WA0091.jpg" height="600" width ="300">
+
 #### B) Android 12+ versions
-![alt text](assets/docs/Screenshot_20240331_142413.jpg)
+
+<img src="assets/docs/Screenshot_20240331_142413.jpg" height="600" width = "300">
 
 ### 2. Onboarding Screen:
 
