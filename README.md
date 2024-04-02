@@ -1,4 +1,4 @@
-# fixer  
+# Fixer  
 <img src="assets/images/logo12.png" width="200" height="200">
 
 ## Fixer is a system primarily utilized as a mobile application, catering to individuals seeking craftsmen to address various household repair needs.
@@ -30,6 +30,7 @@ this layer is responsible for handling the UI and the user interactions.
 <img src="assets/docs/Screenshot_20240331_142413.jpg" height="600" width = "300">
 
 ### 2. Onboarding Screen:
+
 
 ### 3.login Screen
 
