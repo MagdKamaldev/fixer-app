@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class onBoardingContainer extends StatelessWidget {
 
@@ -22,7 +23,7 @@ class onBoardingContainer extends StatelessWidget {
         padding: EdgeInsets.only(top: 40),
         child: Text("$text",
         textAlign: TextAlign.center,
-          style: const TextStyle(
+          style: GoogleFonts.roboto(
             color: Color(0xFF000000),
             fontWeight:FontWeight.w500,
             fontSize:24

@@ -10,13 +10,13 @@ class Logo extends StatelessWidget {
     return Column(children: [
       Stack(children: [
         Image.asset(
-          "assets/images/Group 22.png",
+          "assets/images/login/Group_22.png",
           width: 125,
           height: 89,
         ),
         Padding(
             padding: const EdgeInsets.only(top: 25),
-            child: Image.asset("assets/images/fixr logo.png",
+            child: Image.asset("assets/images/fixr_logo.png",
                 width: 134.85, height: 56.92))
       ]),
       const SizedBox(height: 40),

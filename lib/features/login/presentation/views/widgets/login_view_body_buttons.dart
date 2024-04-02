@@ -45,7 +45,7 @@ class ButtonLogin extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset("assets/images/google icon.png"),
+                Image.asset("assets/images/google_icon.png"),
                 const SizedBox(width: 15),
                 const Text(
                   "Sign in with Google",
