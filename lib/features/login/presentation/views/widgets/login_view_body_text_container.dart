@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class textContainer extends StatelessWidget {
-
-  String text;
-  Color? color;
-  double margin;
-  textContainer({required this.text,this.color,required this.margin});
+class TextContainer extends StatelessWidget {
+  final String text;
+  final Color? color;
+  final double margin;
+  const TextContainer({super.key, required this.text,this.color,required this.margin});
   @override
   Widget build(BuildContext context) {
     return Container(

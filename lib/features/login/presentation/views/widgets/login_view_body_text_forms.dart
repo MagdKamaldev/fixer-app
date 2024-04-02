@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TextForm extends StatelessWidget {
   const TextForm({
@@ -19,7 +20,7 @@ class TextForm extends StatelessWidget {
     return Container(
         height: 55,
         width: 340,
-        padding: const EdgeInsets.only(top: 3, left: 3),
+        padding: EdgeInsets.symmetric(vertical: 3.h, horizontal: 15.w),
         decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(10),
