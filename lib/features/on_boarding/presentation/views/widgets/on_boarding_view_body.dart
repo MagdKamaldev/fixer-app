@@ -15,12 +15,19 @@ class OnBoardingViewBody extends StatefulWidget {
 class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
 
   PageController controller=PageController();
+  bool onlastpage=false;
   @override
   Widget build(BuildContext context) {
     return  Stack(
       children: [
         PageView(
         controller: controller,  
+        onPageChanged: (index){
+          setState(() {
+            onlastpage=(index==2);
+            // turn into true
+          });
+        },
         children: [
         onBoardingContainer(
         image:"assets/images/onbaording1.png", 
@@ -44,7 +51,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             smooth_page_indicator(controller: controller),
-            on_boarding_arrow(controller: controller,),
+            on_boarding_arrow(controller: controller,onlastPage: onlastpage,),
           ],
         ))
     ]);

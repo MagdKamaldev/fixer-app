@@ -1,15 +1,19 @@
 
+import 'package:fixer/core/helpers/extensions.dart';
 import 'package:flutter/material.dart';
 
 class on_boarding_arrow extends StatelessWidget {
 
   PageController controller;
-  on_boarding_arrow({required this.controller});
+  bool onlastPage;
+  on_boarding_arrow({required this.controller,required this.onlastPage});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
+        onlastPage?
+        context.pushReplacementNamed('/login'):
         controller.nextPage(duration: Duration(microseconds:500 ),
          curve:Curves.easeIn);
       },

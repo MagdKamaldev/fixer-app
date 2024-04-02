@@ -10,7 +10,7 @@ class Logo extends StatelessWidget {
     return Column(children: [
       Stack(children: [
         Image.asset(
-          "assets/images/login/Group_22.png",
+          "assets/images/Group_22.png",
           width: 125,
           height: 89,
         ),
