@@ -41,7 +41,7 @@ Each onboarding screen have an arrow button to navigate through them and also is
 <img src="assets\docs\onboarding_2.jpg" height="600" width = "300">
 
 #### Third onboarding screen: 
-<img src="assets\docs\onboarding_3.jpg" height="600" width = "300">
+<img src="assets\docs\onBoarding_3.jpg" height="600" width = "300">
 
 
 ### 3.login Screen
