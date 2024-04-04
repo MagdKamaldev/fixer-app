@@ -2,7 +2,10 @@ import 'package:fixer/features/on_boarding/presentation/views/widgets/on_boardin
 import 'package:fixer/features/on_boarding/presentation/views/widgets/on_boarding_skip_button.dart';
 import 'package:fixer/features/on_boarding/presentation/views/widgets/on_boarding_smoothpageindicator.dart';
 import 'package:fixer/features/on_boarding/presentation/views/widgets/onboarding_container.dart';
+import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 
 class OnBoardingViewBody extends StatefulWidget {
   const OnBoardingViewBody({super.key});
@@ -25,20 +28,18 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
             // turn into true
           });
         },
-        children: const [
+        children:[
           OnBoardingContainer(
             image: "assets/images/onboarding1.svg",
-            text: "Connect users with skilled \n craftsmen instantly.",
+            text: S.of(context).onBoardingText1,
           ),
           OnBoardingContainer(
             image: "assets/images/onboarding2.svg",
-            text:
-                "Recieve competitive bids,\ncompare prices,and make \n informed decisions.",
+            text: S.of(context).onBoardingText2,
           ),
           OnBoardingContainer(
             image: "assets/images/onboarding3.svg",
-            text:
-                "Make hassle-free transcations \n within the app fpr peace of\n mind.",
+            text: S.of(context).onBoardingText3,
           ),
         ],
       ),
@@ -46,7 +47,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
         controller: controller,
       ),
       Container(
-          padding: const EdgeInsets.only(bottom: 60, left: 60, right: 60),
+          padding: EdgeInsets.symmetric(horizontal: 60.h,vertical: 60.w),
           alignment: Alignment.bottomLeft,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

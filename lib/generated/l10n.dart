@@ -59,6 +59,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Connect users with skilled \n craftsmen instantly.`
+  String get onBoardingText1 {
+    return Intl.message(
+      'Connect users with skilled \n craftsmen instantly.',
+      name: 'onBoardingText1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Recieve competitive bids,\n compare prices,and make \n informed decisions.`
+  String get onBoardingText2 {
+    return Intl.message(
+      'Recieve competitive bids,\n compare prices,and make \n informed decisions.',
+      name: 'onBoardingText2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Make hassle-free transcations \n within the app for peace of \n mind.`
+  String get onBoardingText3 {
+    return Intl.message(
+      'Make hassle-free transcations \n within the app for peace of \n mind.',
+      name: 'onBoardingText3',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
