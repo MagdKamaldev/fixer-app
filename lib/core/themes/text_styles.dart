@@ -16,6 +16,12 @@ class TextStyles {
     fontFamily: GoogleFonts.roboto().fontFamily,
     fontWeight: FontWeight.w600,
   );
+  static TextStyle lightHeadings = TextStyle(
+    color: ColorManager.primary,
+    fontSize: 22.sp,
+    fontFamily: GoogleFonts.montserrat().fontFamily,
+    fontWeight: FontWeight.w400,
+  );
   static TextStyle subHeadingsBold = TextStyle(
     color: ColorManager.black,
     fontSize: 19.sp,
@@ -26,6 +32,29 @@ class TextStyles {
     color: ColorManager.black,
     fontSize: 19.sp,
     fontFamily: GoogleFonts.roboto().fontFamily,
+    fontWeight: FontWeight.w400,
+  );
+  static TextStyle smallHeadings = TextStyle(
+    color: ColorManager.darkgrey,
+    fontSize: 18.sp,
+    fontFamily: GoogleFonts.roboto().fontFamily,
+    fontWeight: FontWeight.w400,
+  );
+  static TextStyle darksmallHeadings = TextStyle(
+    color: ColorManager.black,
+    fontSize: 18.sp,
+    fontFamily: GoogleFonts.montserrat().fontFamily,
+    fontWeight: FontWeight.w400,
+  );
+  static TextStyle whitesmallHeadings = TextStyle(
+      fontFamily: GoogleFonts.montserrat().fontFamily,
+      color: ColorManager.white,
+      fontSize: 18.sp,
+      fontWeight: FontWeight.w400);
+  static TextStyle primarysmallHeadings = TextStyle(
+    color: ColorManager.primary,
+    fontSize: 18.sp,
+    fontFamily: GoogleFonts.montserrat().fontFamily,
     fontWeight: FontWeight.w400,
   );
   static TextStyle body = TextStyle(

@@ -209,6 +209,56 @@ class S {
       args: [],
     );
   }
+
+  /// `YOUR FIX , OUR EXPERTISE.`
+  String get slogan {
+    return Intl.message(
+      'YOUR FIX , OUR EXPERTISE.',
+      name: 'slogan',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Browse craftsmen for repair \n and maintainance service`
+  String get getsatrtintro {
+    return Intl.message(
+      'Browse craftsmen for repair \n and maintainance service',
+      name: 'getsatrtintro',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Let’s get started `
+  String get getstart {
+    return Intl.message(
+      'Let’s get started ',
+      name: 'getstart',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign up as user`
+  String get signup_user {
+    return Intl.message(
+      'Sign up as user',
+      name: 'signup_user',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign up as craftsman`
+  String get signup_craft {
+    return Intl.message(
+      'Sign up as craftsman',
+      name: 'signup_craft',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

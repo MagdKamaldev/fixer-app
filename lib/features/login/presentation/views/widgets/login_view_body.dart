@@ -1,5 +1,6 @@
 import 'package:fixer/core/helpers/spacing.dart';
 import 'package:fixer/core/themes/colors.dart';
+import 'package:fixer/features/get_started/presentation/views/get_started_view.dart';
 import 'package:fixer/features/login/presentation/views/widgets/login_view_body_text_container.dart';
 import 'package:fixer/generated/l10n.dart';
 
@@ -75,7 +76,10 @@ class _LoginViewBodyState extends State<LoginViewBody> {
             margin: 0,
           ),
           TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => const GetStarted()));
+              },
               child: TextContainer(
                 text: S.of(context).signup,
                 color: ColorManager.primary,

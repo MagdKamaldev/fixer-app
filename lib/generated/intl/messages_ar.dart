@@ -26,6 +26,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "emailform":
             MessageLookupByLibrary.simpleMessage("أدخل بريدك الإلكتروني"),
         "forgot": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور"),
+        "getsatrtintro": MessageLookupByLibrary.simpleMessage(
+            "تصفح حرفيين لخدمات الإصلاح والصيانة."),
+        "getstart": MessageLookupByLibrary.simpleMessage("لنبدأ "),
         "noaccount": MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
         "onBoardingText1": MessageLookupByLibrary.simpleMessage(
             " توصيل المستخدمين بالحرفيين \nالمهرة على الفور."),
@@ -40,7 +43,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "remember": MessageLookupByLibrary.simpleMessage("تذكرني"),
         "signin": MessageLookupByLibrary.simpleMessage("تسجيل الدخول "),
         "signup": MessageLookupByLibrary.simpleMessage(" تسجيل "),
+        "signup_craft": MessageLookupByLibrary.simpleMessage("التسجيل كحرفي"),
+        "signup_user": MessageLookupByLibrary.simpleMessage("التسجيل كمستخدم"),
         "skip": MessageLookupByLibrary.simpleMessage("تخطي"),
+        "slogan": MessageLookupByLibrary.simpleMessage("إصلاحك، خبرتنا"),
         "welcome": MessageLookupByLibrary.simpleMessage("مرحباً بك مجدداً"),
         "withgoogle":
             MessageLookupByLibrary.simpleMessage("تسجيل الدخول باستخدام جوجل")

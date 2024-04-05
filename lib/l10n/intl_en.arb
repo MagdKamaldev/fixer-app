@@ -14,5 +14,11 @@
   "or":"Or", 
   "withgoogle":"Sign in with google", 
   "noaccount":"Don't have an account?",
-  "signup":" Sign up"  
+  "signup":" Sign up" ,
+  "slogan":"YOUR FIX , OUR EXPERTISE.",
+  "getsatrtintro":"Browse craftsmen for repair \n and maintainance service",
+  "getstart":"Let’s get started ",
+  "signup_user":"Sign up as user",
+  "signup_craft":"Sign up as craftsman"
+
 }

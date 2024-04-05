@@ -25,6 +25,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "emailform": MessageLookupByLibrary.simpleMessage("Enter your email"),
         "forgot": MessageLookupByLibrary.simpleMessage("Forgot Password"),
+        "getsatrtintro": MessageLookupByLibrary.simpleMessage(
+            "Browse craftsmen for repair \n and maintainance service"),
+        "getstart": MessageLookupByLibrary.simpleMessage("Let’s get started "),
         "noaccount":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
         "onBoardingText1": MessageLookupByLibrary.simpleMessage(
@@ -40,7 +43,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "remember": MessageLookupByLibrary.simpleMessage("Remember me"),
         "signin": MessageLookupByLibrary.simpleMessage("Sign in"),
         "signup": MessageLookupByLibrary.simpleMessage(" Sign up"),
+        "signup_craft":
+            MessageLookupByLibrary.simpleMessage("Sign up as craftsman"),
+        "signup_user": MessageLookupByLibrary.simpleMessage("Sign up as user"),
         "skip": MessageLookupByLibrary.simpleMessage("skip"),
+        "slogan":
+            MessageLookupByLibrary.simpleMessage("YOUR FIX , OUR EXPERTISE."),
         "welcome": MessageLookupByLibrary.simpleMessage("Welcome Back !"),
         "withgoogle":
             MessageLookupByLibrary.simpleMessage("Sign in with google")
