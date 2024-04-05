@@ -89,6 +89,126 @@ class S {
       args: [],
     );
   }
+
+  /// `Welcome Back !`
+  String get welcome {
+    return Intl.message(
+      'Welcome Back !',
+      name: 'welcome',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email`
+  String get email {
+    return Intl.message(
+      'Email',
+      name: 'email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter your email`
+  String get emailform {
+    return Intl.message(
+      'Enter your email',
+      name: 'emailform',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password`
+  String get password {
+    return Intl.message(
+      'Password',
+      name: 'password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter your password`
+  String get passwordform {
+    return Intl.message(
+      'Enter your password',
+      name: 'passwordform',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Remember me`
+  String get remember {
+    return Intl.message(
+      'Remember me',
+      name: 'remember',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Forgot Password`
+  String get forgot {
+    return Intl.message(
+      'Forgot Password',
+      name: 'forgot',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign in`
+  String get signin {
+    return Intl.message(
+      'Sign in',
+      name: 'signin',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Or`
+  String get or {
+    return Intl.message(
+      'Or',
+      name: 'or',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign in with google`
+  String get withgoogle {
+    return Intl.message(
+      'Sign in with google',
+      name: 'withgoogle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Don't have an account?`
+  String get noaccount {
+    return Intl.message(
+      'Don\'t have an account?',
+      name: 'noaccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ` Sign up`
+  String get signup {
+    return Intl.message(
+      ' Sign up',
+      name: 'signup',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

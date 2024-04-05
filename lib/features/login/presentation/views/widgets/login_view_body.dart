@@ -1,6 +1,8 @@
 import 'package:fixer/core/helpers/spacing.dart';
 import 'package:fixer/core/themes/colors.dart';
 import 'package:fixer/features/login/presentation/views/widgets/login_view_body_text_container.dart';
+import 'package:fixer/generated/l10n.dart';
+
 import 'package:flutter/material.dart';
 import 'package:fixer/features/login/presentation/views/widgets/login_view_body_buttons.dart';
 import 'package:fixer/features/login/presentation/views/widgets/login_view_body_forgotpass_row.dart';
@@ -26,28 +28,28 @@ class _LoginViewBodyState extends State<LoginViewBody> {
         verticalSpace(50),
         const Logo(),
         verticalSpace(25),
-        const TextContainer(
-          text: "Email",
+        TextContainer(
+          text: S.of(context).email,
           margin: 35,
         ),
         verticalSpace(10),
         //EMAIL INPUT
         TextForm(
             controller: emailController,
-            text: "Enter your email",
+            text: S.of(context).emailform,
             obscure: false,
             textInputType: TextInputType.emailAddress),
 
         verticalSpace(35),
-        const TextContainer(
-          text: "Password",
+        TextContainer(
+          text: S.of(context).password,
           margin: 35,
         ),
         verticalSpace(10),
         //PASSWORD INPUT
         TextForm(
           controller: passwordController,
-          text: "Enter your password",
+          text: S.of(context).passwordform,
           textInputType: TextInputType.text,
           obscure: obscure,
           icon: GestureDetector(
@@ -68,14 +70,14 @@ class _LoginViewBodyState extends State<LoginViewBody> {
       Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const TextContainer(
-            text: "Don’t have an account?",
+          TextContainer(
+            text: S.of(context).noaccount,
             margin: 0,
           ),
           TextButton(
               onPressed: () {},
-              child: const TextContainer(
-                text: "Sign up",
+              child: TextContainer(
+                text: S.of(context).signup,
                 color: ColorManager.primary,
                 margin: 0,
               ))

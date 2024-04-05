@@ -1,5 +1,7 @@
 import 'package:fixer/core/helpers/spacing.dart';
 import 'package:fixer/core/themes/colors.dart';
+import 'package:fixer/core/themes/text_styles.dart';
+import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -24,7 +26,7 @@ class ButtonLogin extends StatelessWidget {
                 backgroundColor: ColorManager.primary,
                 minimumSize: Size.fromHeight(55.h)),
             child: Text(
-              "Sign in",
+              S.of(context).signin,
               style: TextStyle(
                   color: ColorManager.white,
                   fontSize: 16.sp,
@@ -32,18 +34,14 @@ class ButtonLogin extends StatelessWidget {
             ),
           ),
           verticalSpace(10),
-          const Text(
-            "Or",
-            style: TextStyle(
-                fontSize: 16, color: Colors.black, fontWeight: FontWeight.w600),
-          ),
+          Text(S.of(context).or, style: TextStyles.smallbold),
           verticalSpace(10),
           ElevatedButton(
             onPressed: () {},
             style: ElevatedButton.styleFrom(
                 side: const BorderSide(color: ColorManager.primary),
                 shape: const StadiumBorder(),
-                backgroundColor: Colors.white,
+                backgroundColor: ColorManager.white,
                 minimumSize: const Size.fromHeight(55)),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -51,13 +49,7 @@ class ButtonLogin extends StatelessWidget {
                 Image.asset("assets/images/google_icon.png",
                     width: 20.w, height: 20.h),
                 horizontalSpace(15),
-                Text(
-                  "Sign in with Google",
-                  style: TextStyle(
-                      color: ColorManager.black,
-                      fontSize: 16.sp,
-                      fontWeight: FontWeight.w600),
-                ),
+                Text(S.of(context).withgoogle, style: TextStyles.smallbold),
               ],
             ),
           )

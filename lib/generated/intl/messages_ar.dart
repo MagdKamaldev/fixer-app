@@ -22,12 +22,27 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
+        "emailform":
+            MessageLookupByLibrary.simpleMessage("أدخل بريدك الإلكتروني"),
+        "forgot": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور"),
+        "noaccount": MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
         "onBoardingText1": MessageLookupByLibrary.simpleMessage(
             " توصيل المستخدمين بالحرفيين \nالمهرة على الفور."),
         "onBoardingText2": MessageLookupByLibrary.simpleMessage(
             "احصل على عروض بأسعار تنافسية، وقارن الأسعار، واتخذ قرارات مستنيرة."),
         "onBoardingText3": MessageLookupByLibrary.simpleMessage(
             "قم بإجراء تحويلات خالية من \nالمتاعب داخل التطبيق لراحة البال."),
-        "skip": MessageLookupByLibrary.simpleMessage("تخطي")
+        "or": MessageLookupByLibrary.simpleMessage("أو"),
+        "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+        "passwordform":
+            MessageLookupByLibrary.simpleMessage("أدخل كلمة المرور"),
+        "remember": MessageLookupByLibrary.simpleMessage("تذكرني"),
+        "signin": MessageLookupByLibrary.simpleMessage("تسجيل الدخول "),
+        "signup": MessageLookupByLibrary.simpleMessage(" تسجيل "),
+        "skip": MessageLookupByLibrary.simpleMessage("تخطي"),
+        "welcome": MessageLookupByLibrary.simpleMessage("مرحباً بك مجدداً"),
+        "withgoogle":
+            MessageLookupByLibrary.simpleMessage("تسجيل الدخول باستخدام جوجل")
       };
 }

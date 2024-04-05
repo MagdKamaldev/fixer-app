@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class OnBoardingContainer extends StatelessWidget {
   final String image;
@@ -27,9 +26,7 @@ class OnBoardingContainer extends StatelessWidget {
           Container(
             alignment: Alignment.center,
             child: Text(text,
-                textAlign: TextAlign.center,
-                style:TextStyles.headings
-                    ),
+                textAlign: TextAlign.center, style: TextStyles.headings),
           )
         ],
       ),

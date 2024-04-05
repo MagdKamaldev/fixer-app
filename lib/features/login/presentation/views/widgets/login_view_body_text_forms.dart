@@ -1,3 +1,4 @@
+import 'package:fixer/core/themes/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -22,9 +23,9 @@ class TextForm extends StatelessWidget {
         width: 340,
         padding: EdgeInsets.symmetric(vertical: 3.h, horizontal: 15.w),
         decoration: BoxDecoration(
-            color: Colors.white,
+            color: ColorManager.white,
             borderRadius: BorderRadius.circular(10),
-            border: Border.all(color: const Color(0XFF303564))),
+            border: Border.all(color: ColorManager.primary)),
         child: TextFormField(
           controller: controller,
           keyboardType: textInputType,

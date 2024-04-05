@@ -1,6 +1,8 @@
+import 'package:fixer/core/helpers/spacing.dart';
 import 'package:fixer/core/themes/colors.dart';
+import 'package:fixer/core/themes/text_styles.dart';
+import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class ForgotPassword extends StatefulWidget {
   const ForgotPassword({super.key});
@@ -27,20 +29,11 @@ class _ForgotPasswordState extends State<ForgotPassword> {
             activeColor: ColorManager.white,
             focusColor: ColorManager.black,
           ),
-          Text("Remember me",
-              style: GoogleFonts.roboto(
-                  color: const Color(0xff1E1E1E),
-                  fontSize: 14,
-                  fontWeight: FontWeight.w500)),
-          const SizedBox(width: 60),
+          Text(S.of(context).remember, style: TextStyles.smallbold),
+          horizontalSpace(60),
           TextButton(
               onPressed: () {},
-              child: Text("Forgot Password",
-                  style: GoogleFonts.roboto(
-                    color: const Color(0xff1E1E1E),
-                    fontSize: 14,
-                    fontWeight: FontWeight.w500,
-                  )))
+              child: Text(S.of(context).forgot, style: TextStyles.smallbold))
         ]));
   }
 }

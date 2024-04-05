@@ -34,10 +34,23 @@ class TextStyles {
     fontFamily: GoogleFonts.roboto().fontFamily,
     fontWeight: FontWeight.w400,
   );
+  static TextStyle bodybold = TextStyle(
+    color: ColorManager.black,
+    fontSize: 16.sp,
+    fontFamily: GoogleFonts.roboto().fontFamily,
+    fontWeight: FontWeight.w600,
+  );
+
   static TextStyle small = TextStyle(
     color: ColorManager.black,
     fontSize: 14.sp,
     fontFamily: GoogleFonts.roboto().fontFamily,
     fontWeight: FontWeight.w400,
+  );
+  static TextStyle smallbold = TextStyle(
+    color: ColorManager.black,
+    fontSize: 14.sp,
+    fontFamily: GoogleFonts.roboto().fontFamily,
+    fontWeight: FontWeight.w600,
   );
 }
