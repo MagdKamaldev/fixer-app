@@ -1,4 +1,5 @@
 import 'package:fixer/core/themes/colors.dart';
+import 'package:fixer/core/themes/text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -19,15 +20,16 @@ class OnBoardingContainer extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          SizedBox(child: SvgPicture.asset(image)),
+          SizedBox(
+            height: 290.h,
+            child: SvgPicture.asset(image),
+          ),
           Container(
-            padding: EdgeInsets.only(top: 40.h),
+            alignment: Alignment.center,
             child: Text(text,
                 textAlign: TextAlign.center,
-                style: GoogleFonts.roboto(
-                    color: ColorManager.black,
-                    fontWeight: FontWeight.w500,
-                    fontSize: 24)),
+                style:TextStyles.headings
+                    ),
           )
         ],
       ),
