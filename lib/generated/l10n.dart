@@ -221,10 +221,10 @@ class S {
   }
 
   /// `Browse craftsmen for repair \n and maintainance service`
-  String get getsatrtintro {
+  String get getstartintro {
     return Intl.message(
       'Browse craftsmen for repair \n and maintainance service',
-      name: 'getsatrtintro',
+      name: 'getstartintro',
       desc: '',
       args: [],
     );
@@ -255,6 +255,86 @@ class S {
     return Intl.message(
       'Sign up as craftsman',
       name: 'signup_craft',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter confirmation code`
+  String get entercode {
+    return Intl.message(
+      'Enter confirmation code',
+      name: 'entercode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Phone number`
+  String get phone {
+    return Intl.message(
+      'Phone number',
+      name: 'phone',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter your phone number`
+  String get enterypournumber {
+    return Intl.message(
+      'Enter your phone number',
+      name: 'enterypournumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter the 6-digit code we sent to +20`
+  String get enteryourcode {
+    return Intl.message(
+      'Enter the 6-digit code we sent to +20',
+      name: 'enteryourcode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `After 40 seconds you can`
+  String get after40sec {
+    return Intl.message(
+      'After 40 seconds you can',
+      name: 'after40sec',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Resend code by SMS`
+  String get resendcodeSMS {
+    return Intl.message(
+      'Resend code by SMS',
+      name: 'resendcodeSMS',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `if you didn’t receive the code by SMS , please request`
+  String get nocoderecieved {
+    return Intl.message(
+      'if you didn’t receive the code by SMS , please request',
+      name: 'nocoderecieved',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Resend code by Call`
+  String get resendcodeCALL {
+    return Intl.message(
+      'Resend code by Call',
+      name: 'resendcodeCALL',
       desc: '',
       args: [],
     );

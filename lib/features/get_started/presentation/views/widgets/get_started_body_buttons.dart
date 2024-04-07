@@ -1,6 +1,8 @@
+import 'package:fixer/core/helpers/extensions.dart';
 import 'package:fixer/core/helpers/spacing.dart';
 import 'package:fixer/core/themes/colors.dart';
 import 'package:fixer/core/themes/text_styles.dart';
+import 'package:fixer/core/widgets/routing/routes.dart';
 import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -18,26 +20,28 @@ class StartButtons extends StatelessWidget {
             S.of(context).getstart,
             style: TextStyles.darksmallHeadings,
           ),
-          verticalSpace(30),
+          verticalSpace(25),
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              context.pushNamed(Routes.userSignUp);
+            },
             style: ElevatedButton.styleFrom(
                 shape: const StadiumBorder(),
                 backgroundColor: ColorManager.primary,
-                minimumSize: Size.fromHeight(60.h)),
+                minimumSize: Size.fromHeight(55.h)),
             child: Text(
               S.of(context).signup_user,
               style: TextStyles.whitesmallHeadings,
             ),
           ),
-          verticalSpace(30),
+          verticalSpace(25),
           ElevatedButton(
             onPressed: () {},
             style: ElevatedButton.styleFrom(
                 side: const BorderSide(color: ColorManager.primary),
                 shape: const StadiumBorder(),
                 backgroundColor: ColorManager.white,
-                minimumSize: const Size.fromHeight(55)),
+                minimumSize: Size.fromHeight(55.h)),
             child: Text(
               S.of(context).signup_craft,
               style: TextStyles.primarysmallHeadings,

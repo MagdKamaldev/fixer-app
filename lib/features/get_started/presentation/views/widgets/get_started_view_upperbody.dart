@@ -10,29 +10,29 @@ class UpperBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Stack(children: [
-        Container(
-          margin: const EdgeInsets.symmetric(horizontal: 43),
+    return Stack(children: [
+        SizedBox(
+          // margin: const EdgeInsets.symmetric(horizontal: 43),
           child: SvgPicture.asset(
             "assets/images/Group 33.svg",
-            width: 265.w,
-            height: 268.h,
+            width: 263.w,
+            height: 249.h,
           ),
         ),
-        Column(children: [
+        Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
           Container(
-            margin: const EdgeInsets.symmetric(horizontal: 40, vertical: 25),
+            margin: EdgeInsets.symmetric(horizontal: 40.h, vertical: 25.w),
             child: SvgPicture.asset("assets/images/fixr_logo.svg",
                 width: 180.w, height: 76.h),
           ),
           Text(S.of(context).slogan,
               textAlign: TextAlign.center, style: TextStyles.lightHeadings),
           verticalSpace(40),
-          Text(S.of(context).getsatrtintro,
+          Text(S.of(context).getstartintro,
               textAlign: TextAlign.center, style: TextStyles.smallHeadings)
         ]),
-      ]),
-    );
+      ]);
   }
 }

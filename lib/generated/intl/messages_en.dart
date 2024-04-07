@@ -22,14 +22,24 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "after40sec":
+            MessageLookupByLibrary.simpleMessage("After 40 seconds you can"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "emailform": MessageLookupByLibrary.simpleMessage("Enter your email"),
+        "entercode":
+            MessageLookupByLibrary.simpleMessage("Enter confirmation code"),
+        "enteryourcode": MessageLookupByLibrary.simpleMessage(
+            "Enter the 6-digit code we sent to +20"),
+        "enterypournumber":
+            MessageLookupByLibrary.simpleMessage("Enter your phone number"),
         "forgot": MessageLookupByLibrary.simpleMessage("Forgot Password"),
-        "getsatrtintro": MessageLookupByLibrary.simpleMessage(
-            "Browse craftsmen for repair \n and maintainance service"),
         "getstart": MessageLookupByLibrary.simpleMessage("Let’s get started "),
+        "getstartintro": MessageLookupByLibrary.simpleMessage(
+            "Browse craftsmen for repair \n and maintainance service"),
         "noaccount":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
+        "nocoderecieved": MessageLookupByLibrary.simpleMessage(
+            "if you didn’t receive the code by SMS , please request"),
         "onBoardingText1": MessageLookupByLibrary.simpleMessage(
             "Connect users with skilled \n craftsmen instantly."),
         "onBoardingText2": MessageLookupByLibrary.simpleMessage(
@@ -40,7 +50,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "passwordform":
             MessageLookupByLibrary.simpleMessage("Enter your password"),
+        "phone": MessageLookupByLibrary.simpleMessage("Phone number"),
         "remember": MessageLookupByLibrary.simpleMessage("Remember me"),
+        "resendcodeCALL":
+            MessageLookupByLibrary.simpleMessage("Resend code by Call"),
+        "resendcodeSMS":
+            MessageLookupByLibrary.simpleMessage("Resend code by SMS"),
         "signin": MessageLookupByLibrary.simpleMessage("Sign in"),
         "signup": MessageLookupByLibrary.simpleMessage(" Sign up"),
         "signup_craft":

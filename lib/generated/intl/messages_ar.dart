@@ -22,14 +22,23 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "after40sec":
+            MessageLookupByLibrary.simpleMessage("بعد 40 ثانية يمكنك"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
         "emailform":
             MessageLookupByLibrary.simpleMessage("أدخل بريدك الإلكتروني"),
+        "entercode": MessageLookupByLibrary.simpleMessage("أدخل رمز التأكيد"),
+        "enteryourcode": MessageLookupByLibrary.simpleMessage(
+            "أدخل الرمز المكون من 6 أرقام الذي أرسلناه إلى +20"),
+        "enterypournumber":
+            MessageLookupByLibrary.simpleMessage("أدخل رقم هاتفك"),
         "forgot": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور"),
-        "getsatrtintro": MessageLookupByLibrary.simpleMessage(
-            "تصفح حرفيين لخدمات الإصلاح والصيانة."),
         "getstart": MessageLookupByLibrary.simpleMessage("لنبدأ "),
+        "getstartintro": MessageLookupByLibrary.simpleMessage(
+            "تصفح حرفيين لخدمات الإصلاح والصيانة."),
         "noaccount": MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
+        "nocoderecieved": MessageLookupByLibrary.simpleMessage(
+            "إذا لم تتلقى الرمز عن طريق الرسائل القصيرة، يرجى الطلب"),
         "onBoardingText1": MessageLookupByLibrary.simpleMessage(
             " توصيل المستخدمين بالحرفيين \nالمهرة على الفور."),
         "onBoardingText2": MessageLookupByLibrary.simpleMessage(
@@ -40,7 +49,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "passwordform":
             MessageLookupByLibrary.simpleMessage("أدخل كلمة المرور"),
+        "phone": MessageLookupByLibrary.simpleMessage("رقم التليفون"),
         "remember": MessageLookupByLibrary.simpleMessage("تذكرني"),
+        "resendcodeCALL": MessageLookupByLibrary.simpleMessage(
+            "إعادة إرسال الرمز عن طريق الاتصال"),
+        "resendcodeSMS": MessageLookupByLibrary.simpleMessage(
+            "إعادة إرسال الرمز عن طريق الرسائل القصيرة"),
         "signin": MessageLookupByLibrary.simpleMessage("تسجيل الدخول "),
         "signup": MessageLookupByLibrary.simpleMessage(" تسجيل "),
         "signup_craft": MessageLookupByLibrary.simpleMessage("التسجيل كحرفي"),

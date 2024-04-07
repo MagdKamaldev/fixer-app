@@ -16,9 +16,16 @@
   "noaccount":"Don't have an account?",
   "signup":" Sign up" ,
   "slogan":"YOUR FIX , OUR EXPERTISE.",
-  "getsatrtintro":"Browse craftsmen for repair \n and maintainance service",
+  "getstartintro":"Browse craftsmen for repair \n and maintainance service",
   "getstart":"Let’s get started ",
   "signup_user":"Sign up as user",
-  "signup_craft":"Sign up as craftsman"
-
+  "signup_craft":"Sign up as craftsman",
+  "entercode":"Enter confirmation code",
+  "phone":"Phone number",
+  "enterypournumber":"Enter your phone number",
+  "enteryourcode":"Enter the 6-digit code we sent to +20",
+  "after40sec":"After 40 seconds you can",
+  "resendcodeSMS":"Resend code by SMS",
+  "nocoderecieved":"if you didn’t receive the code by SMS , please request",
+  "resendcodeCALL":"Resend code by Call"
 }

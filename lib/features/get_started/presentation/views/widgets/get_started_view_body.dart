@@ -8,12 +8,20 @@ class GetStartedBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(children: [
-      verticalSpace(195),
-      horizontalSpace(82),
+    return Scaffold(
+      appBar: 
+      PreferredSize(preferredSize:const Size.fromHeight(30),
+        child: AppBar(),),
+      body: Column(
+      mainAxisAlignment:MainAxisAlignment.center,
+      children: [
+      // verticalSpace(195),
+      // horizontalSpace(62),
       const UpperBody(),
-      verticalSpace(70),
+      verticalSpace(35),
       const StartButtons()
-    ]);
+    ]
+     )
+    );
   }
 }

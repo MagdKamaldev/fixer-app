@@ -1,5 +1,7 @@
+import 'package:fixer/core/helpers/extensions.dart';
 import 'package:fixer/core/helpers/spacing.dart';
 import 'package:fixer/core/themes/colors.dart';
+import 'package:fixer/core/widgets/routing/routes.dart';
 import 'package:fixer/features/get_started/presentation/views/get_started_view.dart';
 import 'package:fixer/features/login/presentation/views/widgets/login_view_body_text_container.dart';
 import 'package:fixer/generated/l10n.dart';
@@ -77,8 +79,7 @@ class _LoginViewBodyState extends State<LoginViewBody> {
           ),
           TextButton(
               onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => const GetStarted()));
+                context.pushNamed(Routes.getStarted);
               },
               child: TextContainer(
                 text: S.of(context).signup,
