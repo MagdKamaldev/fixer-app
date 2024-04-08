@@ -1,11 +1,9 @@
 import 'package:fixer/core/helpers/spacing.dart';
-import 'package:fixer/features/confirmation_code/presentation/views/confimation_code_View.dart';
 import 'package:fixer/features/user_signup/presentation/views/widgets/on_boarding_smoothpageindicator.dart';
 import 'package:fixer/features/user_signup/presentation/views/widgets/phone_number_view.dart';
 import 'package:fixer/features/user_signup/presentation/views/widgets/user_address_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
 class UserSignUpBody extends StatefulWidget {
@@ -34,13 +32,14 @@ class _UserSignUpBodyState extends State<UserSignUpBody> {
             SmoothIndicatorUserSignup(controller: controller),
             verticalSpace(25),
             Container(
-              color: Colors.white,
-              padding: EdgeInsets.symmetric(horizontal: 10.w,vertical: 20.h),
+              color: const Color.fromARGB(255, 255, 255, 255),
+              // padding: EdgeInsets.symmetric(horizontal:10.w,vertical: 20.h),
+              // margin: EdgeInsets.symmetric(horizontal: 10.w,vertical: 20.h),
               height: 580,
               width: 400,
               child: PageView(
                 controller: controller ,
-                children: const [
+                children:  const [
                    PhoneNumberView(),
                    UserAddressView(),
                 ],

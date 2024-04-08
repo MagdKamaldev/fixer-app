@@ -8,7 +8,7 @@ import 'package:flutter_svg/svg.dart';
 
 class ConfirmationCodeBody extends StatelessWidget {
   const ConfirmationCodeBody({super.key});
-
+ 
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -24,8 +24,14 @@ class ConfirmationCodeBody extends StatelessWidget {
           Text(S.of(context).entercode,
           style: TextStyles.subHeadingsBold,),
           verticalSpace(15),
-          Text(S.of(context).enteryourcode,
-          style: TextStyles.body),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(S.of(context).enteryourcode,
+              style: TextStyles.body),
+              // Text()
+            ],
+          ),
           verticalSpace(35),
           const Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children:[
@@ -46,7 +52,7 @@ class ConfirmationCodeBody extends StatelessWidget {
             decoration:TextDecoration.underline )),
           verticalSpace(15),
           Text(S.of(context).nocoderecieved,
-          style: TextStyles.body.copyWith(fontSize:15.9)),
+          style: TextStyles.body.copyWith(fontSize:14.9)),
           verticalSpace(15),
           Text(S.of(context).resendcodeCALL,
           style: TextStyles.bodybold.copyWith(

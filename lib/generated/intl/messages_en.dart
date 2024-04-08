@@ -22,8 +22,14 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "Aptartment": MessageLookupByLibrary.simpleMessage("Apt.no."),
+        "aditionalDirections": MessageLookupByLibrary.simpleMessage(
+            "Aditional directions (options)"),
         "after40sec":
             MessageLookupByLibrary.simpleMessage("After 40 seconds you can"),
+        "area": MessageLookupByLibrary.simpleMessage("Area"),
+        "building": MessageLookupByLibrary.simpleMessage("Building name"),
+        "change": MessageLookupByLibrary.simpleMessage("Change"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "emailform": MessageLookupByLibrary.simpleMessage("Enter your email"),
         "entercode":
@@ -32,8 +38,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Enter the 6-digit code we sent to +20"),
         "enterypournumber":
             MessageLookupByLibrary.simpleMessage("Enter your phone number"),
+        "floor": MessageLookupByLibrary.simpleMessage("Floor"),
         "forgot": MessageLookupByLibrary.simpleMessage("Forgot Password"),
         "getstart": MessageLookupByLibrary.simpleMessage("Let’s get started "),
+        "getstarted": MessageLookupByLibrary.simpleMessage("Get started"),
         "getstartintro": MessageLookupByLibrary.simpleMessage(
             "Browse craftsmen for repair \n and maintainance service"),
         "noaccount":
@@ -64,6 +72,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "skip": MessageLookupByLibrary.simpleMessage("skip"),
         "slogan":
             MessageLookupByLibrary.simpleMessage("YOUR FIX , OUR EXPERTISE."),
+        "street": MessageLookupByLibrary.simpleMessage("Street"),
         "welcome": MessageLookupByLibrary.simpleMessage("Welcome Back !"),
         "withgoogle":
             MessageLookupByLibrary.simpleMessage("Sign in with google")

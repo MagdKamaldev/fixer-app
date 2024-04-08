@@ -1,9 +1,9 @@
 import 'package:fixer/features/confirmation_code/presentation/views/widgets/confirmation_code_body.dart';
 import 'package:flutter/material.dart';
 
-class confirmationCodeView extends StatelessWidget {
-  const confirmationCodeView({super.key});
-
+class ConfirmationCodeView extends StatelessWidget {
+  const ConfirmationCodeView({super.key});
+  
   @override
   Widget build(BuildContext context) {
     return  Scaffold(

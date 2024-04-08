@@ -27,5 +27,13 @@
   "after40sec":"After 40 seconds you can",
   "resendcodeSMS":"Resend code by SMS",
   "nocoderecieved":"if you didn’t receive the code by SMS , please request",
-  "resendcodeCALL":"Resend code by Call"
+  "resendcodeCALL":"Resend code by Call",
+  "change":"Change",
+  "area":"Area",
+  "building":"Building name",
+  "floor":"Floor",
+  "Aptartment":"Apt.no.",
+  "street":"Street",
+  "aditionalDirections":"Aditional directions (options)",
+  "getstarted":"Get started"
 }

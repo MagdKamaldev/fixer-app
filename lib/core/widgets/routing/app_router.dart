@@ -1,5 +1,6 @@
 import 'package:fixer/core/widgets/routing/routes.dart';
 import 'package:fixer/features/confirmation_code/presentation/views/confimation_code_View.dart';
+import 'package:fixer/features/confirmation_code/presentation/views/widgets/confirmation_code_body.dart';
 import 'package:fixer/features/get_started/presentation/views/get_started_view.dart';
 import 'package:fixer/features/login/presentation/views/login_view.dart';
 import 'package:fixer/features/on_boarding/presentation/views/on_boarding_view.dart';
@@ -31,8 +32,9 @@ class AppRouter {
         );
         case Routes.confirmationCode:
         return MaterialPageRoute(
-          builder: (_) => const confirmationCodeView(),
-        );  
+          builder: (_) => const ConfirmationCodeView(),
+        ); 
+
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(

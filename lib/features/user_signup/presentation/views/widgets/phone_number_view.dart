@@ -10,39 +10,50 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class PhoneNumberView extends StatelessWidget {
   const PhoneNumberView ({super.key});
 
+
   @override
   Widget build(BuildContext context) {
+  final TextEditingController phonenumb=TextEditingController();
     return Padding(
       padding: EdgeInsets.only(top: 15.h),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           Padding(
-            padding: locale=="en"?const EdgeInsets.only(right:260):const EdgeInsets.only(left:280),
+            padding: locale=="en"?const EdgeInsets.only(right:250):const EdgeInsets.only(left:280),
             child: Text(S.of(context).phone,
             style: TextStyles.bodybold,),
           ),
           verticalSpace(5),
-          TextFormField(
-          keyboardType: TextInputType.phone,
-          decoration: InputDecoration(
-          filled: true,
-          fillColor: Colors.white,
-          hintText: S.of(context).enterypournumber,
-          // labelText:S.of(context).phone,
-          // labelStyle: TextStyle(color: ColorManager.black),
-          focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(10.sp),
-          borderSide: const BorderSide(width: 1,color: ColorManager.black)),
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10.sp),
-            borderSide: const BorderSide(width: 1,color: ColorManager.black),
-            
-          )
-          ), 
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: 20.w),
+            width: 385.w,
+            height: 55.h,
+            child: TextFormField(
+            controller:phonenumb ,  
+            keyboardType: TextInputType.phone,
+            style: TextStyles.small ,
+            decoration: InputDecoration(
+            filled: true,
+            fillColor: Colors.white,
+            hintText: S.of(context).enterypournumber,
+            // labelText:S.of(context).phone,
+            // labelStyle: TextStyle(color: ColorManager.black),
+            focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(10.sp),
+            borderSide: const BorderSide(width: 1,color: ColorManager.black)),
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(10.sp),
+              borderSide: const BorderSide(width: 1,color: ColorManager.black),
+              
+            )
+            ), 
+            ),
           )
           ,
           verticalSpace(100),
           const ArrowButton(),
+
+
         ],
       ),
     );

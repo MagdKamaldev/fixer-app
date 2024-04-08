@@ -22,8 +22,14 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "Aptartment": MessageLookupByLibrary.simpleMessage("رقم الشقة"),
+        "aditionalDirections":
+            MessageLookupByLibrary.simpleMessage("اتجاهات إضافية (اختياري)"),
         "after40sec":
             MessageLookupByLibrary.simpleMessage("بعد 40 ثانية يمكنك"),
+        "area": MessageLookupByLibrary.simpleMessage("منطقة"),
+        "building": MessageLookupByLibrary.simpleMessage("اسم المبنى"),
+        "change": MessageLookupByLibrary.simpleMessage("تغيير"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
         "emailform":
             MessageLookupByLibrary.simpleMessage("أدخل بريدك الإلكتروني"),
@@ -32,8 +38,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "أدخل الرمز المكون من 6 أرقام الذي أرسلناه إلى +20"),
         "enterypournumber":
             MessageLookupByLibrary.simpleMessage("أدخل رقم هاتفك"),
+        "floor": MessageLookupByLibrary.simpleMessage("الطابق"),
         "forgot": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور"),
         "getstart": MessageLookupByLibrary.simpleMessage("لنبدأ "),
+        "getstarted": MessageLookupByLibrary.simpleMessage("البدء"),
         "getstartintro": MessageLookupByLibrary.simpleMessage(
             "تصفح حرفيين لخدمات الإصلاح والصيانة."),
         "noaccount": MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
@@ -61,6 +69,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "signup_user": MessageLookupByLibrary.simpleMessage("التسجيل كمستخدم"),
         "skip": MessageLookupByLibrary.simpleMessage("تخطي"),
         "slogan": MessageLookupByLibrary.simpleMessage("إصلاحك، خبرتنا"),
+        "street": MessageLookupByLibrary.simpleMessage("الشارع"),
         "welcome": MessageLookupByLibrary.simpleMessage("مرحباً بك مجدداً"),
         "withgoogle":
             MessageLookupByLibrary.simpleMessage("تسجيل الدخول باستخدام جوجل")

@@ -14,6 +14,7 @@ class ArrowButton extends StatelessWidget {
         context.pushNamed(Routes.confirmationCode);
       },
       child: Container(
+          margin: EdgeInsets.symmetric(horizontal: 20.w),
           width: 71.w,
           height: 71.h,
           decoration: const BoxDecoration(

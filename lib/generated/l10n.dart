@@ -339,6 +339,86 @@ class S {
       args: [],
     );
   }
+
+  /// `Change`
+  String get change {
+    return Intl.message(
+      'Change',
+      name: 'change',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Area`
+  String get area {
+    return Intl.message(
+      'Area',
+      name: 'area',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Building name`
+  String get building {
+    return Intl.message(
+      'Building name',
+      name: 'building',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Floor`
+  String get floor {
+    return Intl.message(
+      'Floor',
+      name: 'floor',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Apt.no.`
+  String get Aptartment {
+    return Intl.message(
+      'Apt.no.',
+      name: 'Aptartment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Street`
+  String get street {
+    return Intl.message(
+      'Street',
+      name: 'street',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Aditional directions (options)`
+  String get aditionalDirections {
+    return Intl.message(
+      'Aditional directions (options)',
+      name: 'aditionalDirections',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Get started`
+  String get getstarted {
+    return Intl.message(
+      'Get started',
+      name: 'getstarted',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
