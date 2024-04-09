@@ -30,14 +30,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "area": MessageLookupByLibrary.simpleMessage("منطقة"),
         "building": MessageLookupByLibrary.simpleMessage("اسم المبنى"),
         "change": MessageLookupByLibrary.simpleMessage("تغيير"),
-        "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
-        "emailform":
-            MessageLookupByLibrary.simpleMessage("أدخل بريدك الإلكتروني"),
         "entercode": MessageLookupByLibrary.simpleMessage("أدخل رمز التأكيد"),
         "enteryourcode": MessageLookupByLibrary.simpleMessage(
             "أدخل الرمز المكون من 6 أرقام الذي أرسلناه إلى +20"),
-        "enterypournumber":
-            MessageLookupByLibrary.simpleMessage("أدخل رقم هاتفك"),
         "floor": MessageLookupByLibrary.simpleMessage("الطابق"),
         "forgot": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور"),
         "getstart": MessageLookupByLibrary.simpleMessage("لنبدأ "),

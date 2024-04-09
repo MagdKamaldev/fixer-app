@@ -1,6 +1,7 @@
 import 'package:fixer/core/helpers/extensions.dart';
 import 'package:fixer/core/helpers/spacing.dart';
 import 'package:fixer/core/themes/colors.dart';
+import 'package:fixer/core/themes/text_styles.dart';
 import 'package:fixer/core/widgets/routing/routes.dart';
 import 'package:fixer/features/login/presentation/views/widgets/login_view_body_text_container.dart';
 import 'package:fixer/generated/l10n.dart';
@@ -19,7 +20,7 @@ class LoginViewBody extends StatefulWidget {
 }
 
 class _LoginViewBodyState extends State<LoginViewBody> {
-  final TextEditingController emailController = TextEditingController();
+  final TextEditingController phoneController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
   bool obscure = true;
 
@@ -30,17 +31,20 @@ class _LoginViewBodyState extends State<LoginViewBody> {
         verticalSpace(50),
         const Logo(),
         verticalSpace(25),
+        Text(S.of(context).welcome,
+            textAlign: TextAlign.center, style: TextStyles.headings),
+        verticalSpace(25),
         TextContainer(
-          text: S.of(context).email,
+          text: S.of(context).phone,
           margin: 35,
         ),
         verticalSpace(10),
         //EMAIL INPUT
         TextForm(
-            controller: emailController,
-            text: S.of(context).emailform,
+            controller: phoneController,
+            text: S.of(context).enteryphonenumber,
             obscure: false,
-            textInputType: TextInputType.emailAddress),
+            textInputType: TextInputType.phone),
 
         verticalSpace(35),
         TextContainer(

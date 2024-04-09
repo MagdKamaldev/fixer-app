@@ -10,7 +10,7 @@ class ButtonLogin extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final TextEditingController emailController = TextEditingController();
+    final TextEditingController phoneController = TextEditingController();
     final TextEditingController passwordController = TextEditingController();
     return Container(
       margin: EdgeInsets.only(left: 30.w, right: 30.w),
@@ -18,7 +18,7 @@ class ButtonLogin extends StatelessWidget {
         children: [
           ElevatedButton(
             onPressed: () {
-              debugPrint("Email : ${emailController.text}");
+              debugPrint("Phone : ${phoneController.text}");
               debugPrint("Password : ${passwordController.text}");
             },
             style: ElevatedButton.styleFrom(

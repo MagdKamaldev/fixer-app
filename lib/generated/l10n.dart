@@ -100,26 +100,6 @@ class S {
     );
   }
 
-  /// `Email`
-  String get email {
-    return Intl.message(
-      'Email',
-      name: 'email',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Enter your email`
-  String get emailform {
-    return Intl.message(
-      'Enter your email',
-      name: 'emailform',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// `Password`
   String get password {
     return Intl.message(
@@ -281,10 +261,10 @@ class S {
   }
 
   /// `Enter your phone number`
-  String get enterypournumber {
+  String get enteryphonenumber {
     return Intl.message(
       'Enter your phone number',
-      name: 'enterypournumber',
+      name: 'enteryphonenumber',
       desc: '',
       args: [],
     );

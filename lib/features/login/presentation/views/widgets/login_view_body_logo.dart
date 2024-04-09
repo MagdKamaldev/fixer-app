@@ -1,7 +1,4 @@
 // ignore: file_names
-import 'package:fixer/core/helpers/spacing.dart';
-import 'package:fixer/core/themes/text_styles.dart';
-import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -23,9 +20,6 @@ class Logo extends StatelessWidget {
             child: SvgPicture.asset("assets/images/fixr_logo.svg",
                 width: 134.85.w, height: 56.92.h))
       ]),
-      verticalSpace(25),
-      Text(S.of(context).welcome,
-          textAlign: TextAlign.center, style: TextStyles.headings)
     ]);
   }
 }

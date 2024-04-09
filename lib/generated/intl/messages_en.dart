@@ -30,13 +30,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "area": MessageLookupByLibrary.simpleMessage("Area"),
         "building": MessageLookupByLibrary.simpleMessage("Building name"),
         "change": MessageLookupByLibrary.simpleMessage("Change"),
-        "email": MessageLookupByLibrary.simpleMessage("Email"),
-        "emailform": MessageLookupByLibrary.simpleMessage("Enter your email"),
         "entercode":
             MessageLookupByLibrary.simpleMessage("Enter confirmation code"),
         "enteryourcode": MessageLookupByLibrary.simpleMessage(
             "Enter the 6-digit code we sent to +20"),
-        "enterypournumber":
+        "enteryphonenumber":
             MessageLookupByLibrary.simpleMessage("Enter your phone number"),
         "floor": MessageLookupByLibrary.simpleMessage("Floor"),
         "forgot": MessageLookupByLibrary.simpleMessage("Forgot Password"),

@@ -9,19 +9,18 @@ class GetStartedBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: 
-      PreferredSize(preferredSize:const Size.fromHeight(30),
-        child: AppBar(),),
-      body: Column(
-      mainAxisAlignment:MainAxisAlignment.center,
-      children: [
-      // verticalSpace(195),
-      // horizontalSpace(62),
-      const UpperBody(),
-      verticalSpace(35),
-      const StartButtons()
-    ]
-     )
-    );
+        appBar: PreferredSize(
+          preferredSize: const Size.fromHeight(30),
+          child: AppBar(),
+        ),
+        body: ListView(children: [
+          Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+            // verticalSpace(195),
+            // horizontalSpace(62),
+            const UpperBody(),
+            verticalSpace(35),
+            const StartButtons()
+          ]),
+        ]));
   }
 }
