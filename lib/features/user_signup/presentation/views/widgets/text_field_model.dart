@@ -15,7 +15,7 @@ class AddressTextFieldModel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 3.h),
+      padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 3.h),
       height: 55.h,
       width: width.w,
       child: TextFormField(

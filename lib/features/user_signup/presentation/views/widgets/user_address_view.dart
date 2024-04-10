@@ -38,7 +38,7 @@ class UserAddressView extends StatelessWidget {
             height:55.h,
             child: Row(
               // crossAxisAlignment: CrossAxisAlignment.start,
-              // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 AddressTextFieldModel(width:165.w,labeltext: S.of(context).Aptartment, icons: const Icon(Icons.map_outlined )),
                 AddressTextFieldModel(width:165.w,labeltext: S.of(context).floor, icons: const Icon(Icons.escalator_outlined)),
