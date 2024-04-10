@@ -45,7 +45,7 @@ Each onboarding screen has an arrow button to navigate through them and also is 
 
 #### Second onboarding screen
 
-| English| Arabic |
+| English | Arabic |
 | ------- | ------ |
 | <img src="assets/docs/onboarding_2.jpg" height="500" width="250"> | <img src="assets/docs/onBoarding_ar_2.jpg" height="500" width="250"> |
 
@@ -55,8 +55,41 @@ Each onboarding screen has an arrow button to navigate through them and also is 
 | ------- | ------ |
 | <img src="assets/docs/onBoarding_3.jpg" height="500" width="250"> | <img src="assets/docs/onBoarding_ar_3.jpg" height="500" width="250"> |
 
-### 3. Login Screen
+### 3. Login screen
 
 The login screen is the first actual interaction with the user. Entering an email and password to register and have an account with the option to log in through the user's Google account.
 
-<img src="assets/docs/login.jpg" height="500" width="250">
+| English | Arabic |
+| ------- | ------ |
+| <img src="assets/docs/login.jpg" height="500" width="250"> | <img src="assets/docs/log_in_arb.jpg" height="500" width="250"> |
+
+### 4.User Sign Up screen
+
+This screen gives the user the option to sign up as a user to sign up the as a client or as a craftsmen. 
+
+| English | Arabic |
+| ------- | ------ |
+| <img src="assets/docs/sign_up_eng.jpg" height="500" width="250"> | <img src="assets/docs/sign_up_arb.jpg" height="500" width="250" > |
+
+### 5.Phone number insert screen 
+
+The user enters his phone number to get a confirmation code sent to his phone number.
+| English | Arabic |
+| ------- | ------ |
+| <img src="assets/docs/phone_num_eng.jpg" height="500" width="250"> | <img src="assets/docs/phone_num_arab.jpg" height="500" width="250"> |
+
+### 6.Confirmation code screen
+
+The code sent to teh user's number is entered to this screen and the code can be resent incase of faliure.
+
+| English | Arabic |
+| ------- | ------ |
+| <img src="assets/docs/confirmation_code_eng.jpg" height="500" width="250"> | <img src="assets/docs/confirmation_code_arb.jpg" height="500" width="250"> |
+
+### 7.User address screen 
+
+The user enters his address or the place he wishes to recieve the service.
+
+| English | Arabic |
+| ------- | ------ |
+| <img src="assets/docs/user_address_eng.jpg" height="500" width="250"> | <img src="assets/docs/user_address_arabic.jpg" height="500" width="250"> |
