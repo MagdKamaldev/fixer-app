@@ -27,18 +27,30 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("اتجاهات إضافية (اختياري)"),
         "after40sec":
             MessageLookupByLibrary.simpleMessage("بعد 40 ثانية يمكنك"),
+        "agree": MessageLookupByLibrary.simpleMessage("اوافق على "),
         "area": MessageLookupByLibrary.simpleMessage("منطقة"),
         "building": MessageLookupByLibrary.simpleMessage("اسم المبنى"),
         "change": MessageLookupByLibrary.simpleMessage("تغيير"),
+        "city": MessageLookupByLibrary.simpleMessage("المدينة"),
+        "cityfield": MessageLookupByLibrary.simpleMessage("ادخل مدينتك"),
         "entercode": MessageLookupByLibrary.simpleMessage("أدخل رمز التأكيد"),
         "enteryourcode": MessageLookupByLibrary.simpleMessage(
             "أدخل الرمز المكون من 6 أرقام الذي أرسلناه إلى +20"),
+        "firstname": MessageLookupByLibrary.simpleMessage("الاسم الاول"),
+        "firstnamefield":
+            MessageLookupByLibrary.simpleMessage("ادخل اسمك الاول"),
         "floor": MessageLookupByLibrary.simpleMessage("الطابق"),
         "forgot": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور"),
         "getstart": MessageLookupByLibrary.simpleMessage("لنبدأ "),
         "getstarted": MessageLookupByLibrary.simpleMessage("البدء"),
         "getstartintro": MessageLookupByLibrary.simpleMessage(
             "تصفح حرفيين لخدمات الإصلاح والصيانة."),
+        "lasttname": MessageLookupByLibrary.simpleMessage("الاسم الأخير"),
+        "lasttnamefield":
+            MessageLookupByLibrary.simpleMessage("ادخل اسمك الاخير"),
+        "nationalid": MessageLookupByLibrary.simpleMessage("الرقم القومي"),
+        "nationalidfield":
+            MessageLookupByLibrary.simpleMessage("ادخل رقمك القومي"),
         "noaccount": MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
         "nocoderecieved": MessageLookupByLibrary.simpleMessage(
             "إذا لم تتلقى الرمز عن طريق الرسائل القصيرة، يرجى الطلب"),
@@ -65,6 +77,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "skip": MessageLookupByLibrary.simpleMessage("تخطي"),
         "slogan": MessageLookupByLibrary.simpleMessage("إصلاحك، خبرتنا"),
         "street": MessageLookupByLibrary.simpleMessage("الشارع"),
+        "termsandpolicy":
+            MessageLookupByLibrary.simpleMessage("الشروط والسياسات"),
         "welcome": MessageLookupByLibrary.simpleMessage("مرحباً بك مجدداً"),
         "withgoogle":
             MessageLookupByLibrary.simpleMessage("تسجيل الدخول باستخدام جوجل")

@@ -33,5 +33,15 @@
   "Aptartment":"رقم الشقة",
   "street":"الشارع",
   "aditionalDirections":"اتجاهات إضافية (اختياري)",
-  "getstarted":"البدء"
+  "getstarted":"البدء",
+  "firstname":"الاسم الاول",
+  "lasttname":"الاسم الأخير",
+  "nationalid":"الرقم القومي",
+  "city":"المدينة",
+  "firstnamefield":"ادخل اسمك الاول",
+  "lasttnamefield":"ادخل اسمك الاخير",
+  "nationalidfield":"ادخل رقمك القومي",
+  "cityfield":"ادخل مدينتك",
+  "agree":"اوافق على ",
+  "termsandpolicy":"الشروط والسياسات"
 }

@@ -3,16 +3,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CraftsmanSignUpTextForm extends StatelessWidget {
-  const CraftsmanSignUpTextForm({
-    super.key,
-    required this.controller,
-    required this.text,
-    required this.textInputType,
-  });
+  const CraftsmanSignUpTextForm(
+      {super.key,
+      required this.controller,
+      required this.text,
+      required this.textInputType,
+      this.dropIcon});
   final TextEditingController controller;
   final String text;
   final TextInputType textInputType;
-
+  final Icon? dropIcon;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -27,7 +27,7 @@ class CraftsmanSignUpTextForm extends StatelessWidget {
           controller: controller,
           keyboardType: textInputType,
           decoration: InputDecoration(
-              hintText: text, disabledBorder: UnderlineInputBorder()),
+              hintText: text, disabledBorder: const UnderlineInputBorder()),
         ));
   }
 }

@@ -27,21 +27,33 @@ class MessageLookup extends MessageLookupByLibrary {
             "Aditional directions (options)"),
         "after40sec":
             MessageLookupByLibrary.simpleMessage("After 40 seconds you can"),
+        "agree": MessageLookupByLibrary.simpleMessage("I agree to the "),
         "area": MessageLookupByLibrary.simpleMessage("Area"),
         "building": MessageLookupByLibrary.simpleMessage("Building name"),
         "change": MessageLookupByLibrary.simpleMessage("Change"),
+        "city": MessageLookupByLibrary.simpleMessage("City"),
+        "cityfield": MessageLookupByLibrary.simpleMessage("Enter your city"),
         "entercode":
             MessageLookupByLibrary.simpleMessage("Enter confirmation code"),
         "enteryourcode": MessageLookupByLibrary.simpleMessage(
             "Enter the 6-digit code we sent to +20"),
         "enteryphonenumber":
             MessageLookupByLibrary.simpleMessage("Enter your phone number"),
+        "firstname": MessageLookupByLibrary.simpleMessage("First name"),
+        "firstnamefield":
+            MessageLookupByLibrary.simpleMessage("Enter your first name"),
         "floor": MessageLookupByLibrary.simpleMessage("Floor"),
         "forgot": MessageLookupByLibrary.simpleMessage("Forgot Password"),
         "getstart": MessageLookupByLibrary.simpleMessage("Let’s get started "),
         "getstarted": MessageLookupByLibrary.simpleMessage("Get started"),
         "getstartintro": MessageLookupByLibrary.simpleMessage(
             "Browse craftsmen for repair \n and maintainance service"),
+        "lasttname": MessageLookupByLibrary.simpleMessage("Last name"),
+        "lasttnamefield":
+            MessageLookupByLibrary.simpleMessage("Enter your last name"),
+        "nationalid": MessageLookupByLibrary.simpleMessage("National ID"),
+        "nationalidfield":
+            MessageLookupByLibrary.simpleMessage("Enter your national ID"),
         "noaccount":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
         "nocoderecieved": MessageLookupByLibrary.simpleMessage(
@@ -71,6 +83,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "slogan":
             MessageLookupByLibrary.simpleMessage("YOUR FIX , OUR EXPERTISE."),
         "street": MessageLookupByLibrary.simpleMessage("Street"),
+        "termsandpolicy":
+            MessageLookupByLibrary.simpleMessage(" terms & policy"),
         "welcome": MessageLookupByLibrary.simpleMessage("Welcome Back !"),
         "withgoogle":
             MessageLookupByLibrary.simpleMessage("Sign in with google")

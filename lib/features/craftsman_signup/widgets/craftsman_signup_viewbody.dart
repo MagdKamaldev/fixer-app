@@ -1,7 +1,11 @@
 import 'package:fixer/core/helpers/spacing.dart';
+import 'package:fixer/core/themes/colors.dart';
+import 'package:fixer/features/craftsman_signup/widgets/arrow.dart';
 import 'package:fixer/features/craftsman_signup/widgets/craftsman_signup_textform.dart';
+import 'package:fixer/features/craftsman_signup/widgets/terms_and_policy_row.dart';
 import 'package:fixer/features/login/presentation/views/widgets/login_view_body_logo.dart';
 import 'package:fixer/features/login/presentation/views/widgets/login_view_body_text_container.dart';
+import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
 class CraftsmanSignUpViewBody extends StatelessWidget {
@@ -13,35 +17,47 @@ class CraftsmanSignUpViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(children: [
       Column(children: [
+        verticalSpace(60),
         const Logo(),
-        verticalSpace(20),
-        TextContainer(text: "First name", margin: 35),
+        verticalSpace(60),
+        TextContainer(text: S.of(context).firstname, margin: 35),
         verticalSpace(5),
         CraftsmanSignUpTextForm(
             controller: nameController,
-            text: "Enter your first name",
+            text: S.of(context).firstnamefield,
             textInputType: TextInputType.name),
         verticalSpace(15),
-        TextContainer(text: "Last name", margin: 35),
+        TextContainer(text: S.of(context).lasttname, margin: 35),
         verticalSpace(5),
         CraftsmanSignUpTextForm(
-            controller: nameController,
-            text: "Enter your last name",
-            textInputType: TextInputType.name),
+          controller: nameController,
+          text: S.of(context).lasttnamefield,
+          textInputType: TextInputType.name,
+        ),
         verticalSpace(15),
-        TextContainer(text: "National ID", margin: 35),
+        TextContainer(text: S.of(context).nationalid, margin: 35),
         verticalSpace(5),
         CraftsmanSignUpTextForm(
             controller: idController,
-            text: "Enter your national ID",
+            text: S.of(context).nationalidfield,
             textInputType: TextInputType.number),
         verticalSpace(15),
-        TextContainer(text: "City", margin: 35),
+        TextContainer(text: S.of(context).city, margin: 35),
         verticalSpace(5),
         CraftsmanSignUpTextForm(
-            controller: cityController,
-            text: "Enter your first name",
-            textInputType: TextInputType.name),
+          controller: cityController,
+          text: S.of(context).cityfield,
+          textInputType: TextInputType.name,
+          dropIcon: const Icon(
+            Icons.keyboard_arrow_down,
+            color: ColorManager.primary,
+            size: 40,
+          ),
+        ),
+        verticalSpace(10),
+        const TermsandPolicy(),
+        verticalSpace(30),
+        const Arrow()
       ]),
     ]);
   }

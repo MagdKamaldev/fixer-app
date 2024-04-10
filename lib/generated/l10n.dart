@@ -399,6 +399,106 @@ class S {
       args: [],
     );
   }
+
+  /// `First name`
+  String get firstname {
+    return Intl.message(
+      'First name',
+      name: 'firstname',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Last name`
+  String get lasttname {
+    return Intl.message(
+      'Last name',
+      name: 'lasttname',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `National ID`
+  String get nationalid {
+    return Intl.message(
+      'National ID',
+      name: 'nationalid',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `City`
+  String get city {
+    return Intl.message(
+      'City',
+      name: 'city',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter your first name`
+  String get firstnamefield {
+    return Intl.message(
+      'Enter your first name',
+      name: 'firstnamefield',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter your last name`
+  String get lasttnamefield {
+    return Intl.message(
+      'Enter your last name',
+      name: 'lasttnamefield',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter your national ID`
+  String get nationalidfield {
+    return Intl.message(
+      'Enter your national ID',
+      name: 'nationalidfield',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter your city`
+  String get cityfield {
+    return Intl.message(
+      'Enter your city',
+      name: 'cityfield',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `I agree to the `
+  String get agree {
+    return Intl.message(
+      'I agree to the ',
+      name: 'agree',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ` terms & policy`
+  String get termsandpolicy {
+    return Intl.message(
+      ' terms & policy',
+      name: 'termsandpolicy',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
