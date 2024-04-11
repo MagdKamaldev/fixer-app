@@ -39,6 +39,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Enter the 6-digit code we sent to +20"),
         "enteryphonenumber":
             MessageLookupByLibrary.simpleMessage("Enter your phone number"),
+        "field": MessageLookupByLibrary.simpleMessage("Choose your field"),
         "firstname": MessageLookupByLibrary.simpleMessage("First name"),
         "firstnamefield":
             MessageLookupByLibrary.simpleMessage("Enter your first name"),

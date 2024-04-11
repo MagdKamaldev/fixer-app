@@ -5,4 +5,5 @@ class Routes {
   static const String userSignUp = '/userSignUp';
   static const String confirmationCode = '/confirmationCode';
   static const String craftsmanSignUp = '/craftsmanSignUp';
+  static const String fieldOfService = '/fieldOfService';
 }

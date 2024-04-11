@@ -8,7 +8,6 @@ class OnboardingView extends StatelessWidget {
   Widget build(BuildContext context) {
     //context.pushReplacementNamed(Routes.login);
     return const Scaffold(
-      //TODO: implement onBoarding UI
       body: OnBoardingViewBody(),
     );
   }

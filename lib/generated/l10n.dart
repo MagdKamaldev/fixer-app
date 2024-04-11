@@ -499,6 +499,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Choose your field`
+  String get field {
+    return Intl.message(
+      'Choose your field',
+      name: 'field',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

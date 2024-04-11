@@ -43,5 +43,6 @@
   "nationalidfield":"Enter your national ID",
   "cityfield":"Enter your city",
   "agree":"I agree to the ",
-  "termsandpolicy":" terms & policy"
+  "termsandpolicy":" terms & policy",
+  "field":"Choose your field"
 }

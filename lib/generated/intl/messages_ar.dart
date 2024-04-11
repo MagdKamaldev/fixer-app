@@ -36,6 +36,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "entercode": MessageLookupByLibrary.simpleMessage("أدخل رمز التأكيد"),
         "enteryourcode": MessageLookupByLibrary.simpleMessage(
             "أدخل الرمز المكون من 6 أرقام الذي أرسلناه إلى +20"),
+        "enteryphonenumber":
+            MessageLookupByLibrary.simpleMessage("أدخل رقم هاتفك"),
+        "field": MessageLookupByLibrary.simpleMessage("اختر المجال الخاص بك"),
         "firstname": MessageLookupByLibrary.simpleMessage("الاسم الاول"),
         "firstnamefield":
             MessageLookupByLibrary.simpleMessage("ادخل اسمك الاول"),
