@@ -16,7 +16,7 @@ class UserAddressView extends StatelessWidget {
     return Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          verticalSpace(40),
+          verticalSpace(20),
           Stack(alignment:locale=="en"? Alignment.centerRight:Alignment.centerLeft,
             children:[ 
             AddressTextFieldModel(width:380.w,labeltext:S.of(context).area, icons: const Icon(Icons.location_on_outlined)),

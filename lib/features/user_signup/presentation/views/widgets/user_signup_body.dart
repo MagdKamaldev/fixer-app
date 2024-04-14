@@ -1,9 +1,10 @@
 import 'package:fixer/core/helpers/spacing.dart';
+import 'package:fixer/features/phone_number/presentation/views/widgets/phone_number_body.dart';
 import 'package:fixer/features/user_signup/presentation/views/widgets/on_boarding_smoothpageindicator.dart';
-import 'package:fixer/features/user_signup/presentation/views/widgets/phone_number_view.dart';
 import 'package:fixer/features/user_signup/presentation/views/widgets/user_address_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
 class UserSignUpBody extends StatefulWidget {
@@ -23,6 +24,7 @@ class _UserSignUpBodyState extends State<UserSignUpBody> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            verticalSpace(60),
             SizedBox(child: SvgPicture.asset('assets/images/fixrpic.svg',
             width: 134.85,
             height: 91,
@@ -30,19 +32,22 @@ class _UserSignUpBodyState extends State<UserSignUpBody> {
             ),
             verticalSpace(30),
             SmoothIndicatorUserSignup(controller: controller),
-            verticalSpace(25),
+            verticalSpace(15),
             Container(
               color: const Color.fromARGB(255, 255, 255, 255),
               // padding: EdgeInsets.symmetric(horizontal:10.w,vertical: 20.h),
               // margin: EdgeInsets.symmetric(horizontal: 10.w,vertical: 20.h),
               height: 580,
               width: 400,
-              child: PageView(
-                controller: controller ,
-                children:  const [
-                   PhoneNumberView(),
-                   UserAddressView(),
-                ],
+              child: Padding(
+                padding: EdgeInsets.only(top:15.h),
+                child: PageView(
+                  controller: controller ,
+                  children:  const [
+                     PhoneNumberBody(),
+                     UserAddressView(),
+                  ],
+                ),
               ),
             )
         

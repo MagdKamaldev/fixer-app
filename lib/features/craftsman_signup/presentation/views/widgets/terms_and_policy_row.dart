@@ -17,7 +17,7 @@ class _TermsandPolicyState extends State<TermsandPolicy> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 30.sp),
+      margin: EdgeInsets.symmetric(horizontal: 20.h),
       child: Row(
         children: [
           Checkbox(

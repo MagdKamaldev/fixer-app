@@ -44,5 +44,7 @@
   "cityfield":"Enter your city",
   "agree":"I agree to the ",
   "termsandpolicy":" terms & policy",
-  "field":"Choose your field"
+  "field":"Choose your field",
+  "passwordinstructions":"it must contain at least two of:numbers,letters,or symbols"
+
 }

@@ -509,6 +509,16 @@ class S {
       args: [],
     );
   }
+
+  /// `it must contain at least two of:numbers,letters,or symbols`
+  String get passwordinstructions {
+    return Intl.message(
+      'it must contain at least two of:numbers,letters,or symbols',
+      name: 'passwordinstructions',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

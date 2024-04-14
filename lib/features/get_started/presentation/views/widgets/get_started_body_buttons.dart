@@ -37,7 +37,7 @@ class StartButtons extends StatelessWidget {
           verticalSpace(25),
           ElevatedButton(
             onPressed: () {
-              context.pushNamed(Routes.craftsmanSignUp);
+              context.pushNamed(Routes.phoneNumber);
             },
             style: ElevatedButton.styleFrom(
                 side: const BorderSide(color: ColorManager.primary),

@@ -8,8 +8,8 @@ class TextFieldModel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 60,
-      height: 60,
+      width: 60.w,
+      height: 60.h,
       child: TextFormField(
         onChanged: (value) {
           if (value.length == 1) {

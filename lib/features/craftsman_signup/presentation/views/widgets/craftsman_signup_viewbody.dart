@@ -1,8 +1,8 @@
 import 'package:fixer/core/helpers/spacing.dart';
 import 'package:fixer/core/themes/colors.dart';
-import 'package:fixer/features/craftsman_signup/widgets/arrow.dart';
-import 'package:fixer/features/craftsman_signup/widgets/craftsman_signup_textform.dart';
-import 'package:fixer/features/craftsman_signup/widgets/terms_and_policy_row.dart';
+import 'package:fixer/features/craftsman_signup/presentation/views/widgets/arrow.dart';
+import 'package:fixer/features/craftsman_signup/presentation/views/widgets/craftsman_signup_textform.dart';
+import 'package:fixer/features/craftsman_signup/presentation/views/widgets/terms_and_policy_row.dart';
 import 'package:fixer/features/login/presentation/views/widgets/login_view_body_logo.dart';
 import 'package:fixer/features/login/presentation/views/widgets/login_view_body_text_container.dart';
 import 'package:fixer/generated/l10n.dart';
@@ -16,10 +16,12 @@ class CraftsmanSignUpViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(children: [
-      Column(children: [
-        verticalSpace(60),
+      Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+        verticalSpace(50),
         const Logo(),
-        verticalSpace(60),
+        verticalSpace(40),
         TextContainer(text: S.of(context).firstname, margin: 35),
         verticalSpace(5),
         CraftsmanSignUpTextForm(

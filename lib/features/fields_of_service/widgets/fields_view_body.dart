@@ -14,7 +14,7 @@ class FieldOfServiceBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Column(children: [
-        verticalSpace(60),
+        verticalSpace(5),
         const Logo(),
         verticalSpace(30),
         Text(
