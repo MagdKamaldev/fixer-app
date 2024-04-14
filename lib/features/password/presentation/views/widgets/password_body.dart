@@ -9,11 +9,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class PasswordBody extends StatelessWidget {
-  const PasswordBody({super.key});
+  PasswordBody({super.key});
+
+  final TextEditingController password = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
-    final TextEditingController password = TextEditingController();
     return SingleChildScrollView(
       child:Column(
           crossAxisAlignment: CrossAxisAlignment.end,
@@ -32,25 +33,27 @@ class PasswordBody extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 20.w),
               width: 385.w,
               height: 55.h,
-              child: TextFormField(
-                controller: password,
-                keyboardType: TextInputType.text,
-                style: TextStyles.small,
-                decoration: InputDecoration(
-                    filled: true,
-                    fillColor: Colors.white,
-                    hintText: S.of(context).password,
-                    focusedBorder: OutlineInputBorder(
+              child:TextFormField(
+                  controller: password,
+                  keyboardType: TextInputType.text,
+                  obscureText: true,
+                  style: TextStyles.small,
+                  decoration: InputDecoration(   
+                      filled: true,
+                      fillColor: Colors.white,
+                      hintText: S.of(context).password,
+                      focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10.sp),
+                          borderSide: const BorderSide(
+                              width: 1, color: ColorManager.black)),
+                      border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10.sp),
-                        borderSide: const BorderSide(
-                            width: 1, color: ColorManager.black)),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10.sp),
-                      borderSide:
-                          const BorderSide(width: 1, color: ColorManager.black),
-                    )),
+                        borderSide:
+                            const BorderSide(width: 1, color: ColorManager.black),
+                      )
+                    ),
+                ),
               ),
-            ),
             verticalSpace(10),
             SizedBox(
               width: 343.w,
@@ -58,7 +61,7 @@ class PasswordBody extends StatelessWidget {
               style: TextStyles.small.copyWith(color: Colors.red),
               ),
               ),
-            verticalSpace(30),
+            verticalSpace(50),
              const ReusableArrowButton(nextPage: Routes.craftsmanSignUp), 
           ],
         ),

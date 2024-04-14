@@ -10,7 +10,8 @@ import 'package:flutter/material.dart';
 
 class CraftsmanSignUpViewBody extends StatelessWidget {
   const CraftsmanSignUpViewBody({super.key});
-  static final TextEditingController nameController = TextEditingController();
+  static final TextEditingController firstNameController = TextEditingController();
+  static final TextEditingController lastNameController = TextEditingController();
   static final TextEditingController idController = TextEditingController();
   static final TextEditingController cityController = TextEditingController();
   @override
@@ -25,14 +26,14 @@ class CraftsmanSignUpViewBody extends StatelessWidget {
         TextContainer(text: S.of(context).firstname, margin: 35),
         verticalSpace(5),
         CraftsmanSignUpTextForm(
-            controller: nameController,
+            controller: firstNameController,
             text: S.of(context).firstnamefield,
             textInputType: TextInputType.name),
         verticalSpace(15),
         TextContainer(text: S.of(context).lasttname, margin: 35),
         verticalSpace(5),
         CraftsmanSignUpTextForm(
-          controller: nameController,
+          controller: lastNameController,
           text: S.of(context).lasttnamefield,
           textInputType: TextInputType.name,
         ),

@@ -20,7 +20,7 @@ class PasswordView extends StatelessWidget {
             ),
             ),
             verticalSpace(30),
-            const PasswordBody(),
+            PasswordBody(),
           
           ],
         ),
