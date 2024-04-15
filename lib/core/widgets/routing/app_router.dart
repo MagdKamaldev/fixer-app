@@ -7,6 +7,7 @@ import 'package:fixer/features/login/presentation/views/login_view.dart';
 import 'package:fixer/features/on_boarding/presentation/views/on_boarding_view.dart';
 import 'package:fixer/features/password/presentation/views/password_view.dart';
 import 'package:fixer/features/phone_number/presentation/views/phone_number_view.dart';
+import 'package:fixer/features/upload_photos/presentation/views/upload_photos_view.dart';
 import 'package:fixer/features/user_signup/presentation/views/user_signup_view.dart';
 import 'package:flutter/material.dart';
 
@@ -52,6 +53,10 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => const FieldOfService(),
         );
+      case Routes.uploadPhotos:
+        return MaterialPageRoute(
+          builder: (_) => const UploadPhotosView(),
+        );  
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(

@@ -1,5 +1,7 @@
+import 'package:fixer/core/helpers/extensions.dart';
 import 'package:fixer/core/helpers/spacing.dart';
 import 'package:fixer/core/themes/text_styles.dart';
+import 'package:fixer/core/widgets/routing/routes.dart';
 import 'package:fixer/features/login/presentation/views/widgets/login_view_body_logo.dart';
 import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/cupertino.dart';
@@ -23,12 +25,16 @@ class FieldOfServiceBody extends StatelessWidget {
         ),
         verticalSpace(30),
         GestureDetector(
-            onTap: () {},
-            child: SvgPicture.asset("assets/images/Electrical card.svg")),
+            onTap: () {
+              context.pushNamed(Routes.uploadPhotos);
+            },
+            child: SvgPicture.asset("assets/images/Electrical_card.svg")),
         verticalSpace(40),
         GestureDetector(
-            onTap: () {},
-            child: SvgPicture.asset("assets/images/plumbing card.svg"))
+            onTap: () {
+              context.pushNamed(Routes.uploadPhotos);
+            },
+            child: SvgPicture.asset("assets/images/plumbing_card.svg"))
       ]),
     );
   }

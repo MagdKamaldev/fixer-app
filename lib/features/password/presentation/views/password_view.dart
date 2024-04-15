@@ -1,6 +1,5 @@
 import 'package:fixer/core/helpers/spacing.dart';
 import 'package:fixer/features/password/presentation/views/widgets/password_body.dart';
-import 'package:fixer/features/phone_number/presentation/views/widgets/phone_number_body.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 

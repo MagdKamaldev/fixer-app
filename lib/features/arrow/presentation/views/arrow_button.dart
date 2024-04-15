@@ -10,28 +10,23 @@ class ReusableArrowButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: locale == "en"
-                ? const EdgeInsets.only(right: 10)
-                : const EdgeInsets.only(left: 25),
-      child: GestureDetector(
-        onTap: () {
-          context.pushNamed(nextPage);
-        },
-        child: Container(
-            margin: EdgeInsets.symmetric(horizontal: 20.w),
-            width: 71.w,
-            height: 71.h,
-            decoration: const BoxDecoration(
-              shape: BoxShape.circle,
-              color: ColorManager.primary,
-            ),
-            child: Icon(
-              Icons.arrow_forward,
-              color: ColorManager.white,
-              size: 30.w,
-            )),
-      ),
+    return GestureDetector(
+      onTap: () {
+        context.pushNamed(nextPage);
+      },
+      child: Container(
+          margin: EdgeInsets.symmetric(horizontal: 20.w),
+          width: 71.w,
+          height: 71.h,
+          decoration: const BoxDecoration(
+            shape: BoxShape.circle,
+            color: ColorManager.primary,
+          ),
+          child: Icon(
+            Icons.arrow_forward,
+            color: ColorManager.white,
+            size: 30.w,
+          )),
     );
   }
 }

@@ -17,12 +17,12 @@ class PasswordBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child:Column(
-          crossAxisAlignment: CrossAxisAlignment.end,
+          // crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             Padding(
               padding: locale == "en"
                   ? const EdgeInsets.only(right: 280)
-                  : const EdgeInsets.only(left: 280),
+                  : const EdgeInsets.only(left: 270),
               child: Text(
                 S.of(context).password,
                 style: TextStyles.bodybold,
@@ -56,13 +56,18 @@ class PasswordBody extends StatelessWidget {
               ),
             verticalSpace(10),
             SizedBox(
-              width: 343.w,
+              width: 340.w,
               child: Text(S.of(context).passwordinstructions,
               style: TextStyles.small.copyWith(color: Colors.red),
               ),
               ),
             verticalSpace(50),
-             const ReusableArrowButton(nextPage: Routes.craftsmanSignUp), 
+             const Padding(
+          padding: locale == "en"
+                ? EdgeInsets.only(left: 230)
+                : EdgeInsets.only(right: 230),
+          child: ReusableArrowButton(nextPage: Routes.craftsmanSignUp),
+        ),
           ],
         ),
     );

@@ -1,46 +1,50 @@
-/*import 'package:fixer/core/helpers/spacing.dart';
-import 'package:fixer/features/craftsman_signup/widgets/craftsman_signup_textform.dart';
-import 'package:fixer/features/craftsman_signup/widgets/craftsman_signup_viewbody.dart';
+import 'package:fixer/core/themes/colors.dart';
+import 'package:fixer/core/themes/text_styles.dart';
+import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class CityDropdown extends StatefulWidget {
+class CityDropDown extends StatefulWidget {
+  const CityDropDown({super.key});
+
   @override
-  _CityDropdownState createState() => _CityDropdownState();
+  State<CityDropDown> createState() => _CityDropDownState();
 }
 
-class _CityDropdownState extends State<CityDropdown> {
-  String? selectedCity;
-  final List<String> cities = ['Cairo', 'Alexandria'];
-
+class _CityDropDownState extends State<CityDropDown> {
+  String? valueChoose;
+  List<String> listItem=["city1","city2","city3","city4"];
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        CraftsmanSignUpTextForm(
-            controller: CraftsmanSignUpViewBody.cityController,
-            text: "City",
-            textInputType: TextInputType.name),
-        verticalSpace(16),
-        Padding(
-          padding: EdgeInsets.only(left: 180.w),
-          child: DropdownButton<String>(
-            value: selectedCity,
-            onChanged: (String? newValue) {
-              setState(() {
-                selectedCity = newValue;
-              });
-            },
-            items: cities.map((String city) {
-              return DropdownMenuItem<String>(
-                value: city,
-                child: Text(city),
-              );
-            }).toList(),
-          ),
+    return Container(
+      width: 330.w,
+      height: 55.h,
+      decoration: BoxDecoration(border: Border.all(color: ColorManager.black),
+      borderRadius: BorderRadius.circular(10.sp)
+      ),
+      padding: EdgeInsets.symmetric(horizontal: 25.h),
+      child: DropdownButton<String>(
+        hint:Text(S.of(context).cityfield),
+        style: TextStyles.body.copyWith(color: ColorManager.darkgrey),
+        icon: const Icon(Icons.arrow_drop_down),
+        iconSize: 25,
+        isExpanded: true,
+        underline:const SizedBox(),
+        value: valueChoose,
+        onChanged: (String? newvalue){
+          setState(() {
+            valueChoose = newvalue;
+          });
+        },
+        items: listItem.map((valueItem){
+          return DropdownMenuItem(
+            value: valueItem,
+            child: Text(valueItem),
+            );
+        }).toList(), 
+        
+        
         ),
-      ],
     );
   }
-}*/
+}
