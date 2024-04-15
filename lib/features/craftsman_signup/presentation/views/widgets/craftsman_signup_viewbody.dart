@@ -1,7 +1,11 @@
+import 'package:fixer/core/constants/constants.dart';
 import 'package:fixer/core/helpers/spacing.dart';
 import 'package:fixer/core/themes/colors.dart';
+import 'package:fixer/core/widgets/routing/routes.dart';
+import 'package:fixer/features/arrow/presentation/views/arrow_button.dart';
 import 'package:fixer/features/craftsman_signup/presentation/views/widgets/arrow.dart';
 import 'package:fixer/features/craftsman_signup/presentation/views/widgets/craftsman_signup_textform.dart';
+import 'package:fixer/features/craftsman_signup/presentation/views/widgets/drop_down_button.dart';
 import 'package:fixer/features/craftsman_signup/presentation/views/widgets/terms_and_policy_row.dart';
 import 'package:fixer/features/login/presentation/views/widgets/login_view_body_logo.dart';
 import 'package:fixer/features/login/presentation/views/widgets/login_view_body_text_container.dart';
@@ -47,20 +51,16 @@ class CraftsmanSignUpViewBody extends StatelessWidget {
         verticalSpace(15),
         TextContainer(text: S.of(context).city, margin: 35),
         verticalSpace(5),
-        CraftsmanSignUpTextForm(
-          controller: cityController,
-          text: S.of(context).cityfield,
-          textInputType: TextInputType.name,
-          dropIcon: const Icon(
-            Icons.keyboard_arrow_down,
-            color: ColorManager.primary,
-            size: 40,
-          ),
-        ),
+        const CityDropDown(),
         verticalSpace(10),
         const TermsandPolicy(),
         verticalSpace(30),
-        const Arrow()
+        const Padding(
+          padding: locale == "en"
+                ? EdgeInsets.only(left: 230)
+                : EdgeInsets.only(right: 230),
+          child: ReusableArrowButton(nextPage: Routes.fieldOfService),
+        )
       ]),
     ]);
   }

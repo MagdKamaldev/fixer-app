@@ -1,3 +1,4 @@
+import 'package:fixer/core/constants/constants.dart';
 import 'package:fixer/core/helpers/spacing.dart';
 import 'package:fixer/core/themes/colors.dart';
 import 'package:fixer/core/themes/text_styles.dart';
@@ -63,7 +64,12 @@ class ConfirmationCodeBody extends StatelessWidget {
                   decoration: TextDecoration.underline,
                 )),
             verticalSpace(60),
-            const ReusableArrowButton(nextPage:Routes.password)
+            const Padding(
+          padding: locale == "en"
+                ? EdgeInsets.only(left: 230)
+                : EdgeInsets.only(right: 230),
+          child: ReusableArrowButton(nextPage: Routes.password),
+        ),
           ],
         ),
       ]);

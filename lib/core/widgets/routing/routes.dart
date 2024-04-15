@@ -8,4 +8,6 @@ class Routes {
   static const String confirmationCode = '/confirmationCode';
   static const String craftsmanSignUp = '/craftsmanSignUp';
   static const String fieldOfService = '/fieldOfService';
+  static const String uploadPhotos = '/uploadPhotos';
+
 }
