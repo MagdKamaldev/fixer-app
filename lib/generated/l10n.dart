@@ -170,6 +170,16 @@ class S {
     );
   }
 
+  /// `Sign in with google`
+  String get signupwithgoogle {
+    return Intl.message(
+      'Sign in with google',
+      name: 'signupwithgoogle',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Don't have an account?`
   String get noaccount {
     return Intl.message(
@@ -515,6 +525,66 @@ class S {
     return Intl.message(
       'it must contain at least two of:numbers,letters,or symbols',
       name: 'passwordinstructions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Name`
+  String get fullname {
+    return Intl.message(
+      'Name',
+      name: 'fullname',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email`
+  String get email {
+    return Intl.message(
+      'Email',
+      name: 'email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter your name`
+  String get fullnamefield {
+    return Intl.message(
+      'Enter your name',
+      name: 'fullnamefield',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter your email`
+  String get emailfield {
+    return Intl.message(
+      'Enter your email',
+      name: 'emailfield',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ` Already have an account?`
+  String get alreadyhaveaccount {
+    return Intl.message(
+      ' Already have an account?',
+      name: 'alreadyhaveaccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Login`
+  String get login {
+    return Intl.message(
+      'Login',
+      name: 'login',
       desc: '',
       args: [],
     );

@@ -11,6 +11,7 @@
   "signin":"Sign in",
   "or":"Or", 
   "withgoogle":"Sign in with google", 
+  "signupwithgoogle":"Sign in with google",
   "noaccount":"Don't have an account?",
   "signup":" Sign up" ,
   "slogan":"YOUR FIX , OUR EXPERTISE.",
@@ -45,6 +46,12 @@
   "agree":"I agree to the ",
   "termsandpolicy":" terms & policy",
   "field":"Choose your field",
-  "passwordinstructions":"it must contain at least two of:numbers,letters,or symbols"
+  "passwordinstructions":"it must contain at least two of:numbers,letters,or symbols",
+  "fullname":"Name",
+  "email":"Email",
+  "fullnamefield":"Enter your name",
+  "emailfield":"Enter your email",
+  "alreadyhaveaccount":" Already have an account?",
+  "login":"Login"
 
 }

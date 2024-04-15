@@ -57,6 +57,12 @@ class TextStyles {
     fontFamily: GoogleFonts.montserrat().fontFamily,
     fontWeight: FontWeight.w400,
   );
+  static TextStyle primarytextbutton = TextStyle(
+    color: ColorManager.primary,
+    fontSize: 16.sp,
+    fontFamily: GoogleFonts.roboto().fontFamily,
+    fontWeight: FontWeight.w700,
+  );
   static TextStyle body = TextStyle(
     color: ColorManager.black,
     fontSize: 16.sp,

@@ -2,15 +2,14 @@ import 'package:fixer/core/themes/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class TextForm extends StatelessWidget {
-  const TextForm({
-    super.key,
-    required this.controller,
-    required this.text,
-    required this.textInputType,
-    required this.obscure,
-    this.icon,
-  });
+class UserSignUpTextForm extends StatelessWidget {
+  const UserSignUpTextForm(
+      {super.key,
+      required this.controller,
+      required this.text,
+      required this.textInputType,
+      required this.obscure,
+      this.icon});
   final TextEditingController controller;
   final String text;
   final TextInputType textInputType;
@@ -31,14 +30,15 @@ class TextForm extends StatelessWidget {
           keyboardType: textInputType,
           obscureText: obscure,
           decoration: InputDecoration(
-            suffixIcon: icon,
             hintText: text,
+            suffix: icon,
             enabledBorder: const UnderlineInputBorder(
               borderSide: BorderSide(color: Colors.transparent),
             ),
             focusedBorder: const UnderlineInputBorder(
-              borderSide: BorderSide(color: Color.fromARGB(0, 31, 24, 24)),
+              borderSide: BorderSide(color: Colors.transparent),
             ),
+            // disabledBorder: const UnderlineInputBorder()
           ),
         ));
   }

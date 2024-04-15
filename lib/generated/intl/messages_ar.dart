@@ -28,11 +28,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "after40sec":
             MessageLookupByLibrary.simpleMessage("بعد 40 ثانية يمكنك"),
         "agree": MessageLookupByLibrary.simpleMessage("اوافق على "),
+        "alreadyhaveaccount":
+            MessageLookupByLibrary.simpleMessage(" لديك حساب بالفعل ؟"),
         "area": MessageLookupByLibrary.simpleMessage("منطقة"),
         "building": MessageLookupByLibrary.simpleMessage("اسم المبنى"),
         "change": MessageLookupByLibrary.simpleMessage("تغيير"),
         "city": MessageLookupByLibrary.simpleMessage("المدينة"),
         "cityfield": MessageLookupByLibrary.simpleMessage("ادخل مدينتك"),
+        "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
+        "emailfield":
+            MessageLookupByLibrary.simpleMessage("ادخل بريدك الإلكتروني"),
         "entercode": MessageLookupByLibrary.simpleMessage("أدخل رمز التأكيد"),
         "enteryourcode": MessageLookupByLibrary.simpleMessage(
             "أدخل الرمز المكون من 6 أرقام الذي أرسلناه إلى +20"),
@@ -44,6 +49,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ادخل اسمك الاول"),
         "floor": MessageLookupByLibrary.simpleMessage("الطابق"),
         "forgot": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور"),
+        "fullname": MessageLookupByLibrary.simpleMessage("الاسم"),
+        "fullnamefield": MessageLookupByLibrary.simpleMessage("ادخل اسمك"),
         "getstart": MessageLookupByLibrary.simpleMessage("لنبدأ "),
         "getstarted": MessageLookupByLibrary.simpleMessage("البدء"),
         "getstartintro": MessageLookupByLibrary.simpleMessage(
@@ -51,6 +58,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "lasttname": MessageLookupByLibrary.simpleMessage("الاسم الأخير"),
         "lasttnamefield":
             MessageLookupByLibrary.simpleMessage("ادخل اسمك الاخير"),
+        "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "nationalid": MessageLookupByLibrary.simpleMessage("الرقم القومي"),
         "nationalidfield":
             MessageLookupByLibrary.simpleMessage("ادخل رقمك القومي"),
@@ -77,6 +85,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "signup": MessageLookupByLibrary.simpleMessage(" تسجيل "),
         "signup_craft": MessageLookupByLibrary.simpleMessage("التسجيل كحرفي"),
         "signup_user": MessageLookupByLibrary.simpleMessage("التسجيل كمستخدم"),
+        "signupwithgoogle":
+            MessageLookupByLibrary.simpleMessage("انشاء حساب باستخدام جوجل"),
         "skip": MessageLookupByLibrary.simpleMessage("تخطي"),
         "slogan": MessageLookupByLibrary.simpleMessage("إصلاحك، خبرتنا"),
         "street": MessageLookupByLibrary.simpleMessage("الشارع"),

@@ -28,11 +28,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "after40sec":
             MessageLookupByLibrary.simpleMessage("After 40 seconds you can"),
         "agree": MessageLookupByLibrary.simpleMessage("I agree to the "),
+        "alreadyhaveaccount":
+            MessageLookupByLibrary.simpleMessage(" Already have an account?"),
         "area": MessageLookupByLibrary.simpleMessage("Area"),
         "building": MessageLookupByLibrary.simpleMessage("Building name"),
         "change": MessageLookupByLibrary.simpleMessage("Change"),
         "city": MessageLookupByLibrary.simpleMessage("City"),
         "cityfield": MessageLookupByLibrary.simpleMessage("Enter your city"),
+        "email": MessageLookupByLibrary.simpleMessage("Email"),
+        "emailfield": MessageLookupByLibrary.simpleMessage("Enter your email"),
         "entercode":
             MessageLookupByLibrary.simpleMessage("Enter confirmation code"),
         "enteryourcode": MessageLookupByLibrary.simpleMessage(
@@ -45,6 +49,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Enter your first name"),
         "floor": MessageLookupByLibrary.simpleMessage("Floor"),
         "forgot": MessageLookupByLibrary.simpleMessage("Forgot Password"),
+        "fullname": MessageLookupByLibrary.simpleMessage("Name"),
+        "fullnamefield":
+            MessageLookupByLibrary.simpleMessage("Enter your name"),
         "getstart": MessageLookupByLibrary.simpleMessage("Let’s get started "),
         "getstarted": MessageLookupByLibrary.simpleMessage("Get started"),
         "getstartintro": MessageLookupByLibrary.simpleMessage(
@@ -52,6 +59,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "lasttname": MessageLookupByLibrary.simpleMessage("Last name"),
         "lasttnamefield":
             MessageLookupByLibrary.simpleMessage("Enter your last name"),
+        "login": MessageLookupByLibrary.simpleMessage("Login"),
         "nationalid": MessageLookupByLibrary.simpleMessage("National ID"),
         "nationalidfield":
             MessageLookupByLibrary.simpleMessage("Enter your national ID"),
@@ -82,6 +90,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "signup_craft":
             MessageLookupByLibrary.simpleMessage("Sign up as craftsman"),
         "signup_user": MessageLookupByLibrary.simpleMessage("Sign up as user"),
+        "signupwithgoogle":
+            MessageLookupByLibrary.simpleMessage("Sign in with google"),
         "skip": MessageLookupByLibrary.simpleMessage("skip"),
         "slogan":
             MessageLookupByLibrary.simpleMessage("YOUR FIX , OUR EXPERTISE."),
