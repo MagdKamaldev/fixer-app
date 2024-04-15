@@ -21,7 +21,7 @@ class PasswordBody extends StatelessWidget {
           children: [
             Padding(
               padding: locale == "en"
-                  ? const EdgeInsets.only(right: 280)
+                  ? const EdgeInsets.only(right: 270)
                   : const EdgeInsets.only(left: 270),
               child: Text(
                 S.of(context).password,
@@ -55,12 +55,17 @@ class PasswordBody extends StatelessWidget {
                 ),
               ),
             verticalSpace(10),
-            SizedBox(
-              width: 340.w,
-              child: Text(S.of(context).passwordinstructions,
-              style: TextStyles.small.copyWith(color: Colors.red),
-              ),
-              ),
+            Padding(
+              padding:  locale == "en"
+                  ? const EdgeInsets.only(left: 25)
+                  : const EdgeInsets.only(right: 25),
+              child: SizedBox(
+                width: 340.w,
+                child: Text(S.of(context).passwordinstructions,
+                style: TextStyles.small.copyWith(color: Colors.red),
+                ),
+                ),
+            ),
             verticalSpace(50),
              const Padding(
           padding: locale == "en"

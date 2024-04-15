@@ -5,8 +5,9 @@ class CraftsmanSignUpView extends StatelessWidget {
   const CraftsmanSignUpView({super.key});
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body:CraftsmanSignUpViewBody()
+    return Scaffold(
+      appBar:AppBar(),
+      body:const CraftsmanSignUpViewBody()
       );
   }
 }

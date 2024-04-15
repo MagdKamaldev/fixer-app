@@ -1,5 +1,5 @@
 import 'package:fixer/core/widgets/routing/routes.dart';
-import 'package:fixer/features/confirmation_code/presentation/views/confimation_code_View.dart';
+import 'package:fixer/features/confirmation_code/presentation/views/confimation_code_view.dart';
 import 'package:fixer/features/craftsman_signup/presentation/views/craftsman_signup_view.dart';
 import 'package:fixer/features/fields_of_service/fields_view.dart';
 import 'package:fixer/features/get_started/presentation/views/get_started_view.dart';
@@ -8,7 +8,7 @@ import 'package:fixer/features/on_boarding/presentation/views/on_boarding_view.d
 import 'package:fixer/features/password/presentation/views/password_view.dart';
 import 'package:fixer/features/phone_number/presentation/views/phone_number_view.dart';
 import 'package:fixer/features/upload_photos/presentation/views/upload_photos_view.dart';
-import 'package:fixer/features/user_signup/presentation/views/user_signup_view.dart';
+import 'package:fixer/features/user_signup_layout/presentation/views/user_signup_layout_view.dart';
 import 'package:flutter/material.dart';
 
 class AppRouter {

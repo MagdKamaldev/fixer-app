@@ -1,4 +1,4 @@
-import 'package:fixer/features/user_signup/presentation/views/widgets/user_signup_body.dart';
+import 'package:fixer/features/user_signup_layout/presentation/views/widgets/user_signup_layout_body.dart';
 import 'package:flutter/material.dart';
 
 class UserSignUpView extends StatelessWidget {

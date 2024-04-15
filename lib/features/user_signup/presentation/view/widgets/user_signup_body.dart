@@ -2,11 +2,11 @@ import 'package:fixer/core/helpers/spacing.dart';
 import 'package:fixer/core/themes/text_styles.dart';
 import 'package:fixer/core/widgets/routing/routes.dart';
 import 'package:fixer/features/craftsman_signup/presentation/views/widgets/terms_and_policy_row.dart';
-import 'package:fixer/features/user_signup_1stpage/presentation/user_first_signup_textform.dart';
-import 'package:fixer/features/user_signup_1stpage/presentation/widgets/signup_buttons.dart';
+import 'package:fixer/features/user_signup/presentation/view/widgets/signup_buttons.dart';
+import 'package:fixer/features/user_signup/presentation/view/widgets/user_first_signup_textform.dart';
 import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
-import '../../../login/presentation/views/widgets/login_view_body_text_container.dart';
+import '../../../../login/presentation/views/widgets/login_view_body_text_container.dart';
 
 class UserSignUpFirstBody extends StatefulWidget {
   const UserSignUpFirstBody({super.key});
@@ -24,7 +24,6 @@ class _UserSignUpFirstBodyState extends State<UserSignUpFirstBody> {
   Widget build(BuildContext context) {
     return ListView(children: [
       Column(children: [
-        verticalSpace(20),
         TextContainer(text: S.of(context).fullname, margin: 35),
         verticalSpace(5),
         UserSignUpTextForm(
@@ -58,9 +57,9 @@ class _UserSignUpFirstBodyState extends State<UserSignUpFirstBody> {
             child: setpasswordIcon(),
           ),
         ),
-        verticalSpace(15),
+        verticalSpace(5),
         const TermsandPolicy(),
-        verticalSpace(30),
+        verticalSpace(15),
         const ButtonSignUp(),
         verticalSpace(10),
         Row(

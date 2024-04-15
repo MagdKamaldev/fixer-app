@@ -68,9 +68,9 @@ class _LoginViewBodyState extends State<LoginViewBody> {
           ),
         ),
       ]),
-      verticalSpace(15),
+      verticalSpace(5),
       const ForgotPassword(),
-      verticalSpace(20),
+      verticalSpace(15),
       const ButtonLogin(),
       verticalSpace(15),
       Row(

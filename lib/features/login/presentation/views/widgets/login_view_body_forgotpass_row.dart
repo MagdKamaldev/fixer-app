@@ -1,3 +1,4 @@
+import 'package:fixer/core/constants/constants.dart';
 import 'package:fixer/core/helpers/spacing.dart';
 import 'package:fixer/core/themes/colors.dart';
 import 'package:fixer/core/themes/text_styles.dart';
@@ -16,7 +17,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        margin: const EdgeInsets.only(left: 35),
+        margin: locale=="en"? const EdgeInsets.only(left: 15):const EdgeInsets.only(right: 15),
         child: Row(children: [
           Checkbox(
             value: isSelected,

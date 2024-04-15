@@ -1,4 +1,3 @@
-import 'package:fixer/core/constants/constants.dart';
 import 'package:fixer/core/helpers/extensions.dart';
 import 'package:fixer/core/themes/colors.dart';
 import 'package:flutter/material.dart';

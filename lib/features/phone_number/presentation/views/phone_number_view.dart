@@ -9,10 +9,11 @@ class PhoneNumberView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
       body: Center(
         child: Column(
           children: [
-            verticalSpace(80),
+            // verticalSpace(80),
              SizedBox(child: SvgPicture.asset('assets/images/fixrpic.svg',
             width: 134.85,
             height: 91,
