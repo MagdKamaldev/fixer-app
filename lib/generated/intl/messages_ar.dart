@@ -23,6 +23,10 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "Aptartment": MessageLookupByLibrary.simpleMessage("رقم الشقة"),
+        "Confirmnewpassword":
+            MessageLookupByLibrary.simpleMessage("تأكيد كلمة المرور الجديدة"),
+        "Confirmnewpasswordfield": MessageLookupByLibrary.simpleMessage(
+            "قم بتأكيد كلمة المرور الجديدة"),
         "aditionalDirections":
             MessageLookupByLibrary.simpleMessage("اتجاهات إضافية (اختياري)"),
         "after40sec":
@@ -49,6 +53,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ادخل اسمك الاول"),
         "floor": MessageLookupByLibrary.simpleMessage("الطابق"),
         "forgot": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور"),
+        "forgotpass": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور"),
         "fullname": MessageLookupByLibrary.simpleMessage("الاسم"),
         "fullnamefield": MessageLookupByLibrary.simpleMessage("ادخل اسمك"),
         "getstart": MessageLookupByLibrary.simpleMessage("لنبدأ "),
@@ -59,9 +64,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "lasttnamefield":
             MessageLookupByLibrary.simpleMessage("ادخل اسمك الاخير"),
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+        "messageforgotpass": MessageLookupByLibrary.simpleMessage(
+            "سنرسل رمز التحقق إلى هذا الرقم \n إذا كان يطابق حسابًا موجودًا"),
         "nationalid": MessageLookupByLibrary.simpleMessage("الرقم القومي"),
         "nationalidfield":
             MessageLookupByLibrary.simpleMessage("ادخل رقمك القومي"),
+        "newpassword":
+            MessageLookupByLibrary.simpleMessage(" كلمة المرور الجديدة"),
+        "newpasswordfield":
+            MessageLookupByLibrary.simpleMessage("ادخل كلمة المرور الجديدة"),
+        "nextbutton": MessageLookupByLibrary.simpleMessage("التالي"),
         "noaccount": MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
         "nocoderecieved": MessageLookupByLibrary.simpleMessage(
             "إذا لم تتلقى الرمز عن طريق الرسائل القصيرة، يرجى الطلب"),
@@ -75,14 +87,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "passwordform":
             MessageLookupByLibrary.simpleMessage("أدخل كلمة المرور"),
-        "passwordinstructions": MessageLookupByLibrary.simpleMessage(
-            "يجب أن تحتوي على اثنين على الأقل من: أرقام أو أحرف أو رموز"),
         "phone": MessageLookupByLibrary.simpleMessage("رقم التليفون"),
         "remember": MessageLookupByLibrary.simpleMessage("تذكرني"),
         "resendcodeCALL": MessageLookupByLibrary.simpleMessage(
             "إعادة إرسال الرمز عن طريق الاتصال"),
         "resendcodeSMS": MessageLookupByLibrary.simpleMessage(
             "إعادة إرسال الرمز عن طريق الرسائل القصيرة"),
+        "resetpassword":
+            MessageLookupByLibrary.simpleMessage("إعادة تعيين كلمة المرور"),
         "signin": MessageLookupByLibrary.simpleMessage("تسجيل الدخول "),
         "signup": MessageLookupByLibrary.simpleMessage(" تسجيل "),
         "signup_craft": MessageLookupByLibrary.simpleMessage("التسجيل كحرفي"),
@@ -94,6 +106,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "street": MessageLookupByLibrary.simpleMessage("الشارع"),
         "termsandpolicy":
             MessageLookupByLibrary.simpleMessage("الشروط والسياسات"),
+        "uploadid": MessageLookupByLibrary.simpleMessage(
+            "قم بتحميل رقم الهوية الوطنية الخاص بك"),
+        "uploadphoto":
+            MessageLookupByLibrary.simpleMessage("قم بتحميل صورة ملفك الشخصي"),
         "welcome": MessageLookupByLibrary.simpleMessage("مرحباً بك مجدداً"),
         "withgoogle":
             MessageLookupByLibrary.simpleMessage("تسجيل الدخول باستخدام جوجل")

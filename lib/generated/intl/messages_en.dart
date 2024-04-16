@@ -23,6 +23,10 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "Aptartment": MessageLookupByLibrary.simpleMessage("Apt.no."),
+        "Confirmnewpassword":
+            MessageLookupByLibrary.simpleMessage("Confirm new password"),
+        "Confirmnewpasswordfield":
+            MessageLookupByLibrary.simpleMessage("Confirm your new password"),
         "aditionalDirections": MessageLookupByLibrary.simpleMessage(
             "Aditional directions (options)"),
         "after40sec":
@@ -49,6 +53,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Enter your first name"),
         "floor": MessageLookupByLibrary.simpleMessage("Floor"),
         "forgot": MessageLookupByLibrary.simpleMessage("Forgot Password"),
+        "forgotpass": MessageLookupByLibrary.simpleMessage("Forgot password"),
         "fullname": MessageLookupByLibrary.simpleMessage("Name"),
         "fullnamefield":
             MessageLookupByLibrary.simpleMessage("Enter your name"),
@@ -60,9 +65,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "lasttnamefield":
             MessageLookupByLibrary.simpleMessage("Enter your last name"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
+        "messageforgotpass": MessageLookupByLibrary.simpleMessage(
+            "  We’ll send a verification code to this\nnumber if it matches an existing account"),
         "nationalid": MessageLookupByLibrary.simpleMessage("National ID"),
         "nationalidfield":
             MessageLookupByLibrary.simpleMessage("Enter your national ID"),
+        "newpassword": MessageLookupByLibrary.simpleMessage("New password"),
+        "newpasswordfield":
+            MessageLookupByLibrary.simpleMessage("Enter your new password"),
+        "nextbutton": MessageLookupByLibrary.simpleMessage("Next"),
         "noaccount":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
         "nocoderecieved": MessageLookupByLibrary.simpleMessage(
@@ -85,6 +96,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Resend code by Call"),
         "resendcodeSMS":
             MessageLookupByLibrary.simpleMessage("Resend code by SMS"),
+        "resetpassword": MessageLookupByLibrary.simpleMessage("Reset password"),
         "signin": MessageLookupByLibrary.simpleMessage("Sign in"),
         "signup": MessageLookupByLibrary.simpleMessage(" Sign up"),
         "signup_craft":
@@ -98,6 +110,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "street": MessageLookupByLibrary.simpleMessage("Street"),
         "termsandpolicy":
             MessageLookupByLibrary.simpleMessage(" terms & policy"),
+        "uploadid":
+            MessageLookupByLibrary.simpleMessage("Upload your national ID"),
+        "uploadphoto":
+            MessageLookupByLibrary.simpleMessage("Upload your Profile photo"),
         "welcome": MessageLookupByLibrary.simpleMessage("Welcome Back !"),
         "withgoogle":
             MessageLookupByLibrary.simpleMessage("Sign in with google")

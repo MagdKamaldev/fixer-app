@@ -3,6 +3,8 @@ import 'package:fixer/features/upload_photos/presentation/views/widgets/upload_c
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../../../../../generated/l10n.dart';
+
 class UploadPhotosBody extends StatelessWidget {
   const UploadPhotosBody({super.key});
 
@@ -12,15 +14,13 @@ class UploadPhotosBody extends StatelessWidget {
       children: [
         Column(
           children: [
-             SizedBox(
+            SizedBox(
               child: SvgPicture.asset('assets/images/fixrpic.svg',
                   width: 134.85, height: 91),
             ),
             verticalSpace(20),
-            const UploadConatiner(text: "Upload your national ID"),
-             verticalSpace(20),
-            const UploadConatiner(text: "Upload your profile photo"),
-            
+            UploadConatiner(text: S.of(context).uploadid),
+            UploadConatiner(text: S.of(context).uploadphoto),
           ],
         )
       ],

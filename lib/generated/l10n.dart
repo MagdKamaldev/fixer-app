@@ -589,6 +589,106 @@ class S {
       args: [],
     );
   }
+
+  /// `Forgot password`
+  String get forgotpass {
+    return Intl.message(
+      'Forgot password',
+      name: 'forgotpass',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `  We’ll send a verification code to this\nnumber if it matches an existing account`
+  String get messageforgotpass {
+    return Intl.message(
+      '  We’ll send a verification code to this\nnumber if it matches an existing account',
+      name: 'messageforgotpass',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Next`
+  String get nextbutton {
+    return Intl.message(
+      'Next',
+      name: 'nextbutton',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Reset password`
+  String get resetpassword {
+    return Intl.message(
+      'Reset password',
+      name: 'resetpassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `New password`
+  String get newpassword {
+    return Intl.message(
+      'New password',
+      name: 'newpassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter your new password`
+  String get newpasswordfield {
+    return Intl.message(
+      'Enter your new password',
+      name: 'newpasswordfield',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm new password`
+  String get Confirmnewpassword {
+    return Intl.message(
+      'Confirm new password',
+      name: 'Confirmnewpassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm your new password`
+  String get Confirmnewpasswordfield {
+    return Intl.message(
+      'Confirm your new password',
+      name: 'Confirmnewpasswordfield',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Upload your national ID`
+  String get uploadid {
+    return Intl.message(
+      'Upload your national ID',
+      name: 'uploadid',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Upload your Profile photo`
+  String get uploadphoto {
+    return Intl.message(
+      'Upload your Profile photo',
+      name: 'uploadphoto',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

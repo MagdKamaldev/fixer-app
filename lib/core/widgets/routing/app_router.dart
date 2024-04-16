@@ -7,9 +7,12 @@ import 'package:fixer/features/login/presentation/views/login_view.dart';
 import 'package:fixer/features/on_boarding/presentation/views/on_boarding_view.dart';
 import 'package:fixer/features/password/presentation/views/password_view.dart';
 import 'package:fixer/features/phone_number/presentation/views/phone_number_view.dart';
+import 'package:fixer/features/reset_password/reset_password_view.dart';
 import 'package:fixer/features/upload_photos/presentation/views/upload_photos_view.dart';
 import 'package:fixer/features/user_signup_layout/presentation/views/user_signup_layout_view.dart';
 import 'package:flutter/material.dart';
+
+import '../../../features/forget_password/forget_password_view.dart';
 
 class AppRouter {
   Route generateRoute(RouteSettings settings) {
@@ -40,7 +43,7 @@ class AppRouter {
       case Routes.password:
         return MaterialPageRoute(
           builder: (_) => const PasswordView(),
-        );  
+        );
       case Routes.confirmationCode:
         return MaterialPageRoute(
           builder: (_) => const ConfirmationCodeView(),
@@ -56,7 +59,16 @@ class AppRouter {
       case Routes.uploadPhotos:
         return MaterialPageRoute(
           builder: (_) => const UploadPhotosView(),
-        );  
+        );
+      case Routes.forgetPassword:
+        return MaterialPageRoute(
+          builder: (_) => const ForgetPassword(),
+        );
+      case Routes.resetPassword:
+        return MaterialPageRoute(
+          builder: (_) => const ResetPassword(),
+        );
+
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(

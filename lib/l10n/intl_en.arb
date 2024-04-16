@@ -52,6 +52,16 @@
   "fullnamefield":"Enter your name",
   "emailfield":"Enter your email",
   "alreadyhaveaccount":" Already have an account?",
-  "login":"Login"
+  "login":"Login",
+  "forgotpass":"Forgot password",
+  "messageforgotpass":"  We’ll send a verification code to this\nnumber if it matches an existing account",
+  "nextbutton":"Next",
+  "resetpassword":"Reset password",
+  "newpassword":"New password",
+  "newpasswordfield":"Enter your new password",
+  "Confirmnewpassword":"Confirm new password",
+  "Confirmnewpasswordfield":"Confirm your new password",
+  "uploadid":"Upload your national ID",
+  "uploadphoto":"Upload your Profile photo"
 
 }

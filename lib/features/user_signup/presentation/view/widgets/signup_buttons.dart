@@ -12,7 +12,6 @@ class ButtonSignUp extends StatelessWidget {
   Widget build(BuildContext context) {
     final TextEditingController emailController = TextEditingController();
     final TextEditingController nameController = TextEditingController();
-
     final TextEditingController passwordController = TextEditingController();
     return Container(
       margin: EdgeInsets.only(left: 30.w, right: 30.w),

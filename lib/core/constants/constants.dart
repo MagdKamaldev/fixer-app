@@ -1,1 +1,1 @@
-const String locale = "en";
+const String locale = "ar";

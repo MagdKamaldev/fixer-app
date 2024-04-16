@@ -2,6 +2,7 @@ import 'package:fixer/core/constants/constants.dart';
 import 'package:fixer/core/helpers/spacing.dart';
 import 'package:fixer/core/themes/colors.dart';
 import 'package:fixer/core/themes/text_styles.dart';
+import 'package:fixer/core/widgets/routing/routes.dart';
 import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +18,9 @@ class _ForgotPasswordState extends State<ForgotPassword> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        margin: locale=="en"? const EdgeInsets.only(left: 15):const EdgeInsets.only(right: 15),
+        margin: locale == "en"
+            ? const EdgeInsets.only(left: 15)
+            : const EdgeInsets.only(right: 15),
         child: Row(children: [
           Checkbox(
             value: isSelected,
@@ -33,7 +36,9 @@ class _ForgotPasswordState extends State<ForgotPassword> {
           Text(S.of(context).remember, style: TextStyles.smallbold),
           horizontalSpace(60),
           TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).pushNamed(Routes.forgetPassword);
+              },
               child: Text(S.of(context).forgot, style: TextStyles.smallbold))
         ]));
   }

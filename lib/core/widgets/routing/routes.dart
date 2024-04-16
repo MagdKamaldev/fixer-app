@@ -9,5 +9,6 @@ class Routes {
   static const String craftsmanSignUp = '/craftsmanSignUp';
   static const String fieldOfService = '/fieldOfService';
   static const String uploadPhotos = '/uploadPhotos';
-
+  static const String forgetPassword = "/forgetPassword";
+  static const String resetPassword = "/resetPassword";
 }
