@@ -19,8 +19,8 @@ class PhoneNumberBody extends StatelessWidget {
         children: [
           Padding(
             padding: locale == "en"
-                ? const EdgeInsets.only(right: 250)
-                : const EdgeInsets.only(left: 280),
+                ?  EdgeInsets.only(right: 240.w)
+                :  EdgeInsets.only(left: 280.w),
             child: Text(
               S.of(context).phone,
               style: TextStyles.bodybold,
@@ -43,12 +43,12 @@ class PhoneNumberBody extends StatelessWidget {
                   // labelStyle: TextStyle(color: ColorManager.black),
                   focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.sp),
-                      borderSide: const BorderSide(
-                          width: 1, color: ColorManager.black)),
+                      borderSide:  BorderSide(
+                          width: 1.sp, color: ColorManager.black)),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10.sp),
                     borderSide:
-                        const BorderSide(width: 1, color: ColorManager.black),
+                         BorderSide(width: 1.sp, color: ColorManager.black),
                   )),
             ),
           ),

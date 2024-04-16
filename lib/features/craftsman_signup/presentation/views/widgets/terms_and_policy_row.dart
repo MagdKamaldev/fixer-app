@@ -35,20 +35,14 @@ class _TermsandPolicyState extends State<TermsandPolicy> {
           GestureDetector(
               onTap: () {},
               child: Text(S.of(context).termsandpolicy,
-                  style: GoogleFonts.roboto(
-                      color: ColorManager.black,
-                      fontSize: 14,
-                      fontWeight: FontWeight.w600,
-                      decoration: TextDecoration.underline,
-                      decorationColor:
-                          ColorManager.black, // Optional: Set underline color
-                      decorationThickness: 2)))
-          /*TextButton(
-              onPressed: () {},
-              child: Text(
-                "terms & policy",
-                style: TextStyles.smallbold,
-              ))*/
+                  style: 
+                  TextStyles.smallbold.copyWith(
+                    decoration:TextDecoration.underline,
+                    decorationColor: ColorManager.black, 
+                    decorationThickness: 2.sp
+                  )   
+               )
+            )
         ],
       ),
     );

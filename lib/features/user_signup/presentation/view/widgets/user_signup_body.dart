@@ -57,9 +57,9 @@ class _UserSignUpFirstBodyState extends State<UserSignUpFirstBody> {
             child: setpasswordIcon(),
           ),
         ),
-        verticalSpace(5),
+        verticalSpace(0),
         const TermsandPolicy(),
-        verticalSpace(15),
+        verticalSpace(10),
         const ButtonSignUp(),
         verticalSpace(10),
         Row(

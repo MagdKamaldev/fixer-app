@@ -44,7 +44,7 @@ class ButtonSignUp extends StatelessWidget {
                 side: const BorderSide(color: ColorManager.primary),
                 shape: const StadiumBorder(),
                 backgroundColor: ColorManager.white,
-                minimumSize: const Size.fromHeight(55)),
+                minimumSize:Size.fromHeight(55.h)),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

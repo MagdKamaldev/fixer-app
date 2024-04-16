@@ -6,6 +6,8 @@ class ForgetPassword extends StatelessWidget {
   const ForgetPassword({super.key});
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(body: ForgetPasswordBody());
+    return Scaffold(
+      appBar: AppBar(),
+      body: const ForgetPasswordBody());
   }
 }

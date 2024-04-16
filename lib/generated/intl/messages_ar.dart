@@ -87,6 +87,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "passwordform":
             MessageLookupByLibrary.simpleMessage("أدخل كلمة المرور"),
+        "passwordinstructions": MessageLookupByLibrary.simpleMessage(
+            "ويجب أن تحتوي على اثنين على الأقل من: أرقام أو أحرف \nأو رموز"),
         "phone": MessageLookupByLibrary.simpleMessage("رقم التليفون"),
         "remember": MessageLookupByLibrary.simpleMessage("تذكرني"),
         "resendcodeCALL": MessageLookupByLibrary.simpleMessage(

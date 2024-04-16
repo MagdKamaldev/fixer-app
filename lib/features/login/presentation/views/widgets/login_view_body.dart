@@ -46,7 +46,7 @@ class _LoginViewBodyState extends State<LoginViewBody> {
             obscure: false,
             textInputType: TextInputType.phone),
 
-        verticalSpace(35),
+        verticalSpace(30),
         TextContainer(
           text: S.of(context).password,
           margin: 35,

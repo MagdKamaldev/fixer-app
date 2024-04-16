@@ -1,4 +1,4 @@
-import 'package:fixer/features/craftsman_signup/presentation/views/widgets/craftsman_signup_viewbody.dart';
+import 'package:fixer/features/craftsman_signup/presentation/views/widgets/craftsman_signup_body.dart';
 import 'package:flutter/material.dart';
 
 class CraftsmanSignUpView extends StatelessWidget {

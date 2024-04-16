@@ -14,8 +14,10 @@ class ForgetPasswordBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final TextEditingController phonenumber = TextEditingController();
-    return Column(children: [
-      verticalSpace(50),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+      // verticalSpace(50),
       const Logo(),
       verticalSpace(25),
       Text(
@@ -26,12 +28,13 @@ class ForgetPasswordBody extends StatelessWidget {
       Text(
         S.of(context).messageforgotpass,
         style: TextStyles.body,
+        textAlign: TextAlign.center,
       ),
       verticalSpace(40),
       Padding(
           padding: locale == "en"
-              ? const EdgeInsets.only(right: 250)
-              : const EdgeInsets.only(left: 280),
+              ?  EdgeInsets.only(right: 220.w)
+              :  EdgeInsets.only(left: 250.w),
           child: Text(
             S.of(context).phone,
             style: TextStyles.bodybold,

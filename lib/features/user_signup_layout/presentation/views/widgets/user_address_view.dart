@@ -21,7 +21,9 @@ class UserAddressView extends StatelessWidget {
             children:[ 
             AddressTextFieldModel(width:380.w,labeltext:S.of(context).area, icons: const Icon(Icons.location_on_outlined)),
             Padding(
-              padding: locale=="en"? const EdgeInsets.only(right: 40):const EdgeInsets.only(left: 40),
+              padding: locale=="en"
+                      ?EdgeInsets.only(right: 40.w)
+                      :EdgeInsets.only(left: 40.w),
               child: InkWell(
                 onTap: () {
                   

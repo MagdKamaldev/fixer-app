@@ -33,16 +33,16 @@ class AddressTextFieldModel extends StatelessWidget {
             labelStyle: TextStyles.small.copyWith(color: ColorManager.grey),
             floatingLabelBehavior: FloatingLabelBehavior.auto,
             alignLabelWithHint: true,
-            focusedBorder: const OutlineInputBorder(
+            focusedBorder:OutlineInputBorder(
               borderSide:
-                    BorderSide(width: 1, color: ColorManager.grey)),
-            border: const OutlineInputBorder(
+                    BorderSide(width: 1.sp, color: ColorManager.grey)),
+            border: OutlineInputBorder(
               borderSide: 
-                    BorderSide(width: 1, color: ColorManager.grey),
+                    BorderSide(width: 1.sp, color: ColorManager.grey),
             ),
-            enabledBorder: const OutlineInputBorder(
+            enabledBorder:OutlineInputBorder(
               borderSide: 
-                   BorderSide(color: ColorManager.grey,width: 1)
+                   BorderSide(width: 1.sp,color: ColorManager.grey,)
             )
             ),
       ),

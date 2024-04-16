@@ -36,10 +36,9 @@ class ResetPasswordTextField extends StatelessWidget {
                 focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10.sp),
                     borderSide:
-                        const BorderSide(width: 1, color: ColorManager.black)),
+                        BorderSide(width: 1.sp, color: ColorManager.black)),
                 border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10.sp),
-                    borderSide: const BorderSide(
-                        width: 1, color: ColorManager.black)))));
+                    borderSide:  BorderSide(width: 1.sp, color: ColorManager.black)))));
   }
 }

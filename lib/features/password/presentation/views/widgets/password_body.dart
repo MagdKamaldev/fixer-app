@@ -21,8 +21,8 @@ class PasswordBody extends StatelessWidget {
           children: [
             Padding(
               padding: locale == "en"
-                  ? const EdgeInsets.only(right: 270)
-                  : const EdgeInsets.only(left: 270),
+                  ? EdgeInsets.only(right: 250.w)
+                  : EdgeInsets.only(left: 270.w),
               child: Text(
                 S.of(context).password,
                 style: TextStyles.bodybold,
@@ -57,8 +57,8 @@ class PasswordBody extends StatelessWidget {
             verticalSpace(10),
             Padding(
               padding:  locale == "en"
-                  ? const EdgeInsets.only(left: 25)
-                  : const EdgeInsets.only(right: 25),
+                  ? EdgeInsets.only(left: 25.w)
+                  : EdgeInsets.only(right: 20.w),
               child: SizedBox(
                 width: 340.w,
                 child: Text(S.of(context).passwordinstructions,
@@ -67,11 +67,11 @@ class PasswordBody extends StatelessWidget {
                 ),
             ),
             verticalSpace(50),
-             const Padding(
+             Padding(
           padding: locale == "en"
-                ? EdgeInsets.only(left: 230)
-                : EdgeInsets.only(right: 230),
-          child: ReusableArrowButton(nextPage: Routes.craftsmanSignUp),
+                ? EdgeInsets.only(left: 230.w)
+                : EdgeInsets.only(right: 230.w),
+          child: const ReusableArrowButton(nextPage: Routes.craftsmanSignUp),
         ),
           ],
         ),

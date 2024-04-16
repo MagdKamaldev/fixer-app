@@ -7,6 +7,7 @@ import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
 class FieldOfServiceBody extends StatelessWidget {
@@ -28,13 +29,19 @@ class FieldOfServiceBody extends StatelessWidget {
             onTap: () {
               context.pushNamed(Routes.uploadPhotos);
             },
-            child: SvgPicture.asset("assets/images/Electrical_card.svg")),
+            child: SvgPicture.asset("assets/images/Electrical_card.svg",
+            height: 180.h,
+            width:150.w ,
+            )),
         verticalSpace(40),
         GestureDetector(
             onTap: () {
               context.pushNamed(Routes.uploadPhotos);
             },
-            child: SvgPicture.asset("assets/images/plumbing_card.svg"))
+            child: SvgPicture.asset("assets/images/plumbing_card.svg",
+            height: 180.h,
+            width: 150.w,
+            ))
       ]),
     );
   }

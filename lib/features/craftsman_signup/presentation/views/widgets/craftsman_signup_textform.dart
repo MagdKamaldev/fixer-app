@@ -16,12 +16,12 @@ class CraftsmanSignUpTextForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        height: 55,
-        width: 340,
+        height: 55.h,
+        width: 340.w,
         padding: EdgeInsets.symmetric(vertical: 3.h, horizontal: 15.w),
         decoration: BoxDecoration(
             color: ColorManager.white,
-            borderRadius: BorderRadius.circular(10),
+            borderRadius: BorderRadius.circular(10.sp),
             border: Border.all(color: ColorManager.primary)),
         child: TextFormField(
           controller: controller,

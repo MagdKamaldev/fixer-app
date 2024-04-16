@@ -12,8 +12,8 @@ class UploadConatiner extends StatelessWidget {
       height: 47.h,
       width: 340.w,
       padding: const EdgeInsets.all(10),
-      decoration: const BoxDecoration(
-        border: Border(bottom:BorderSide(color: ColorManager.black,width: 1))
+      decoration: BoxDecoration(
+        border: Border(bottom:BorderSide(color: ColorManager.black,width: 1.sp))
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -21,8 +21,8 @@ class UploadConatiner extends StatelessWidget {
           Text(text,
           style: TextStyles.body,
           ),
-          const Icon(Icons.arrow_forward_ios_outlined,
-          color: ColorManager.grey,size: 25,)
+          Icon(Icons.arrow_forward_ios_outlined,
+          color: ColorManager.grey,size: 25.sp,)
         ],
       ),
     );

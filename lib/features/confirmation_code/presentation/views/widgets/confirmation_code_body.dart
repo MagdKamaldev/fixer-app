@@ -5,8 +5,10 @@ import 'package:fixer/core/themes/text_styles.dart';
 import 'package:fixer/core/widgets/routing/routes.dart';
 import 'package:fixer/features/arrow/presentation/views/arrow_button.dart';
 import 'package:fixer/features/confirmation_code/presentation/views/widgets/code_textfield_model.dart';
+import 'package:fixer/features/confirmation_code/presentation/views/widgets/text_buttons.dart';
 import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
 class ConfirmationCodeBody extends StatelessWidget {
@@ -21,7 +23,7 @@ class ConfirmationCodeBody extends StatelessWidget {
           children: [
             SizedBox(
               child: SvgPicture.asset('assets/images/fixrpic.svg',
-                  width: 134.85, height: 91),
+                  width: 134.85.w, height: 91.h),
             ),
             verticalSpace(20),
             Text(
@@ -50,25 +52,18 @@ class ConfirmationCodeBody extends StatelessWidget {
             verticalSpace(35),
             Text(S.of(context).after40sec, style: TextStyles.body),
             verticalSpace(15),
-            Text(S.of(context).resendcodeSMS,
-                style: TextStyles.bodybold.copyWith(
-                    color: ColorManager.grey,
-                    decoration: TextDecoration.underline)),
+            ResendTextButton(text:S.of(context).resendcodeSMS),
             verticalSpace(15),
             Text(S.of(context).nocoderecieved,
-                style: TextStyles.body.copyWith(fontSize: 14.9)),
+                style: TextStyles.body.copyWith(fontSize: 14.9.sp)),
             verticalSpace(15),
-            Text(S.of(context).resendcodeCALL,
-                style: TextStyles.bodybold.copyWith(
-                  color: ColorManager.grey,
-                  decoration: TextDecoration.underline,
-                )),
+            ResendTextButton(text:S.of(context).resendcodeCALL),
             verticalSpace(60),
-            const Padding(
+             Padding(
           padding: locale == "en"
-                ? EdgeInsets.only(left: 230)
-                : EdgeInsets.only(right: 230),
-          child: ReusableArrowButton(nextPage: Routes.password),
+                ? EdgeInsets.only(left: 230.w)
+                : EdgeInsets.only(right: 230.w),
+          child:const ReusableArrowButton(nextPage: Routes.password),
         ),
           ],
         ),
