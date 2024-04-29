@@ -37,7 +37,7 @@ class _TermsandPolicyState extends State<TermsandPolicy> {
                   style: TextStyles.smallbold.copyWith(
                       decoration: TextDecoration.underline,
                       decorationColor: ColorManager.black,
-                      decorationThickness: 2.sp)))
+                      decorationThickness: 2.sp))),
         ],
       ),
     );
