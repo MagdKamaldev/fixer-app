@@ -1,9 +1,13 @@
+import 'package:fixer/core/helpers/extensions.dart';
+import 'package:fixer/core/widgets/routing/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class TextFieldModel extends StatelessWidget {
-  const TextFieldModel({super.key});
+class UserTextFieldModel extends StatelessWidget {
+  final bool? lastTextField;
+  // final PageController? controller;
+  const UserTextFieldModel({super.key,this.lastTextField});
 
   @override
   Widget build(BuildContext context) {
@@ -14,6 +18,14 @@ class TextFieldModel extends StatelessWidget {
         onChanged: (value) {
           if (value.length == 1) {
             FocusScope.of(context).nextFocus();
+          }
+          if(value.isEmpty){
+            FocusScope.of(context).previousFocus();
+          }
+          if(lastTextField==true){
+           
+           context.pushNamed(Routes.userSignUp);
+            
           }
         },
         decoration: InputDecoration(
@@ -30,5 +42,7 @@ class TextFieldModel extends StatelessWidget {
         ],
       ),
     );
+
+
   }
 }

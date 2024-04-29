@@ -1,18 +1,15 @@
 import 'package:fixer/core/constants/constants.dart';
 import 'package:fixer/core/helpers/spacing.dart';
-import 'package:fixer/core/themes/colors.dart';
 import 'package:fixer/core/themes/text_styles.dart';
-import 'package:fixer/core/widgets/routing/routes.dart';
-import 'package:fixer/features/arrow/presentation/views/arrow_button.dart';
-import 'package:fixer/features/confirmation_code/presentation/views/widgets/code_textfield_model.dart';
-import 'package:fixer/features/confirmation_code/presentation/views/widgets/text_buttons.dart';
+import 'package:fixer/features/craftsman_confirmation_code/presentation/views/widgets/code_textfield_model.dart';
+import 'package:fixer/features/user_confirmation_code/presentation/views/widgets/text_buttons.dart';
 import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
-class ConfirmationCodeBody extends StatelessWidget {
-  const ConfirmationCodeBody({super.key});
+class CraftsmanConfirmationCodeBody extends StatelessWidget {
+  const CraftsmanConfirmationCodeBody({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -42,12 +39,12 @@ class ConfirmationCodeBody extends StatelessWidget {
             const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  TextFieldModel(),
-                  TextFieldModel(),
-                  TextFieldModel(),
-                  TextFieldModel(),
-                  TextFieldModel(),
-                  TextFieldModel(),
+                  CraftsmanTextFieldModel(),
+                  CraftsmanTextFieldModel(),
+                  CraftsmanTextFieldModel(),
+                  CraftsmanTextFieldModel(),
+                  CraftsmanTextFieldModel(),
+                  CraftsmanTextFieldModel(lastTextField: true),
                 ]),
             verticalSpace(35),
             Text(S.of(context).after40sec, style: TextStyles.body),
@@ -63,7 +60,6 @@ class ConfirmationCodeBody extends StatelessWidget {
           padding: locale == "en"
                 ? EdgeInsets.only(left: 230.w)
                 : EdgeInsets.only(right: 230.w),
-          child:const ReusableArrowButton(nextPage: Routes.password),
         ),
           ],
         ),

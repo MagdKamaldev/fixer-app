@@ -1,14 +1,16 @@
 import 'package:fixer/core/widgets/routing/routes.dart';
-import 'package:fixer/features/confirmation_code/presentation/views/confimation_code_view.dart';
+import 'package:fixer/features/craftsman_confirmation_code/presentation/views/craftsman_confimation_code_view.dart';
+import 'package:fixer/features/user_confirmation_code/presentation/views/user_confimation_code_view.dart';
 import 'package:fixer/features/craftsman_signup/presentation/views/craftsman_signup_view.dart';
 import 'package:fixer/features/fields_of_service/fields_view.dart';
 import 'package:fixer/features/get_started/presentation/views/get_started_view.dart';
 import 'package:fixer/features/login/presentation/views/login_view.dart';
 import 'package:fixer/features/on_boarding/presentation/views/on_boarding_view.dart';
 import 'package:fixer/features/password/presentation/views/password_view.dart';
-import 'package:fixer/features/phone_number/presentation/views/phone_number_view.dart';
+import 'package:fixer/features/craftsman_phone_number/presentation/views/craftsman_phone_number_view.dart';
 import 'package:fixer/features/reset_password/reset_password_view.dart';
 import 'package:fixer/features/upload_photos/presentation/views/upload_photos_view.dart';
+import 'package:fixer/features/user_phone_number/presentation/views/user_phone_number_view.dart';
 import 'package:fixer/features/user_signup_layout/presentation/views/user_signup_layout_view.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +20,6 @@ class AppRouter {
   Route generateRoute(RouteSettings settings) {
     //this arguments to be passed in any screen like this ( arguments as ClassName )
     //final arguments = settings.arguments;
-
     switch (settings.name) {
       case Routes.onBoarding:
         return MaterialPageRoute(
@@ -36,18 +37,26 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => const UserSignUpView(),
         );
-      case Routes.phoneNumber:
+      case Routes.craftsmanphoneNumber:
         return MaterialPageRoute(
-          builder: (_) => const PhoneNumberView(),
+          builder: (_) => const CraftsmanPhoneNumberView(),
+        );
+      case Routes.userphoneNumber:
+        return MaterialPageRoute(
+          builder: (context) =>const UserPhoneNumberView()
         );
       case Routes.password:
         return MaterialPageRoute(
           builder: (_) => const PasswordView(),
         );
-      case Routes.confirmationCode:
+      case Routes.craftsmanConfirmationCode:
         return MaterialPageRoute(
-          builder: (_) => const ConfirmationCodeView(),
+          builder: (_) => const CraftsmanConfirmationCodeView(),
         );
+      case Routes.userConfirmationCode:
+        return MaterialPageRoute(
+          builder: (_) => const UserConfirmationCodeView(),
+        );   
       case Routes.craftsmanSignUp:
         return MaterialPageRoute(
           builder: (_) => const CraftsmanSignUpView(),

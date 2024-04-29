@@ -11,7 +11,7 @@ class ReusableArrowButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        context.pushNamed(nextPage);
+      context.pushNamed(nextPage);
       },
       child: Container(
           margin: EdgeInsets.symmetric(horizontal: 20.w),

@@ -8,8 +8,9 @@ import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class PhoneNumberBody extends StatelessWidget {
-  const PhoneNumberBody({super.key});
+class UserPhoneNumberBody extends StatelessWidget {
+  final PageController?  controller;
+  const UserPhoneNumberBody({super.key,this.controller});
 
   @override
   Widget build(BuildContext context) {
@@ -53,7 +54,7 @@ class PhoneNumberBody extends StatelessWidget {
             ),
           ),
           verticalSpace(75),
-           const ReusableArrowButton(nextPage: Routes.confirmationCode), 
+          const ReusableArrowButton(nextPage:Routes.userConfirmationCode), 
         ],
       );
   }

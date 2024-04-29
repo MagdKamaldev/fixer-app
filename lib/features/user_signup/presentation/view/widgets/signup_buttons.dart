@@ -6,27 +6,34 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ButtonSignUp extends StatelessWidget {
-  const ButtonSignUp({super.key});
+  const ButtonSignUp({super.key,this.controller});
+  final PageController? controller;
 
   @override
   Widget build(BuildContext context) {
     final TextEditingController emailController = TextEditingController();
     final TextEditingController nameController = TextEditingController();
     final TextEditingController passwordController = TextEditingController();
+
     return Container(
       margin: EdgeInsets.only(left: 30.w, right: 30.w),
       child: Column(
         children: [
           ElevatedButton(
             onPressed: () {
+              controller!.nextPage(
+                duration: const Duration(microseconds: 500),
+                curve: Curves.easeIn);
+              // context.pushNamed(Routes.userphoneNumber);
               debugPrint("Email : ${emailController.text}");
               debugPrint("Password : ${passwordController.text}");
               debugPrint("Name : ${nameController.text}");
+              
             },
             style: ElevatedButton.styleFrom(
                 shape: const StadiumBorder(),
                 backgroundColor: ColorManager.primary,
-                minimumSize: Size.fromHeight(55.h)),
+                minimumSize: Size.fromHeight(55.h)),    
             child: Text(
               S.of(context).signup,
               style: TextStyle(
@@ -38,8 +45,11 @@ class ButtonSignUp extends StatelessWidget {
           verticalSpace(10),
           Text(S.of(context).or, style: TextStyles.smallbold),
           verticalSpace(10),
+          // google sign in 
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+            
+            },
             style: ElevatedButton.styleFrom(
                 side: const BorderSide(color: ColorManager.primary),
                 shape: const StadiumBorder(),

@@ -14,54 +14,56 @@ class ForgetPasswordBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final TextEditingController phonenumber = TextEditingController();
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-      // verticalSpace(50),
-      const Logo(),
-      verticalSpace(25),
-      Text(
-        S.of(context).forgotpass,
-        style: TextStyles.headings,
-      ),
-      verticalSpace(25),
-      Text(
-        S.of(context).messageforgotpass,
-        style: TextStyles.body,
-        textAlign: TextAlign.center,
-      ),
-      verticalSpace(40),
-      Padding(
-          padding: locale == "en"
-              ?  EdgeInsets.only(right: 220.w)
-              :  EdgeInsets.only(left: 250.w),
-          child: Text(
-            S.of(context).phone,
-            style: TextStyles.bodybold,
-          )),
-      verticalSpace(5),
-      Container(
-          padding: EdgeInsets.symmetric(horizontal: 20.w),
-          width: 385.w,
-          height: 50.h,
-          child: TextFormField(
-              controller: phonenumber,
-              keyboardType: TextInputType.phone,
-              style: TextStyles.small,
-              decoration: InputDecoration(
-                  filled: true,
-                  fillColor: Colors.white,
-                  hintText: S.of(context).enteryphonenumber,
-                  focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10.sp),
-                      borderSide: const BorderSide(
-                          width: 1, color: ColorManager.black)),
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10.sp),
-                      borderSide: const BorderSide(
-                          width: 1, color: ColorManager.black))))),
-      verticalSpace(25),
-      const NextButtton()
-    ]);
+    return ListView(
+      children: [Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+        // verticalSpace(50),
+        const Logo(),
+        verticalSpace(25),
+        Text(
+          S.of(context).forgotpass,
+          style: TextStyles.headings,
+        ),
+        verticalSpace(25),
+        Text(
+          S.of(context).messageforgotpass,
+          style: TextStyles.body,
+          textAlign: TextAlign.center,
+        ),
+        verticalSpace(40),
+        Padding(
+            padding: locale == "en"
+                ?  EdgeInsets.only(right: 220.w)
+                :  EdgeInsets.only(left: 250.w),
+            child: Text(
+              S.of(context).phone,
+              style: TextStyles.bodybold,
+            )),
+        verticalSpace(5),
+        Container(
+            padding: EdgeInsets.symmetric(horizontal: 20.w),
+            width: 385.w,
+            height: 50.h,
+            child: TextFormField(
+                controller: phonenumber,
+                keyboardType: TextInputType.phone,
+                style: TextStyles.small,
+                decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Colors.white,
+                    hintText: S.of(context).enteryphonenumber,
+                    focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10.sp),
+                        borderSide: const BorderSide(
+                            width: 1, color: ColorManager.black)),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10.sp),
+                        borderSide: const BorderSide(
+                            width: 1, color: ColorManager.black))))),
+        verticalSpace(25),
+        const NextButtton()
+      ])],
+    );
   }
 }

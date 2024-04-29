@@ -9,7 +9,8 @@ import 'package:flutter/material.dart';
 import '../../../../login/presentation/views/widgets/login_view_body_text_container.dart';
 
 class UserSignUpFirstBody extends StatefulWidget {
-  const UserSignUpFirstBody({super.key});
+  final PageController? controller;
+  const UserSignUpFirstBody({super.key,this.controller});
 
   @override
   State<UserSignUpFirstBody> createState() => _UserSignUpFirstBodyState();
@@ -60,7 +61,7 @@ class _UserSignUpFirstBodyState extends State<UserSignUpFirstBody> {
         verticalSpace(0),
         const TermsandPolicy(),
         verticalSpace(10),
-        const ButtonSignUp(),
+        ButtonSignUp(controller: widget.controller!,),
         verticalSpace(10),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,

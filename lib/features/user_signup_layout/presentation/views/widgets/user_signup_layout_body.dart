@@ -1,6 +1,6 @@
 import 'package:fixer/core/helpers/spacing.dart';
-import 'package:fixer/features/phone_number/presentation/views/widgets/phone_number_body.dart';
-import 'package:fixer/features/user_signup_layout/presentation/views/widgets/on_boarding_smoothpageindicator.dart';
+import 'package:fixer/features/user_phone_number/presentation/views/widgets/user_phone_number_body.dart';
+import 'package:fixer/features/user_signup_layout/presentation/views/widgets/signup_smoothpageindicator.dart';
 import 'package:fixer/features/user_signup_layout/presentation/views/widgets/user_address_view.dart';
 import 'package:fixer/features/user_signup/presentation/view/user_signup_view.dart';
 import 'package:flutter/material.dart';
@@ -42,10 +42,10 @@ class _UserSignUpBodyState extends State<UserSignUpBody> {
               width: 400.w,
               child: PageView(
                 controller: controller,
-                children: const [
-                  UserSignUpView(),
-                  PhoneNumberBody(),
-                  UserAddressView(),
+                children: [
+                  UserSignUpView(controller: controller,),
+                  UserPhoneNumberBody(controller: controller,),
+                  const UserAddressView(),
                 ],
               ),
             )

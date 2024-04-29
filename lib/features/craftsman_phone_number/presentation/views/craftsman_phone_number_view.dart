@@ -1,10 +1,10 @@
 import 'package:fixer/core/helpers/spacing.dart';
-import 'package:fixer/features/phone_number/presentation/views/widgets/phone_number_body.dart';
+import 'package:fixer/features/craftsman_phone_number/presentation/views/widgets/phone_number_body.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class PhoneNumberView extends StatelessWidget {
-  const PhoneNumberView({super.key});
+class CraftsmanPhoneNumberView extends StatelessWidget {
+  const CraftsmanPhoneNumberView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class PhoneNumberView extends StatelessWidget {
             ),
             ),
             verticalSpace(30),
-            const PhoneNumberBody(),
+            const CraftsmanPhoneNumberBody(),
           
           ],
         ),
