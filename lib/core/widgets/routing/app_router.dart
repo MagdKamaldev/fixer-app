@@ -37,11 +37,11 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => const UserSignUpView(),
         );
-      case Routes.craftsmanphoneNumber:
+      case Routes.craftsmanPhoneNumber:
         return MaterialPageRoute(
           builder: (_) => const CraftsmanPhoneNumberView(),
         );
-      case Routes.userphoneNumber:
+      case Routes.userPhoneNumber:
         return MaterialPageRoute(
           builder: (context) =>const UserPhoneNumberView()
         );

@@ -3,8 +3,8 @@ class Routes {
   static const String login = '/login';
   static const String getStarted = '/getStarted';
   static const String userSignUp = '/userSignUp';
-  static const String craftsmanphoneNumber = '/phoneNumber';
-  static const String userphoneNumber = '/phoneNumber';
+  static const String craftsmanPhoneNumber = '/phoneNumber';
+  static const String userPhoneNumber = '/phoneNumber';
   static const String password = '/password';
   static const String craftsmanConfirmationCode = '/craftsmanConfirmationCode';
   static const String userConfirmationCode = '/userConfirmationCode';
