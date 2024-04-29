@@ -34,14 +34,10 @@ class _TermsandPolicyState extends State<TermsandPolicy> {
           GestureDetector(
               onTap: () {},
               child: Text(S.of(context).termsandpolicy,
-                  style: 
-                  TextStyles.smallbold.copyWith(
-                    decoration:TextDecoration.underline,
-                    decorationColor: ColorManager.black, 
-                    decorationThickness: 2.sp
-                  )   
-               )
-            )
+                  style: TextStyles.smallbold.copyWith(
+                      decoration: TextDecoration.underline,
+                      decorationColor: ColorManager.black,
+                      decorationThickness: 2.sp))),
         ],
       ),
     );

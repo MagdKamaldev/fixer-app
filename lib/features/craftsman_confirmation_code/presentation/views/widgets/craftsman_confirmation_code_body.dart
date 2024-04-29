@@ -1,6 +1,8 @@
 import 'package:fixer/core/constants/constants.dart';
 import 'package:fixer/core/helpers/spacing.dart';
 import 'package:fixer/core/themes/text_styles.dart';
+import 'package:fixer/core/widgets/routing/routes.dart';
+import 'package:fixer/features/arrow/presentation/views/arrow_button.dart';
 import 'package:fixer/features/craftsman_confirmation_code/presentation/views/widgets/code_textfield_model.dart';
 import 'package:fixer/features/user_confirmation_code/presentation/views/widgets/text_buttons.dart';
 import 'package:fixer/generated/l10n.dart';
@@ -44,7 +46,7 @@ class CraftsmanConfirmationCodeBody extends StatelessWidget {
                   CraftsmanTextFieldModel(),
                   CraftsmanTextFieldModel(),
                   CraftsmanTextFieldModel(),
-                  CraftsmanTextFieldModel(lastTextField: true),
+                  CraftsmanTextFieldModel(lastTextField: true,),
                 ]),
             verticalSpace(35),
             Text(S.of(context).after40sec, style: TextStyles.body),
@@ -60,6 +62,7 @@ class CraftsmanConfirmationCodeBody extends StatelessWidget {
           padding: locale == "en"
                 ? EdgeInsets.only(left: 230.w)
                 : EdgeInsets.only(right: 230.w),
+          child:const ReusableArrowButton(nextPage: Routes.password),
         ),
           ],
         ),
