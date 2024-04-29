@@ -3,7 +3,6 @@ import 'package:fixer/core/themes/text_styles.dart';
 import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class TermsandPolicy extends StatefulWidget {
   const TermsandPolicy({super.key});
@@ -35,14 +34,10 @@ class _TermsandPolicyState extends State<TermsandPolicy> {
           GestureDetector(
               onTap: () {},
               child: Text(S.of(context).termsandpolicy,
-                  style: 
-                  TextStyles.smallbold.copyWith(
-                    decoration:TextDecoration.underline,
-                    decorationColor: ColorManager.black, 
-                    decorationThickness: 2.sp
-                  )   
-               )
-            )
+                  style: TextStyles.smallbold.copyWith(
+                      decoration: TextDecoration.underline,
+                      decorationColor: ColorManager.black,
+                      decorationThickness: 2.sp)))
         ],
       ),
     );
