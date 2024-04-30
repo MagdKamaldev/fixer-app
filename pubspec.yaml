@@ -48,6 +48,7 @@ dependencies:
     sdk: flutter
   firebase_core: ^2.30.1
   country_picker: ^2.0.25
+  dartz: ^0.10.1
 
 dev_dependencies:
   flutter_test:

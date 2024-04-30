@@ -10,7 +10,6 @@ import 'package:fixer/features/craftsman_sign_up/presentation/password/presentat
 import 'package:fixer/features/craftsman_sign_up/presentation/craftsman_phone_number/presentation/views/craftsman_phone_number_view.dart';
 import 'package:fixer/features/reset_password/presentation/reset_password_view.dart';
 import 'package:fixer/features/craftsman_sign_up/presentation/upload_photos/presentation/views/upload_photos_view.dart';
-import 'package:fixer/features/user_sign_up/presentation/user_phone_number/presentation/views/user_phone_number_view.dart';
 import 'package:fixer/features/user_sign_up/presentation/user_signup_layout/presentation/views/user_signup_layout_view.dart';
 import 'package:flutter/material.dart';
 
@@ -41,9 +40,6 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => const CraftsmanPhoneNumberView(),
         );
-      case Routes.userPhoneNumber:
-        return MaterialPageRoute(
-            builder: (context) => const UserPhoneNumberView());
       case Routes.password:
         return MaterialPageRoute(
           builder: (_) => const PasswordView(),
