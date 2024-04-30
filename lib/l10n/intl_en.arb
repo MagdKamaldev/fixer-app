@@ -1,5 +1,5 @@
 {
-  "skip": "skip",
+  "skip": "Skip",
   "onBoardingText1" : "Connect users with skilled \n craftsmen instantly.",
   "onBoardingText2" : "Recieve competitive bids,\n compare prices,and make \n informed decisions.",
   "onBoardingText3" : "Make hassle-free transcations \n within the app for peace of \n mind." ,
@@ -62,6 +62,8 @@
   "Confirmnewpassword":"Confirm new password",
   "Confirmnewpasswordfield":"Confirm your new password",
   "uploadid":"Upload your national ID",
-  "uploadphoto":"Upload your Profile photo"
-
+  "uploadphoto":"Upload your Profile photo",
+  "doneField":"This field already is Done !",
+  "edit":"Edit",
+  "continuee":"Continue"
 }

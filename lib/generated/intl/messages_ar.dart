@@ -39,6 +39,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "change": MessageLookupByLibrary.simpleMessage("تغيير"),
         "city": MessageLookupByLibrary.simpleMessage("المدينة"),
         "cityfield": MessageLookupByLibrary.simpleMessage("ادخل مدينتك"),
+        "continuee": MessageLookupByLibrary.simpleMessage("استمرار"),
+        "doneField":
+            MessageLookupByLibrary.simpleMessage("تم تخطي هذا بالفعل !"),
+        "edit": MessageLookupByLibrary.simpleMessage("تعديل"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
         "emailfield":
             MessageLookupByLibrary.simpleMessage("ادخل بريدك الإلكتروني"),

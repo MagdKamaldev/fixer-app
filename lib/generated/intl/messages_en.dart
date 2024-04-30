@@ -39,6 +39,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "change": MessageLookupByLibrary.simpleMessage("Change"),
         "city": MessageLookupByLibrary.simpleMessage("City"),
         "cityfield": MessageLookupByLibrary.simpleMessage("Enter your city"),
+        "continuee": MessageLookupByLibrary.simpleMessage("Continue"),
+        "doneField": MessageLookupByLibrary.simpleMessage(
+            "This field already is Done !"),
+        "edit": MessageLookupByLibrary.simpleMessage("Edit"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "emailfield": MessageLookupByLibrary.simpleMessage("Enter your email"),
         "entercode":
@@ -104,7 +108,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "signup_user": MessageLookupByLibrary.simpleMessage("Sign up as user"),
         "signupwithgoogle":
             MessageLookupByLibrary.simpleMessage("Sign in with google"),
-        "skip": MessageLookupByLibrary.simpleMessage("skip"),
+        "skip": MessageLookupByLibrary.simpleMessage("Skip"),
         "slogan":
             MessageLookupByLibrary.simpleMessage("YOUR FIX , OUR EXPERTISE."),
         "street": MessageLookupByLibrary.simpleMessage("Street"),

@@ -34,7 +34,7 @@ class ButtonSignUp extends StatelessWidget {
                 backgroundColor: ColorManager.primary,
                 minimumSize: Size.fromHeight(55.h)),
             child: Text(
-              S.of(context).signup,
+              S.of(context).continuee,
               style: TextStyle(
                   color: ColorManager.white,
                   fontSize: 16.sp,

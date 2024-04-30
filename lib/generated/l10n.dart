@@ -50,10 +50,10 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `skip`
+  /// `Skip`
   String get skip {
     return Intl.message(
-      'skip',
+      'Skip',
       name: 'skip',
       desc: '',
       args: [],
@@ -685,6 +685,36 @@ class S {
     return Intl.message(
       'Upload your Profile photo',
       name: 'uploadphoto',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This field already is Done !`
+  String get doneField {
+    return Intl.message(
+      'This field already is Done !',
+      name: 'doneField',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Edit`
+  String get edit {
+    return Intl.message(
+      'Edit',
+      name: 'edit',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Continue`
+  String get continuee {
+    return Intl.message(
+      'Continue',
+      name: 'continuee',
       desc: '',
       args: [],
     );
