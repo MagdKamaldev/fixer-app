@@ -5,7 +5,6 @@ class UserModel {
   String? name;
   String? username;
   String? email;
-  String? password;
   String? phone;
   String? userType;
   Location? location;
@@ -15,7 +14,6 @@ class UserModel {
     this.name,
     this.username,
     this.email,
-    this.password,
     this.phone,
     this.userType,
     this.location,
@@ -26,7 +24,6 @@ class UserModel {
         name: json['name'] as String?,
         username: json['username'] as String?,
         email: json['email'] as String?,
-        password: json['password'] as String?,
         phone: json['phone'] as String?,
         userType: json['user_type'] as String?,
         location: json['location'] == null
@@ -41,7 +38,6 @@ class UserModel {
         'name': name,
         'username': username,
         'email': email,
-        'password': password,
         'phone': phone,
         'user_type': userType,
         'location': location?.toJson(),
