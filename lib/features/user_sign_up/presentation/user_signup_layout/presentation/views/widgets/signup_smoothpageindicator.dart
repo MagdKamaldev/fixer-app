@@ -11,7 +11,7 @@ class SmoothIndicatorUserSignup extends StatelessWidget {
     return SmoothPageIndicator(
       controller: controller,
       count: 3,
-      effect:ExpandingDotsEffect(
+      effect: ExpandingDotsEffect(
         dotHeight: 10.h,
         dotWidth: 10.w,
         activeDotColor: ColorManager.primary,

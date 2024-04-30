@@ -27,15 +27,15 @@ class CraftsmanSignUpTextForm extends StatelessWidget {
           controller: controller,
           keyboardType: textInputType,
           decoration: InputDecoration(
-              hintText: text,
-               enabledBorder: const UnderlineInputBorder(
+            hintText: text,
+            enabledBorder: const UnderlineInputBorder(
               borderSide: BorderSide(color: Colors.transparent),
             ),
             focusedBorder: const UnderlineInputBorder(
               borderSide: BorderSide(color: Colors.transparent),
-            ), 
-              // disabledBorder: const UnderlineInputBorder()
-              ),
+            ),
+            // disabledBorder: const UnderlineInputBorder()
+          ),
         ));
   }
 }

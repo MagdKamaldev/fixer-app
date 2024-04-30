@@ -14,14 +14,15 @@ class CraftsmanPhoneNumberView extends StatelessWidget {
         child: Column(
           children: [
             // verticalSpace(80),
-             SizedBox(child: SvgPicture.asset('assets/images/fixrpic.svg',
-            width: 134.85,
-            height: 91,
-            ),
+            SizedBox(
+              child: SvgPicture.asset(
+                'assets/images/fixrpic.svg',
+                width: 134.85,
+                height: 91,
+              ),
             ),
             verticalSpace(30),
             const CraftsmanPhoneNumberBody(),
-          
           ],
         ),
       ),

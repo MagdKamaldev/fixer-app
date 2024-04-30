@@ -10,7 +10,7 @@ import '../../../../login/presentation/views/widgets/login_view_body_text_contai
 
 class UserSignUpFirstBody extends StatefulWidget {
   final PageController? controller;
-  const UserSignUpFirstBody({super.key,this.controller});
+  const UserSignUpFirstBody({super.key, this.controller});
 
   @override
   State<UserSignUpFirstBody> createState() => _UserSignUpFirstBodyState();
@@ -61,7 +61,9 @@ class _UserSignUpFirstBodyState extends State<UserSignUpFirstBody> {
         verticalSpace(0),
         const TermsandPolicy(),
         verticalSpace(10),
-        ButtonSignUp(controller: widget.controller!,),
+        ButtonSignUp(
+          controller: widget.controller!,
+        ),
         verticalSpace(10),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,

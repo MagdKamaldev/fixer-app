@@ -21,10 +21,8 @@ class _ResetPasswordBodyState extends State<ResetPasswordBody> {
   bool obscure = true;
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      children:[ Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
+    return ListView(children: [
+      Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
         const Logo(),
         verticalSpace(25),
         Text(
@@ -34,8 +32,8 @@ class _ResetPasswordBodyState extends State<ResetPasswordBody> {
         verticalSpace(40),
         Padding(
             padding: locale == "en"
-                ?  EdgeInsets.only(right: 220.w)
-                :  EdgeInsets.only(left: 210.w),
+                ? EdgeInsets.only(right: 220.w)
+                : EdgeInsets.only(left: 210.w),
             child: Text(
               S.of(context).newpassword,
               style: TextStyles.bodybold,
@@ -58,8 +56,8 @@ class _ResetPasswordBodyState extends State<ResetPasswordBody> {
         verticalSpace(25),
         Padding(
             padding: locale == "en"
-                ?  EdgeInsets.only(right: 160.w)
-                :  EdgeInsets.only(left: 170.w),
+                ? EdgeInsets.only(right: 160.w)
+                : EdgeInsets.only(left: 170.w),
             child: Text(
               S.of(context).Confirmnewpassword,
               style: TextStyles.bodybold,

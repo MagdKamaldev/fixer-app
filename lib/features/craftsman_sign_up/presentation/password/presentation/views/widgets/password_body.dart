@@ -16,65 +16,65 @@ class PasswordBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child:Column(
-          // crossAxisAlignment: CrossAxisAlignment.end,
-          children: [
-            Padding(
-              padding: locale == "en"
-                  ? EdgeInsets.only(right: 250.w)
-                  : EdgeInsets.only(left: 270.w),
+      child: Column(
+        // crossAxisAlignment: CrossAxisAlignment.end,
+        children: [
+          Padding(
+            padding: locale == "en"
+                ? EdgeInsets.only(right: 250.w)
+                : EdgeInsets.only(left: 270.w),
+            child: Text(
+              S.of(context).password,
+              style: TextStyles.bodybold,
+            ),
+          ),
+          verticalSpace(5),
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: 20.w),
+            width: 385.w,
+            height: 55.h,
+            child: TextFormField(
+              controller: password,
+              keyboardType: TextInputType.text,
+              obscureText: true,
+              style: TextStyles.small,
+              decoration: InputDecoration(
+                  filled: true,
+                  fillColor: Colors.white,
+                  hintText: S.of(context).password,
+                  focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10.sp),
+                      borderSide: const BorderSide(
+                          width: 1, color: ColorManager.black)),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10.sp),
+                    borderSide:
+                        const BorderSide(width: 1, color: ColorManager.black),
+                  )),
+            ),
+          ),
+          verticalSpace(10),
+          Padding(
+            padding: locale == "en"
+                ? EdgeInsets.only(left: 25.w)
+                : EdgeInsets.only(right: 20.w),
+            child: SizedBox(
+              width: 340.w,
               child: Text(
-                S.of(context).password,
-                style: TextStyles.bodybold,
-              ),
-            ),
-            verticalSpace(5),
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: 20.w),
-              width: 385.w,
-              height: 55.h,
-              child:TextFormField(
-                  controller: password,
-                  keyboardType: TextInputType.text,
-                  obscureText: true,
-                  style: TextStyles.small,
-                  decoration: InputDecoration(   
-                      filled: true,
-                      fillColor: Colors.white,
-                      hintText: S.of(context).password,
-                      focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10.sp),
-                          borderSide: const BorderSide(
-                              width: 1, color: ColorManager.black)),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10.sp),
-                        borderSide:
-                            const BorderSide(width: 1, color: ColorManager.black),
-                      )
-                    ),
-                ),
-              ),
-            verticalSpace(10),
-            Padding(
-              padding:  locale == "en"
-                  ? EdgeInsets.only(left: 25.w)
-                  : EdgeInsets.only(right: 20.w),
-              child: SizedBox(
-                width: 340.w,
-                child: Text(S.of(context).passwordinstructions,
+                S.of(context).passwordinstructions,
                 style: TextStyles.small.copyWith(color: Colors.red),
-                ),
-                ),
+              ),
             ),
-            verticalSpace(50),
-             Padding(
-          padding: locale == "en"
+          ),
+          verticalSpace(50),
+          Padding(
+            padding: locale == "en"
                 ? EdgeInsets.only(left: 230.w)
                 : EdgeInsets.only(right: 230.w),
-          child: const ReusableArrowButton(nextPage: Routes.craftsmanSignUp),
-        ),
-          ],
-        ),
+            child: const ReusableArrowButton(nextPage: Routes.craftsmanSignUp),
+          ),
+        ],
+      ),
     );
   }
 }

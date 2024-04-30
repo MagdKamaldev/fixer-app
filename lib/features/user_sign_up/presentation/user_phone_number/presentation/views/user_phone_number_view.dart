@@ -5,7 +5,7 @@ import 'package:flutter_svg/svg.dart';
 
 class UserPhoneNumberView extends StatelessWidget {
   final PageController? controller;
-  const UserPhoneNumberView({super.key,this.controller});
+  const UserPhoneNumberView({super.key, this.controller});
 
   @override
   Widget build(BuildContext context) {
@@ -15,14 +15,17 @@ class UserPhoneNumberView extends StatelessWidget {
         child: Column(
           children: [
             // verticalSpace(80),
-             SizedBox(child: SvgPicture.asset('assets/images/fixrpic.svg',
-            width: 134.85,
-            height: 91,
-            ),
+            SizedBox(
+              child: SvgPicture.asset(
+                'assets/images/fixrpic.svg',
+                width: 134.85,
+                height: 91,
+              ),
             ),
             verticalSpace(30),
-            UserPhoneNumberBody(controller: controller!,),
-          
+            UserPhoneNumberBody(
+              controller: controller!,
+            ),
           ],
         ),
       ),

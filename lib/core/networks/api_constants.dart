@@ -4,4 +4,4 @@ class ApiConstants {
   static const String registerClient = 'ClientRegistration';
   static const String registerAdmin = 'AdminRegistration';
   static const String getAllAdmins = 'retrive';
-  }
+}

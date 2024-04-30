@@ -13,38 +13,36 @@ class CityDropDown extends StatefulWidget {
 
 class _CityDropDownState extends State<CityDropDown> {
   String? valueChoose;
-  List<String> listItem=["city1","city2","city3","city4"];
+  List<String> listItem = ["city1", "city2", "city3", "city4"];
   @override
   Widget build(BuildContext context) {
     return Container(
       width: 330.w,
       height: 55.h,
-      decoration: BoxDecoration(border: Border.all(color: ColorManager.black),
-      borderRadius: BorderRadius.circular(10.sp)
-      ),
+      decoration: BoxDecoration(
+          border: Border.all(color: ColorManager.black),
+          borderRadius: BorderRadius.circular(10.sp)),
       padding: EdgeInsets.symmetric(horizontal: 25.h),
       child: DropdownButton<String>(
-        hint:Text(S.of(context).cityfield),
+        hint: Text(S.of(context).cityfield),
         style: TextStyles.body.copyWith(color: ColorManager.darkgrey),
         icon: const Icon(Icons.arrow_drop_down),
         iconSize: 25,
         isExpanded: true,
-        underline:const SizedBox(),
+        underline: const SizedBox(),
         value: valueChoose,
-        onChanged: (String? newvalue){
+        onChanged: (String? newvalue) {
           setState(() {
             valueChoose = newvalue;
           });
         },
-        items: listItem.map((valueItem){
+        items: listItem.map((valueItem) {
           return DropdownMenuItem(
             value: valueItem,
             child: Text(valueItem),
-            );
-        }).toList(), 
-        
-        
-        ),
+          );
+        }).toList(),
+      ),
     );
   }
 }

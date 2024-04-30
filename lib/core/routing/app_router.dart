@@ -43,8 +43,7 @@ class AppRouter {
         );
       case Routes.userPhoneNumber:
         return MaterialPageRoute(
-          builder: (context) =>const UserPhoneNumberView()
-        );
+            builder: (context) => const UserPhoneNumberView());
       case Routes.password:
         return MaterialPageRoute(
           builder: (_) => const PasswordView(),
@@ -56,7 +55,7 @@ class AppRouter {
       case Routes.userConfirmationCode:
         return MaterialPageRoute(
           builder: (_) => const UserConfirmationCodeView(),
-        );   
+        );
       case Routes.craftsmanSignUp:
         return MaterialPageRoute(
           builder: (_) => const CraftsmanSignUpView(),

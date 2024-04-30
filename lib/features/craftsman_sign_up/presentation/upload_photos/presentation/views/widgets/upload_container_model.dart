@@ -5,7 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class UploadConatiner extends StatelessWidget {
   final String text;
-  const UploadConatiner({super.key,required this.text});
+  const UploadConatiner({super.key, required this.text});
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -13,16 +13,20 @@ class UploadConatiner extends StatelessWidget {
       width: 340.w,
       padding: const EdgeInsets.all(10),
       decoration: BoxDecoration(
-        border: Border(bottom:BorderSide(color: ColorManager.black,width: 1.sp))
-      ),
+          border: Border(
+              bottom: BorderSide(color: ColorManager.black, width: 1.sp))),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(text,
-          style: TextStyles.body,
+          Text(
+            text,
+            style: TextStyles.body,
           ),
-          Icon(Icons.arrow_forward_ios_outlined,
-          color: ColorManager.grey,size: 25.sp,)
+          Icon(
+            Icons.arrow_forward_ios_outlined,
+            color: ColorManager.grey,
+            size: 25.sp,
+          )
         ],
       ),
     );

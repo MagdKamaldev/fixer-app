@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 
 class CraftsmanConfirmationCodeView extends StatelessWidget {
   const CraftsmanConfirmationCodeView({super.key});
-  
+
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-      appBar:AppBar(),
-      body:const CraftsmanConfirmationCodeBody(),
+    return Scaffold(
+      appBar: AppBar(),
+      body: const CraftsmanConfirmationCodeBody(),
     );
   }
 }

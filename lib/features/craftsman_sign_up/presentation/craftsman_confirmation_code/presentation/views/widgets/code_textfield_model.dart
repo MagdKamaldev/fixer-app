@@ -7,7 +7,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class CraftsmanTextFieldModel extends StatelessWidget {
   final bool? lastTextField;
   final String? routeName;
-  const CraftsmanTextFieldModel({super.key,this.lastTextField, this.routeName});
+  const CraftsmanTextFieldModel(
+      {super.key, this.lastTextField, this.routeName});
 
   @override
   Widget build(BuildContext context) {
@@ -19,12 +20,11 @@ class CraftsmanTextFieldModel extends StatelessWidget {
           if (value.length == 1) {
             FocusScope.of(context).nextFocus();
           }
-          if(value.isEmpty){
+          if (value.isEmpty) {
             FocusScope.of(context).previousFocus();
           }
-          if(lastTextField==true){
-           context.pushNamed(Routes.password);
-            
+          if (lastTextField == true) {
+            context.pushNamed(Routes.password);
           }
         },
         decoration: InputDecoration(
@@ -41,7 +41,5 @@ class CraftsmanTextFieldModel extends StatelessWidget {
         ],
       ),
     );
-
-
   }
 }

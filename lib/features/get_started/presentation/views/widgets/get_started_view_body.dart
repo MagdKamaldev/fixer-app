@@ -9,7 +9,7 @@ class GetStartedBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar:AppBar(),
+        appBar: AppBar(),
         body: ListView(children: [
           Column(mainAxisAlignment: MainAxisAlignment.center, children: [
             // verticalSpace(195),

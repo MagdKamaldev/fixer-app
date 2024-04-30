@@ -5,8 +5,6 @@ class ResetPassword extends StatelessWidget {
   const ResetPassword({super.key});
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
-      body: const ResetPasswordBody());
+    return Scaffold(appBar: AppBar(), body: const ResetPasswordBody());
   }
 }

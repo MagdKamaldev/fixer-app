@@ -14,49 +14,67 @@ class UserAddressView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          verticalSpace(20),
-          Stack(alignment:locale=="en"? Alignment.centerRight:Alignment.centerLeft,
-            children:[ 
-            AddressTextFieldModel(width:380.w,labeltext:S.of(context).area, icons: const Icon(Icons.location_on_outlined)),
-            Padding(
-              padding: locale=="en"
-                      ?EdgeInsets.only(right: 40.w)
-                      :EdgeInsets.only(left: 40.w),
-              child: InkWell(
-                onTap: () {
-                  
-                },
-                child: Text(S.of(context).change,style: TextStyles.smallbold.copyWith(color: ColorManager.primary),)),
-            )
-            
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        verticalSpace(20),
+        Stack(
+            alignment:
+                locale == "en" ? Alignment.centerRight : Alignment.centerLeft,
+            children: [
+              AddressTextFieldModel(
+                  width: 380.w,
+                  labeltext: S.of(context).area,
+                  icons: const Icon(Icons.location_on_outlined)),
+              Padding(
+                padding: locale == "en"
+                    ? EdgeInsets.only(right: 40.w)
+                    : EdgeInsets.only(left: 40.w),
+                child: InkWell(
+                    onTap: () {},
+                    child: Text(
+                      S.of(context).change,
+                      style: TextStyles.smallbold
+                          .copyWith(color: ColorManager.primary),
+                    )),
+              )
             ]),
-          verticalSpace(40),
-          AddressTextFieldModel(width:380.w,labeltext: S.of(context).building, icons: const Icon(Icons.home_outlined)),
-          verticalSpace(10),
-          SizedBox(
-            width: 385.w,
-            height:55.h,
-            child: Row(
-              // crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                AddressTextFieldModel(width:165.w,labeltext: S.of(context).Aptartment, icons: const Icon(Icons.map_outlined )),
-                AddressTextFieldModel(width:165.w,labeltext: S.of(context).floor, icons: const Icon(Icons.escalator_outlined)),
-            
-              ],
-            ),
+        verticalSpace(40),
+        AddressTextFieldModel(
+            width: 380.w,
+            labeltext: S.of(context).building,
+            icons: const Icon(Icons.home_outlined)),
+        verticalSpace(10),
+        SizedBox(
+          width: 385.w,
+          height: 55.h,
+          child: Row(
+            // crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              AddressTextFieldModel(
+                  width: 165.w,
+                  labeltext: S.of(context).Aptartment,
+                  icons: const Icon(Icons.map_outlined)),
+              AddressTextFieldModel(
+                  width: 165.w,
+                  labeltext: S.of(context).floor,
+                  icons: const Icon(Icons.escalator_outlined)),
+            ],
           ),
-          verticalSpace(10),
-          AddressTextFieldModel(width:380.w,labeltext: S.of(context).street, icons: const Icon(Icons.location_on_outlined)),
-          verticalSpace(10),
-          AddressTextFieldModel(width:380.w,labeltext:S.of(context).aditionalDirections, icons: const Icon(Icons.location_on_outlined)),
-          verticalSpace(60),
-          const GetStartedButton()
-
-
-        ],
-      );
+        ),
+        verticalSpace(10),
+        AddressTextFieldModel(
+            width: 380.w,
+            labeltext: S.of(context).street,
+            icons: const Icon(Icons.location_on_outlined)),
+        verticalSpace(10),
+        AddressTextFieldModel(
+            width: 380.w,
+            labeltext: S.of(context).aditionalDirections,
+            icons: const Icon(Icons.location_on_outlined)),
+        verticalSpace(60),
+        const GetStartedButton()
+      ],
+    );
   }
 }

@@ -29,18 +29,20 @@ class FieldOfServiceBody extends StatelessWidget {
             onTap: () {
               context.pushNamed(Routes.uploadPhotos);
             },
-            child: SvgPicture.asset("assets/images/Electrical_card.svg",
-            height: 180.h,
-            width:150.w ,
+            child: SvgPicture.asset(
+              "assets/images/Electrical_card.svg",
+              height: 180.h,
+              width: 150.w,
             )),
         verticalSpace(40),
         GestureDetector(
             onTap: () {
               context.pushNamed(Routes.uploadPhotos);
             },
-            child: SvgPicture.asset("assets/images/plumbing_card.svg",
-            height: 180.h,
-            width: 150.w,
+            child: SvgPicture.asset(
+              "assets/images/plumbing_card.svg",
+              height: 180.h,
+              width: 150.w,
             ))
       ]),
     );

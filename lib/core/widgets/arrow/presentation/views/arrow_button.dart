@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ReusableArrowButton extends StatelessWidget {
-  final String nextPage; 
-  const ReusableArrowButton({super.key,required this.nextPage});
+  final String nextPage;
+  const ReusableArrowButton({super.key, required this.nextPage});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-      context.pushNamed(nextPage);
+        context.pushNamed(nextPage);
       },
       child: Container(
           margin: EdgeInsets.symmetric(horizontal: 20.w),

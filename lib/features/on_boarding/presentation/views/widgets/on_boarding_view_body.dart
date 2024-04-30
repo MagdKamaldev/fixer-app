@@ -6,7 +6,6 @@ import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-
 class OnBoardingViewBody extends StatefulWidget {
   const OnBoardingViewBody({super.key});
 
@@ -28,7 +27,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
             // turn into true
           });
         },
-        children:[
+        children: [
           OnBoardingContainer(
             image: "assets/images/onboarding1.svg",
             text: S.of(context).onBoardingText1,
@@ -47,7 +46,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
         controller: controller,
       ),
       Container(
-          padding: EdgeInsets.symmetric(horizontal: 60.h,vertical: 60.w),
+          padding: EdgeInsets.symmetric(horizontal: 60.h, vertical: 60.w),
           alignment: Alignment.bottomLeft,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

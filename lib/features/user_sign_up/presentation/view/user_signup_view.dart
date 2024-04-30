@@ -3,10 +3,13 @@ import 'package:flutter/material.dart';
 
 class UserSignUpView extends StatelessWidget {
   final PageController? controller;
-  const UserSignUpView({super.key,this.controller});
+  const UserSignUpView({super.key, this.controller});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: UserSignUpFirstBody(controller: controller,));
+    return Scaffold(
+        body: UserSignUpFirstBody(
+      controller: controller,
+    ));
   }
 }

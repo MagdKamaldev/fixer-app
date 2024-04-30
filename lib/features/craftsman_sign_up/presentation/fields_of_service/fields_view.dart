@@ -6,8 +6,6 @@ class FieldOfService extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
-      body: const FieldOfServiceBody());
+    return Scaffold(appBar: AppBar(), body: const FieldOfServiceBody());
   }
 }

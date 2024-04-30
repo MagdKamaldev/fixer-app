@@ -7,7 +7,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class UserTextFieldModel extends StatelessWidget {
   final bool? lastTextField;
   // final PageController? controller;
-  const UserTextFieldModel({super.key,this.lastTextField});
+  const UserTextFieldModel({super.key, this.lastTextField});
 
   @override
   Widget build(BuildContext context) {
@@ -19,13 +19,11 @@ class UserTextFieldModel extends StatelessWidget {
           if (value.length == 1) {
             FocusScope.of(context).nextFocus();
           }
-          if(value.isEmpty){
+          if (value.isEmpty) {
             FocusScope.of(context).previousFocus();
           }
-          if(lastTextField==true){
-           
-           context.pushNamed(Routes.userSignUp);
-            
+          if (lastTextField == true) {
+            context.pushNamed(Routes.userSignUp);
           }
         },
         decoration: InputDecoration(
@@ -42,7 +40,5 @@ class UserTextFieldModel extends StatelessWidget {
         ],
       ),
     );
-
-
   }
 }

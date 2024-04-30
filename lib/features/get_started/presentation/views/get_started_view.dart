@@ -6,8 +6,6 @@ class GetStartedView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: GetStartedBody()
-      );
+    return const Scaffold(body: GetStartedBody());
   }
 }

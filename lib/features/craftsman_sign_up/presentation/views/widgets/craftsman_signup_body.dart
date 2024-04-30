@@ -13,16 +13,16 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CraftsmanSignUpViewBody extends StatelessWidget {
   const CraftsmanSignUpViewBody({super.key});
-  static final TextEditingController firstNameController = TextEditingController();
-  static final TextEditingController lastNameController = TextEditingController();
+  static final TextEditingController firstNameController =
+      TextEditingController();
+  static final TextEditingController lastNameController =
+      TextEditingController();
   static final TextEditingController idController = TextEditingController();
   static final TextEditingController cityController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return ListView(children: [
-      Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
+      Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
         const Logo(),
         verticalSpace(40),
         TextContainer(text: S.of(context).firstname, margin: 35),
@@ -55,8 +55,8 @@ class CraftsmanSignUpViewBody extends StatelessWidget {
         verticalSpace(30),
         Padding(
           padding: locale == "en"
-                ? EdgeInsets.only(left: 230.w)
-                : EdgeInsets.only(right: 230.w),
+              ? EdgeInsets.only(left: 230.w)
+              : EdgeInsets.only(right: 230.w),
           child: const ReusableArrowButton(nextPage: Routes.fieldOfService),
         )
       ]),
