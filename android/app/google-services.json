@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1077249954572",
+    "project_id": "fixer-c7cba",
+    "storage_bucket": "fixer-c7cba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1077249954572:android:f8bc8f41de71e315596f29",
+        "android_client_info": {
+          "package_name": "com.example.fixer"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtF8PyY_Tbo4QYLMmvNHrtPWv58CfMcPg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
