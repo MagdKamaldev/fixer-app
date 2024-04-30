@@ -1,12 +1,12 @@
 import 'package:fixer/core/helpers/spacing.dart';
 import 'package:fixer/features/login/presentation/views/widgets/login_view_body_logo.dart';
-import 'package:fixer/features/reset_password/widgets/reset_button.dart';
-import 'package:fixer/features/reset_password/widgets/reset_password_textfield.dart';
+import 'package:fixer/features/reset_password/presentation/widgets/reset_button.dart';
+import 'package:fixer/features/reset_password/presentation/widgets/reset_password_textfield.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../core/constants/constants.dart';
-import '../../../core/themes/text_styles.dart';
-import '../../../generated/l10n.dart';
+import '../../../../core/constants/constants.dart';
+import '../../../../core/themes/text_styles.dart';
+import '../../../../generated/l10n.dart';
 
 class ResetPasswordBody extends StatefulWidget {
   const ResetPasswordBody({super.key});

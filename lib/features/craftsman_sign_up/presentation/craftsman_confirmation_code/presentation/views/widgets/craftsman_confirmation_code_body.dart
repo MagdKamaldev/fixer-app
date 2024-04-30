@@ -1,8 +1,8 @@
 import 'package:fixer/core/constants/constants.dart';
 import 'package:fixer/core/helpers/spacing.dart';
 import 'package:fixer/core/themes/text_styles.dart';
-import 'package:fixer/core/widgets/routing/routes.dart';
-import 'package:fixer/features/arrow/presentation/views/arrow_button.dart';
+import 'package:fixer/core/routing/routes.dart';
+import 'package:fixer/core/widgets/arrow/presentation/views/arrow_button.dart';
 import 'package:fixer/features/craftsman_sign_up/presentation/craftsman_confirmation_code/presentation/views/widgets/code_textfield_model.dart';
 import 'package:fixer/features/user_sign_up/presentation/user_confirmation_code/presentation/views/widgets/text_buttons.dart';
 import 'package:fixer/generated/l10n.dart';

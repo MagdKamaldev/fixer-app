@@ -2,7 +2,7 @@ import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../core/themes/colors.dart';
+import '../../../../core/themes/colors.dart';
 
 class ResetButtton extends StatelessWidget {
   const ResetButtton({super.key});

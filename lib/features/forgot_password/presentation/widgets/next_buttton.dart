@@ -1,9 +1,9 @@
-import 'package:fixer/core/widgets/routing/routes.dart';
+import 'package:fixer/core/routing/routes.dart';
 import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../core/themes/colors.dart';
+import '../../../../core/themes/colors.dart';
 
 class NextButtton extends StatefulWidget {
   const NextButtton({super.key});

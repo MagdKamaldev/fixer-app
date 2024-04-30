@@ -1,5 +1,5 @@
 import 'package:fixer/core/helpers/extensions.dart';
-import 'package:fixer/core/widgets/routing/routes.dart';
+import 'package:fixer/core/routing/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

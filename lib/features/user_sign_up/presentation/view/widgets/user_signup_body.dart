@@ -1,6 +1,6 @@
 import 'package:fixer/core/helpers/spacing.dart';
 import 'package:fixer/core/themes/text_styles.dart';
-import 'package:fixer/core/widgets/routing/routes.dart';
+import 'package:fixer/core/routing/routes.dart';
 import 'package:fixer/features/craftsman_sign_up/presentation/views/widgets/terms_and_policy_row.dart';
 import 'package:fixer/features/user_sign_up/presentation/view/widgets/signup_buttons.dart';
 import 'package:fixer/features/user_sign_up/presentation/view/widgets/user_first_signup_textform.dart';

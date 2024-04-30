@@ -2,7 +2,7 @@ import 'package:fixer/core/themes/text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../core/themes/colors.dart';
+import '../../../../core/themes/colors.dart';
 
 class ResetPasswordTextField extends StatelessWidget {
   const ResetPasswordTextField(

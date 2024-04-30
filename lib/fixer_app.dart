@@ -1,7 +1,7 @@
 import 'package:fixer/core/constants/constants.dart';
 import 'package:fixer/core/themes/colors.dart';
-import 'package:fixer/core/widgets/routing/app_router.dart';
-import 'package:fixer/core/widgets/routing/routes.dart';
+import 'package:fixer/core/routing/app_router.dart';
+import 'package:fixer/core/routing/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';

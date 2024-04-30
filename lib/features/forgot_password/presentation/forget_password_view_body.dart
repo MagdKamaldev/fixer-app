@@ -1,5 +1,5 @@
 import 'package:fixer/core/themes/colors.dart';
-import 'package:fixer/features/forget_password/widgets/next_buttton.dart';
+import 'package:fixer/features/forgot_password/presentation/widgets/next_buttton.dart';
 import 'package:fixer/features/login/presentation/views/widgets/login_view_body_logo.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
