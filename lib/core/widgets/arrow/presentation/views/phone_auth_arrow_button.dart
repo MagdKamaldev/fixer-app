@@ -1,20 +1,16 @@
-import 'package:fixer/core/helpers/extensions.dart';
 import 'package:fixer/core/themes/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class ReusableArrowButton extends StatelessWidget {
-  final String nextPage;
+class PhoneAuthArrowButton extends StatelessWidget {
   final Function() onPressed;
-  const ReusableArrowButton(
-      {super.key, required this.nextPage, required this.onPressed});
+  const PhoneAuthArrowButton({super.key, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
         onPressed();
-        context.pushNamed(nextPage);
       },
       child: Container(
           margin: EdgeInsets.symmetric(horizontal: 20.w),

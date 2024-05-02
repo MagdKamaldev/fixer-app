@@ -17,15 +17,15 @@ class UserSignUpCubit extends Cubit<UserSignUpState> {
   bool is2Done = false;
   bool is3Done = false;
 
-  void changePageState(int page) {
+  void changePageState(int page, bool value) {
     if (page == 1) {
-      is1Done = !is1Done;
+      is1Done = value;
       emit(ChangePageState());
     } else if (page == 2) {
-      is2Done = !is2Done;
+      is2Done = value;
       emit(ChangePageState());
     } else if (page == 3) {
-      is3Done = !is3Done;
+      is3Done = value;
       emit(ChangePageState());
     }
   }

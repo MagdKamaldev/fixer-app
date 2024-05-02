@@ -19,6 +19,7 @@ class CraftsmanSignUpViewBody extends StatelessWidget {
       TextEditingController();
   static final TextEditingController idController = TextEditingController();
   static final TextEditingController cityController = TextEditingController();
+  static bool isAgreed = false;
   @override
   Widget build(BuildContext context) {
     return ListView(children: [
@@ -57,7 +58,10 @@ class CraftsmanSignUpViewBody extends StatelessWidget {
           padding: locale == "en"
               ? EdgeInsets.only(left: 230.w)
               : EdgeInsets.only(right: 230.w),
-          child: const ReusableArrowButton(nextPage: Routes.fieldOfService),
+          child: ReusableArrowButton(
+            nextPage: Routes.fieldOfService,
+            onPressed: () {},
+          ),
         )
       ]),
     ]);

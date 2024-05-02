@@ -53,7 +53,7 @@ class CraftsmanPhoneNumberBody extends StatelessWidget {
           ),
         ),
         verticalSpace(75),
-        const ReusableArrowButton(nextPage: Routes.craftsmanConfirmationCode),
+         ReusableArrowButton(nextPage: Routes.craftsmanConfirmationCode,onPressed: (){},),
       ],
     );
   }

@@ -7,7 +7,6 @@ class Routes {
   static const String userPhoneNumber = '/phoneNumber';
   static const String password = '/password';
   static const String craftsmanConfirmationCode = '/craftsmanConfirmationCode';
-  static const String userConfirmationCode = '/userConfirmationCode';
   static const String craftsmanSignUp = '/craftsmanSignUp';
   static const String fieldOfService = '/fieldOfService';
   static const String uploadPhotos = '/uploadPhotos';

@@ -65,5 +65,7 @@
   "uploadphoto":"Upload your Profile photo",
   "doneField":"This field already is Done !",
   "edit":"Edit",
-  "continuee":"Continue"
+  "continuee":"Continue",
+  "accepttermsandpolicy":"You must accept the terms and policy !",
+  "emptyValidation":"Field must not be empty !"
 }

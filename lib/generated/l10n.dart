@@ -719,6 +719,26 @@ class S {
       args: [],
     );
   }
+
+  /// `You must accept the terms and policy !`
+  String get accepttermsandpolicy {
+    return Intl.message(
+      'You must accept the terms and policy !',
+      name: 'accepttermsandpolicy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Field must not be empty !`
+  String get emptyValidation {
+    return Intl.message(
+      'Field must not be empty !',
+      name: 'emptyValidation',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

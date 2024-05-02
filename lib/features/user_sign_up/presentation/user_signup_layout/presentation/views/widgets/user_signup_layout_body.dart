@@ -2,7 +2,7 @@ import 'package:fixer/core/helpers/spacing.dart';
 import 'package:fixer/core/service_locator/service_locator.dart';
 import 'package:fixer/core/widgets/done_animation.dart';
 import 'package:fixer/features/user_sign_up/data/repos/user_signup_repository_implementation.dart';
-import 'package:fixer/features/user_sign_up/manager/cubit/user_sign_up_cubit.dart';
+import 'package:fixer/features/user_sign_up/manager/user_sign_up_cubit/user_sign_up_cubit.dart';
 import 'package:fixer/features/user_sign_up/presentation/user_phone_number/presentation/views/widgets/user_phone_number_body.dart';
 import 'package:fixer/features/user_sign_up/presentation/user_signup_layout/presentation/views/widgets/signup_smoothpageindicator.dart';
 import 'package:fixer/features/user_sign_up/presentation/user_signup_layout/presentation/views/widgets/user_address_view.dart';
@@ -61,17 +61,17 @@ class _UserSignUpBodyState extends State<UserSignUpBody> {
                       children: [
                         cubit.is1Done
                             ? const DoneAnimation()
-                            : UserSignUpView(
+                            : UserPhoneNumberBody(
                                 controller: cubit.controller,
                               ),
                         cubit.is2Done
                             ? const DoneAnimation()
-                            : UserPhoneNumberBody(
+                            : UserSignUpView(
                                 controller: cubit.controller,
                               ),
                         cubit.is3Done
                             ? const DoneAnimation()
-                            : UserAddressView(),
+                            : const UserAddressView(),
                       ],
                     ),
                   )

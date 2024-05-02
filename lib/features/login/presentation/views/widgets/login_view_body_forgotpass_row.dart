@@ -34,7 +34,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
             focusColor: ColorManager.black,
           ),
           Text(S.of(context).remember, style: TextStyles.smallbold),
-          horizontalSpace(60),
+          const Spacer(),
           TextButton(
               onPressed: () {
                 Navigator.of(context).pushNamed(Routes.forgetPassword);

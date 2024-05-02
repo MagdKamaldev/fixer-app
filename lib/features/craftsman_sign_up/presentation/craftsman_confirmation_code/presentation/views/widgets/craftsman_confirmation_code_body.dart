@@ -64,7 +64,7 @@ class CraftsmanConfirmationCodeBody extends StatelessWidget {
             padding: locale == "en"
                 ? EdgeInsets.only(left: 230.w)
                 : EdgeInsets.only(right: 230.w),
-            child: const ReusableArrowButton(nextPage: Routes.password),
+            child: ReusableArrowButton(nextPage: Routes.password,onPressed: (){},),
           ),
         ],
       ),

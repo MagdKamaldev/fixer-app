@@ -27,6 +27,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تأكيد كلمة المرور الجديدة"),
         "Confirmnewpasswordfield": MessageLookupByLibrary.simpleMessage(
             "قم بتأكيد كلمة المرور الجديدة"),
+        "accepttermsandpolicy": MessageLookupByLibrary.simpleMessage(
+            "يجب الموافقة على الشروط والسياسات"),
         "aditionalDirections":
             MessageLookupByLibrary.simpleMessage("اتجاهات إضافية (اختياري)"),
         "after40sec":
@@ -46,6 +48,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
         "emailfield":
             MessageLookupByLibrary.simpleMessage("ادخل بريدك الإلكتروني"),
+        "emptyValidation":
+            MessageLookupByLibrary.simpleMessage("هذا الحقل مطلوب"),
         "entercode": MessageLookupByLibrary.simpleMessage("أدخل رمز التأكيد"),
         "enteryourcode": MessageLookupByLibrary.simpleMessage(
             "أدخل الرمز المكون من 6 أرقام الذي أرسلناه إلى +20"),

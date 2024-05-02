@@ -6,28 +6,25 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ButtonSignUp extends StatelessWidget {
-  const ButtonSignUp({super.key, this.controller});
-  final PageController? controller;
+  final Function()? onPressed;
+  const ButtonSignUp({super.key, this.pageController, this.onPressed});
+  final PageController? pageController;
 
   @override
   Widget build(BuildContext context) {
-    final TextEditingController emailController = TextEditingController();
-    final TextEditingController nameController = TextEditingController();
-    final TextEditingController passwordController = TextEditingController();
-
     return Container(
       margin: EdgeInsets.only(left: 30.w, right: 30.w),
       child: Column(
         children: [
           ElevatedButton(
             onPressed: () {
-              controller!.nextPage(
-                  duration: const Duration(microseconds: 500),
-                  curve: Curves.easeIn);
-              // context.pushNamed(Routes.userphoneNumber);
-              debugPrint("Email : ${emailController.text}");
-              debugPrint("Password : ${passwordController.text}");
-              debugPrint("Name : ${nameController.text}");
+              onPressed!();
+              // pageController!.nextPage(
+              //     duration: const Duration(microseconds: 500),
+              //     curve: Curves.easeIn);
+              // debugPrint("Email : ${emailController.text}");
+              // debugPrint("Password : ${passwordController.text}");
+              // debugPrint("Name : ${nameController.text}");
             },
             style: ElevatedButton.styleFrom(
                 shape: const StadiumBorder(),

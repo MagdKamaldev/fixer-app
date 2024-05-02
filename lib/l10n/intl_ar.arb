@@ -65,5 +65,7 @@
   "uploadphoto":"قم بتحميل صورة ملفك الشخصي",
   "doneField":"تم تخطي هذا بالفعل !",
   "edit":"تعديل",
-  "continuee":"استمرار"
+  "continuee":"استمرار",
+  "accepttermsandpolicy":"يجب الموافقة على الشروط والسياسات",
+  "emptyValidation":"هذا الحقل مطلوب"
 } 

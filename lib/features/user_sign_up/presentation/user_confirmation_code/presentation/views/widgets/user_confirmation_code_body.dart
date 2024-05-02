@@ -10,7 +10,8 @@ import 'package:flutter_svg/svg.dart';
 
 class UserConfirmationCodeBody extends StatelessWidget {
   final PageController? controller;
-  const UserConfirmationCodeBody({super.key, this.controller});
+  final String verificationId;
+  const UserConfirmationCodeBody({super.key, this.controller, required this.verificationId});
 
   @override
   Widget build(BuildContext context) {
@@ -37,15 +38,15 @@ class UserConfirmationCodeBody extends StatelessWidget {
             ],
           ),
           verticalSpace(35),
-          const Row(
+           Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                UserTextFieldModel(),
-                UserTextFieldModel(),
-                UserTextFieldModel(),
-                UserTextFieldModel(),
-                UserTextFieldModel(),
-                UserTextFieldModel(lastTextField: true),
+                const UserTextFieldModel(),
+                const UserTextFieldModel(),
+                const UserTextFieldModel(),
+                const UserTextFieldModel(),
+                const UserTextFieldModel(),
+                UserTextFieldModel(lastTextField: true,verificationId: verificationId,),
               ]),
           verticalSpace(35),
           Text(S.of(context).after40sec, style: TextStyles.body),

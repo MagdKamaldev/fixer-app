@@ -1,6 +1,5 @@
 import 'package:fixer/core/routing/routes.dart';
 import 'package:fixer/features/craftsman_sign_up/presentation/craftsman_confirmation_code/presentation/views/craftsman_confimation_code_view.dart';
-import 'package:fixer/features/user_sign_up/presentation/user_confirmation_code/presentation/views/user_confimation_code_view.dart';
 import 'package:fixer/features/craftsman_sign_up/presentation/views/craftsman_signup_view.dart';
 import 'package:fixer/features/craftsman_sign_up/presentation/fields_of_service/fields_view.dart';
 import 'package:fixer/features/get_started/presentation/views/get_started_view.dart';
@@ -11,14 +10,12 @@ import 'package:fixer/features/craftsman_sign_up/presentation/craftsman_phone_nu
 import 'package:fixer/features/reset_password/presentation/reset_password_view.dart';
 import 'package:fixer/features/craftsman_sign_up/presentation/upload_photos/presentation/views/upload_photos_view.dart';
 import 'package:fixer/features/user_sign_up/presentation/user_signup_layout/presentation/views/user_signup_layout_view.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import '../../features/forgot_password/presentation/forget_password_view.dart';
 
 class AppRouter {
   Route generateRoute(RouteSettings settings) {
-    //this arguments to be passed in any screen like this ( arguments as ClassName )
-    //final arguments = settings.arguments;
     switch (settings.name) {
       case Routes.onBoarding:
         return MaterialPageRoute(
@@ -47,10 +44,6 @@ class AppRouter {
       case Routes.craftsmanConfirmationCode:
         return MaterialPageRoute(
           builder: (_) => const CraftsmanConfirmationCodeView(),
-        );
-      case Routes.userConfirmationCode:
-        return MaterialPageRoute(
-          builder: (_) => const UserConfirmationCodeView(),
         );
       case Routes.craftsmanSignUp:
         return MaterialPageRoute(
@@ -84,3 +77,9 @@ class AppRouter {
     }
   }
 }
+
+void navigateTo(context, widget) => Navigator.push(
+    context,
+    CupertinoPageRoute(
+      builder: (context) => widget,
+    ));

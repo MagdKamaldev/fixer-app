@@ -27,6 +27,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Confirm new password"),
         "Confirmnewpasswordfield":
             MessageLookupByLibrary.simpleMessage("Confirm your new password"),
+        "accepttermsandpolicy": MessageLookupByLibrary.simpleMessage(
+            "You must accept the terms and policy !"),
         "aditionalDirections": MessageLookupByLibrary.simpleMessage(
             "Aditional directions (options)"),
         "after40sec":
@@ -45,6 +47,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "edit": MessageLookupByLibrary.simpleMessage("Edit"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "emailfield": MessageLookupByLibrary.simpleMessage("Enter your email"),
+        "emptyValidation":
+            MessageLookupByLibrary.simpleMessage("Field must not be empty !"),
         "entercode":
             MessageLookupByLibrary.simpleMessage("Enter confirmation code"),
         "enteryourcode": MessageLookupByLibrary.simpleMessage(

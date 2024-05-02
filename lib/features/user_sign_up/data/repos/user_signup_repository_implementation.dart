@@ -12,23 +12,27 @@ class UserSignUpRepositoryImpelemntation implements UserSignUpRepository {
   UserSignUpRepositoryImpelemntation({required this.apiServices});
 
   @override
-  Future<Either<Failure, UserModel>> userSignUp(UserModel user,String password) async {
+  Future<Either<Failure, UserModel>> userSignUp(
+      UserModel user, String password) async {
     try {
       final response =
           await apiServices.post(endPoint: ApiConstants.registerClient, data: {
         "name": user.name,
-        "username":user.name,
+        "username": user.name,
         "email": user.email,
         "password": password,
         "phone": user.phone,
         "user_type": user.userType,
-          });
+      });
       final userModel = UserModel.fromJson(response);
+      print("here");
       return Right(userModel);
     } catch (e) {
       if (e is DioError) {
+        print(e.toString());
         return Left(ServerFailure.fromDioError(e));
       } else {
+        print(e.toString());
         return Left(ServerFailure(e.toString()));
       }
     }

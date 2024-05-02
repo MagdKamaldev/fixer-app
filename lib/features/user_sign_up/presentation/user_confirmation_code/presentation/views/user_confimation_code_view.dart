@@ -3,13 +3,14 @@ import 'package:flutter/material.dart';
 
 class UserConfirmationCodeView extends StatelessWidget {
   // final PageController? controller;
-  const UserConfirmationCodeView({super.key});
+  final String verificationId;
+  const UserConfirmationCodeView({super.key, required this.verificationId});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: const UserConfirmationCodeBody(),
+      body: UserConfirmationCodeBody(verificationId: verificationId,),
     );
   }
 }
