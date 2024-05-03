@@ -1,6 +1,4 @@
 import 'package:fixer/core/helpers/spacing.dart';
-import 'package:fixer/core/models/user_model/user_model.dart';
-import 'package:fixer/core/networks/errors/error_snackbar.dart';
 import 'package:fixer/core/service_locator/service_locator.dart';
 import 'package:fixer/core/themes/text_styles.dart';
 import 'package:fixer/core/routing/routes.dart';
@@ -105,6 +103,19 @@ class _UserSignUpFirstBodyState extends State<UserSignUpFirstBody> {
                   const TermsandPolicy(),
                   verticalSpace(10),
                   ButtonSignUp(
+                    onGooglePressed: () {
+                      UserSignUpCubit.get(context).signUpWithGoogle(context);
+
+                      // if (isAgreed && UserSignUpCubit.get(context).is1Done) {
+                      //   UserSignUpCubit.get(context).signUpWithGoogle(context);
+                      // } else if (!isAgreed) {
+                      //   showErrorSnackbar(
+                      //       context, S.of(context).accepttermsandpolicy);
+                      // } else if (!UserSignUpCubit.get(context).is1Done) {
+                      //   showErrorSnackbar(
+                      //       context, S.of(context).phoneValidation);
+                      // }
+                    },
                     onPressed: () {
                       // if (formKey.currentState!.validate() &&
                       //     isAgreed &&

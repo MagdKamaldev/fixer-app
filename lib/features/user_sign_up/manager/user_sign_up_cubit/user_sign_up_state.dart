@@ -15,4 +15,16 @@ final class UserSignUpFailure extends UserSignUpState {
   UserSignUpFailure(this.message);
 }
 
+final class GoogleSignUpLoading extends UserSignUpState {} 
+
+final class GoogleSignUpSuccess extends UserSignUpState {
+  final AuthCredential credential;
+  GoogleSignUpSuccess(this.credential);
+}
+
+final class GoogleSignUpFailure extends UserSignUpState {
+  final String message;
+  GoogleSignUpFailure(this.message);
+}
+
 final class ChangePageState extends UserSignUpState {}

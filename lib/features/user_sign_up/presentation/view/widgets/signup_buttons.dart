@@ -7,7 +7,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ButtonSignUp extends StatelessWidget {
   final Function()? onPressed;
-  const ButtonSignUp({super.key, this.pageController, this.onPressed});
+  final Function()? onGooglePressed;
+  const ButtonSignUp({super.key, this.pageController, this.onPressed, this.onGooglePressed});
   final PageController? pageController;
 
   @override
@@ -19,12 +20,6 @@ class ButtonSignUp extends StatelessWidget {
           ElevatedButton(
             onPressed: () {
               onPressed!();
-              // pageController!.nextPage(
-              //     duration: const Duration(microseconds: 500),
-              //     curve: Curves.easeIn);
-              // debugPrint("Email : ${emailController.text}");
-              // debugPrint("Password : ${passwordController.text}");
-              // debugPrint("Name : ${nameController.text}");
             },
             style: ElevatedButton.styleFrom(
                 shape: const StadiumBorder(),
@@ -43,7 +38,9 @@ class ButtonSignUp extends StatelessWidget {
           verticalSpace(10),
           // google sign in
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              onGooglePressed!();
+            },
             style: ElevatedButton.styleFrom(
                 side: const BorderSide(color: ColorManager.primary),
                 shape: const StadiumBorder(),
