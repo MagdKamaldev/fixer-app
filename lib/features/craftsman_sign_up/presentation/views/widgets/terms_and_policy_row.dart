@@ -25,7 +25,6 @@ class _TermsandPolicyState extends State<TermsandPolicy> {
               setState(() {
                 isAgreed = !isAgreed;
               });
-              print(isAgreed);
             },
             checkColor: ColorManager.primary,
             activeColor: ColorManager.white,

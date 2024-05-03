@@ -739,6 +739,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Please complete the code !`
+  String get completeCode {
+    return Intl.message(
+      'Please complete the code !',
+      name: 'completeCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please add your phone number !`
+  String get phoneValidation {
+    return Intl.message(
+      'Please add your phone number !',
+      name: 'phoneValidation',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -4,10 +4,13 @@ import 'package:fixer/core/themes/colors.dart';
 import 'package:fixer/core/themes/text_styles.dart';
 import 'package:fixer/core/widgets/arrow/presentation/views/phone_auth_arrow_button.dart';
 import 'package:fixer/features/user_sign_up/manager/phone_auth_cubit/phone_auth_cubit.dart';
+import 'package:fixer/features/user_sign_up/manager/user_sign_up_cubit/user_sign_up_cubit.dart';
 import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+String phoneNumber = "";
 
 class UserPhoneNumberBody extends StatefulWidget {
   final PageController? controller;
@@ -37,7 +40,14 @@ class _UserPhoneNumberBodyState extends State<UserPhoneNumberBody> {
     return BlocProvider(
       create: (context) => PhoneAuthCubit(),
       child: BlocConsumer<PhoneAuthCubit, PhoneAuthState>(
-        listener: (context, state) {},
+        listener: (context, state) {
+          if (state is CodeSentSuccess) {
+            widget.controller!.animateToPage(1,
+                duration: const Duration(milliseconds: 300),
+                curve: Curves.easeIn);
+            UserSignUpCubit.get(context).changePageState(1, true);
+          }
+        },
         builder: (context, state) => Form(
           key: formKey,
           child: Column(
@@ -111,6 +121,7 @@ class _UserPhoneNumberBodyState extends State<UserPhoneNumberBody> {
                     ? PhoneAuthArrowButton(
                         onPressed: () {
                           if (formKey.currentState!.validate()) {
+                            phoneNumber = "${selectedCountry.phoneCode}${phonenumb.text}";
                             PhoneAuthCubit.get(context).signInWithPhoneNumber(
                                 "${selectedCountry.phoneCode}${phonenumb.text}",
                                 context);

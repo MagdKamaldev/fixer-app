@@ -41,6 +41,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "change": MessageLookupByLibrary.simpleMessage("Change"),
         "city": MessageLookupByLibrary.simpleMessage("City"),
         "cityfield": MessageLookupByLibrary.simpleMessage("Enter your city"),
+        "completeCode":
+            MessageLookupByLibrary.simpleMessage("Please complete the code !"),
         "continuee": MessageLookupByLibrary.simpleMessage("Continue"),
         "doneField": MessageLookupByLibrary.simpleMessage(
             "This field already is Done !"),
@@ -99,6 +101,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "passwordinstructions": MessageLookupByLibrary.simpleMessage(
             "it must contain at least two of:numbers,letters,or symbols"),
         "phone": MessageLookupByLibrary.simpleMessage("Phone number"),
+        "phoneValidation": MessageLookupByLibrary.simpleMessage(
+            "Please add your phone number !"),
         "remember": MessageLookupByLibrary.simpleMessage("Remember me"),
         "resendcodeCALL":
             MessageLookupByLibrary.simpleMessage("Resend code by Call"),

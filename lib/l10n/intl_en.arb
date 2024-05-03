@@ -67,5 +67,7 @@
   "edit":"Edit",
   "continuee":"Continue",
   "accepttermsandpolicy":"You must accept the terms and policy !",
-  "emptyValidation":"Field must not be empty !"
+  "emptyValidation":"Field must not be empty !",
+  "completeCode" :"Please complete the code !",
+  "phoneValidation":"Please add your phone number !"
 }

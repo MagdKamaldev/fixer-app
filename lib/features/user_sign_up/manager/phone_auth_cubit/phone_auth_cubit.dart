@@ -1,5 +1,4 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:fixer/core/helpers/extensions.dart';
 import 'package:fixer/core/networks/errors/error_snackbar.dart';
 import 'package:fixer/core/routing/app_router.dart';
 import 'package:fixer/features/user_sign_up/presentation/user_confirmation_code/presentation/views/user_confimation_code_view.dart';
@@ -20,8 +19,6 @@ class PhoneAuthCubit extends Cubit<PhoneAuthState> {
         phoneNumber: phoneNumber,
         verificationCompleted: (PhoneAuthCredential credential) async {
           await _auth.signInWithCredential(credential);
-          Navigator.pop(context);
-
           emit(PhoneAuthSuccess(credential.verificationId!));
         },
         verificationFailed: (FirebaseAuthException e) {
@@ -51,11 +48,12 @@ class PhoneAuthCubit extends Cubit<PhoneAuthState> {
         smsCode: smsCode,
       );
       await _auth.signInWithCredential(credential);
-      showErrorSnackbar(context, "successsss");
-      emit(PhoneAuthSuccess(verificationId));
+      Navigator.pop(context);
+
+      emit(CodeSentSuccess());
     } on FirebaseAuthException catch (e) {
       showErrorSnackbar(context, e.message!);
-      emit(PhoneAuthFailure(e.message!));
+      emit(CodeSentFailure(e.message!));
     }
   }
 }

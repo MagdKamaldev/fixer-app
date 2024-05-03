@@ -25,14 +25,12 @@ class UserSignUpRepositoryImpelemntation implements UserSignUpRepository {
         "user_type": user.userType,
       });
       final userModel = UserModel.fromJson(response);
-      print("here");
+
       return Right(userModel);
     } catch (e) {
       if (e is DioError) {
-        print(e.toString());
         return Left(ServerFailure.fromDioError(e));
       } else {
-        print(e.toString());
         return Left(ServerFailure(e.toString()));
       }
     }

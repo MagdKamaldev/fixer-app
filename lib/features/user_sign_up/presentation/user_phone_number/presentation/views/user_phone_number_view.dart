@@ -14,7 +14,6 @@ class UserPhoneNumberView extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
-            // verticalSpace(80),
             SizedBox(
               child: SvgPicture.asset(
                 'assets/images/fixrpic.svg',

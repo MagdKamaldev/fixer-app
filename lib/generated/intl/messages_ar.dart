@@ -41,6 +41,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "change": MessageLookupByLibrary.simpleMessage("تغيير"),
         "city": MessageLookupByLibrary.simpleMessage("المدينة"),
         "cityfield": MessageLookupByLibrary.simpleMessage("ادخل مدينتك"),
+        "completeCode": MessageLookupByLibrary.simpleMessage(
+            "الرجاء إدخال الرمز المكون من 6 أرقام"),
         "continuee": MessageLookupByLibrary.simpleMessage("استمرار"),
         "doneField":
             MessageLookupByLibrary.simpleMessage("تم تخطي هذا بالفعل !"),
@@ -98,6 +100,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "passwordinstructions": MessageLookupByLibrary.simpleMessage(
             "ويجب أن تحتوي على اثنين على الأقل من: أرقام أو أحرف \nأو رموز"),
         "phone": MessageLookupByLibrary.simpleMessage("رقم التليفون"),
+        "phoneValidation":
+            MessageLookupByLibrary.simpleMessage("الرجاء إدخال رقم هاتف صحيح"),
         "remember": MessageLookupByLibrary.simpleMessage("تذكرني"),
         "resendcodeCALL": MessageLookupByLibrary.simpleMessage(
             "إعادة إرسال الرمز عن طريق الاتصال"),

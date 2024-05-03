@@ -44,33 +44,37 @@ class _UserSignUpBodyState extends State<UserSignUpBody> {
                     ),
                   ),
                   verticalSpace(30),
-                  SmoothIndicatorUserSignup(controller: cubit.controller),
+                  SmoothIndicatorUserSignup(controller: cubit.pageController),
                   verticalSpace(10),
                   Container(
                     color: const Color.fromARGB(255, 255, 255, 255),
                     height: 580.h,
                     width: 400.w,
                     child: PageView(
-                      controller: cubit.controller,
+                      controller: cubit.pageController,
                       onPageChanged: (int index) {
                         setState(() {});
-                        cubit.controller.animateToPage(index,
+                        cubit.pageController.animateToPage(index,
                             duration: const Duration(milliseconds: 300),
                             curve: Curves.easeIn);
                       },
                       children: [
                         cubit.is1Done
-                            ? const DoneAnimation()
+                            ? const DoneAnimation(
+                                page: 1,
+                              )
                             : UserPhoneNumberBody(
-                                controller: cubit.controller,
+                                controller: cubit.pageController,
                               ),
                         cubit.is2Done
-                            ? const DoneAnimation()
+                            ? const DoneAnimation(
+                                page: 2,
+                              )
                             : UserSignUpView(
-                                controller: cubit.controller,
+                                controller: cubit.pageController,
                               ),
                         cubit.is3Done
-                            ? const DoneAnimation()
+                            ? const DoneAnimation(page: 3)
                             : const UserAddressView(),
                       ],
                     ),

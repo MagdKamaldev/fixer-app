@@ -67,5 +67,7 @@
   "edit":"تعديل",
   "continuee":"استمرار",
   "accepttermsandpolicy":"يجب الموافقة على الشروط والسياسات",
-  "emptyValidation":"هذا الحقل مطلوب"
+  "emptyValidation":"هذا الحقل مطلوب",
+  "completeCode" :"الرجاء إدخال الرمز المكون من 6 أرقام",
+  "phoneValidation":"الرجاء إدخال رقم هاتف صحيح"
 } 

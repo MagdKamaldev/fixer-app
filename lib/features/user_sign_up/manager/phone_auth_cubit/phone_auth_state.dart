@@ -15,3 +15,10 @@ final class PhoneAuthSuccess extends PhoneAuthState {
   final String verificationId;
   PhoneAuthSuccess(this.verificationId);
 }
+
+final class CodeSentSuccess extends PhoneAuthState {}
+
+final class CodeSentFailure extends PhoneAuthState {
+  final String message;
+  CodeSentFailure(this.message);
+}
