@@ -1,4 +1,5 @@
 import 'package:country_picker/country_picker.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fixer/core/helpers/spacing.dart';
 import 'package:fixer/core/themes/colors.dart';
 import 'package:fixer/core/themes/text_styles.dart';
@@ -41,12 +42,7 @@ class _UserPhoneNumberBodyState extends State<UserPhoneNumberBody> {
       create: (context) => PhoneAuthCubit(),
       child: BlocConsumer<PhoneAuthCubit, PhoneAuthState>(
         listener: (context, state) {
-          if (state is CodeSentSuccess) {
-            widget.controller!.animateToPage(1,
-                duration: const Duration(milliseconds: 300),
-                curve: Curves.easeIn);
-            UserSignUpCubit.get(context).changePageState(1, true);
-          }
+          
         },
         builder: (context, state) => Form(
           key: formKey,
@@ -121,7 +117,8 @@ class _UserPhoneNumberBodyState extends State<UserPhoneNumberBody> {
                     ? PhoneAuthArrowButton(
                         onPressed: () {
                           if (formKey.currentState!.validate()) {
-                            phoneNumber = "${selectedCountry.phoneCode}${phonenumb.text}";
+                            phoneNumber =
+                                "${selectedCountry.phoneCode}${phonenumb.text}";
                             PhoneAuthCubit.get(context).signInWithPhoneNumber(
                                 "${selectedCountry.phoneCode}${phonenumb.text}",
                                 context);

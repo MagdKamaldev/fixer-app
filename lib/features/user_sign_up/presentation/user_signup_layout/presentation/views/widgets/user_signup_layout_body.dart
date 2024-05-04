@@ -1,6 +1,5 @@
 import 'package:fixer/core/helpers/spacing.dart';
 import 'package:fixer/core/service_locator/service_locator.dart';
-import 'package:fixer/core/widgets/done_animation.dart';
 import 'package:fixer/features/user_sign_up/data/repos/user_signup_repository_implementation.dart';
 import 'package:fixer/features/user_sign_up/manager/user_sign_up_cubit/user_sign_up_cubit.dart';
 import 'package:fixer/features/user_sign_up/presentation/user_phone_number/presentation/views/widgets/user_phone_number_body.dart';
@@ -59,23 +58,13 @@ class _UserSignUpBodyState extends State<UserSignUpBody> {
                             curve: Curves.easeIn);
                       },
                       children: [
-                        cubit.is1Done
-                            ? const DoneAnimation(
-                                page: 1,
-                              )
-                            : UserPhoneNumberBody(
-                                controller: cubit.pageController,
-                              ),
-                        cubit.is2Done
-                            ? const DoneAnimation(
-                                page: 2,
-                              )
-                            : UserSignUpView(
-                                controller: cubit.pageController,
-                              ),
-                        cubit.is3Done
-                            ? const DoneAnimation(page: 3)
-                            : const UserAddressView(),
+                        UserPhoneNumberBody(
+                          controller: cubit.pageController,
+                        ),
+                        UserSignUpView(
+                          controller: cubit.pageController,
+                        ),
+                        const UserAddressView(),
                       ],
                     ),
                   )

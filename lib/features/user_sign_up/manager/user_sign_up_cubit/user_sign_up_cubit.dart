@@ -16,28 +16,16 @@ class UserSignUpCubit extends Cubit<UserSignUpState> {
 
   PageController pageController = PageController();
 
-  bool is1Done = false;
-  bool is2Done = false;
-  bool is3Done = false;
 
-  void changePageState(int page, bool value) {
-    if (page == 1) {
-      is1Done = value;
-      emit(ChangePageState());
-    } else if (page == 2) {
-      is2Done = value;
-      emit(ChangePageState());
-    } else if (page == 3) {
-      is3Done = value;
-      emit(ChangePageState());
-    }
-  }
-
-  Future<void> userSignUp(UserModel user, String password) async {
+  Future<void> userSignUp(UserModel user, String password, context) async {
     emit(UserSignUpLoading());
     final response =
         await userSignUpRepositoryImpelemntation.userSignUp(user, password);
     response.fold((l) {
+      showErrorSnackbar(
+        context,
+        l.message,
+      );
       emit(UserSignUpFailure(l.message));
     }, (r) {
       emit(UserSignUpSuccess(r));
@@ -64,7 +52,8 @@ class UserSignUpCubit extends Cubit<UserSignUpState> {
             userType: "client",
             phone: phoneNumber,
           ),
-          "google");
+          "google",
+          context);
       emit(GoogleSignUpSuccess(credential));
     } catch (e) {
       showErrorSnackbar(context, e.toString());
