@@ -1,11 +1,10 @@
 import 'package:country_picker/country_picker.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:fixer/core/constants/constants.dart';
 import 'package:fixer/core/helpers/spacing.dart';
 import 'package:fixer/core/themes/colors.dart';
 import 'package:fixer/core/themes/text_styles.dart';
 import 'package:fixer/core/widgets/arrow/presentation/views/phone_auth_arrow_button.dart';
 import 'package:fixer/features/user_sign_up/manager/phone_auth_cubit/phone_auth_cubit.dart';
-import 'package:fixer/features/user_sign_up/manager/user_sign_up_cubit/user_sign_up_cubit.dart';
 import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -42,7 +41,11 @@ class _UserPhoneNumberBodyState extends State<UserPhoneNumberBody> {
       create: (context) => PhoneAuthCubit(),
       child: BlocConsumer<PhoneAuthCubit, PhoneAuthState>(
         listener: (context, state) {
-          
+          if (state is PhoneAuthSuccess) {
+            widget.controller!.animateToPage(1,
+                duration: const Duration(milliseconds: 300),
+                curve: Curves.easeIn);
+          }
         },
         builder: (context, state) => Form(
           key: formKey,
@@ -63,6 +66,8 @@ class _UserPhoneNumberBodyState extends State<UserPhoneNumberBody> {
                 width: 385.w,
                 height: 100.h,
                 child: TextFormField(
+                  textDirection:
+                      locale == "en" ? TextDirection.ltr : TextDirection.rtl,
                   controller: phonenumb,
                   validator: (value) {
                     if (value!.isEmpty) {

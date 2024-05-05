@@ -759,6 +759,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Set your home location`
+  String get setHomeLocation {
+    return Intl.message(
+      'Set your home location',
+      name: 'setHomeLocation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm location`
+  String get confirmLocation {
+    return Intl.message(
+      'Confirm location',
+      name: 'confirmLocation',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

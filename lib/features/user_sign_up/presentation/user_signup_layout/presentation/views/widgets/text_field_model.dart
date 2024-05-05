@@ -19,14 +19,12 @@ class AddressTextFieldModel extends StatelessWidget {
       height: 55.h,
       width: width.w,
       child: TextFormField(
-        // controller: ,
         keyboardType: TextInputType.text,
         textAlign: TextAlign.start,
         style: TextStyles.small,
         decoration: InputDecoration(
             filled: true,
             fillColor: Colors.white,
-            // hintText: hinttext,
             prefixIcon: icons,
             prefixIconColor: ColorManager.grey,
             labelText: labeltext,

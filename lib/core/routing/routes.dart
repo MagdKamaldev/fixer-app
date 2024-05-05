@@ -12,4 +12,5 @@ class Routes {
   static const String uploadPhotos = '/uploadPhotos';
   static const String forgetPassword = "/forgetPassword";
   static const String resetPassword = "/resetPassword";
+  static const String setUserLocation = "/setUserLocation";
 }

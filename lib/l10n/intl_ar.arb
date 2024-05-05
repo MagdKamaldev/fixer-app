@@ -69,5 +69,7 @@
   "accepttermsandpolicy":"يجب الموافقة على الشروط والسياسات",
   "emptyValidation":"هذا الحقل مطلوب",
   "completeCode" :"الرجاء إدخال الرمز المكون من 6 أرقام",
-  "phoneValidation":"الرجاء إدخال رقم هاتف صحيح"
+  "phoneValidation":"الرجاء إدخال رقم هاتف صحيح",
+  "setHomeLocation":"اختيار موقع المنزل",
+  "confirmLocation":"تأكيد الموقع"
 } 

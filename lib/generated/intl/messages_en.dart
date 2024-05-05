@@ -43,6 +43,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "cityfield": MessageLookupByLibrary.simpleMessage("Enter your city"),
         "completeCode":
             MessageLookupByLibrary.simpleMessage("Please complete the code !"),
+        "confirmLocation":
+            MessageLookupByLibrary.simpleMessage("Confirm location"),
         "continuee": MessageLookupByLibrary.simpleMessage("Continue"),
         "doneField": MessageLookupByLibrary.simpleMessage(
             "This field already is Done !"),
@@ -109,6 +111,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "resendcodeSMS":
             MessageLookupByLibrary.simpleMessage("Resend code by SMS"),
         "resetpassword": MessageLookupByLibrary.simpleMessage("Reset password"),
+        "setHomeLocation":
+            MessageLookupByLibrary.simpleMessage("Set your home location"),
         "signin": MessageLookupByLibrary.simpleMessage("Sign in"),
         "signup": MessageLookupByLibrary.simpleMessage(" Sign up"),
         "signup_craft":

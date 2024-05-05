@@ -69,5 +69,7 @@
   "accepttermsandpolicy":"You must accept the terms and policy !",
   "emptyValidation":"Field must not be empty !",
   "completeCode" :"Please complete the code !",
-  "phoneValidation":"Please add your phone number !"
+  "phoneValidation":"Please add your phone number !",
+  "setHomeLocation":"Set your home location",
+  "confirmLocation":"Confirm location"
 }

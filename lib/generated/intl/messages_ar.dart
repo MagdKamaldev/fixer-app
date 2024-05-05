@@ -43,6 +43,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "cityfield": MessageLookupByLibrary.simpleMessage("ادخل مدينتك"),
         "completeCode": MessageLookupByLibrary.simpleMessage(
             "الرجاء إدخال الرمز المكون من 6 أرقام"),
+        "confirmLocation": MessageLookupByLibrary.simpleMessage("تأكيد الموقع"),
         "continuee": MessageLookupByLibrary.simpleMessage("استمرار"),
         "doneField":
             MessageLookupByLibrary.simpleMessage("تم تخطي هذا بالفعل !"),
@@ -109,6 +110,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "إعادة إرسال الرمز عن طريق الرسائل القصيرة"),
         "resetpassword":
             MessageLookupByLibrary.simpleMessage("إعادة تعيين كلمة المرور"),
+        "setHomeLocation":
+            MessageLookupByLibrary.simpleMessage("اختيار موقع المنزل"),
         "signin": MessageLookupByLibrary.simpleMessage("تسجيل الدخول "),
         "signup": MessageLookupByLibrary.simpleMessage(" تسجيل "),
         "signup_craft": MessageLookupByLibrary.simpleMessage("التسجيل كحرفي"),

@@ -1,5 +1,12 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fixer/core/constants/constants.dart';
+import 'package:fixer/core/helpers/extensions.dart';
 import 'package:fixer/core/helpers/spacing.dart';
+import 'package:fixer/core/models/user_model/address.dart';
+import 'package:fixer/core/models/user_model/location.dart';
+import 'package:fixer/core/models/user_model/user_model.dart';
+import 'package:fixer/core/routing/app_router.dart';
+import 'package:fixer/core/routing/routes.dart';
 import 'package:fixer/core/themes/colors.dart';
 import 'package:fixer/core/themes/text_styles.dart';
 import 'package:fixer/features/user_sign_up/presentation/user_signup_layout/presentation/views/widgets/address_botton.dart';
@@ -30,7 +37,9 @@ class UserAddressView extends StatelessWidget {
                     ? EdgeInsets.only(right: 40.w)
                     : EdgeInsets.only(left: 40.w),
                 child: InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      context.pushNamed(Routes.setUserLocation);
+                    },
                     child: Text(
                       S.of(context).change,
                       style: TextStyles.smallbold
