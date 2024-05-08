@@ -71,5 +71,7 @@
   "completeCode" :"Please complete the code !",
   "phoneValidation":"Please add your phone number !",
   "setHomeLocation":"Set your home location",
-  "confirmLocation":"Confirm location"
+  "confirmLocation":"Confirm location",
+  "locationServicesDisabled":"Location services are disabled",
+  "locationPermissionDenied":"Location permission denied"
 }

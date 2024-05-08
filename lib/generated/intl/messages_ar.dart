@@ -74,6 +74,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "lasttname": MessageLookupByLibrary.simpleMessage("الاسم الأخير"),
         "lasttnamefield":
             MessageLookupByLibrary.simpleMessage("ادخل اسمك الاخير"),
+        "locationPermissionDenied":
+            MessageLookupByLibrary.simpleMessage("تم رفض إذن الموقع"),
+        "locationServicesDisabled":
+            MessageLookupByLibrary.simpleMessage("خدمات الموقع معطلة"),
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "messageforgotpass": MessageLookupByLibrary.simpleMessage(
             "سنرسل رمز التحقق إلى هذا الرقم \n إذا كان يطابق حسابًا موجودًا"),

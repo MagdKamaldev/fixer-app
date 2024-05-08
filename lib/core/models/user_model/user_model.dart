@@ -7,7 +7,7 @@ class UserModel {
   String? email;
   String? phone;
   String? userType;
-  Location? location;
+  LocationModel? location;
   Address? address;
 
   UserModel({
@@ -28,7 +28,7 @@ class UserModel {
         userType: json['user_type'] as String?,
         location: json['location'] == null
             ? null
-            : Location.fromJson(json['location'] as Map<String, dynamic>),
+            : LocationModel.fromJson(json['location'] as Map<String, dynamic>),
         address: json['address'] == null
             ? null
             : Address.fromJson(json['address'] as Map<String, dynamic>),

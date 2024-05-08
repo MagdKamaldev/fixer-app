@@ -71,5 +71,7 @@
   "completeCode" :"الرجاء إدخال الرمز المكون من 6 أرقام",
   "phoneValidation":"الرجاء إدخال رقم هاتف صحيح",
   "setHomeLocation":"اختيار موقع المنزل",
-  "confirmLocation":"تأكيد الموقع"
+  "confirmLocation":"تأكيد الموقع",
+  "locationServicesDisabled":"خدمات الموقع معطلة",
+  "locationPermissionDenied":"تم رفض إذن الموقع"
 } 

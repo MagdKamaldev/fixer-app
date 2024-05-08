@@ -779,6 +779,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Location services are disabled`
+  String get locationServicesDisabled {
+    return Intl.message(
+      'Location services are disabled',
+      name: 'locationServicesDisabled',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Location permission denied`
+  String get locationPermissionDenied {
+    return Intl.message(
+      'Location permission denied',
+      name: 'locationPermissionDenied',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

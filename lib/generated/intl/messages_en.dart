@@ -76,6 +76,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "lasttname": MessageLookupByLibrary.simpleMessage("Last name"),
         "lasttnamefield":
             MessageLookupByLibrary.simpleMessage("Enter your last name"),
+        "locationPermissionDenied":
+            MessageLookupByLibrary.simpleMessage("Location permission denied"),
+        "locationServicesDisabled": MessageLookupByLibrary.simpleMessage(
+            "Location services are disabled"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "messageforgotpass": MessageLookupByLibrary.simpleMessage(
             "  We’ll send a verification code to this\nnumber if it matches an existing account"),

@@ -1,12 +1,14 @@
 // ignore_for_file: deprecated_member_use
-
+import 'package:fixer/core/networks/errors/error_snackbar.dart';
 import 'package:fixer/core/themes/text_styles.dart';
 import 'package:fixer/core/widgets/buttons/default_button.dart';
 import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:location/location.dart';
+import 'dart:ui' as ui;
 
 class SetUserLocation extends StatefulWidget {
   const SetUserLocation({super.key});
@@ -20,37 +22,49 @@ class _SetUserLocationState extends State<SetUserLocation> {
 
   @override
   void initState() {
+    location = Location();
+    updateLocation(context);
     _initialCameraPosition = const CameraPosition(
-        target: LatLng(29.959157296412783, 30.93926904564774), zoom: 16);
+        target: LatLng(29.959157296412783, 30.93926904564774), zoom: 18);
     initMarker();
     super.initState();
   }
 
-  void initMarker() {
-    Marker marker = const Marker(
-      markerId: MarkerId("home"),
-      position: LatLng(29.959157296412783, 30.93926904564774),
-    );
-    markers.add(marker);
+  Future<Uint8List> getImageFromRawData(String image, double width) async {
+    var imageData = await rootBundle.load(image);
+    var codec = await ui.instantiateImageCodec(imageData.buffer.asUint8List(),
+        targetWidth: width.toInt());
+    var frameInfo = await codec.getNextFrame();
+    return (await frameInfo.image.toByteData(format: ui.ImageByteFormat.png))!
+        .buffer
+        .asUint8List();
+  }
+
+  BitmapDescriptor? icon;
+
+  void initMarker() async {
+    BitmapDescriptor customMarkerIcon = BitmapDescriptor.fromBytes(
+        await getImageFromRawData("assets/images/house.png", 150.sp));
+    icon = customMarkerIcon;
   }
 
   Set<Marker> markers = {};
 
-  late GoogleMapController _googleMapController;
+  late Location location;
+
+  GoogleMapController? googleMapController;
+
   void initMapStyle() async {
     var style = await DefaultAssetBundle.of(context)
         .loadString("assets/maps_styles/app_styles.json");
-    _googleMapController.setMapStyle(style);
+    googleMapController!.setMapStyle(style);
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          S.of(context).setHomeLocation,
-          style: TextStyles.headings,
-        ),
+        title: Text(S.of(context).setHomeLocation, style: TextStyles.bodybold),
         toolbarHeight: 60.h,
         centerTitle: true,
       ),
@@ -59,20 +73,12 @@ class _SetUserLocationState extends State<SetUserLocation> {
           GoogleMap(
             markers: markers,
             onMapCreated: (controller) {
-              _googleMapController = controller;
+              googleMapController = controller;
               initMapStyle();
             },
             initialCameraPosition: _initialCameraPosition,
             zoomControlsEnabled: true,
             zoomGesturesEnabled: true,
-            cameraTargetBounds:
-                //Egypt bounds
-                CameraTargetBounds(
-              LatLngBounds(
-                southwest: const LatLng(22.0, 25.0),
-                northeast: const LatLng(31.0, 35.0),
-              ),
-            ),
           ),
           Padding(
             padding: EdgeInsets.only(
@@ -85,5 +91,59 @@ class _SetUserLocationState extends State<SetUserLocation> {
         ],
       ),
     );
+  }
+
+  Future<void> checkAndRequestLocationServices(context) async {
+    bool isServicesEnabed = await location.serviceEnabled();
+
+    if (!isServicesEnabed) {
+      isServicesEnabed = await location.requestService();
+      if (!isServicesEnabed) {
+        showErrorSnackbar(context, S.of(context).locationServicesDisabled);
+      }
+    }
+  }
+
+  Future<bool> checkAndRequestLocationPermission(context) async {
+    var permissionStatus = await location.hasPermission();
+    if (permissionStatus == PermissionStatus.denied) {
+      permissionStatus = await location.requestPermission();
+      if (permissionStatus != PermissionStatus.granted) {
+        showErrorSnackbar(context, S.of(context).locationPermissionDenied);
+      }
+    }
+    return permissionStatus == PermissionStatus.granted;
+  }
+
+  void getLocationData() {
+    location.changeSettings(distanceFilter: 5, interval: 10000);
+
+    location.onLocationChanged.listen((LocationData currentLocation) {
+      CameraPosition cameraPosition = CameraPosition(
+          target: LatLng(currentLocation.latitude!, currentLocation.longitude!),
+          zoom: 18);
+
+      Marker myLocationMarker = Marker(
+        markerId: const MarkerId("myLocation"),
+        position: LatLng(currentLocation.latitude!, currentLocation.longitude!),
+        icon: icon!,
+        infoWindow: const InfoWindow(title: "My Location"),
+      );
+
+      markers.add(myLocationMarker);
+      setState(() {});
+      googleMapController!
+          .animateCamera(CameraUpdate.newCameraPosition(cameraPosition));
+    });
+  }
+
+  void updateLocation(context) async {
+    await checkAndRequestLocationServices(context);
+    bool hasPermission = await checkAndRequestLocationPermission(context);
+    if (hasPermission) {
+      getLocationData();
+    } else {
+      showErrorSnackbar(context, S.of(context).locationPermissionDenied);
+    }
   }
 }

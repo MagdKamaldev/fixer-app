@@ -10,7 +10,9 @@ class UserConfirmationCodeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: UserConfirmationCodeBody(verificationId: verificationId,),
+      body: UserConfirmationCodeBody(
+        verificationId: verificationId,
+      ),
     );
   }
 }

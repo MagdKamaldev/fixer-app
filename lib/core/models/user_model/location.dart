@@ -1,10 +1,10 @@
-class Location {
+class LocationModel {
   double? latitude;
   double? longitude;
 
-  Location({this.latitude, this.longitude});
+  LocationModel({this.latitude, this.longitude});
 
-  factory Location.fromJson(Map<String, dynamic> json) => Location(
+  factory LocationModel.fromJson(Map<String, dynamic> json) => LocationModel(
         latitude: (json['latitude'] as num?)?.toDouble(),
         longitude: (json['longitude'] as num?)?.toDouble(),
       );
