@@ -370,6 +370,16 @@ class S {
     );
   }
 
+  /// `District`
+  String get district {
+    return Intl.message(
+      'District',
+      name: 'district',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Apt.no.`
   String get Aptartment {
     return Intl.message(

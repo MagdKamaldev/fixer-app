@@ -62,7 +62,7 @@ class UserSignUpCubit extends Cubit<UserSignUpState> {
     }
   }
 
-  Future<void> setLocation(LocationModel location, String jwt, context) async {
+  Future<void> setLocation(LocationModel location, context) async {
     emit(SetLocationLocading());
     final response =
         await userSignUpRepositoryImpelemntation.setLocation(location,);

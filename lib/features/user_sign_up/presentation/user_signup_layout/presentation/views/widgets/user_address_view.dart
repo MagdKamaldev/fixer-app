@@ -36,6 +36,7 @@ class _UserAddressViewState extends State<UserAddressView> {
     TextEditingController apartmentControler = TextEditingController();
     TextEditingController floorControler = TextEditingController();
     TextEditingController streetControler = TextEditingController();
+    TextEditingController districtControler = TextEditingController();
     TextEditingController additionalDirectionsControler =
         TextEditingController();
     return Column(
@@ -77,7 +78,6 @@ class _UserAddressViewState extends State<UserAddressView> {
           width: 385.w,
           height: 55.h,
           child: Row(
-            // crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               AddressTextFieldModel(
@@ -98,6 +98,12 @@ class _UserAddressViewState extends State<UserAddressView> {
             controller: streetControler,
             width: 380.w,
             labeltext: S.of(context).street,
+            icons: const Icon(Icons.location_on_outlined)),
+        verticalSpace(10),
+         AddressTextFieldModel(
+            controller: districtControler,
+            width: 380.w,
+            labeltext: S.of(context).district,
             icons: const Icon(Icons.location_on_outlined)),
         verticalSpace(10),
         AddressTextFieldModel(

@@ -31,6 +31,7 @@
   "area":"Area",
   "building":"Building name",
   "floor":"Floor",
+  "district":"District",
   "Aptartment":"Apt.no.",
   "street":"Street",
   "aditionalDirections":"Aditional directions (options)",
