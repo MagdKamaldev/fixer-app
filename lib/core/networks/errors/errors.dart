@@ -38,6 +38,8 @@ class ServerFailure extends Failure {
           "A problem occured within remote server, Please try again later !");
     } else if (statusCode == 400 || statusCode == 401 || statusCode == 403) {
       return ServerFailure(response["message"]);
+    } else if (response["message"] == null || statusCode == 422) {
+      return ServerFailure(response["msg"]);
     } else {
       return ServerFailure(response["message"]);
     }

@@ -29,3 +29,15 @@ final class GoogleSignUpFailure extends UserSignUpState {
 }
 
 final class ChangePageState extends UserSignUpState {}
+
+final class SetLocationLocading extends UserSignUpState {}
+
+final class SetLocationSuccess extends UserSignUpState {
+  final LocationModel location;
+  SetLocationSuccess(this.location);
+}
+
+final class SetLocationFailure extends UserSignUpState {
+  final String message;
+  SetLocationFailure(this.message);
+}

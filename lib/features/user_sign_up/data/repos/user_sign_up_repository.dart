@@ -8,5 +8,5 @@ abstract class UserSignUpRepository {
       UserModel user, String password);
 
   Future<Either<Failure, LocationModel>> setLocation(
-      LocationModel location, String jwt);
+      LocationModel location);
 }

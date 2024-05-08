@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:fixer/core/models/location_model.dart';
 import 'package:fixer/core/models/user_model.dart';
 import 'package:fixer/core/networks/errors/error_snackbar.dart';
 import 'package:fixer/features/user_sign_up/data/repos/user_signup_repository_implementation.dart';
@@ -59,5 +60,20 @@ class UserSignUpCubit extends Cubit<UserSignUpState> {
       showErrorSnackbar(context, e.toString());
       emit(GoogleSignUpFailure(e.toString()));
     }
+  }
+
+  Future<void> setLocation(LocationModel location, String jwt, context) async {
+    emit(SetLocationLocading());
+    final response =
+        await userSignUpRepositoryImpelemntation.setLocation(location,);
+    response.fold((l) {
+      showErrorSnackbar(
+        context,
+        l.message,
+      );
+      emit(SetLocationFailure(l.message));
+    }, (r) {
+      emit(SetLocationSuccess(r));
+    });
   }
 }

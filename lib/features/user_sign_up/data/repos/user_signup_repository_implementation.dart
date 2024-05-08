@@ -41,7 +41,7 @@ class UserSignUpRepositoryImpelemntation implements UserSignUpRepository {
 
   @override
   Future<Either<Failure, LocationModel>> setLocation(
-      LocationModel location, String jwt) async {
+      LocationModel location,) async {
     try {
       final response = await apiServices
           .post(endPoint: ApiConstants.setLocation, jwt: token, data: {
