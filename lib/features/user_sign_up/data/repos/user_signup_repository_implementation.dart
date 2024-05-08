@@ -6,6 +6,7 @@ import 'package:fixer/core/networks/api_constants.dart';
 import 'package:fixer/core/networks/api_services/api_services.dart';
 import 'package:fixer/core/networks/errors/errors.dart';
 import 'package:fixer/features/user_sign_up/data/repos/user_sign_up_repository.dart';
+import 'package:fixer/main.dart';
 
 class UserSignUpRepositoryImpelemntation implements UserSignUpRepository {
   final ApiServices apiServices;
@@ -24,7 +25,8 @@ class UserSignUpRepositoryImpelemntation implements UserSignUpRepository {
         "phone": user.phone,
         "user_type": user.userType,
       });
-      final userModel = UserModel.fromJson(response);
+      final userModel = UserModel.fromJson(response["user"]);
+      token = response["jwt"];
 
       return Right(userModel);
     } catch (e) {

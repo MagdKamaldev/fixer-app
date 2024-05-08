@@ -7,11 +7,12 @@ class AddressTextFieldModel extends StatelessWidget {
   final String labeltext;
   final Widget icons;
   final double width;
+  final TextEditingController controller;
   const AddressTextFieldModel(
       {super.key,
       required this.width,
       required this.labeltext,
-      required this.icons});
+      required this.icons, required this.controller});
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -19,6 +20,7 @@ class AddressTextFieldModel extends StatelessWidget {
       height: 55.h,
       width: width.w,
       child: TextFormField(
+        controller: controller,
         keyboardType: TextInputType.text,
         textAlign: TextAlign.start,
         style: TextStyles.small,

@@ -16,8 +16,8 @@ class UserSignUpCubit extends Cubit<UserSignUpState> {
 
   PageController pageController = PageController();
 
-
   Future<void> userSignUp(UserModel user, String password, context) async {
+    print("l.message");
     emit(UserSignUpLoading());
     final response =
         await userSignUpRepositoryImpelemntation.userSignUp(user, password);
@@ -26,8 +26,10 @@ class UserSignUpCubit extends Cubit<UserSignUpState> {
         context,
         l.message,
       );
+      print(l.message);
       emit(UserSignUpFailure(l.message));
     }, (r) {
+      print(r.email);
       emit(UserSignUpSuccess(r));
     });
   }

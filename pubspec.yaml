@@ -54,6 +54,7 @@ dependencies:
   pinput: ^4.0.0
   google_sign_in: ^6.2.1
   location: ^6.0.2
+  geocoding: ^3.0.0
 
 dev_dependencies:
   flutter_test:

@@ -1,9 +1,10 @@
 part of 'user_sign_up_cubit.dart';
+
 sealed class UserSignUpState {}
 
-final class UserSignUpInitial extends UserSignUpState {}
+class UserSignUpInitial extends UserSignUpState {}
 
-final class UserSignUpLoading extends UserSignUpState {}
+class UserSignUpLoading extends UserSignUpState {}
 
 final class UserSignUpSuccess extends UserSignUpState {
   final UserModel user;
@@ -15,7 +16,7 @@ final class UserSignUpFailure extends UserSignUpState {
   UserSignUpFailure(this.message);
 }
 
-final class GoogleSignUpLoading extends UserSignUpState {} 
+final class GoogleSignUpLoading extends UserSignUpState {}
 
 final class GoogleSignUpSuccess extends UserSignUpState {
   final AuthCredential credential;
