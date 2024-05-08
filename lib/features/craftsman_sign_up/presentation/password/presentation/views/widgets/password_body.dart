@@ -71,7 +71,10 @@ class PasswordBody extends StatelessWidget {
             padding: locale == "en"
                 ? EdgeInsets.only(left: 230.w)
                 : EdgeInsets.only(right: 230.w),
-            child:ReusableArrowButton(nextPage: Routes.craftsmanSignUp,onPressed: (){},),
+            child: ReusableArrowButton(
+              nextPage: Routes.craftsmanSignUp,
+              onPressed: () {},
+            ),
           ),
         ],
       ),

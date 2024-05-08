@@ -1,7 +1,7 @@
 // ignore_for_file: deprecated_member_use
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
-import 'package:fixer/core/models/user_model/user_model.dart';
+import 'package:fixer/core/models/user_model.dart';
 import 'package:fixer/core/networks/api_constants.dart';
 import 'package:fixer/core/networks/api_services/api_services.dart';
 import 'package:fixer/core/networks/errors/errors.dart';

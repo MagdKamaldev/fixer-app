@@ -11,7 +11,8 @@ class UserSignUpView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => UserSignUpCubit(getIt<UserSignUpRepositoryImpelemntation>()),
+      create: (context) =>
+          UserSignUpCubit(getIt<UserSignUpRepositoryImpelemntation>()),
       child: Scaffold(
         appBar: AppBar(),
         body: const UserSignUpBody(),

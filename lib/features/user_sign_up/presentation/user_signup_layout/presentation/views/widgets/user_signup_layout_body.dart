@@ -64,7 +64,7 @@ class _UserSignUpBodyState extends State<UserSignUpBody> {
                         UserSignUpView(
                           controller: cubit.pageController,
                         ),
-                        UserAddressView(),
+                        const UserAddressView(),
                       ],
                     ),
                   )

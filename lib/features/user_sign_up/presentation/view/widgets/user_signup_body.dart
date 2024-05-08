@@ -1,5 +1,5 @@
 import 'package:fixer/core/helpers/spacing.dart';
-import 'package:fixer/core/models/user_model/user_model.dart';
+import 'package:fixer/core/models/user_model.dart';
 import 'package:fixer/core/networks/errors/error_snackbar.dart';
 import 'package:fixer/core/service_locator/service_locator.dart';
 import 'package:fixer/core/themes/text_styles.dart';

@@ -1,14 +1,12 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../themes/colors.dart';
 
 class DefaultButton extends StatelessWidget {
-   final String text;
-   final void Function() onPressed;
+  final String text;
+  final void Function() onPressed;
   const DefaultButton({super.key, required this.text, required this.onPressed});
-
 
   @override
   Widget build(BuildContext context) {

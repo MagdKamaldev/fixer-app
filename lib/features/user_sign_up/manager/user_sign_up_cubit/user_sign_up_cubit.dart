@@ -1,5 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:fixer/core/models/user_model/user_model.dart';
+import 'package:fixer/core/models/user_model.dart';
 import 'package:fixer/core/networks/errors/error_snackbar.dart';
 import 'package:fixer/features/user_sign_up/data/repos/user_signup_repository_implementation.dart';
 import 'package:fixer/features/user_sign_up/presentation/user_phone_number/presentation/views/widgets/user_phone_number_body.dart';
@@ -17,7 +17,6 @@ class UserSignUpCubit extends Cubit<UserSignUpState> {
   PageController pageController = PageController();
 
   Future<void> userSignUp(UserModel user, String password, context) async {
-    print("l.message");
     emit(UserSignUpLoading());
     final response =
         await userSignUpRepositoryImpelemntation.userSignUp(user, password);
@@ -26,10 +25,9 @@ class UserSignUpCubit extends Cubit<UserSignUpState> {
         context,
         l.message,
       );
-      print(l.message);
+
       emit(UserSignUpFailure(l.message));
     }, (r) {
-      print(r.email);
       emit(UserSignUpSuccess(r));
     });
   }

@@ -5,7 +5,7 @@ import 'package:fixer/firebase_options.dart';
 import 'package:fixer/fixer_app.dart';
 import 'package:flutter/material.dart';
 
-String ? token = "";
+String? token = "";
 void main() async {
   setupLocator();
   WidgetsFlutterBinding.ensureInitialized();

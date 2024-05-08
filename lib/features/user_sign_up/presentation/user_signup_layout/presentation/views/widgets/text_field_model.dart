@@ -12,7 +12,8 @@ class AddressTextFieldModel extends StatelessWidget {
       {super.key,
       required this.width,
       required this.labeltext,
-      required this.icons, required this.controller});
+      required this.icons,
+      required this.controller});
   @override
   Widget build(BuildContext context) {
     return Container(

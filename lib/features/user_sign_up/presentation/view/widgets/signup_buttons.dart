@@ -29,7 +29,7 @@ class ButtonSignUp extends StatelessWidget {
             children: [
               if (state is UserSignUpLoading)
                 const Center(child: CircularProgressIndicator()),
-              if (state is ! UserSignUpLoading)
+              if (state is! UserSignUpLoading)
                 ElevatedButton(
                   onPressed: () {
                     onPressed!();
