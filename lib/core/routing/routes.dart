@@ -13,4 +13,5 @@ class Routes {
   static const String forgetPassword = "/forgetPassword";
   static const String resetPassword = "/resetPassword";
   static const String setUserLocation = "/setUserLocation";
+  static const String home = "/home";
 }

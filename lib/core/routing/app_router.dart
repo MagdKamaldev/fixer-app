@@ -1,4 +1,5 @@
 import 'package:fixer/core/routing/routes.dart';
+import 'package:fixer/features/home/presentation/views/home_view.dart';
 import 'package:fixer/features/user_sign_up/presentation/user_signup_layout/presentation/views/widgets/set_user_location.dart';
 import 'package:fixer/features/craftsman_sign_up/presentation/craftsman_confirmation_code/presentation/views/craftsman_confimation_code_view.dart';
 import 'package:fixer/features/craftsman_sign_up/presentation/views/craftsman_signup_view.dart';
@@ -70,7 +71,10 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => const SetUserLocation(),
         );
-
+      case Routes.home:
+        return MaterialPageRoute(
+          builder: (_) => const HomeView(),
+        );
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(

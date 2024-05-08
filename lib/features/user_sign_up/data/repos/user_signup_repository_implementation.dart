@@ -1,6 +1,7 @@
 // ignore_for_file: deprecated_member_use
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
+import 'package:fixer/core/models/location_model.dart';
 import 'package:fixer/core/models/user_model.dart';
 import 'package:fixer/core/networks/api_constants.dart';
 import 'package:fixer/core/networks/api_services/api_services.dart';
@@ -29,6 +30,34 @@ class UserSignUpRepositoryImpelemntation implements UserSignUpRepository {
       token = response["jwt"];
 
       return Right(userModel);
+    } catch (e) {
+      if (e is DioError) {
+        return Left(ServerFailure.fromDioError(e));
+      } else {
+        return Left(ServerFailure(e.toString()));
+      }
+    }
+  }
+
+  @override
+  Future<Either<Failure, LocationModel>> setLocation(
+      LocationModel location, String jwt) async {
+    try {
+      final response = await apiServices
+          .post(endPoint: ApiConstants.setLocation, jwt: token, data: {
+        "latitude": location.lat,
+        "longitude": location.long,
+        "city": location.city,
+        "district": location.district,
+        "building": location.building,
+        "street": location.street,
+        "floor": location.floor,
+        "apartment": location.apartment,
+        "additional": location.additional,
+      });
+
+      final locationModel = LocationModel.fromJson(response["location"]);
+      return Right(locationModel);
     } catch (e) {
       if (e is DioError) {
         return Left(ServerFailure.fromDioError(e));
