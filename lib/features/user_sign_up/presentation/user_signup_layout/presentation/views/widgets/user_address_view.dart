@@ -47,7 +47,7 @@ class _UserAddressViewState extends State<UserAddressView> {
     return BlocConsumer<UserSignUpCubit, UserSignUpState>(
       listener: (context, state) {
         if (state is SetLocationSuccess) {
-          context.pushNamed(Routes.home);
+          context.pushReplacementNamed(Routes.home);
         }
       },
       builder: (context, state) {
