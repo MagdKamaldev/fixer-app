@@ -57,7 +57,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "entercode":
             MessageLookupByLibrary.simpleMessage("Enter confirmation code"),
         "enteryourcode": MessageLookupByLibrary.simpleMessage(
-            "Enter the 6-digit code we sent to +20"),
+            "Enter the 6-digit code we sent to "),
         "enteryphonenumber":
             MessageLookupByLibrary.simpleMessage("Enter your phone number"),
         "field": MessageLookupByLibrary.simpleMessage("Choose your field"),
@@ -118,6 +118,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetpassword": MessageLookupByLibrary.simpleMessage("Reset password"),
         "setHomeLocation":
             MessageLookupByLibrary.simpleMessage("Set your home location"),
+        "setLocationFirst":
+            MessageLookupByLibrary.simpleMessage("Please Set Location first !"),
+        "signUpFirst":
+            MessageLookupByLibrary.simpleMessage("Please Sign Up first !"),
         "signin": MessageLookupByLibrary.simpleMessage("Sign in"),
         "signup": MessageLookupByLibrary.simpleMessage(" Sign up"),
         "signup_craft":

@@ -56,7 +56,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("هذا الحقل مطلوب"),
         "entercode": MessageLookupByLibrary.simpleMessage("أدخل رمز التأكيد"),
         "enteryourcode": MessageLookupByLibrary.simpleMessage(
-            "أدخل الرمز المكون من 6 أرقام الذي أرسلناه إلى +20"),
+            "أدخل الرمز المكون من 6 أرقام الذي أرسلناه إلى "),
         "enteryphonenumber":
             MessageLookupByLibrary.simpleMessage("أدخل رقم هاتفك"),
         "field": MessageLookupByLibrary.simpleMessage("اختر المجال الخاص بك"),
@@ -117,6 +117,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("إعادة تعيين كلمة المرور"),
         "setHomeLocation":
             MessageLookupByLibrary.simpleMessage("اختيار موقع المنزل"),
+        "setLocationFirst":
+            MessageLookupByLibrary.simpleMessage("الرجاء تحديد موقعك أولاً !"),
+        "signUpFirst":
+            MessageLookupByLibrary.simpleMessage("الرجاء تسجيل الدخول أولاً !"),
         "signin": MessageLookupByLibrary.simpleMessage("تسجيل الدخول "),
         "signup": MessageLookupByLibrary.simpleMessage(" تسجيل "),
         "signup_craft": MessageLookupByLibrary.simpleMessage("التسجيل كحرفي"),

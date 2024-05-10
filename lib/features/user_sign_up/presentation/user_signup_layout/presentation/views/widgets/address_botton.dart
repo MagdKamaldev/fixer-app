@@ -5,12 +5,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class GetStartedButton extends StatelessWidget {
-  const GetStartedButton({super.key});
+  final Function()? onPressed;
+  const GetStartedButton({super.key, this.onPressed});
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: onPressed!,
       child: Container(
         width: 320.w,
         height: 47.h,

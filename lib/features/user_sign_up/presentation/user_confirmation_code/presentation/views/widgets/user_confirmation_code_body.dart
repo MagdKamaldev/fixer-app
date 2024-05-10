@@ -5,6 +5,7 @@ import 'package:fixer/core/themes/text_styles.dart';
 import 'package:fixer/core/widgets/buttons/default_button.dart';
 import 'package:fixer/features/user_sign_up/manager/phone_auth_cubit/phone_auth_cubit.dart';
 import 'package:fixer/features/user_sign_up/presentation/user_confirmation_code/presentation/views/widgets/text_buttons.dart';
+import 'package:fixer/features/user_sign_up/presentation/user_phone_number/presentation/views/widgets/user_phone_number_body.dart';
 import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -41,11 +42,14 @@ class UserConfirmationCodeBody extends StatelessWidget {
                 style: TextStyles.subHeadingsBold,
               ),
               verticalSpace(15),
-              Row(
+              Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(S.of(context).enteryourcode, style: TextStyles.body),
-                  // Text()
+                  verticalSpace(10),
+                  Text(phoneNumber,
+                      style: TextStyles.headings
+                          .copyWith(color: ColorManager.primary)),
                 ],
               ),
               verticalSpace(35),
@@ -91,7 +95,12 @@ class UserConfirmationCodeBody extends StatelessWidget {
               verticalSpace(100),
               Text(S.of(context).after40sec, style: TextStyles.body),
               verticalSpace(15),
-              ResendTextButton(text: S.of(context).resendcodeSMS),
+              ResendTextButton(
+                text: S.of(context).resendcodeSMS,
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
             ],
           ),
         ),

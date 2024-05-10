@@ -6,6 +6,7 @@ import 'package:fixer/fixer_app.dart';
 import 'package:flutter/material.dart';
 
 String? token = "";
+
 void main() async {
   setupLocator();
   WidgetsFlutterBinding.ensureInitialized();

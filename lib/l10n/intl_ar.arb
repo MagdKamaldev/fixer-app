@@ -22,7 +22,7 @@
   "entercode":"أدخل رمز التأكيد",
   "phone":"رقم التليفون",
   "enteryphonenumber":"أدخل رقم هاتفك",
-  "enteryourcode":"أدخل الرمز المكون من 6 أرقام الذي أرسلناه إلى +20",
+  "enteryourcode":"أدخل الرمز المكون من 6 أرقام الذي أرسلناه إلى ",
   "after40sec":"بعد 40 ثانية يمكنك",
   "resendcodeSMS":"إعادة إرسال الرمز عن طريق الرسائل القصيرة",
   "nocoderecieved":"إذا لم تتلقى الرمز عن طريق الرسائل القصيرة، يرجى الطلب",
@@ -74,5 +74,7 @@
   "setHomeLocation":"اختيار موقع المنزل",
   "confirmLocation":"تأكيد الموقع",
   "locationServicesDisabled":"خدمات الموقع معطلة",
-  "locationPermissionDenied":"تم رفض إذن الموقع"
+  "locationPermissionDenied":"تم رفض إذن الموقع",
+  "signUpFirst":"الرجاء تسجيل الدخول أولاً !",
+  "setLocationFirst":"الرجاء تحديد موقعك أولاً !"
 } 

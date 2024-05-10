@@ -39,7 +39,7 @@ class ServerFailure extends Failure {
     } else if (statusCode == 400 || statusCode == 401 || statusCode == 403) {
       return ServerFailure(response["message"]);
     } else if (response["message"] == null || statusCode == 422) {
-      return ServerFailure(response["msg"]);
+      return ServerFailure(response["msg"] ?? response["message"]);
     } else {
       return ServerFailure(response["message"]);
     }

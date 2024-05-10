@@ -14,6 +14,8 @@ import 'package:location/location.dart';
 import 'dart:ui' as ui;
 
 String? cityName = "other";
+String? lat = "";
+String? long = "";
 
 class SetUserLocation extends StatefulWidget {
   const SetUserLocation({super.key});
@@ -59,9 +61,8 @@ class _SetUserLocationState extends State<SetUserLocation> {
     icon = customMarkerIcon;
   }
 
-  Set<Marker> markers = {};
-
   GoogleMapController? googleMapController;
+  Set<Marker> markers = {};
 
   void initMapStyle() async {
     var style = await DefaultAssetBundle.of(context)
@@ -145,6 +146,8 @@ class _SetUserLocationState extends State<SetUserLocation> {
                         cityName = placemarks.first.subAdministrativeArea!;
                         areaControler.text =
                             placemarks.first.subAdministrativeArea!;
+                        lat = markers.first.position.latitude.toString();
+                        long = markers.first.position.longitude.toString();
                         if (cityName == "" || cityName == null) {
                           areaControler.text = "Other";
                         }

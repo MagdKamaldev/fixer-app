@@ -6,7 +6,7 @@ class LocationModel {
   String? building;
   String? city;
   String? district;
-  int? floor;
+  String? floor;
   int? id;
   String? street;
 
@@ -19,6 +19,7 @@ class LocationModel {
     this.city,
     this.district,
     this.floor,
+   
     this.id,
     this.street,
   });
@@ -31,7 +32,7 @@ class LocationModel {
         building: json['building'] as String?,
         city: json['city'] as String?,
         district: json['district'] as String?,
-        floor: json['floor'] as int?,
+        floor: json['floor'] as String?,
         id: json['id'] as int?,
         street: json['street'] as String?,
       );

@@ -2,7 +2,6 @@ import 'package:fixer/features/user_sign_up/presentation/user_confirmation_code/
 import 'package:flutter/material.dart';
 
 class UserConfirmationCodeView extends StatelessWidget {
-  // final PageController? controller;
   final String verificationId;
   const UserConfirmationCodeView({super.key, required this.verificationId});
 

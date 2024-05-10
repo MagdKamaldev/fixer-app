@@ -280,10 +280,10 @@ class S {
     );
   }
 
-  /// `Enter the 6-digit code we sent to +20`
+  /// `Enter the 6-digit code we sent to `
   String get enteryourcode {
     return Intl.message(
-      'Enter the 6-digit code we sent to +20',
+      'Enter the 6-digit code we sent to ',
       name: 'enteryourcode',
       desc: '',
       args: [],
@@ -805,6 +805,26 @@ class S {
     return Intl.message(
       'Location permission denied',
       name: 'locationPermissionDenied',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please Sign Up first !`
+  String get signUpFirst {
+    return Intl.message(
+      'Please Sign Up first !',
+      name: 'signUpFirst',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please Set Location first !`
+  String get setLocationFirst {
+    return Intl.message(
+      'Please Set Location first !',
+      name: 'setLocationFirst',
       desc: '',
       args: [],
     );

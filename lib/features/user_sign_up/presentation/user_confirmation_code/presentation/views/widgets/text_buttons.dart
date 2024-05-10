@@ -4,12 +4,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ResendTextButton extends StatelessWidget {
-  const ResendTextButton({super.key, required this.text});
+  final Function()? onTap;
+  const ResendTextButton({super.key, required this.text, this.onTap});
   final String text;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: onTap,
       child: Text(text,
           style: TextStyles.bodybold.copyWith(
             color: ColorManager.grey,

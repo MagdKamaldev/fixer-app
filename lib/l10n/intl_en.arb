@@ -22,7 +22,7 @@
   "entercode":"Enter confirmation code",
   "phone":"Phone number",
   "enteryphonenumber":"Enter your phone number",
-  "enteryourcode":"Enter the 6-digit code we sent to +20",
+  "enteryourcode":"Enter the 6-digit code we sent to ",
   "after40sec":"After 40 seconds you can",
   "resendcodeSMS":"Resend code by SMS",
   "nocoderecieved":"if you didn’t receive the code by SMS , please request",
@@ -74,5 +74,7 @@
   "setHomeLocation":"Set your home location",
   "confirmLocation":"Confirm location",
   "locationServicesDisabled":"Location services are disabled",
-  "locationPermissionDenied":"Location permission denied"
+  "locationPermissionDenied":"Location permission denied",
+  "signUpFirst":"Please Sign Up first !",
+  "setLocationFirst":"Please Set Location first !"
 }
