@@ -80,14 +80,6 @@ class _SetUserLocationState extends State<SetUserLocation> {
       ),
       body: Stack(
         children: [
-          if (locationServices.isPermissionGranted == false &&
-              markers.isNotEmpty)
-            Center(
-              child: Text(
-                S.of(context).locationPermissionDenied,
-                style: TextStyles.headings.copyWith(color: Colors.red),
-              ),
-            ),
           if (markers.isEmpty)
             const Center(
               child: CircularProgressIndicator(),

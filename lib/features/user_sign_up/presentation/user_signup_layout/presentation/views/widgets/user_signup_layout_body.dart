@@ -1,3 +1,4 @@
+// ignore_for_file: unused_local_variable
 import 'package:fixer/core/helpers/spacing.dart';
 import 'package:fixer/core/service_locator/service_locator.dart';
 import 'package:fixer/features/user_sign_up/data/repos/user_signup_repository_implementation.dart';
@@ -11,6 +12,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:location/location.dart';
 
 class UserSignUpBody extends StatefulWidget {
   const UserSignUpBody({super.key});
@@ -20,6 +22,25 @@ class UserSignUpBody extends StatefulWidget {
 }
 
 class _UserSignUpBodyState extends State<UserSignUpBody> {
+  Location location = Location();
+
+  Future<void> requestLocationPermission() async {
+    PermissionStatus permissionStatus;
+    try {
+      permissionStatus = await location.requestPermission();
+    } catch (e) {
+      debugPrint('Error requesting location permission: $e');
+      return;
+    }
+  }
+
+  @override
+  void initState() {
+    //request location acces here
+    requestLocationPermission();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return BlocProvider(

@@ -34,4 +34,6 @@ class LocationServices {
         accuracy: LocationAccuracy.high, interval: 1000, distanceFilter: 100);
     location.onLocationChanged.listen(onData);
   }
+
+  
 }
