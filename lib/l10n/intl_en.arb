@@ -78,8 +78,9 @@
   "setLocationFirst":"Please Set Location first !",
   "selectArea":"select your area !",
   "city":"city",
-  "upload":"Upload",
-  "uploadOptions":"Select an upload option",
+  "uploadFront":"front part",
+  "uploadBack":"backward part",
+  "uploadOptions":"upload option",
   "camera":"Camera",
   "gallery":"Gallery"
 }

@@ -139,9 +139,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "street": MessageLookupByLibrary.simpleMessage("Street"),
         "termsandpolicy":
             MessageLookupByLibrary.simpleMessage(" terms & policy"),
-        "upload": MessageLookupByLibrary.simpleMessage("Upload"),
-        "uploadOptions":
-            MessageLookupByLibrary.simpleMessage("Select an upload option"),
+        "uploadBack": MessageLookupByLibrary.simpleMessage("backward part"),
+        "uploadFront": MessageLookupByLibrary.simpleMessage("front part"),
+        "uploadOptions": MessageLookupByLibrary.simpleMessage("upload option"),
         "uploadid":
             MessageLookupByLibrary.simpleMessage("Upload your national ID"),
         "uploadphoto":

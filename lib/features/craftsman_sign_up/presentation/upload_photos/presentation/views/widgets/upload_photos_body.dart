@@ -2,7 +2,10 @@ import 'package:fixer/core/helpers/spacing.dart';
 import 'package:fixer/core/themes/text_styles.dart';
 import 'package:fixer/core/widgets/buttons/default_button.dart';
 import 'package:fixer/features/craftsman_sign_up/manager/craftsman_sign_up_cubit/craftsman_sign_up_cubit.dart';
+import 'package:fixer/features/craftsman_sign_up/presentation/upload_photos/presentation/views/widgets/back_id.dart';
+import 'package:fixer/features/craftsman_sign_up/presentation/upload_photos/presentation/views/widgets/front_id.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -38,87 +41,52 @@ class UploadPhotosBody extends StatelessWidget {
                       child: Image.asset("assets/images/id.png")),
                   verticalSpace(100),
                   Padding(
-                    padding: const EdgeInsets.all(20.0),
-                    child: DefaultButton(
-                        text: S.of(context).upload,
-                        onPressed: () {
-                          showDialog(
-                            context: context,
-                            builder: (BuildContext dialogContext) {
-                              return AlertDialog(
-                                title: Text(
-                                  S.of(context).uploadOptions,
-                                  style: TextStyles.bodybold,
-                                ),
-                                content: SingleChildScrollView(
-                                  child: Row(
-                                    children: [
-                                      GestureDetector(
-                                        child: Column(
-                                          children: [
-                                            verticalSpace(30),
-                                            Text(
-                                              S.of(context).camera,
-                                              style: TextStyles.headings,
-                                            ),
-                                            verticalSpace(10),
-                                            SizedBox(
-                                                height: 80.h,
-                                                width: 80.w,
-                                                child: Image.asset(
-                                                    "assets/images/camera.png")),
-                                          ],
-                                        ),
-                                        onTap: () {
-                                          // Handle camera upload
-                                          CraftsmanSignUpCubit.get(context)
-                                              .getStoryImagefromCamera(context);
-                                        },
-                                      ),
-                                      horizontalSpace(50),
-                                      GestureDetector(
-                                        child: Column(
-                                          children: [
-                                            verticalSpace(30),
-                                            Text(
-                                              S.of(context).gallery,
-                                              style: TextStyles.headings,
-                                            ),
-                                            verticalSpace(10),
-                                            SizedBox(
-                                                height: 80.h,
-                                                width: 80.w,
-                                                child: Image.asset(
-                                                    "assets/images/gallery.png")),
-                                          ],
-                                        ),
-                                        onTap: () {
-                                          CraftsmanSignUpCubit.get(context)
-                                              .getStoryImagefromGallery(
-                                                  context);
-                                        },
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              );
-                            },
-                          );
-                        }),
-                  ),
-                  if (CraftsmanSignUpCubit.get(context).storyImage != null)
-                    Container(
-                      height: 340,
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(4),
-                          image: DecorationImage(
-                            image: FileImage(
-                              CraftsmanSignUpCubit.get(context).storyImage!,
-                            ),
-                            fit: BoxFit.cover,
-                          )),
+                    padding: EdgeInsets.all(20.w),
+                    child: const Row(
+                      children: [
+                        FrontId(),
+                        Spacer(),
+                        BackId(),
+                      ],
                     ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.all(20.w),
+                    child: Row(
+                      children: [
+                        if (CraftsmanSignUpCubit.get(context).frontImage !=
+                            null)
+                          Container(
+                            height: 100.h,
+                            width: 100.w,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(4),
+                                image: DecorationImage(
+                                  image: FileImage(
+                                    CraftsmanSignUpCubit.get(context)
+                                        .frontImage!,
+                                  ),
+                                  fit: BoxFit.cover,
+                                )),
+                          ),
+                        const Spacer(),
+                        if (CraftsmanSignUpCubit.get(context).backImage != null)
+                          Container(
+                            height: 100.h,
+                            width: 100.w,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(4),
+                                image: DecorationImage(
+                                  image: FileImage(
+                                    CraftsmanSignUpCubit.get(context)
+                                        .backImage!,
+                                  ),
+                                  fit: BoxFit.cover,
+                                )),
+                          ),
+                      ],
+                    ),
+                  ),
                 ],
               )
             ],

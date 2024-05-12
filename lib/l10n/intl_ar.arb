@@ -78,7 +78,8 @@
   "setLocationFirst":"الرجاء تحديد موقعك أولاً !",
   "selectArea":"ادخل منطقتك !",
   "city":"المدينة",
-  "upload":"تحميل",
+  "uploadFront":"الجزء الامامي",
+  "uploadBack":"الجزء الخلفي",
   "uploadOptions":"اختر طريقة التحميل",
   "camera":"الكاميرا",
   "gallery":"المعرض"

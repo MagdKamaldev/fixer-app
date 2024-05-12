@@ -4,12 +4,21 @@ sealed class CraftsmanSignUpState {}
 final class CraftsmanSignUpInitial extends CraftsmanSignUpState {}
 
 
-class StoryImagePickedFromGallerySuccessState extends CraftsmanSignUpState{}
+class FrontImagePickedFromGallerySuccessState extends CraftsmanSignUpState{}
 
-class StoryImagePickedFromGalleryErrorState extends CraftsmanSignUpState{}
+class FrontImagePickedFromGalleryErrorState extends CraftsmanSignUpState{}
 
-class StoryImagePickedFromCameraSuccessState extends CraftsmanSignUpState{}
+class FrontImagePickedFromCameraSuccessState extends CraftsmanSignUpState{}
 
-class StoryImagePickedFromCameraErrorState extends CraftsmanSignUpState{}
+class FrontImagePickedFromCameraErrorState extends CraftsmanSignUpState{}
+
+
+class BackImagePickedFromGallerySuccessState extends CraftsmanSignUpState{}
+
+class BackImagePickedFromGalleryErrorState extends CraftsmanSignUpState{}
+
+class BackImagePickedFromCameraSuccessState extends CraftsmanSignUpState{}
+
+class BackImagePickedFromCameraErrorState extends CraftsmanSignUpState{}
 
 class RemoveImage extends CraftsmanSignUpState{}

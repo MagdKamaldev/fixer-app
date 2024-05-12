@@ -840,20 +840,30 @@ class S {
     );
   }
 
-  /// `Upload`
-  String get upload {
+  /// `front part`
+  String get uploadFront {
     return Intl.message(
-      'Upload',
-      name: 'upload',
+      'front part',
+      name: 'uploadFront',
       desc: '',
       args: [],
     );
   }
 
-  /// `Select an upload option`
+  /// `backward part`
+  String get uploadBack {
+    return Intl.message(
+      'backward part',
+      name: 'uploadBack',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `upload option`
   String get uploadOptions {
     return Intl.message(
-      'Select an upload option',
+      'upload option',
       name: 'uploadOptions',
       desc: '',
       args: [],

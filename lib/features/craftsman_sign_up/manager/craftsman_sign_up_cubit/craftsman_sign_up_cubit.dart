@@ -13,42 +13,84 @@ class CraftsmanSignUpCubit extends Cubit<CraftsmanSignUpState> {
 
   static CraftsmanSignUpCubit get(context) => BlocProvider.of(context);
 
-  File? storyImage;
-  var pickedFile;
-  var picker = ImagePicker();
+  File? frontImage;
+  var frontFile;
+  var frontPicker = ImagePicker();
 
-  Future<void> getStoryImagefromGallery(context) async {
-    pickedFile = await picker.pickImage(source: ImageSource.gallery);
-    if (pickedFile != null) {
-      storyImage = File(pickedFile.path);
+  Future<void> getFrontImagefromGallery(context) async {
+    frontFile = await frontPicker.pickImage(source: ImageSource.gallery);
+    if (frontFile != null) {
+      frontImage = File(frontFile.path);
       Navigator.pop(context);
-      emit(StoryImagePickedFromGallerySuccessState());
+      emit(FrontImagePickedFromGallerySuccessState());
     } else {
       showErrorSnackbar(
         context,
         "no image selected",
       );
-      emit(StoryImagePickedFromGalleryErrorState());
+      emit(FrontImagePickedFromGalleryErrorState());
     }
   }
 
-  Future<void> getStoryImagefromCamera(context) async {
-    pickedFile = await picker.pickImage(source: ImageSource.camera);
-    if (pickedFile != null) {
-      storyImage = File(pickedFile.path);
+  Future<void> getFrontImagefromCamera(context) async {
+   frontFile = await frontPicker.pickImage(source: ImageSource.camera);
+    if (frontFile != null) {
+      frontImage = File(frontFile.path);
       Navigator.pop(context);
-      emit(StoryImagePickedFromCameraSuccessState());
+      emit(FrontImagePickedFromCameraSuccessState());
     } else {
       showErrorSnackbar(
         context,
         "no image selected",
       );
-      emit(StoryImagePickedFromCameraErrorState());
+      emit(FrontImagePickedFromCameraErrorState());
     }
   }
 
-  void removeImage() {
-    pickedFile = null;
+  void removeFrontImage() {
+    frontImage = null;
+    emit(RemoveImage());
+  }
+
+
+  //back
+
+  File? backImage;
+  var backFile;
+  var backPicker = ImagePicker();
+
+  Future<void> getbackImagefromGallery(context) async {
+   backFile = await backPicker.pickImage(source: ImageSource.gallery);
+    if (backFile != null) {
+      backImage = File(backFile.path);
+      Navigator.pop(context);
+      emit(BackImagePickedFromGallerySuccessState());
+    } else {
+      showErrorSnackbar(
+        context,
+        "no image selected",
+      );
+      emit(BackImagePickedFromGalleryErrorState());
+    }
+  }
+
+  Future<void> getbackImagefromCamera(context) async {
+   backFile = await backPicker.pickImage(source: ImageSource.camera);
+    if (backFile != null) {
+      backImage = File(backFile.path);
+      Navigator.pop(context);
+      emit(BackImagePickedFromCameraSuccessState());
+    } else {
+      showErrorSnackbar(
+        context,
+        "no image selected",
+      );
+      emit(BackImagePickedFromCameraErrorState());
+    }
+  }
+
+  void removebackImage() {
+    backImage = null;
     emit(RemoveImage());
   }
 }
