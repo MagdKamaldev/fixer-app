@@ -115,6 +115,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "إعادة إرسال الرمز عن طريق الرسائل القصيرة"),
         "resetpassword":
             MessageLookupByLibrary.simpleMessage("إعادة تعيين كلمة المرور"),
+        "selectArea": MessageLookupByLibrary.simpleMessage("ادخل منطقتك !"),
         "setHomeLocation":
             MessageLookupByLibrary.simpleMessage("اختيار موقع المنزل"),
         "setLocationFirst":

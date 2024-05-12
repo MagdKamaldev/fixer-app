@@ -9,7 +9,6 @@ import 'package:fixer/features/login/presentation/views/widgets/login_view_body_
 import 'package:fixer/features/login/presentation/views/widgets/login_view_body_text_container.dart';
 import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CraftsmanSignUpViewBody extends StatelessWidget {
   const CraftsmanSignUpViewBody({super.key});
@@ -48,21 +47,20 @@ class CraftsmanSignUpViewBody extends StatelessWidget {
             text: S.of(context).nationalidfield,
             textInputType: TextInputType.number),
         verticalSpace(15),
-        TextContainer(text: S.of(context).city, margin: 35),
+        TextContainer(text: S.of(context).area, margin: 35),
         verticalSpace(5),
-        const CityDropDown(),
+        MultiSelectWidget(),
         verticalSpace(10),
         const TermsandPolicy(),
         verticalSpace(30),
-        Padding(
-          padding: locale == "en"
-              ? EdgeInsets.only(left: 230.w)
-              : EdgeInsets.only(right: 230.w),
+        Align(
+          alignment: Alignment.topRight,
           child: ReusableArrowButton(
-            nextPage: Routes.fieldOfService,
+            //TODO: nextPage: Routes.fieldOfService,
             onPressed: () {},
           ),
-        )
+        ),
+        verticalSpace(30),
       ]),
     ]);
   }

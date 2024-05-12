@@ -39,7 +39,6 @@
   "firstname":"الاسم الاول",
   "lasttname":"الاسم الأخير",
   "nationalid":"الرقم القومي",
-  "city":"المدينة",
   "firstnamefield":"ادخل اسمك الاول",
   "lasttnamefield":"ادخل اسمك الاخير",
   "nationalidfield":"ادخل رقمك القومي",
@@ -76,5 +75,7 @@
   "locationServicesDisabled":"خدمات الموقع معطلة",
   "locationPermissionDenied":"تم رفض إذن الموقع",
   "signUpFirst":"الرجاء تسجيل الدخول أولاً !",
-  "setLocationFirst":"الرجاء تحديد موقعك أولاً !"
+  "setLocationFirst":"الرجاء تحديد موقعك أولاً !",
+  "selectArea":"ادخل منطقتك !",
+  "city":"المدينة"
 } 

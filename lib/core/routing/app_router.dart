@@ -43,10 +43,6 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => const PasswordView(),
         );
-      case Routes.craftsmanConfirmationCode:
-        return MaterialPageRoute(
-          builder: (_) => const CraftsmanConfirmationCodeView(),
-        );
       case Routes.craftsmanSignUp:
         return MaterialPageRoute(
           builder: (_) => const CraftsmanSignUpView(),

@@ -3,45 +3,67 @@ import 'package:fixer/core/themes/text_styles.dart';
 import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:multi_select_flutter/multi_select_flutter.dart';
 
-class CityDropDown extends StatefulWidget {
-  const CityDropDown({super.key});
-
+class MultiSelectWidget extends StatefulWidget {
   @override
-  State<CityDropDown> createState() => _CityDropDownState();
+  _MultiSelectWidgetState createState() => _MultiSelectWidgetState();
 }
 
-class _CityDropDownState extends State<CityDropDown> {
-  String? valueChoose;
-  List<String> listItem = ["city1", "city2", "city3", "city4"];
+class _MultiSelectWidgetState extends State<MultiSelectWidget> {
+  List<dynamic> selectedOptions = [];
+
+  final List<dynamic> options = [
+    'Option 1',
+    'Option 2',
+    'Option 3',
+    'Option 4',
+    'Option 5',
+    'Option 1',
+    'Option 2',
+    'Option 3',
+    'Option 4',
+    'Option 5',
+    'Option 1',
+    'Option 2',
+    'Option 3',
+    'Option 4',
+    'Option 5',
+    'Option 1',
+    'Option 2',
+    'Option 3',
+    'Option 4',
+    'Option 5',
+  ];
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 330.w,
-      height: 55.h,
-      decoration: BoxDecoration(
-          border: Border.all(color: ColorManager.black),
-          borderRadius: BorderRadius.circular(10.sp)),
-      padding: EdgeInsets.symmetric(horizontal: 25.h),
-      child: DropdownButton<String>(
-        hint: Text(S.of(context).cityfield),
-        style: TextStyles.body.copyWith(color: ColorManager.darkgrey),
-        icon: const Icon(Icons.arrow_drop_down),
-        iconSize: 25,
-        isExpanded: true,
-        underline: const SizedBox(),
-        value: valueChoose,
-        onChanged: (String? newvalue) {
-          setState(() {
-            valueChoose = newvalue;
-          });
-        },
-        items: listItem.map((valueItem) {
-          return DropdownMenuItem(
-            value: valueItem,
-            child: Text(valueItem),
-          );
-        }).toList(),
+    return Padding(
+      padding: EdgeInsets.all(16.sp),
+      child: Column(
+        children: [
+          MultiSelectDialogField(
+            searchable: true,
+            items: options
+                .map((option) => MultiSelectItem<String>(option, option))
+                .toList(),
+            initialValue: selectedOptions,
+            listType: MultiSelectListType.LIST,
+            onConfirm: (List<dynamic> values) {
+              setState(() {
+                selectedOptions = values;
+              });
+            },
+            chipDisplay: MultiSelectChipDisplay(
+              chipColor: ColorManager.primary100,
+              textStyle: TextStyles.body,
+            ),
+            title: Text(
+              S.of(context).selectArea,
+              style: TextStyles.bodybold,
+            ),
+          ),
+        ],
       ),
     );
   }

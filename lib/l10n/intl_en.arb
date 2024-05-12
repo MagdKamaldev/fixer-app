@@ -39,7 +39,6 @@
   "firstname":"First name",
   "lasttname":"Last name",
   "nationalid":"National ID",
-  "city":"City",
   "firstnamefield":"Enter your first name",
   "lasttnamefield":"Enter your last name",
   "nationalidfield":"Enter your national ID",
@@ -47,7 +46,7 @@
   "agree":"I agree to the ",
   "termsandpolicy":" terms & policy",
   "field":"Choose your field",
-  "passwordinstructions":"it must contain at least two of:numbers,letters,or symbols",
+  "passwordinstructions":"It must contain at least two of:numbers,letters,or symbols",
   "fullname":"Name",
   "email":"Email",
   "fullnamefield":"Enter your name",
@@ -76,5 +75,7 @@
   "locationServicesDisabled":"Location services are disabled",
   "locationPermissionDenied":"Location permission denied",
   "signUpFirst":"Please Sign Up first !",
-  "setLocationFirst":"Please Set Location first !"
+  "setLocationFirst":"Please Set Location first !",
+  "selectArea":"select your area !",
+  "city":"city"
 }

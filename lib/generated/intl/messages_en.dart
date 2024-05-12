@@ -39,7 +39,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "area": MessageLookupByLibrary.simpleMessage("Area"),
         "building": MessageLookupByLibrary.simpleMessage("Building name"),
         "change": MessageLookupByLibrary.simpleMessage("Change"),
-        "city": MessageLookupByLibrary.simpleMessage("City"),
+        "city": MessageLookupByLibrary.simpleMessage("city"),
         "cityfield": MessageLookupByLibrary.simpleMessage("Enter your city"),
         "completeCode":
             MessageLookupByLibrary.simpleMessage("Please complete the code !"),
@@ -106,7 +106,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "passwordform":
             MessageLookupByLibrary.simpleMessage("Enter your password"),
         "passwordinstructions": MessageLookupByLibrary.simpleMessage(
-            "it must contain at least two of:numbers,letters,or symbols"),
+            "It must contain at least two of:numbers,letters,or symbols"),
         "phone": MessageLookupByLibrary.simpleMessage("Phone number"),
         "phoneValidation": MessageLookupByLibrary.simpleMessage(
             "Please add your phone number !"),
@@ -116,6 +116,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "resendcodeSMS":
             MessageLookupByLibrary.simpleMessage("Resend code by SMS"),
         "resetpassword": MessageLookupByLibrary.simpleMessage("Reset password"),
+        "selectArea":
+            MessageLookupByLibrary.simpleMessage("select your area !"),
         "setHomeLocation":
             MessageLookupByLibrary.simpleMessage("Set your home location"),
         "setLocationFirst":

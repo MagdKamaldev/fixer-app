@@ -450,16 +450,6 @@ class S {
     );
   }
 
-  /// `City`
-  String get city {
-    return Intl.message(
-      'City',
-      name: 'city',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// `Enter your first name`
   String get firstnamefield {
     return Intl.message(
@@ -530,10 +520,10 @@ class S {
     );
   }
 
-  /// `it must contain at least two of:numbers,letters,or symbols`
+  /// `It must contain at least two of:numbers,letters,or symbols`
   String get passwordinstructions {
     return Intl.message(
-      'it must contain at least two of:numbers,letters,or symbols',
+      'It must contain at least two of:numbers,letters,or symbols',
       name: 'passwordinstructions',
       desc: '',
       args: [],
@@ -825,6 +815,26 @@ class S {
     return Intl.message(
       'Please Set Location first !',
       name: 'setLocationFirst',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `select your area !`
+  String get selectArea {
+    return Intl.message(
+      'select your area !',
+      name: 'selectArea',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `city`
+  String get city {
+    return Intl.message(
+      'city',
+      name: 'city',
       desc: '',
       args: [],
     );

@@ -2,13 +2,14 @@ import 'package:fixer/features/craftsman_sign_up/presentation/craftsman_confirma
 import 'package:flutter/material.dart';
 
 class CraftsmanConfirmationCodeView extends StatelessWidget {
-  const CraftsmanConfirmationCodeView({super.key});
+  final String verificationId;
+  const CraftsmanConfirmationCodeView({super.key, required this.verificationId});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: const CraftsmanConfirmationCodeBody(),
+      body: CraftsmanConfirmationCodeBody(verificationId:  verificationId,),
     );
   }
 }
