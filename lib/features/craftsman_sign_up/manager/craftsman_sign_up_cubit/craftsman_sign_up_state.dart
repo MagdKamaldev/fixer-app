@@ -21,4 +21,11 @@ class BackImagePickedFromCameraSuccessState extends CraftsmanSignUpState{}
 
 class BackImagePickedFromCameraErrorState extends CraftsmanSignUpState{}
 
-class RemoveImage extends CraftsmanSignUpState{}
+class UploadFrontImageLoadingState extends CraftsmanSignUpState{}
+
+class UploadFrontImageSuccessState extends CraftsmanSignUpState{}
+
+class UploadFrontImageErrorState extends CraftsmanSignUpState{}
+
+class RemoveImageState extends CraftsmanSignUpState{}
+

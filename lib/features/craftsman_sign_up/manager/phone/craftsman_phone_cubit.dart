@@ -5,10 +5,14 @@ import 'package:fixer/core/helpers/extensions.dart';
 import 'package:fixer/core/networks/errors/error_snackbar.dart';
 import 'package:fixer/core/routing/app_router.dart';
 import 'package:fixer/core/routing/routes.dart';
+import 'package:fixer/features/craftsman_sign_up/manager/craftsman_sign_up_cubit/craftsman_sign_up_cubit.dart';
 import 'package:fixer/features/craftsman_sign_up/presentation/craftsman_confirmation_code/presentation/views/craftsman_confimation_code_view.dart';
+import 'package:fixer/main.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 part 'craftsman_phone_state.dart';
+
+String ? phoneToken = "";
 
 class CraftsmanPhoneNumberCubit extends Cubit<CraftsmanPhoneNumberState> {
   CraftsmanPhoneNumberCubit() : super(CraftsmanPhoneNumberInitial());
@@ -22,7 +26,11 @@ class CraftsmanPhoneNumberCubit extends Cubit<CraftsmanPhoneNumberState> {
         phoneNumber: phoneNumber,
         verificationCompleted: (PhoneAuthCredential credential) async {
           await _auth.signInWithCredential(credential);
+          phoneToken = credential.accessToken;
           emit(CraftsmanPhoneAuthSuccess(credential.verificationId!));
+
+// Trigger CraftsmanSignUpCubit to handle user object (optional)
+          context.read<CraftsmanSignUpCubit>().handleUserSignedIn(credential);
         },
         verificationFailed: (FirebaseAuthException e) {
           showErrorSnackbar(context, e.message!);
@@ -52,6 +60,7 @@ class CraftsmanPhoneNumberCubit extends Cubit<CraftsmanPhoneNumberState> {
         smsCode: smsCode,
       );
       await _auth.signInWithCredential(credential);
+      token = credential.accessToken;
       context.pushNamed(Routes.password);
       emit(CraftsmanCodeSentSuccess());
     } on FirebaseAuthException catch (e) {

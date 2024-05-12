@@ -1,4 +1,5 @@
 import 'package:fixer/core/helpers/spacing.dart';
+import 'package:fixer/core/themes/colors.dart';
 import 'package:fixer/core/themes/text_styles.dart';
 import 'package:fixer/features/craftsman_sign_up/manager/craftsman_sign_up_cubit/craftsman_sign_up_cubit.dart';
 import 'package:fixer/generated/l10n.dart';
@@ -76,7 +77,7 @@ class BackId extends StatelessWidget {
         children: [
           Text(
             S.of(context).uploadBack,
-            style: TextStyles.bodybold,
+            style: TextStyles.bodybold.copyWith(color: ColorManager.primary),
           ),
         ],
       ),

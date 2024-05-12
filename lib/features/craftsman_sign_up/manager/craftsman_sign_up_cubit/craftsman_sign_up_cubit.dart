@@ -1,11 +1,12 @@
 // ignore_for_file: prefer_typing_uninitialized_variables
-
 import 'dart:io';
-
+import 'package:fixer/core/constants/constants.dart';
 import 'package:fixer/core/networks/errors/error_snackbar.dart';
+import 'package:fixer/features/craftsman_sign_up/manager/phone/craftsman_phone_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:image_picker/image_picker.dart';
+
 part 'craftsman_sign_up_state.dart';
 
 class CraftsmanSignUpCubit extends Cubit<CraftsmanSignUpState> {
@@ -33,7 +34,7 @@ class CraftsmanSignUpCubit extends Cubit<CraftsmanSignUpState> {
   }
 
   Future<void> getFrontImagefromCamera(context) async {
-   frontFile = await frontPicker.pickImage(source: ImageSource.camera);
+    frontFile = await frontPicker.pickImage(source: ImageSource.camera);
     if (frontFile != null) {
       frontImage = File(frontFile.path);
       Navigator.pop(context);
@@ -49,9 +50,8 @@ class CraftsmanSignUpCubit extends Cubit<CraftsmanSignUpState> {
 
   void removeFrontImage() {
     frontImage = null;
-    emit(RemoveImage());
+    emit(RemoveImageState());
   }
-
 
   //back
 
@@ -60,7 +60,7 @@ class CraftsmanSignUpCubit extends Cubit<CraftsmanSignUpState> {
   var backPicker = ImagePicker();
 
   Future<void> getbackImagefromGallery(context) async {
-   backFile = await backPicker.pickImage(source: ImageSource.gallery);
+    backFile = await backPicker.pickImage(source: ImageSource.gallery);
     if (backFile != null) {
       backImage = File(backFile.path);
       Navigator.pop(context);
@@ -75,7 +75,7 @@ class CraftsmanSignUpCubit extends Cubit<CraftsmanSignUpState> {
   }
 
   Future<void> getbackImagefromCamera(context) async {
-   backFile = await backPicker.pickImage(source: ImageSource.camera);
+    backFile = await backPicker.pickImage(source: ImageSource.camera);
     if (backFile != null) {
       backImage = File(backFile.path);
       Navigator.pop(context);
@@ -91,6 +91,7 @@ class CraftsmanSignUpCubit extends Cubit<CraftsmanSignUpState> {
 
   void removebackImage() {
     backImage = null;
-    emit(RemoveImage());
+    emit(RemoveImageState());
   }
+
 }

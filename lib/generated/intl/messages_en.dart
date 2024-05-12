@@ -139,6 +139,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "street": MessageLookupByLibrary.simpleMessage("Street"),
         "termsandpolicy":
             MessageLookupByLibrary.simpleMessage(" terms & policy"),
+        "upload": MessageLookupByLibrary.simpleMessage("Upload"),
         "uploadBack": MessageLookupByLibrary.simpleMessage("backward part"),
         "uploadFront": MessageLookupByLibrary.simpleMessage("front part"),
         "uploadOptions": MessageLookupByLibrary.simpleMessage("upload option"),

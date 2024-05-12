@@ -82,5 +82,6 @@
   "uploadBack":"backward part",
   "uploadOptions":"upload option",
   "camera":"Camera",
-  "gallery":"Gallery"
+  "gallery":"Gallery",
+  "upload":"Upload"
 }

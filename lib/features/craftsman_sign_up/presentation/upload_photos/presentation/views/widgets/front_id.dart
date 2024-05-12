@@ -1,6 +1,8 @@
 import 'package:fixer/core/helpers/spacing.dart';
+import 'package:fixer/core/themes/colors.dart';
 import 'package:fixer/core/themes/text_styles.dart';
 import 'package:fixer/features/craftsman_sign_up/manager/craftsman_sign_up_cubit/craftsman_sign_up_cubit.dart';
+import 'package:fixer/features/craftsman_sign_up/presentation/craftsman_phone_number/presentation/views/widgets/phone_number_body.dart';
 import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -10,6 +12,7 @@ class FrontId extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    CraftsmanSignUpCubit cubit = CraftsmanSignUpCubit.get(context);
     return GestureDetector(
       onTap: () {
         showDialog(
@@ -76,10 +79,12 @@ class FrontId extends StatelessWidget {
         children: [
           Text(
             S.of(context).uploadFront,
-            style: TextStyles.bodybold,
+            style: TextStyles.bodybold.copyWith(color: ColorManager.primary),
           ),
         ],
       ),
     );
   }
 }
+
+//KVRHfkActQKADLqb
