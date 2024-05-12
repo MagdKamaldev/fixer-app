@@ -38,6 +38,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage(" Already have an account?"),
         "area": MessageLookupByLibrary.simpleMessage("Area"),
         "building": MessageLookupByLibrary.simpleMessage("Building name"),
+        "camera": MessageLookupByLibrary.simpleMessage("Camera"),
         "change": MessageLookupByLibrary.simpleMessage("Change"),
         "city": MessageLookupByLibrary.simpleMessage("city"),
         "cityfield": MessageLookupByLibrary.simpleMessage("Enter your city"),
@@ -70,6 +71,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "fullname": MessageLookupByLibrary.simpleMessage("Name"),
         "fullnamefield":
             MessageLookupByLibrary.simpleMessage("Enter your name"),
+        "gallery": MessageLookupByLibrary.simpleMessage("Gallery"),
         "getstart": MessageLookupByLibrary.simpleMessage("Let’s get started "),
         "getstarted": MessageLookupByLibrary.simpleMessage("Get started"),
         "getstartintro": MessageLookupByLibrary.simpleMessage(
@@ -137,6 +139,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "street": MessageLookupByLibrary.simpleMessage("Street"),
         "termsandpolicy":
             MessageLookupByLibrary.simpleMessage(" terms & policy"),
+        "upload": MessageLookupByLibrary.simpleMessage("Upload"),
+        "uploadOptions":
+            MessageLookupByLibrary.simpleMessage("Select an upload option"),
         "uploadid":
             MessageLookupByLibrary.simpleMessage("Upload your national ID"),
         "uploadphoto":

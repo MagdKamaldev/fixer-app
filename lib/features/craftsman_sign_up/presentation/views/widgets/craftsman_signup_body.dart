@@ -1,4 +1,4 @@
-import 'package:fixer/core/constants/constants.dart';
+import 'package:fixer/core/helpers/extensions.dart';
 import 'package:fixer/core/helpers/spacing.dart';
 import 'package:fixer/core/routing/routes.dart';
 import 'package:fixer/core/widgets/arrow/presentation/views/arrow_button.dart';
@@ -48,16 +48,16 @@ class CraftsmanSignUpViewBody extends StatelessWidget {
             textInputType: TextInputType.number),
         verticalSpace(15),
         TextContainer(text: S.of(context).area, margin: 35),
-        verticalSpace(5),
-        MultiSelectWidget(),
         verticalSpace(10),
         const TermsandPolicy(),
         verticalSpace(30),
         Align(
           alignment: Alignment.topRight,
           child: ReusableArrowButton(
-            //TODO: nextPage: Routes.fieldOfService,
-            onPressed: () {},
+            
+            onPressed: () {
+              context.pushNamed(Routes.fieldOfService);
+            },
           ),
         ),
         verticalSpace(30),

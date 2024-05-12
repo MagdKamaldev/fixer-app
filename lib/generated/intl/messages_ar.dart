@@ -38,6 +38,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage(" لديك حساب بالفعل ؟"),
         "area": MessageLookupByLibrary.simpleMessage("منطقة"),
         "building": MessageLookupByLibrary.simpleMessage("اسم المبنى"),
+        "camera": MessageLookupByLibrary.simpleMessage("الكاميرا"),
         "change": MessageLookupByLibrary.simpleMessage("تغيير"),
         "city": MessageLookupByLibrary.simpleMessage("المدينة"),
         "cityfield": MessageLookupByLibrary.simpleMessage("ادخل مدينتك"),
@@ -68,6 +69,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "forgotpass": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور"),
         "fullname": MessageLookupByLibrary.simpleMessage("الاسم"),
         "fullnamefield": MessageLookupByLibrary.simpleMessage("ادخل اسمك"),
+        "gallery": MessageLookupByLibrary.simpleMessage("المعرض"),
         "getstart": MessageLookupByLibrary.simpleMessage("لنبدأ "),
         "getstarted": MessageLookupByLibrary.simpleMessage("البدء"),
         "getstartintro": MessageLookupByLibrary.simpleMessage(
@@ -133,6 +135,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "street": MessageLookupByLibrary.simpleMessage("الشارع"),
         "termsandpolicy":
             MessageLookupByLibrary.simpleMessage("الشروط والسياسات"),
+        "upload": MessageLookupByLibrary.simpleMessage("تحميل"),
+        "uploadOptions":
+            MessageLookupByLibrary.simpleMessage("اختر طريقة التحميل"),
         "uploadid": MessageLookupByLibrary.simpleMessage(
             "قم بتحميل رقم الهوية الوطنية الخاص بك"),
         "uploadphoto":

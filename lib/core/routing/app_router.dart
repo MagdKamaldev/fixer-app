@@ -1,7 +1,6 @@
 import 'package:fixer/core/routing/routes.dart';
 import 'package:fixer/features/home/presentation/views/home_view.dart';
 import 'package:fixer/features/user_sign_up/presentation/user_signup_layout/presentation/views/widgets/set_user_location.dart';
-import 'package:fixer/features/craftsman_sign_up/presentation/craftsman_confirmation_code/presentation/views/craftsman_confimation_code_view.dart';
 import 'package:fixer/features/craftsman_sign_up/presentation/views/craftsman_signup_view.dart';
 import 'package:fixer/features/craftsman_sign_up/presentation/fields_of_service/fields_view.dart';
 import 'package:fixer/features/get_started/presentation/views/get_started_view.dart';
