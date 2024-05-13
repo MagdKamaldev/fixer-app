@@ -27,7 +27,6 @@ class AddressTextFieldModel extends StatelessWidget {
             return S.of(context).emptyValidation;
           }
           return null;
-        
         },
         controller: controller,
         keyboardType: TextInputType.text,

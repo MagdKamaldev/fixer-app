@@ -7,6 +7,5 @@ abstract class UserSignUpRepository {
   Future<Either<Failure, UserModel>> userSignUp(
       UserModel user, String password);
 
-  Future<Either<Failure, LocationModel>> setLocation(
-      LocationModel location);
+  Future<Either<Failure, LocationModel>> setLocation(LocationModel location);
 }

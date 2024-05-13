@@ -21,8 +21,8 @@ class CraftsmanPhoneNumberBody extends StatefulWidget {
 }
 
 class _CraftsmanPhoneNumberBodyState extends State<CraftsmanPhoneNumberBody> {
-   final TextEditingController phonenumb = TextEditingController();
-     GlobalKey<FormState> formKey = GlobalKey<FormState>();
+  final TextEditingController phonenumb = TextEditingController();
+  GlobalKey<FormState> formKey = GlobalKey<FormState>();
   Country selectedCountry = Country(
     phoneCode: "+20",
     countryCode: "EG",
@@ -37,10 +37,9 @@ class _CraftsmanPhoneNumberBodyState extends State<CraftsmanPhoneNumberBody> {
   );
   @override
   Widget build(BuildContext context) {
-   
-    return BlocConsumer<CraftsmanPhoneNumberCubit,CraftsmanPhoneNumberState>(
+    return BlocConsumer<CraftsmanPhoneNumberCubit, CraftsmanPhoneNumberState>(
       listener: (context, state) {},
-      builder:(context,state)=> Form(
+      builder: (context, state) => Form(
         key: formKey,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -110,23 +109,25 @@ class _CraftsmanPhoneNumberBodyState extends State<CraftsmanPhoneNumberBody> {
             ),
             verticalSpace(75),
             Align(
-                alignment: Alignment.bottomRight,
-                child:state is! CraftsmanPhoneAuthLoading
-                    ? PhoneAuthArrowButton(
-                        onPressed: () {
-                          if (formKey.currentState!.validate()) {
-                            craftsmanPhoneNumber =
-                                "${selectedCountry.phoneCode}${phonenumb.text}";
-                            CraftsmanPhoneNumberCubit.get(context).signInWithPhoneNumber(
-                                "${selectedCountry.phoneCode}${phonenumb.text}",
-                                context);
-                          }
-                        },
-                      )
-                    : Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 50.w),
-                        child: const CircularProgressIndicator(),
-                      ),),
+              alignment: Alignment.bottomRight,
+              child: state is! CraftsmanPhoneAuthLoading
+                  ? PhoneAuthArrowButton(
+                      onPressed: () {
+                        if (formKey.currentState!.validate()) {
+                          craftsmanPhoneNumber =
+                              "${selectedCountry.phoneCode}${phonenumb.text}";
+                          CraftsmanPhoneNumberCubit.get(context)
+                              .signInWithPhoneNumber(
+                                  "${selectedCountry.phoneCode}${phonenumb.text}",
+                                  context);
+                        }
+                      },
+                    )
+                  : Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 50.w),
+                      child: const CircularProgressIndicator(),
+                    ),
+            ),
           ],
         ),
       ),

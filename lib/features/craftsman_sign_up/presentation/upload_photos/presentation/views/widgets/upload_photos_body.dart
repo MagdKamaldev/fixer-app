@@ -1,9 +1,11 @@
 import 'package:fixer/core/helpers/spacing.dart';
+import 'package:fixer/core/routing/app_router.dart';
 import 'package:fixer/core/themes/text_styles.dart';
 import 'package:fixer/core/widgets/buttons/default_button.dart';
 import 'package:fixer/features/craftsman_sign_up/manager/craftsman_sign_up_cubit/craftsman_sign_up_cubit.dart';
 import 'package:fixer/features/craftsman_sign_up/presentation/upload_photos/presentation/views/widgets/back_id.dart';
 import 'package:fixer/features/craftsman_sign_up/presentation/upload_photos/presentation/views/widgets/front_id.dart';
+import 'package:fixer/features/craftsman_sign_up/presentation/views/widgets/set_operating_locations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -111,7 +113,8 @@ class UploadPhotosBody extends StatelessWidget {
                     child: DefaultButton(
                         text: S.of(context).upload,
                         onPressed: () {
-                         // cubit.saveImage(cubit.frontFile);
+                          navigateTo(context, SelectLoations());
+                          //cubit.saveImage(cubit.frontFile);
                         }),
                   ),
                   verticalSpace(30),

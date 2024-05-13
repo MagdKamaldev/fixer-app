@@ -93,5 +93,4 @@ class CraftsmanSignUpCubit extends Cubit<CraftsmanSignUpState> {
     backImage = null;
     emit(RemoveImageState());
   }
-
 }

@@ -44,6 +44,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "cityfield": MessageLookupByLibrary.simpleMessage("Enter your city"),
         "completeCode":
             MessageLookupByLibrary.simpleMessage("Please complete the code !"),
+        "confirm": MessageLookupByLibrary.simpleMessage("Confirm"),
         "confirmLocation":
             MessageLookupByLibrary.simpleMessage("Confirm location"),
         "continuee": MessageLookupByLibrary.simpleMessage("Continue"),

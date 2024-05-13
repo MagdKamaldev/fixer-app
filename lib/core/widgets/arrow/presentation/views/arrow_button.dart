@@ -4,8 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ReusableArrowButton extends StatelessWidget {
   final Function() onPressed;
-  const ReusableArrowButton(
-      {super.key,required this.onPressed});
+  const ReusableArrowButton({super.key, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {

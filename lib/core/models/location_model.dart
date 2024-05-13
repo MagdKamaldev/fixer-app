@@ -19,7 +19,6 @@ class LocationModel {
     this.city,
     this.district,
     this.floor,
-   
     this.id,
     this.street,
   });

@@ -12,7 +12,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 part 'craftsman_phone_state.dart';
 
-String ? phoneToken = "";
+String? phoneToken = "";
 
 class CraftsmanPhoneNumberCubit extends Cubit<CraftsmanPhoneNumberState> {
   CraftsmanPhoneNumberCubit() : super(CraftsmanPhoneNumberInitial());

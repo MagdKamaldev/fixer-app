@@ -3,7 +3,6 @@ import 'package:fixer/core/helpers/spacing.dart';
 import 'package:fixer/core/routing/routes.dart';
 import 'package:fixer/core/widgets/arrow/presentation/views/arrow_button.dart';
 import 'package:fixer/features/craftsman_sign_up/presentation/views/widgets/craftsman_signup_textform.dart';
-import 'package:fixer/features/craftsman_sign_up/presentation/views/widgets/drop_down_button.dart';
 import 'package:fixer/features/craftsman_sign_up/presentation/views/widgets/terms_and_policy_row.dart';
 import 'package:fixer/features/login/presentation/views/widgets/login_view_body_logo.dart';
 import 'package:fixer/features/login/presentation/views/widgets/login_view_body_text_container.dart';
@@ -17,7 +16,7 @@ class CraftsmanSignUpViewBody extends StatelessWidget {
   static final TextEditingController lastNameController =
       TextEditingController();
   static final TextEditingController idController = TextEditingController();
-  static final TextEditingController cityController = TextEditingController();
+  static final TextEditingController emailController = TextEditingController();
   static bool isAgreed = false;
   @override
   Widget build(BuildContext context) {
@@ -47,14 +46,18 @@ class CraftsmanSignUpViewBody extends StatelessWidget {
             text: S.of(context).nationalidfield,
             textInputType: TextInputType.number),
         verticalSpace(15),
-        TextContainer(text: S.of(context).area, margin: 35),
+        TextContainer(text: S.of(context).email, margin: 35),
+        verticalSpace(10),
+        CraftsmanSignUpTextForm(
+            controller: emailController,
+            text: S.of(context).emailfield,
+            textInputType: TextInputType.emailAddress),
         verticalSpace(10),
         const TermsandPolicy(),
         verticalSpace(30),
         Align(
           alignment: Alignment.topRight,
           child: ReusableArrowButton(
-            
             onPressed: () {
               context.pushNamed(Routes.fieldOfService);
             },

@@ -1,5 +1,9 @@
+// ignore_for_file: library_private_types_in_public_api
+
+import 'package:fixer/core/helpers/spacing.dart';
 import 'package:fixer/core/themes/colors.dart';
 import 'package:fixer/core/themes/text_styles.dart';
+import 'package:fixer/core/widgets/buttons/default_button.dart';
 import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -52,7 +56,7 @@ class _SelectLoationsState extends State<SelectLoations> {
                   .map((option) => MultiSelectItem<String>(option, option))
                   .toList(),
               initialValue: selectedOptions,
-              listType: MultiSelectListType.LIST,
+              listType: MultiSelectListType.CHIP,
               onConfirm: (List<dynamic> values) {
                 setState(() {
                   selectedOptions = values;
@@ -67,6 +71,9 @@ class _SelectLoationsState extends State<SelectLoations> {
                 style: TextStyles.bodybold,
               ),
             ),
+            const Spacer(),
+            DefaultButton(text: S.of(context).confirm, onPressed: () {}),
+            verticalSpace(30)
           ],
         ),
       ),

@@ -83,5 +83,6 @@
   "uploadOptions":"upload option",
   "camera":"Camera",
   "gallery":"Gallery",
-  "upload":"Upload"
+  "upload":"Upload",
+  "confirm":"Confirm"
 }

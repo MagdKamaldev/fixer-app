@@ -76,22 +76,23 @@ class CraftsmanConfirmationCodeBody extends StatelessWidget {
                 ),
                 verticalSpace(100),
                 if (state is CraftsmanPhoneAuthLoading)
-                const Center(child: CircularProgressIndicator()),
-              if (state is! CraftsmanPhoneAuthLoading)
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 50.w),
-                  child: DefaultButton(
-                      text: "Submit",
-                      onPressed: () {
-                        if (craftsmanOtp!.length != 6) {
-                          showErrorSnackbar(
-                              context, S.of(context).completeCode);
-                        } else {
-                          CraftsmanPhoneNumberCubit.get(context).verifyPhoneNumber(
-                              verificationId, craftsmanOtp!, context);
-                        }
-                      }),
-                ),
+                  const Center(child: CircularProgressIndicator()),
+                if (state is! CraftsmanPhoneAuthLoading)
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 50.w),
+                    child: DefaultButton(
+                        text: "Submit",
+                        onPressed: () {
+                          if (craftsmanOtp!.length != 6) {
+                            showErrorSnackbar(
+                                context, S.of(context).completeCode);
+                          } else {
+                            CraftsmanPhoneNumberCubit.get(context)
+                                .verifyPhoneNumber(
+                                    verificationId, craftsmanOtp!, context);
+                          }
+                        }),
+                  ),
                 verticalSpace(100),
                 Text(S.of(context).after40sec, style: TextStyles.body),
                 verticalSpace(15),

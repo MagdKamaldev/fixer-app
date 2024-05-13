@@ -44,6 +44,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "cityfield": MessageLookupByLibrary.simpleMessage("ادخل مدينتك"),
         "completeCode": MessageLookupByLibrary.simpleMessage(
             "الرجاء إدخال الرمز المكون من 6 أرقام"),
+        "confirm": MessageLookupByLibrary.simpleMessage("تأكيد"),
         "confirmLocation": MessageLookupByLibrary.simpleMessage("تأكيد الموقع"),
         "continuee": MessageLookupByLibrary.simpleMessage("استمرار"),
         "district": MessageLookupByLibrary.simpleMessage("الحي"),
