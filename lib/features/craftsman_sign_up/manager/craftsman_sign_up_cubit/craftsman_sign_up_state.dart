@@ -27,3 +27,13 @@ class UploadFrontImageSuccessState extends CraftsmanSignUpState {}
 class UploadFrontImageErrorState extends CraftsmanSignUpState {}
 
 class RemoveImageState extends CraftsmanSignUpState {}
+
+class GetLocationsLoading extends CraftsmanSignUpState {}
+
+class GetlocationsSuccess extends CraftsmanSignUpState {
+  final List<OperatingAreaModel> locations;
+
+  GetlocationsSuccess(this.locations);
+}
+
+class GetlocationsError extends CraftsmanSignUpState {}

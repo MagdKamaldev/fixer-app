@@ -1,7 +1,9 @@
 import 'package:fixer/core/helpers/spacing.dart';
 import 'package:fixer/core/routing/app_router.dart';
+import 'package:fixer/core/service_locator/service_locator.dart';
 import 'package:fixer/core/themes/text_styles.dart';
 import 'package:fixer/core/widgets/buttons/default_button.dart';
+import 'package:fixer/features/craftsman_sign_up/data/repos/craftsman_signup_repo_implementation.dart';
 import 'package:fixer/features/craftsman_sign_up/manager/craftsman_sign_up_cubit/craftsman_sign_up_cubit.dart';
 import 'package:fixer/features/craftsman_sign_up/presentation/upload_photos/presentation/views/widgets/back_id.dart';
 import 'package:fixer/features/craftsman_sign_up/presentation/upload_photos/presentation/views/widgets/front_id.dart';
@@ -19,7 +21,7 @@ class UploadPhotosBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => CraftsmanSignUpCubit(),
+      create: (context) => CraftsmanSignUpCubit(getIt<CraftsmanSignUpRepositoryImplementation>()),
       child: BlocConsumer<CraftsmanSignUpCubit, CraftsmanSignUpState>(
         listener: (context, state) {},
         builder: (context, state) {
