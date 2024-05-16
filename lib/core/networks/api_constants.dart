@@ -5,4 +5,6 @@ class ApiConstants {
   static const String registerClient = 'ClientRegistration';
   static const String registerCraftsman = "CraftsmanRegistration";
   static const String operatingLocations = "OperatingLocations";
+  static const String craftsmanUploadPhotos = "Craftsman/Upload";
+  static const String craftsmanSetLocations = "Craftsman/Locations";
 }

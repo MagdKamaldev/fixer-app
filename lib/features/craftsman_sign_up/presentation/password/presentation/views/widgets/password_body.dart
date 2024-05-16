@@ -1,5 +1,4 @@
 // ignore_for_file: must_be_immutable
-
 import 'package:fixer/core/constants/constants.dart';
 import 'package:fixer/core/helpers/extensions.dart';
 import 'package:fixer/core/helpers/spacing.dart';
@@ -38,17 +37,21 @@ class PasswordBody extends StatelessWidget {
               width: 385.w,
               height: 85.h,
               child: TextFormField(
+                onChanged: (value) {
+                  craftsmanPassword = value;
+                },
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return S.of(context).emptyValidation;
                   }
+                  if (value.length < 8) {
+                    return S.of(context).passwordLength;
+                  }
                   const pattern =
                       r'^(?=(.*\d){2})(?=(.*[a-zA-Z]){2})(?=(.*\W){2}).*$';
-
                   if (!RegExp(pattern).hasMatch(value)) {
                     return S.of(context).passwordinstructions;
                   }
-
                   return null;
                 },
                 controller: passwordController,
@@ -92,7 +95,8 @@ class PasswordBody extends StatelessWidget {
               alignment: Alignment.topRight,
               child: ReusableArrowButton(
                 onPressed: () {
-                  if (formKey.currentState!.validate()) {
+                  if (formKey.currentState!.validate() &&
+                      craftsmanPassword!.length >= 8) {
                     craftsmanPassword = passwordController.text;
                     context.pushNamed(Routes.craftsmanSignUp);
                   }

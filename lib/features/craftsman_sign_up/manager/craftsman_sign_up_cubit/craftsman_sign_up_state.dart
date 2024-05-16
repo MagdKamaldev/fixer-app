@@ -47,6 +47,29 @@ class RegisterCraftsmanSuccess extends CraftsmanSignUpState {
 
 class RegisterCraftsmanError extends CraftsmanSignUpState {
   final String message;
-
   RegisterCraftsmanError(this.message);
+}
+
+class CraftsManUploadPhotoLoading extends CraftsmanSignUpState {}
+
+class CraftsManUploadPhotoSuccess extends CraftsmanSignUpState {
+  final String imageUrl;
+  CraftsManUploadPhotoSuccess(this.imageUrl);
+}
+
+class CraftsManUploadPhotoError extends CraftsmanSignUpState {
+  final String message;
+  CraftsManUploadPhotoError(this.message);
+}
+
+class SetOperatinLocationsLoading extends CraftsmanSignUpState {}
+
+class SetOperatinLocationsSuccess extends CraftsmanSignUpState {
+  final String message;
+  SetOperatinLocationsSuccess(this.message);
+}
+
+class SetOperatinLocationsError extends CraftsmanSignUpState {
+  final String message;
+  SetOperatinLocationsError(this.message);
 }

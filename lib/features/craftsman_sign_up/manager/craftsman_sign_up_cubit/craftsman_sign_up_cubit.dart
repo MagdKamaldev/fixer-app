@@ -6,6 +6,8 @@ import 'package:fixer/core/routing/app_router.dart';
 import 'package:fixer/features/craftsman_sign_up/data/models/craftsman_model.dart';
 import 'package:fixer/features/craftsman_sign_up/data/repos/craftsman_signup_repo_implementation.dart';
 import 'package:fixer/features/craftsman_sign_up/presentation/upload_photos/presentation/views/upload_photos_view.dart';
+import 'package:fixer/features/craftsman_sign_up/presentation/views/widgets/set_operating_locations.dart';
+import 'package:fixer/features/home/presentation/views/home_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:image_picker/image_picker.dart';
@@ -115,7 +117,6 @@ class CraftsmanSignUpCubit extends Cubit<CraftsmanSignUpState> {
   Future<void> registerCraftsman(CraftsmanModel craftsman, context) async {
     emit(RegisterCraftsmanLoading());
     final response = await repositoryImplementation.signUpCraftsman(craftsman);
-
     response.fold(
       (l) {
         emit(RegisterCraftsmanError(l.message));
@@ -123,6 +124,35 @@ class CraftsmanSignUpCubit extends Cubit<CraftsmanSignUpState> {
       (r) {
         navigateTo(context, const UploadPhotosView());
         emit(RegisterCraftsmanSuccess(r));
+      },
+    );
+  }
+
+  Future<void> uploadFrontImage(context) async {
+    emit(CraftsManUploadPhotoLoading());
+    final response =
+        await repositoryImplementation.uploadImage(frontImage!, backImage!);
+    response.fold(
+      (l) {
+        emit(CraftsManUploadPhotoError(l.message));
+      },
+      (r) {
+        navigateTo(context, const SelectLoations());
+        emit(CraftsManUploadPhotoSuccess(r));
+      },
+    );
+  }
+
+  Future<void> setOperatingAreas(List<dynamic> areas, context) async {
+    emit(SetOperatinLocationsLoading());
+    final response = await repositoryImplementation.setOperatingAreas(areas);
+    response.fold(
+      (l) {
+        emit(SetOperatinLocationsError(l.message));
+      },
+      (r) {
+        navigateTo(context, const HomeView());
+        emit(SetOperatinLocationsSuccess(r));
       },
     );
   }

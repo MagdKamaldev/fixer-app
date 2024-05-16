@@ -37,16 +37,16 @@ class CraftsmanSignUpRepositoryImplementation
   @override
   Future<Either<Failure, CraftsmanModel>> signUpCraftsman(
       CraftsmanModel craftsman) async {
-     try {
-    final response = await apiServices.post(
-      endPoint: ApiConstants.registerCraftsman,
-      data: craftsman.toJson(),
-    );
-  
-    final craftsmanModel = CraftsmanModel.fromJson(response);
-    token = response["jwt"];
-    kTokenBox.put(kTokenBoxString, token);
-    return Right(craftsmanModel);
+    try {
+      final response = await apiServices.post(
+        endPoint: ApiConstants.registerCraftsman,
+        data: craftsman.toJson(),
+      );
+
+      final craftsmanModel = CraftsmanModel.fromJson(response);
+      token = response["jwt"];
+      kTokenBox.put(kTokenBoxString, token);
+      return Right(craftsmanModel);
     } catch (e) {
       if (e is DioError) {
         return Left(ServerFailure.fromDioError(e));
@@ -57,14 +57,39 @@ class CraftsmanSignUpRepositoryImplementation
   }
 
   @override
-  Future<Either<Failure, String>> setOperatingAreas(List<String> areas) {
-    // TODO: implement setOperatingAreas
-    throw UnimplementedError();
+  Future<Either<Failure, String>> setOperatingAreas(List<dynamic> areas) async{
+    try{
+      final response = await apiServices.post(
+          endPoint: ApiConstants.craftsmanSetLocations,
+          jwt: token,
+          data: {"locations": areas});
+      return Right(response["message"]);
+    } catch (e) {
+      if (e is DioError) {
+        return Left(ServerFailure.fromDioError(e));
+      } else {
+        return Left(ServerFailure(e.toString()));
+      }
+    }
   }
 
   @override
-  Future<Either<Failure, String>> uploadImage(File image) {
-    // TODO: implement uploadImage
-    throw UnimplementedError();
+  Future<Either<Failure, String>> uploadImage(File front, File back) async {
+    try {
+      final response = await apiServices.post(
+          endPoint: ApiConstants.craftsmanUploadPhotos,
+          jwt: token,
+          data: FormData.fromMap({
+            "front": await MultipartFile.fromFile(front.path),
+            "back": await MultipartFile.fromFile(back.path),
+          }));
+      return Right(response["Front image url"]);
+    } catch (e) {
+      if (e is DioError) {
+        return Left(ServerFailure.fromDioError(e));
+      } else {
+        return Left(ServerFailure(e.toString()));
+      }
+    }
   }
 }

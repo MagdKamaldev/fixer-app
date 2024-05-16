@@ -10,8 +10,6 @@ abstract class CraftsmanSignUpRepository {
   Future<Either<Failure, CraftsmanModel>> signUpCraftsman(
       CraftsmanModel craftsman);
   Future<Either<Failure, List<OperatingAreaModel>>> getOperatingAreas();
-  Future<Either<Failure, String>> setOperatingAreas(List<String> areas);
-  Future<Either<Failure, String>> uploadImage(File image);
-  
-
+  Future<Either<Failure, String>> setOperatingAreas(List<dynamic> areas);
+  Future<Either<Failure, String>> uploadImage(File fonr,File back);
 }

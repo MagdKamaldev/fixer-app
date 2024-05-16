@@ -69,7 +69,11 @@ class _SelectLoationsState extends State<SelectLoations> {
                         ),
                         const Spacer(),
                         DefaultButton(
-                            text: S.of(context).confirm, onPressed: () {}),
+                            text: S.of(context).confirm,
+                            onPressed: () {
+                              CraftsmanSignUpCubit.get(context)
+                                  .setOperatingAreas(selectedOptions, context);
+                            }),
                         verticalSpace(30)
                       ],
                     )

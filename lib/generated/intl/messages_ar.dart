@@ -102,6 +102,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "قم بإجراء تحويلات خالية من \nالمتاعب داخل التطبيق لراحة البال."),
         "or": MessageLookupByLibrary.simpleMessage("أو"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+        "passwordLength": MessageLookupByLibrary.simpleMessage(
+            "يجب أن تحتوي كلمة المرور على 8 أحرف على الأقل"),
         "passwordform":
             MessageLookupByLibrary.simpleMessage("أدخل كلمة المرور"),
         "passwordinstructions": MessageLookupByLibrary.simpleMessage(

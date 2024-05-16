@@ -84,5 +84,6 @@
   "camera":"Camera",
   "gallery":"Gallery",
   "upload":"Upload",
-  "confirm":"Confirm"
+  "confirm":"Confirm",
+  "passwordLength":"Password must be at least 8 characters"
 }

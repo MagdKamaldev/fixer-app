@@ -1,5 +1,4 @@
 import 'package:fixer/core/helpers/spacing.dart';
-import 'package:fixer/core/routing/app_router.dart';
 import 'package:fixer/core/service_locator/service_locator.dart';
 import 'package:fixer/core/themes/text_styles.dart';
 import 'package:fixer/core/widgets/buttons/default_button.dart';
@@ -7,9 +6,7 @@ import 'package:fixer/features/craftsman_sign_up/data/repos/craftsman_signup_rep
 import 'package:fixer/features/craftsman_sign_up/manager/craftsman_sign_up_cubit/craftsman_sign_up_cubit.dart';
 import 'package:fixer/features/craftsman_sign_up/presentation/upload_photos/presentation/views/widgets/back_id.dart';
 import 'package:fixer/features/craftsman_sign_up/presentation/upload_photos/presentation/views/widgets/front_id.dart';
-import 'package:fixer/features/craftsman_sign_up/presentation/views/widgets/set_operating_locations.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -63,16 +60,12 @@ class UploadPhotosBody extends StatelessWidget {
                                 BackId(),
                               ],
                             ),
-                            if (cubit.frontImage !=
-                                    null ||
-                                cubit.backImage !=
-                                    null)
+                            if (cubit.frontImage != null ||
+                                cubit.backImage != null)
                               verticalSpace(20),
                             Row(
                               children: [
-                                if (cubit
-                                        .frontImage !=
-                                    null)
+                                if (cubit.frontImage != null)
                                   Container(
                                     height: 100.h,
                                     width: 120.w,
@@ -80,16 +73,13 @@ class UploadPhotosBody extends StatelessWidget {
                                         borderRadius: BorderRadius.circular(4),
                                         image: DecorationImage(
                                           image: FileImage(
-                                            cubit
-                                                .frontImage!,
+                                            cubit.frontImage!,
                                           ),
                                           fit: BoxFit.cover,
                                         )),
                                   ),
                                 const Spacer(),
-                                if (cubit
-                                        .backImage !=
-                                    null)
+                                if (cubit.backImage != null)
                                   Container(
                                     height: 100.h,
                                     width: 120.w,
@@ -97,8 +87,7 @@ class UploadPhotosBody extends StatelessWidget {
                                         borderRadius: BorderRadius.circular(4),
                                         image: DecorationImage(
                                           image: FileImage(
-                                            cubit
-                                                .backImage!,
+                                            cubit.backImage!,
                                           ),
                                           fit: BoxFit.cover,
                                         )),
@@ -111,15 +100,17 @@ class UploadPhotosBody extends StatelessWidget {
                     ),
                   ),
                   verticalSpace(30),
-                  Padding(
-                    padding: EdgeInsets.all(20.0.sp),
-                    child: DefaultButton(
-                        text: S.of(context).upload,
-                        onPressed: () {
-                          navigateTo(context, const SelectLoations());
-                          //cubit.saveImage(cubit.frontFile);
-                        }),
-                  ),
+                  if (state is! CraftsManUploadPhotoLoading)
+                    Padding(
+                      padding: EdgeInsets.all(20.0.sp),
+                      child: DefaultButton(
+                          text: S.of(context).upload,
+                          onPressed: () {
+                            cubit.uploadFrontImage(context);
+                          }),
+                    ),
+                  if (state is CraftsManUploadPhotoLoading)
+                    const Center(child: CircularProgressIndicator()),
                   verticalSpace(30),
                 ],
               )
