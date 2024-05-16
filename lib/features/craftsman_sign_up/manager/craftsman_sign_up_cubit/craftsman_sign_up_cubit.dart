@@ -2,8 +2,10 @@
 import 'dart:io';
 import 'package:fixer/core/models/operating_area_model.dart';
 import 'package:fixer/core/networks/errors/error_snackbar.dart';
+import 'package:fixer/core/routing/app_router.dart';
 import 'package:fixer/features/craftsman_sign_up/data/models/craftsman_model.dart';
 import 'package:fixer/features/craftsman_sign_up/data/repos/craftsman_signup_repo_implementation.dart';
+import 'package:fixer/features/craftsman_sign_up/presentation/upload_photos/presentation/views/upload_photos_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:image_picker/image_picker.dart';
@@ -110,7 +112,7 @@ class CraftsmanSignUpCubit extends Cubit<CraftsmanSignUpState> {
     );
   }
 
-  Future<void> registerCraftsman(CraftsmanModel craftsman) async {
+  Future<void> registerCraftsman(CraftsmanModel craftsman, context) async {
     emit(RegisterCraftsmanLoading());
     final response = await repositoryImplementation.signUpCraftsman(craftsman);
 
@@ -119,6 +121,7 @@ class CraftsmanSignUpCubit extends Cubit<CraftsmanSignUpState> {
         emit(RegisterCraftsmanError(l.message));
       },
       (r) {
+        navigateTo(context, const UploadPhotosView());
         emit(RegisterCraftsmanSuccess(r));
       },
     );

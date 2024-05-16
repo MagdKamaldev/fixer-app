@@ -37,15 +37,16 @@ class CraftsmanSignUpRepositoryImplementation
   @override
   Future<Either<Failure, CraftsmanModel>> signUpCraftsman(
       CraftsmanModel craftsman) async {
-    try {
-      final response = await apiServices.post(
-        endPoint: ApiConstants.registerCraftsman,
-        data: craftsman.toJson(),
-      );
-      final craftsmanModel = CraftsmanModel.fromJson(response);
-      token = response["jwt"];
-      kTokenBox.put(kTokenBoxString, token);
-      return Right(craftsmanModel);
+     try {
+    final response = await apiServices.post(
+      endPoint: ApiConstants.registerCraftsman,
+      data: craftsman.toJson(),
+    );
+  
+    final craftsmanModel = CraftsmanModel.fromJson(response);
+    token = response["jwt"];
+    kTokenBox.put(kTokenBoxString, token);
+    return Right(craftsmanModel);
     } catch (e) {
       if (e is DioError) {
         return Left(ServerFailure.fromDioError(e));

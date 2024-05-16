@@ -42,7 +42,6 @@ class RegisterCraftsmanLoading extends CraftsmanSignUpState {}
 
 class RegisterCraftsmanSuccess extends CraftsmanSignUpState {
   final CraftsmanModel craftsman;
-
   RegisterCraftsmanSuccess(this.craftsman);
 }
 

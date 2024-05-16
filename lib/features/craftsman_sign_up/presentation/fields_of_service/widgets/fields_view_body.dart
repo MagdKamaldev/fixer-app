@@ -50,14 +50,17 @@ class FieldOfServiceBody extends StatelessWidget {
               verticalSpace(30),
               GestureDetector(
                   onTap: () {
-                    cubit.registerCraftsman(CraftsmanModel(
-                        name: name,
-                        email: email,
-                        password: craftsmanPassword,
-                        phone: craftsmanPhoneNumber,
-                        userType: "craftsman",
-                        categoryName: "electrical",
-                        image: ""));
+                    cubit.registerCraftsman(
+                        CraftsmanModel(
+                            name: name,
+                            username: userName,
+                            email: email,
+                            password: craftsmanPassword,
+                             phone: craftsmanPhoneNumber,
+                            userType: "craftsman",
+                            categoryName: "electrical",
+                            image: ""),
+                        context);
                   },
                   child: SvgPicture.asset(
                     "assets/images/Electrical_card.svg",
@@ -67,14 +70,17 @@ class FieldOfServiceBody extends StatelessWidget {
               verticalSpace(40),
               GestureDetector(
                   onTap: () {
-                    cubit.registerCraftsman(CraftsmanModel(
-                        name: name,
-                        email: email,
-                        password: craftsmanPassword,
-                        phone: craftsmanPhoneNumber,
-                        userType: "craftsman",
-                        categoryName: "plumbing",
-                        image: ""));
+                    cubit.registerCraftsman(
+                        CraftsmanModel(
+                            name: name,
+                            email: email,
+                            username: userName,
+                            password: craftsmanPassword,
+                            phone: craftsmanPhoneNumber,
+                            userType: "craftsman",
+                            categoryName: "plumbing",
+                            image: ""),
+                        context);
                   },
                   child: SvgPicture.asset(
                     "assets/images/plumbing_card.svg",
