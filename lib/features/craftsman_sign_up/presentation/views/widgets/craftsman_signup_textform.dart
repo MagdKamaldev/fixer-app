@@ -8,7 +8,9 @@ class CraftsmanSignUpTextForm extends StatelessWidget {
       required this.controller,
       required this.text,
       required this.textInputType,
-      this.dropIcon});
+      this.dropIcon,
+      this.validate});
+  final Function? validate;
   final TextEditingController controller;
   final String text;
   final TextInputType textInputType;
@@ -24,6 +26,9 @@ class CraftsmanSignUpTextForm extends StatelessWidget {
             borderRadius: BorderRadius.circular(10.sp),
             border: Border.all(color: ColorManager.primary)),
         child: TextFormField(
+          validator: (value) {
+            return validate!(value);
+          },
           controller: controller,
           keyboardType: textInputType,
           decoration: InputDecoration(

@@ -27,6 +27,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Confirm new password"),
         "Confirmnewpasswordfield":
             MessageLookupByLibrary.simpleMessage("Confirm your new password"),
+        "UserNameField":
+            MessageLookupByLibrary.simpleMessage("Enter your user name"),
         "accepttermsandpolicy": MessageLookupByLibrary.simpleMessage(
             "You must accept the terms and policy !"),
         "aditionalDirections": MessageLookupByLibrary.simpleMessage(
@@ -63,9 +65,6 @@ class MessageLookup extends MessageLookupByLibrary {
         "enteryphonenumber":
             MessageLookupByLibrary.simpleMessage("Enter your phone number"),
         "field": MessageLookupByLibrary.simpleMessage("Choose your field"),
-        "firstname": MessageLookupByLibrary.simpleMessage("First name"),
-        "firstnamefield":
-            MessageLookupByLibrary.simpleMessage("Enter your first name"),
         "floor": MessageLookupByLibrary.simpleMessage("Floor"),
         "forgot": MessageLookupByLibrary.simpleMessage("Forgot Password"),
         "forgotpass": MessageLookupByLibrary.simpleMessage("Forgot password"),
@@ -77,9 +76,6 @@ class MessageLookup extends MessageLookupByLibrary {
         "getstarted": MessageLookupByLibrary.simpleMessage("Get started"),
         "getstartintro": MessageLookupByLibrary.simpleMessage(
             "Browse craftsmen for repair \n and maintainance service"),
-        "lasttname": MessageLookupByLibrary.simpleMessage("Last name"),
-        "lasttnamefield":
-            MessageLookupByLibrary.simpleMessage("Enter your last name"),
         "locationPermissionDenied":
             MessageLookupByLibrary.simpleMessage("Location permission denied"),
         "locationServicesDisabled": MessageLookupByLibrary.simpleMessage(
@@ -87,6 +83,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "messageforgotpass": MessageLookupByLibrary.simpleMessage(
             "  We’ll send a verification code to this\nnumber if it matches an existing account"),
+        "name": MessageLookupByLibrary.simpleMessage("Name"),
+        "nameField": MessageLookupByLibrary.simpleMessage("Enter your Name"),
         "nationalid": MessageLookupByLibrary.simpleMessage("National ID"),
         "nationalidfield":
             MessageLookupByLibrary.simpleMessage("Enter your national ID"),
@@ -148,6 +146,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Upload your national ID"),
         "uploadphoto":
             MessageLookupByLibrary.simpleMessage("Upload your Profile photo"),
+        "userName": MessageLookupByLibrary.simpleMessage("User Name"),
         "welcome": MessageLookupByLibrary.simpleMessage("Welcome Back !"),
         "withgoogle":
             MessageLookupByLibrary.simpleMessage("Sign in with google")

@@ -2,10 +2,23 @@ import 'package:fixer/features/craftsman_sign_up/presentation/fields_of_service/
 import 'package:flutter/material.dart';
 
 class FieldOfService extends StatelessWidget {
-  const FieldOfService({super.key});
+  final String name;
+  final String userName;
+  final String email;
+  const FieldOfService(
+      {super.key,
+      required this.name,
+      required this.userName,
+      required this.email});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(), body: const FieldOfServiceBody());
+    return Scaffold(
+        appBar: AppBar(),
+        body: FieldOfServiceBody(
+          name: name,
+          userName: userName,
+          email: email,
+        ));
   }
 }

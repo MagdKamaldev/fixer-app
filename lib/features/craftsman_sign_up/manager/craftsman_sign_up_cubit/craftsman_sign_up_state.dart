@@ -37,3 +37,17 @@ class GetlocationsSuccess extends CraftsmanSignUpState {
 }
 
 class GetlocationsError extends CraftsmanSignUpState {}
+
+class RegisterCraftsmanLoading extends CraftsmanSignUpState {}
+
+class RegisterCraftsmanSuccess extends CraftsmanSignUpState {
+  final CraftsmanModel craftsman;
+
+  RegisterCraftsmanSuccess(this.craftsman);
+}
+
+class RegisterCraftsmanError extends CraftsmanSignUpState {
+  final String message;
+
+  RegisterCraftsmanError(this.message);
+}

@@ -2,7 +2,6 @@ import 'package:fixer/core/helpers/spacing.dart';
 import 'package:fixer/core/themes/colors.dart';
 import 'package:fixer/core/themes/text_styles.dart';
 import 'package:fixer/features/craftsman_sign_up/manager/craftsman_sign_up_cubit/craftsman_sign_up_cubit.dart';
-import 'package:fixer/features/craftsman_sign_up/presentation/craftsman_phone_number/presentation/views/widgets/phone_number_body.dart';
 import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -43,8 +42,7 @@ class FrontId extends StatelessWidget {
                       ),
                       onTap: () {
                         // Handle camera upload
-                        CraftsmanSignUpCubit.get(context)
-                            .getFrontImagefromCamera(context);
+                        cubit.getFrontImagefromCamera(context);
                       },
                     ),
                     horizontalSpace(50),
@@ -64,8 +62,7 @@ class FrontId extends StatelessWidget {
                         ],
                       ),
                       onTap: () {
-                        CraftsmanSignUpCubit.get(context)
-                            .getFrontImagefromGallery(context);
+                        cubit.getFrontImagefromGallery(context);
                       },
                     ),
                   ],

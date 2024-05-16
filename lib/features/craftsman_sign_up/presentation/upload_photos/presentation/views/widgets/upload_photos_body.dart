@@ -21,7 +21,8 @@ class UploadPhotosBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => CraftsmanSignUpCubit(getIt<CraftsmanSignUpRepositoryImplementation>()),
+      create: (context) => CraftsmanSignUpCubit(
+          getIt<CraftsmanSignUpRepositoryImplementation>()),
       child: BlocConsumer<CraftsmanSignUpCubit, CraftsmanSignUpState>(
         listener: (context, state) {},
         builder: (context, state) {
@@ -62,14 +63,14 @@ class UploadPhotosBody extends StatelessWidget {
                                 BackId(),
                               ],
                             ),
-                            if (CraftsmanSignUpCubit.get(context).frontImage !=
+                            if (cubit.frontImage !=
                                     null ||
-                                CraftsmanSignUpCubit.get(context).backImage !=
+                                cubit.backImage !=
                                     null)
                               verticalSpace(20),
                             Row(
                               children: [
-                                if (CraftsmanSignUpCubit.get(context)
+                                if (cubit
                                         .frontImage !=
                                     null)
                                   Container(
@@ -79,14 +80,14 @@ class UploadPhotosBody extends StatelessWidget {
                                         borderRadius: BorderRadius.circular(4),
                                         image: DecorationImage(
                                           image: FileImage(
-                                            CraftsmanSignUpCubit.get(context)
+                                            cubit
                                                 .frontImage!,
                                           ),
                                           fit: BoxFit.cover,
                                         )),
                                   ),
                                 const Spacer(),
-                                if (CraftsmanSignUpCubit.get(context)
+                                if (cubit
                                         .backImage !=
                                     null)
                                   Container(
@@ -96,7 +97,7 @@ class UploadPhotosBody extends StatelessWidget {
                                         borderRadius: BorderRadius.circular(4),
                                         image: DecorationImage(
                                           image: FileImage(
-                                            CraftsmanSignUpCubit.get(context)
+                                            cubit
                                                 .backImage!,
                                           ),
                                           fit: BoxFit.cover,
@@ -115,7 +116,7 @@ class UploadPhotosBody extends StatelessWidget {
                     child: DefaultButton(
                         text: S.of(context).upload,
                         onPressed: () {
-                          navigateTo(context, SelectLoations());
+                          navigateTo(context, const SelectLoations());
                           //cubit.saveImage(cubit.frontFile);
                         }),
                   ),

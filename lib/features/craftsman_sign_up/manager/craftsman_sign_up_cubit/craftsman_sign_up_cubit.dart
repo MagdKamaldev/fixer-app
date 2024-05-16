@@ -1,8 +1,8 @@
 // ignore_for_file: prefer_typing_uninitialized_variables
 import 'dart:io';
-import 'dart:math';
 import 'package:fixer/core/models/operating_area_model.dart';
 import 'package:fixer/core/networks/errors/error_snackbar.dart';
+import 'package:fixer/features/craftsman_sign_up/data/models/craftsman_model.dart';
 import 'package:fixer/features/craftsman_sign_up/data/repos/craftsman_signup_repo_implementation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -102,11 +102,24 @@ class CraftsmanSignUpCubit extends Cubit<CraftsmanSignUpState> {
 
     response.fold(
       (l) {
-        print(e.toString());
         emit(GetlocationsError());
       },
       (r) {
         emit(GetlocationsSuccess(r));
+      },
+    );
+  }
+
+  Future<void> registerCraftsman(CraftsmanModel craftsman) async {
+    emit(RegisterCraftsmanLoading());
+    final response = await repositoryImplementation.signUpCraftsman(craftsman);
+
+    response.fold(
+      (l) {
+        emit(RegisterCraftsmanError(l.message));
+      },
+      (r) {
+        emit(RegisterCraftsmanSuccess(r));
       },
     );
   }

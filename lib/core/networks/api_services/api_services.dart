@@ -17,7 +17,7 @@ class ApiServices {
     return response.data;
   }
 
-  Future <List<dynamic>> getList({
+  Future<List<dynamic>> getList({
     required String endPoint,
     String? jwt,
   }) async {

@@ -2,7 +2,6 @@ import 'package:fixer/core/routing/routes.dart';
 import 'package:fixer/features/home/presentation/views/home_view.dart';
 import 'package:fixer/features/user_sign_up/presentation/user_signup_layout/presentation/views/widgets/set_user_location.dart';
 import 'package:fixer/features/craftsman_sign_up/presentation/views/craftsman_signup_view.dart';
-import 'package:fixer/features/craftsman_sign_up/presentation/fields_of_service/fields_view.dart';
 import 'package:fixer/features/get_started/presentation/views/get_started_view.dart';
 import 'package:fixer/features/login/presentation/views/login_view.dart';
 import 'package:fixer/features/on_boarding/presentation/views/on_boarding_view.dart';
@@ -45,10 +44,6 @@ class AppRouter {
       case Routes.craftsmanSignUp:
         return MaterialPageRoute(
           builder: (_) => const CraftsmanSignUpView(),
-        );
-      case Routes.fieldOfService:
-        return MaterialPageRoute(
-          builder: (_) => const FieldOfService(),
         );
       case Routes.uploadPhotos:
         return MaterialPageRoute(

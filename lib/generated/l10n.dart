@@ -420,21 +420,21 @@ class S {
     );
   }
 
-  /// `First name`
-  String get firstname {
+  /// `Name`
+  String get name {
     return Intl.message(
-      'First name',
-      name: 'firstname',
+      'Name',
+      name: 'name',
       desc: '',
       args: [],
     );
   }
 
-  /// `Last name`
-  String get lasttname {
+  /// `User Name`
+  String get userName {
     return Intl.message(
-      'Last name',
-      name: 'lasttname',
+      'User Name',
+      name: 'userName',
       desc: '',
       args: [],
     );
@@ -450,21 +450,21 @@ class S {
     );
   }
 
-  /// `Enter your first name`
-  String get firstnamefield {
+  /// `Enter your Name`
+  String get nameField {
     return Intl.message(
-      'Enter your first name',
-      name: 'firstnamefield',
+      'Enter your Name',
+      name: 'nameField',
       desc: '',
       args: [],
     );
   }
 
-  /// `Enter your last name`
-  String get lasttnamefield {
+  /// `Enter your user name`
+  String get UserNameField {
     return Intl.message(
-      'Enter your last name',
-      name: 'lasttnamefield',
+      'Enter your user name',
+      name: 'UserNameField',
       desc: '',
       args: [],
     );

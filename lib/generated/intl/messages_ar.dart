@@ -27,6 +27,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تأكيد كلمة المرور الجديدة"),
         "Confirmnewpasswordfield": MessageLookupByLibrary.simpleMessage(
             "قم بتأكيد كلمة المرور الجديدة"),
+        "UserNameField":
+            MessageLookupByLibrary.simpleMessage("ادخل اسم المستخدم"),
         "accepttermsandpolicy": MessageLookupByLibrary.simpleMessage(
             "يجب الموافقة على الشروط والسياسات"),
         "aditionalDirections":
@@ -62,9 +64,6 @@ class MessageLookup extends MessageLookupByLibrary {
         "enteryphonenumber":
             MessageLookupByLibrary.simpleMessage("أدخل رقم هاتفك"),
         "field": MessageLookupByLibrary.simpleMessage("اختر المجال الخاص بك"),
-        "firstname": MessageLookupByLibrary.simpleMessage("الاسم الاول"),
-        "firstnamefield":
-            MessageLookupByLibrary.simpleMessage("ادخل اسمك الاول"),
         "floor": MessageLookupByLibrary.simpleMessage("الطابق"),
         "forgot": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور"),
         "forgotpass": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور"),
@@ -75,9 +74,6 @@ class MessageLookup extends MessageLookupByLibrary {
         "getstarted": MessageLookupByLibrary.simpleMessage("البدء"),
         "getstartintro": MessageLookupByLibrary.simpleMessage(
             "تصفح حرفيين لخدمات الإصلاح والصيانة."),
-        "lasttname": MessageLookupByLibrary.simpleMessage("الاسم الأخير"),
-        "lasttnamefield":
-            MessageLookupByLibrary.simpleMessage("ادخل اسمك الاخير"),
         "locationPermissionDenied":
             MessageLookupByLibrary.simpleMessage("تم رفض إذن الموقع"),
         "locationServicesDisabled":
@@ -85,6 +81,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "messageforgotpass": MessageLookupByLibrary.simpleMessage(
             "سنرسل رمز التحقق إلى هذا الرقم \n إذا كان يطابق حسابًا موجودًا"),
+        "name": MessageLookupByLibrary.simpleMessage("الاسم"),
+        "nameField": MessageLookupByLibrary.simpleMessage("ادخل اسمك"),
         "nationalid": MessageLookupByLibrary.simpleMessage("الرقم القومي"),
         "nationalidfield":
             MessageLookupByLibrary.simpleMessage("ادخل رقمك القومي"),
@@ -145,6 +143,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "قم بتحميل رقم الهوية الوطنية الخاص بك"),
         "uploadphoto":
             MessageLookupByLibrary.simpleMessage("قم بتحميل صورة ملفك الشخصي"),
+        "userName": MessageLookupByLibrary.simpleMessage("اسم المستخدم"),
         "welcome": MessageLookupByLibrary.simpleMessage("مرحباً بك مجدداً"),
         "withgoogle":
             MessageLookupByLibrary.simpleMessage("تسجيل الدخول باستخدام جوجل")

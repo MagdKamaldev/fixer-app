@@ -1,6 +1,7 @@
 // ignore_for_file: deprecated_member_use
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
+import 'package:fixer/core/constants/constants.dart';
 import 'package:fixer/core/models/location_model.dart';
 import 'package:fixer/core/models/user_model.dart';
 import 'package:fixer/core/networks/api_constants.dart';
@@ -28,7 +29,7 @@ class UserSignUpRepositoryImpelemntation implements UserSignUpRepository {
       });
       final userModel = UserModel.fromJson(response["user"]);
       token = response["jwt"];
-
+      kTokenBox.put(kTokenBoxString, token);
       return Right(userModel);
     } catch (e) {
       if (e is DioError) {
