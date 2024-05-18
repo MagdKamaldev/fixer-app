@@ -123,6 +123,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("اختيار موقع المنزل"),
         "setLocationFirst":
             MessageLookupByLibrary.simpleMessage("الرجاء تحديد موقعك أولاً !"),
+        "setLocations": MessageLookupByLibrary.simpleMessage("تحديد المواقع"),
+        "setLocationsInstructions": MessageLookupByLibrary.simpleMessage(
+            "الرجاء تحديد المواقع التي ستعمل بها !"),
         "signUpFirst":
             MessageLookupByLibrary.simpleMessage("الرجاء تسجيل الدخول أولاً !"),
         "signin": MessageLookupByLibrary.simpleMessage("تسجيل الدخول "),
@@ -137,12 +140,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "termsandpolicy":
             MessageLookupByLibrary.simpleMessage("الشروط والسياسات"),
         "upload": MessageLookupByLibrary.simpleMessage("تحميل"),
-        "uploadBack": MessageLookupByLibrary.simpleMessage("الجزء الخلفي"),
-        "uploadFront": MessageLookupByLibrary.simpleMessage("الجزء الامامي"),
+        "uploadBack": MessageLookupByLibrary.simpleMessage("الخلف"),
+        "uploadFront": MessageLookupByLibrary.simpleMessage("الامام"),
         "uploadOptions":
             MessageLookupByLibrary.simpleMessage("اختر طريقة التحميل"),
         "uploadid": MessageLookupByLibrary.simpleMessage(
             "قم بتحميل رقم الهوية الوطنية الخاص بك"),
+        "uploading": MessageLookupByLibrary.simpleMessage(" ... يتم الرفع"),
         "uploadphoto":
             MessageLookupByLibrary.simpleMessage("قم بتحميل صورة ملفك الشخصي"),
         "userName": MessageLookupByLibrary.simpleMessage("اسم المستخدم"),

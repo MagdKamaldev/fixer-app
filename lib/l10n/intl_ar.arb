@@ -78,12 +78,15 @@
   "setLocationFirst":"الرجاء تحديد موقعك أولاً !",
   "selectArea":"ادخل منطقتك !",
   "city":"المدينة",
-  "uploadFront":"الجزء الامامي",
-  "uploadBack":"الجزء الخلفي",
+  "uploadFront":"الامام",
+  "uploadBack":"الخلف",
   "uploadOptions":"اختر طريقة التحميل",
   "camera":"الكاميرا",
   "gallery":"المعرض",
   "upload":"تحميل",
   "confirm":"تأكيد",
-  "passwordLength":"يجب أن تحتوي كلمة المرور على 8 أحرف على الأقل"
+  "passwordLength":"يجب أن تحتوي كلمة المرور على 8 أحرف على الأقل",
+  "uploading":" ... يتم الرفع",
+  "setLocations" :"تحديد المواقع",
+  "setLocationsInstructions":"الرجاء تحديد المواقع التي ستعمل بها !"
 } 

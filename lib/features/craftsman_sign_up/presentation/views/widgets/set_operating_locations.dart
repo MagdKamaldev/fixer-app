@@ -11,6 +11,7 @@ import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:lottie/lottie.dart';
 import 'package:multi_select_flutter/multi_select_flutter.dart';
 
 class SelectLoations extends StatefulWidget {
@@ -45,6 +46,16 @@ class _SelectLoationsState extends State<SelectLoations> {
               child: state is GetlocationsSuccess
                   ? Column(
                       children: [
+                        Text(
+                          S.of(context).setLocations,
+                          style: TextStyles.headings,
+                        ),
+                        verticalSpace(50),
+                        Text(
+                          S.of(context).setLocationsInstructions,
+                          style: TextStyles.body,
+                        ),
+                        verticalSpace(70),
                         MultiSelectDialogField(
                           searchable: true,
                           items: options
@@ -77,9 +88,10 @@ class _SelectLoationsState extends State<SelectLoations> {
                         verticalSpace(30)
                       ],
                     )
-                  : const Center(
-                      child: CircularProgressIndicator(),
-                    ),
+                  : SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.8,
+                      width: MediaQuery.of(context).size.width,
+                      child: Lottie.asset("assets/animations/loading.json")),
             ),
           );
         },

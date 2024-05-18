@@ -14,7 +14,6 @@ class CraftsmanSignUpViewBody extends StatelessWidget {
   static final TextEditingController nameController = TextEditingController();
   static final TextEditingController userNameController =
       TextEditingController();
-  static final TextEditingController idController = TextEditingController();
   static final TextEditingController emailController = TextEditingController();
   static bool isAgreed = false;
 
@@ -54,19 +53,6 @@ class CraftsmanSignUpViewBody extends StatelessWidget {
             textInputType: TextInputType.name,
           ),
           verticalSpace(15),
-          TextContainer(text: S.of(context).nationalid, margin: 35),
-          verticalSpace(5),
-          CraftsmanSignUpTextForm(
-              validate: (String value) {
-                if (value.isEmpty) {
-                  return S.of(context).emptyValidation;
-                }
-                return null;
-              },
-              controller: idController,
-              text: S.of(context).nationalidfield,
-              textInputType: TextInputType.number),
-          verticalSpace(15),
           TextContainer(text: S.of(context).email, margin: 35),
           verticalSpace(10),
           CraftsmanSignUpTextForm(
@@ -81,7 +67,7 @@ class CraftsmanSignUpViewBody extends StatelessWidget {
               textInputType: TextInputType.emailAddress),
           verticalSpace(10),
           const TermsandPolicy(),
-          verticalSpace(30),
+          verticalSpace(50),
           Align(
             alignment: Alignment.topRight,
             child: ReusableArrowButton(onPressed: () {

@@ -840,20 +840,20 @@ class S {
     );
   }
 
-  /// `front part`
+  /// `Front`
   String get uploadFront {
     return Intl.message(
-      'front part',
+      'Front',
       name: 'uploadFront',
       desc: '',
       args: [],
     );
   }
 
-  /// `backward part`
+  /// `Back`
   String get uploadBack {
     return Intl.message(
-      'backward part',
+      'Back',
       name: 'uploadBack',
       desc: '',
       args: [],
@@ -915,6 +915,36 @@ class S {
     return Intl.message(
       'Password must be at least 8 characters',
       name: 'passwordLength',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Uploading ...`
+  String get uploading {
+    return Intl.message(
+      'Uploading ...',
+      name: 'uploading',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Set Locations`
+  String get setLocations {
+    return Intl.message(
+      'Set Locations',
+      name: 'setLocations',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please Set areas You can work in !`
+  String get setLocationsInstructions {
+    return Intl.message(
+      'Please Set areas You can work in !',
+      name: 'setLocationsInstructions',
       desc: '',
       args: [],
     );

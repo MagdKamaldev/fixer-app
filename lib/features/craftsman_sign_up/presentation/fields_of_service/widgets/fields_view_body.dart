@@ -12,6 +12,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:lottie/lottie.dart';
 
 class FieldOfServiceBody extends StatelessWidget {
   final String name;
@@ -85,7 +86,11 @@ class FieldOfServiceBody extends StatelessWidget {
                 ]),
               );
             }
-            return const Center(child: CircularProgressIndicator());
+            return Center(
+                child: SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.8,
+                    width: MediaQuery.of(context).size.width,
+                    child: Lottie.asset("assets/animations/loading.json")));
           }),
     );
   }

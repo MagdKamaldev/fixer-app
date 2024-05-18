@@ -125,6 +125,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Set your home location"),
         "setLocationFirst":
             MessageLookupByLibrary.simpleMessage("Please Set Location first !"),
+        "setLocations": MessageLookupByLibrary.simpleMessage("Set Locations"),
+        "setLocationsInstructions": MessageLookupByLibrary.simpleMessage(
+            "Please Set areas You can work in !"),
         "signUpFirst":
             MessageLookupByLibrary.simpleMessage("Please Sign Up first !"),
         "signin": MessageLookupByLibrary.simpleMessage("Sign in"),
@@ -141,11 +144,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "termsandpolicy":
             MessageLookupByLibrary.simpleMessage(" terms & policy"),
         "upload": MessageLookupByLibrary.simpleMessage("Upload"),
-        "uploadBack": MessageLookupByLibrary.simpleMessage("backward part"),
-        "uploadFront": MessageLookupByLibrary.simpleMessage("front part"),
+        "uploadBack": MessageLookupByLibrary.simpleMessage("Back"),
+        "uploadFront": MessageLookupByLibrary.simpleMessage("Front"),
         "uploadOptions": MessageLookupByLibrary.simpleMessage("upload option"),
         "uploadid":
             MessageLookupByLibrary.simpleMessage("Upload your national ID"),
+        "uploading": MessageLookupByLibrary.simpleMessage("Uploading ..."),
         "uploadphoto":
             MessageLookupByLibrary.simpleMessage("Upload your Profile photo"),
         "userName": MessageLookupByLibrary.simpleMessage("User Name"),

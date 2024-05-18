@@ -119,6 +119,7 @@ class CraftsmanSignUpCubit extends Cubit<CraftsmanSignUpState> {
     final response = await repositoryImplementation.signUpCraftsman(craftsman);
     response.fold(
       (l) {
+        showErrorSnackbar(context, l.message);
         emit(RegisterCraftsmanError(l.message));
       },
       (r) {

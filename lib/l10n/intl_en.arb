@@ -78,12 +78,15 @@
   "setLocationFirst":"Please Set Location first !",
   "selectArea":"select your area !",
   "city":"city",
-  "uploadFront":"front part",
-  "uploadBack":"backward part",
+  "uploadFront":"Front",
+  "uploadBack":"Back",
   "uploadOptions":"upload option",
   "camera":"Camera",
   "gallery":"Gallery",
   "upload":"Upload",
   "confirm":"Confirm",
-  "passwordLength":"Password must be at least 8 characters"
+  "passwordLength":"Password must be at least 8 characters",
+  "uploading":"Uploading ...",
+  "setLocations" :"Set Locations",
+  "setLocationsInstructions":"Please Set areas You can work in !"
 }
