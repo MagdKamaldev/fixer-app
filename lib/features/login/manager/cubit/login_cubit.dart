@@ -31,7 +31,7 @@ class LoginCubit extends Cubit<LoginState> {
     emit(GoogleSignUpLoading());
     try {
       final GoogleSignInAccount? googleUser = await _googleSignIn.signIn();
-      login(googleUser!.email, "Google", context);
+      login(googleUser!.email, "Google123", context);
       emit(GoogleSignUpSuccess());
     } catch (e) {
       showErrorSnackbar(context, e.toString());

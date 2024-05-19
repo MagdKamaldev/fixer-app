@@ -55,7 +55,7 @@ class UserSignUpCubit extends Cubit<UserSignUpState> {
             userType: "client",
             phone: phoneNumber,
           ),
-          "google",
+          "Google123",
           context);
       emit(GoogleSignUpSuccess(credential));
     } catch (e) {
