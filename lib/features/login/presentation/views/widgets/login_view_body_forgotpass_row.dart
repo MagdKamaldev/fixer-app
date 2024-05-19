@@ -1,9 +1,9 @@
-import 'package:fixer/core/constants/constants.dart';
 import 'package:fixer/core/themes/colors.dart';
 import 'package:fixer/core/themes/text_styles.dart';
 import 'package:fixer/core/routing/routes.dart';
 import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ForgotPassword extends StatefulWidget {
   const ForgotPassword({super.key});
@@ -17,9 +17,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        margin: locale == "en"
-            ? const EdgeInsets.only(left: 15)
-            : const EdgeInsets.only(right: 15),
+        padding: EdgeInsets.all(15.w),
         child: Row(children: [
           Checkbox(
             value: isSelected,

@@ -33,6 +33,8 @@ class UserSignUpCubit extends Cubit<UserSignUpState> {
     });
   }
 
+  
+
   final GoogleSignIn _googleSignIn = GoogleSignIn();
 
   Future<void> signUpWithGoogle(context) async {

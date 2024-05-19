@@ -82,3 +82,10 @@ void navigateTo(context, widget) => Navigator.push(
     CupertinoPageRoute(
       builder: (context) => widget,
     ));
+
+
+void navigateAndFinish(context, widget) => Navigator.pushReplacement(
+    context,
+    CupertinoPageRoute(
+      builder: (context) => widget,
+    ));

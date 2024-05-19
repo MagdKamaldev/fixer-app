@@ -59,6 +59,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "emptyValidation":
             MessageLookupByLibrary.simpleMessage("هذا الحقل مطلوب"),
         "entercode": MessageLookupByLibrary.simpleMessage("أدخل رمز التأكيد"),
+        "enteryUserName":
+            MessageLookupByLibrary.simpleMessage("أدخل اسم المستخدم الخاص بك"),
         "enteryourcode": MessageLookupByLibrary.simpleMessage(
             "أدخل الرمز المكون من 6 أرقام الذي أرسلناه إلى "),
         "enteryphonenumber":
@@ -118,6 +120,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "إعادة إرسال الرمز عن طريق الرسائل القصيرة"),
         "resetpassword":
             MessageLookupByLibrary.simpleMessage("إعادة تعيين كلمة المرور"),
+        "reviewingApp": MessageLookupByLibrary.simpleMessage(
+            "برجاء الانتظارو يتم مراجعة طلبك"),
         "selectArea": MessageLookupByLibrary.simpleMessage("ادخل منطقتك !"),
         "setHomeLocation":
             MessageLookupByLibrary.simpleMessage("اختيار موقع المنزل"),

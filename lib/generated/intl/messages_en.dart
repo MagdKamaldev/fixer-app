@@ -60,6 +60,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Field must not be empty !"),
         "entercode":
             MessageLookupByLibrary.simpleMessage("Enter confirmation code"),
+        "enteryUserName":
+            MessageLookupByLibrary.simpleMessage("Enter your user name"),
         "enteryourcode": MessageLookupByLibrary.simpleMessage(
             "Enter the 6-digit code we sent to "),
         "enteryphonenumber":
@@ -119,6 +121,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "resendcodeSMS":
             MessageLookupByLibrary.simpleMessage("Resend code by SMS"),
         "resetpassword": MessageLookupByLibrary.simpleMessage("Reset password"),
+        "reviewingApp": MessageLookupByLibrary.simpleMessage(
+            "Please wait, Your application is Being Reviewd !"),
         "selectArea":
             MessageLookupByLibrary.simpleMessage("select your area !"),
         "setHomeLocation":

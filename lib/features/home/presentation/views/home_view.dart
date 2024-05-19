@@ -1,3 +1,5 @@
+import 'package:fixer/core/widgets/screens/reviewing_screen.dart';
+import 'package:fixer/features/login/data/repos/login_repository_implementation.dart';
 import 'package:flutter/material.dart';
 
 class HomeView extends StatelessWidget {
@@ -7,9 +9,9 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: const Center(
-        child: Text('Home View'),
-      ),
+      body: isPending
+          ? const ReviewingBody()
+          : const Center(child: Text('Home View')),
     );
   }
 }

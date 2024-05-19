@@ -280,6 +280,16 @@ class S {
     );
   }
 
+  /// `Enter your user name`
+  String get enteryUserName {
+    return Intl.message(
+      'Enter your user name',
+      name: 'enteryUserName',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Enter the 6-digit code we sent to `
   String get enteryourcode {
     return Intl.message(
@@ -945,6 +955,16 @@ class S {
     return Intl.message(
       'Please Set areas You can work in !',
       name: 'setLocationsInstructions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please wait, Your application is Being Reviewd !`
+  String get reviewingApp {
+    return Intl.message(
+      'Please wait, Your application is Being Reviewd !',
+      name: 'reviewingApp',
       desc: '',
       args: [],
     );

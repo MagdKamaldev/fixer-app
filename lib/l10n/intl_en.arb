@@ -22,6 +22,7 @@
   "entercode":"Enter confirmation code",
   "phone":"Phone number",
   "enteryphonenumber":"Enter your phone number",
+  "enteryUserName":"Enter your user name",
   "enteryourcode":"Enter the 6-digit code we sent to ",
   "after40sec":"After 40 seconds you can",
   "resendcodeSMS":"Resend code by SMS",
@@ -88,5 +89,6 @@
   "passwordLength":"Password must be at least 8 characters",
   "uploading":"Uploading ...",
   "setLocations" :"Set Locations",
-  "setLocationsInstructions":"Please Set areas You can work in !"
+  "setLocationsInstructions":"Please Set areas You can work in !",
+  "reviewingApp":"Please wait, Your application is Being Reviewd !"
 }

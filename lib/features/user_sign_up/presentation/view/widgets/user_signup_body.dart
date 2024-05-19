@@ -4,11 +4,11 @@ import 'package:fixer/core/networks/errors/error_snackbar.dart';
 import 'package:fixer/core/service_locator/service_locator.dart';
 import 'package:fixer/core/themes/text_styles.dart';
 import 'package:fixer/core/routing/routes.dart';
-import 'package:fixer/features/craftsman_sign_up/presentation/views/widgets/terms_and_policy_row.dart';
 import 'package:fixer/features/user_sign_up/data/repos/user_signup_repository_implementation.dart';
 import 'package:fixer/features/user_sign_up/manager/phone_auth_cubit/phone_auth_cubit.dart';
 import 'package:fixer/features/user_sign_up/manager/user_sign_up_cubit/user_sign_up_cubit.dart';
 import 'package:fixer/features/user_sign_up/presentation/user_phone_number/presentation/views/widgets/user_phone_number_body.dart';
+import 'package:fixer/features/user_sign_up/presentation/user_signup_layout/presentation/views/widgets/user_terms_and_policy_row.dart';
 import 'package:fixer/features/user_sign_up/presentation/view/widgets/signup_buttons.dart';
 import 'package:fixer/features/user_sign_up/presentation/view/widgets/user_first_signup_textform.dart';
 import 'package:fixer/generated/l10n.dart';
@@ -102,7 +102,7 @@ class _UserSignUpFirstBodyState extends State<UserSignUpFirstBody> {
                     ),
                   ),
                   verticalSpace(0),
-                  const TermsandPolicy(),
+                  const UserTermsandPolicy(),
                   verticalSpace(10),
                   ButtonSignUp(
                     onGooglePressed: () {
