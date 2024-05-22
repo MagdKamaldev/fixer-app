@@ -1,4 +1,3 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fixer/core/networks/errors/error_snackbar.dart';
 import 'package:fixer/features/login/data/repos/login_repositort.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

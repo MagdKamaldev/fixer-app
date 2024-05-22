@@ -1,4 +1,4 @@
-// ignore_for_file: deprecated_member_use
+// ignore_for_file: deprecated_member_use, void_checks
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 import 'package:fixer/core/constants/constants.dart';
