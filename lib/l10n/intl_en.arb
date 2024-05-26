@@ -90,5 +90,11 @@
   "uploading":"Uploading ...",
   "setLocations" :"Set Locations",
   "setLocationsInstructions":"Please Set areas You can work in !",
-  "reviewingApp":"Please wait, Your application is Being Reviewd !"
+  "reviewingApp":"Please wait, Your application is Being Reviewd !",
+  "complains":"Complains",
+  "logout":"Logout",
+  "addComplain":"Add Complain",
+  "complainMessage":"Complain Message",
+  "contactMail":"Contact Mail",
+  "noComplains":"No Complain Messges Yet !"
 }

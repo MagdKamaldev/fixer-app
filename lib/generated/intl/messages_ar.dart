@@ -31,6 +31,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ادخل اسم المستخدم"),
         "accepttermsandpolicy": MessageLookupByLibrary.simpleMessage(
             "يجب الموافقة على الشروط والسياسات"),
+        "addComplain": MessageLookupByLibrary.simpleMessage("إضافة شكوى"),
         "aditionalDirections":
             MessageLookupByLibrary.simpleMessage("اتجاهات إضافية (اختياري)"),
         "after40sec":
@@ -44,10 +45,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "change": MessageLookupByLibrary.simpleMessage("تغيير"),
         "city": MessageLookupByLibrary.simpleMessage("المدينة"),
         "cityfield": MessageLookupByLibrary.simpleMessage("ادخل مدينتك"),
+        "complainMessage": MessageLookupByLibrary.simpleMessage("رسالة الشكوى"),
+        "complains": MessageLookupByLibrary.simpleMessage("الشكاوى"),
         "completeCode": MessageLookupByLibrary.simpleMessage(
             "الرجاء إدخال الرمز المكون من 6 أرقام"),
         "confirm": MessageLookupByLibrary.simpleMessage("تأكيد"),
         "confirmLocation": MessageLookupByLibrary.simpleMessage("تأكيد الموقع"),
+        "contactMail":
+            MessageLookupByLibrary.simpleMessage("البريد الإلكتروني للتواصل"),
         "continuee": MessageLookupByLibrary.simpleMessage("استمرار"),
         "district": MessageLookupByLibrary.simpleMessage("الحي"),
         "doneField":
@@ -81,6 +86,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "locationServicesDisabled":
             MessageLookupByLibrary.simpleMessage("خدمات الموقع معطلة"),
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+        "logout": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
         "messageforgotpass": MessageLookupByLibrary.simpleMessage(
             "سنرسل رمز التحقق إلى هذا الرقم \n إذا كان يطابق حسابًا موجودًا"),
         "name": MessageLookupByLibrary.simpleMessage("الاسم"),
@@ -93,6 +99,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "newpasswordfield":
             MessageLookupByLibrary.simpleMessage("ادخل كلمة المرور الجديدة"),
         "nextbutton": MessageLookupByLibrary.simpleMessage("التالي"),
+        "noComplains": MessageLookupByLibrary.simpleMessage("لا توجد شكاوى !"),
         "noaccount": MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
         "nocoderecieved": MessageLookupByLibrary.simpleMessage(
             "إذا لم تتلقى الرمز عن طريق الرسائل القصيرة، يرجى الطلب"),

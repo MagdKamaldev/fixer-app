@@ -5,10 +5,10 @@ import 'package:fixer/features/complains/data/repos/complains_repo_impl.dart';
 import 'package:fixer/features/complains/manager/cubit/complains_cubit.dart';
 import 'package:fixer/features/complains/presentation/widgets/messegs_tff.dart';
 import 'package:fixer/features/login/presentation/views/widgets/login_view_body_text_forms.dart';
+import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import '../../../core/service_locator/service_locator.dart';
 
 class AddComplain extends StatefulWidget {
@@ -31,7 +31,7 @@ class _AddComplainState extends State<AddComplain> {
           return Scaffold(
             appBar: AppBar(
               title: Text(
-                'Add Complain',
+                S.of(context).addComplain,
                 style: TextStyles.headings,
               ),
               toolbarHeight: 80.h,
@@ -47,24 +47,24 @@ class _AddComplainState extends State<AddComplain> {
                     children: [
                       verticalSpace(30),
                       Text(
-                        "Contact Mail",
+                        S.of(context).contactMail,
                         style: TextStyles.bodybold,
                       ),
                       verticalSpace(20),
                       TextForm(
                           controller: mailController,
-                          text: "Contact-Mail",
+                          text: S.of(context).contactMail,
                           textInputType: TextInputType.emailAddress,
                           obscure: false),
                       verticalSpace(100),
                       Text(
-                        "Message",
+                        S.of(context).complainMessage,
                         style: TextStyles.bodybold,
                       ),
                       verticalSpace(20),
                       LargeTextForm(
                           controller: messegeController,
-                          text: "Message",
+                          text: S.of(context).complainMessage,
                           textInputType: TextInputType.emailAddress,
                           obscure: false),
                       verticalSpace(100),
@@ -72,7 +72,7 @@ class _AddComplainState extends State<AddComplain> {
                         const Center(child: CircularProgressIndicator()),
                       if (state is! SendComplainLoading)
                         DefaultButton(
-                            text: "Confirm",
+                            text: S.of(context).confirm,
                             onPressed: () {
                               if (formKey.currentState!.validate()) {
                                 ComplainsCubit.get(context)
@@ -82,7 +82,6 @@ class _AddComplainState extends State<AddComplain> {
                                   ComplainsCubit.get(context)
                                       .getUserComplains();
                                 });
-                             
                               }
                             })
                     ],

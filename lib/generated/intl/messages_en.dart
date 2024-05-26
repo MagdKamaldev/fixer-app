@@ -31,6 +31,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Enter your user name"),
         "accepttermsandpolicy": MessageLookupByLibrary.simpleMessage(
             "You must accept the terms and policy !"),
+        "addComplain": MessageLookupByLibrary.simpleMessage("Add Complain"),
         "aditionalDirections": MessageLookupByLibrary.simpleMessage(
             "Aditional directions (options)"),
         "after40sec":
@@ -44,11 +45,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "change": MessageLookupByLibrary.simpleMessage("Change"),
         "city": MessageLookupByLibrary.simpleMessage("city"),
         "cityfield": MessageLookupByLibrary.simpleMessage("Enter your city"),
+        "complainMessage":
+            MessageLookupByLibrary.simpleMessage("Complain Message"),
+        "complains": MessageLookupByLibrary.simpleMessage("Complains"),
         "completeCode":
             MessageLookupByLibrary.simpleMessage("Please complete the code !"),
         "confirm": MessageLookupByLibrary.simpleMessage("Confirm"),
         "confirmLocation":
             MessageLookupByLibrary.simpleMessage("Confirm location"),
+        "contactMail": MessageLookupByLibrary.simpleMessage("Contact Mail"),
         "continuee": MessageLookupByLibrary.simpleMessage("Continue"),
         "district": MessageLookupByLibrary.simpleMessage("District"),
         "doneField": MessageLookupByLibrary.simpleMessage(
@@ -83,6 +88,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "locationServicesDisabled": MessageLookupByLibrary.simpleMessage(
             "Location services are disabled"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
+        "logout": MessageLookupByLibrary.simpleMessage("Logout"),
         "messageforgotpass": MessageLookupByLibrary.simpleMessage(
             "  We’ll send a verification code to this\nnumber if it matches an existing account"),
         "name": MessageLookupByLibrary.simpleMessage("Name"),
@@ -94,6 +100,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "newpasswordfield":
             MessageLookupByLibrary.simpleMessage("Enter your new password"),
         "nextbutton": MessageLookupByLibrary.simpleMessage("Next"),
+        "noComplains":
+            MessageLookupByLibrary.simpleMessage("No Complain Messges Yet !"),
         "noaccount":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
         "nocoderecieved": MessageLookupByLibrary.simpleMessage(
