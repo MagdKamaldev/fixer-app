@@ -1,3 +1,4 @@
+import 'package:fixer/core/constants/constants.dart';
 import 'package:fixer/core/helpers/extensions.dart';
 import 'package:fixer/core/helpers/spacing.dart';
 import 'package:fixer/core/routing/routes.dart';
@@ -51,8 +52,9 @@ class HomeView extends StatelessWidget {
                     const Icon(Icons.logout)
                   ],
                 ),
-                onTap: () {
+                onTap: () async {
                   token = "";
+                  await kTokenBox.delete(kTokenBoxString);
                   context.pushReplacementNamed(Routes.login);
                 },
               ),

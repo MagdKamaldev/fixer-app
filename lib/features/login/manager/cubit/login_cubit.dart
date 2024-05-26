@@ -2,7 +2,6 @@ import 'package:fixer/core/networks/errors/error_snackbar.dart';
 import 'package:fixer/features/login/data/repos/login_repositort.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-
 part 'login_state.dart';
 
 class LoginCubit extends Cubit<LoginState> {
@@ -30,7 +29,7 @@ class LoginCubit extends Cubit<LoginState> {
     emit(GoogleSignUpLoading());
     try {
       final GoogleSignInAccount? googleUser = await _googleSignIn.signIn();
-      login(googleUser!.email, "Google123", context);
+      login(googleUser!.displayName!, "Google123", context);
       emit(GoogleSignUpSuccess());
     } catch (e) {
       showErrorSnackbar(context, e.toString());
