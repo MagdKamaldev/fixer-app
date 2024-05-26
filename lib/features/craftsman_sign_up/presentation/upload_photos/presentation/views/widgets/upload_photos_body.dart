@@ -133,20 +133,20 @@ class UploadPhotosBody extends StatelessWidget {
               ],
             );
           } else {
-          return Padding(
-            padding: EdgeInsets.all(20.sp),
-            child: Column(
-              children: [
-                LottieBuilder.asset("assets/animations/uploading.json"),
-                verticalSpace(50),
-                Text(
-                  S.of(context).uploading,
-                  style: TextStyles.headings,
-                )
-              ],
-            ),
-          );
-            }
+            return Padding(
+              padding: EdgeInsets.all(20.sp),
+              child: Column(
+                children: [
+                  LottieBuilder.asset("assets/animations/uploading.json"),
+                  verticalSpace(50),
+                  Text(
+                    S.of(context).uploading,
+                    style: TextStyles.headings,
+                  )
+                ],
+              ),
+            );
+          }
         },
       ),
     );

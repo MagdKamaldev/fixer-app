@@ -13,7 +13,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:lottie/lottie.dart';
 import 'package:multi_select_flutter/multi_select_flutter.dart';
 
-
 class SelectLoations extends StatefulWidget {
   const SelectLoations({super.key});
 

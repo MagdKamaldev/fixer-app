@@ -57,8 +57,8 @@ class CraftsmanSignUpRepositoryImplementation
   }
 
   @override
-  Future<Either<Failure, String>> setOperatingAreas(List<dynamic> areas) async{
-    try{
+  Future<Either<Failure, String>> setOperatingAreas(List<dynamic> areas) async {
+    try {
       final response = await apiServices.post(
           endPoint: ApiConstants.craftsmanSetLocations,
           jwt: token,

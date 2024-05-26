@@ -87,10 +87,7 @@ class _LoginViewBodyState extends State<LoginViewBody> {
             ButtonLogin(
               onSignInPressed: () {
                 cubit.login(
-                  nameController.text,
-                  passwordController.text,
-                  context
-                );
+                    nameController.text, passwordController.text, context);
               },
               onGooglePressed: () {
                 cubit.signUpWithGoogle(context);

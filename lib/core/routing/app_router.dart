@@ -1,4 +1,6 @@
 import 'package:fixer/core/routing/routes.dart';
+import 'package:fixer/features/complains/presentation/add_complain_view.dart';
+import 'package:fixer/features/complains/presentation/complains_view.dart';
 import 'package:fixer/features/home/presentation/views/home_view.dart';
 import 'package:fixer/features/user_sign_up/presentation/user_signup_layout/presentation/views/widgets/set_user_location.dart';
 import 'package:fixer/features/craftsman_sign_up/presentation/views/craftsman_signup_view.dart';
@@ -65,6 +67,14 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => const HomeView(),
         );
+      case Routes.complains:
+        return MaterialPageRoute(
+          builder: (_) => const ComplainsView(),
+        );
+        case Routes.addComplain:
+        return MaterialPageRoute(
+          builder: (_) => const AddComplain(),
+        );
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(
@@ -82,7 +92,6 @@ void navigateTo(context, widget) => Navigator.push(
     CupertinoPageRoute(
       builder: (context) => widget,
     ));
-
 
 void navigateAndFinish(context, widget) => Navigator.pushReplacement(
     context,

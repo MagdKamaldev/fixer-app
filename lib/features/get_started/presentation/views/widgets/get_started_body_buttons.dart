@@ -1,8 +1,10 @@
 import 'package:fixer/core/helpers/extensions.dart';
 import 'package:fixer/core/helpers/spacing.dart';
+import 'package:fixer/core/routing/app_router.dart';
 import 'package:fixer/core/themes/colors.dart';
 import 'package:fixer/core/themes/text_styles.dart';
 import 'package:fixer/core/routing/routes.dart';
+import 'package:fixer/features/craftsman_sign_up/presentation/password/presentation/views/password_view.dart';
 import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -37,7 +39,6 @@ class StartButtons extends StatelessWidget {
           verticalSpace(25),
           ElevatedButton(
             onPressed: () {
-              //navigateTo(context, const SelectLoations());
               context.pushNamed(Routes.craftsmanPhoneNumber);
             },
             style: ElevatedButton.styleFrom(

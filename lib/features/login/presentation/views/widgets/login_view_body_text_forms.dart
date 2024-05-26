@@ -1,4 +1,5 @@
 import 'package:fixer/core/themes/colors.dart';
+import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -27,6 +28,11 @@ class TextForm extends StatelessWidget {
             borderRadius: BorderRadius.circular(10),
             border: Border.all(color: ColorManager.primary)),
         child: TextFormField(
+          validator: (String ? value) {
+            if (value!.isEmpty) {
+              return S.of(context).emptyValidation;
+            }
+          },
           controller: controller,
           keyboardType: textInputType,
           obscureText: obscure,

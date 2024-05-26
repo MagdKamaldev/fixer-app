@@ -1,4 +1,5 @@
 part of 'login_cubit.dart';
+
 sealed class LoginState {}
 
 final class LoginInitial extends LoginState {}
@@ -19,11 +20,9 @@ final class LoginFailed extends LoginState {
 
 class GoogleSignUpLoading extends LoginState {}
 
-class GoogleSignUpSuccess extends LoginState {
-}
+class GoogleSignUpSuccess extends LoginState {}
 
 class GoogleSignUpFailure extends LoginState {
   final String message;
   GoogleSignUpFailure(this.message);
 }
-

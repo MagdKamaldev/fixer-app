@@ -5,7 +5,6 @@ import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-
 class UserTermsandPolicy extends StatefulWidget {
   const UserTermsandPolicy({super.key});
 
