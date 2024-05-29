@@ -39,27 +39,11 @@ class _SetUserLocationState extends State<SetUserLocation> {
 
     locationServices = LocationServices();
     updateLocation(context);
-    initMarker();
+
     super.initState();
   }
 
-  Future<Uint8List> getImageFromRawData(String image, double width) async {
-    var imageData = await rootBundle.load(image);
-    var codec = await ui.instantiateImageCodec(imageData.buffer.asUint8List(),
-        targetWidth: width.toInt());
-    var frameInfo = await codec.getNextFrame();
-    return (await frameInfo.image.toByteData(format: ui.ImageByteFormat.png))!
-        .buffer
-        .asUint8List();
-  }
-
   BitmapDescriptor? icon;
-
-  void initMarker() async {
-    BitmapDescriptor customMarkerIcon = BitmapDescriptor.fromBytes(
-        await getImageFromRawData("assets/images/house.png", 150.sp));
-    icon = customMarkerIcon;
-  }
 
   GoogleMapController? googleMapController;
   Set<Marker> markers = {};
