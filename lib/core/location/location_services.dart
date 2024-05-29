@@ -34,4 +34,16 @@ class LocationServices {
         accuracy: LocationAccuracy.high, interval: 1000, distanceFilter: 100);
     location.onLocationChanged.listen(onData);
   }
+
+  Future<LocationData> getLocation() async {
+    await checkAndRequestLocationService();
+    await checkAndRequestLocationPermission();
+    return await location.getLocation();
+  }
+
 }
+
+class LocationServiceException implements Exception {}
+
+class LocationPermissionException implements Exception {}
+

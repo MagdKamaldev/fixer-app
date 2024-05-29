@@ -1,7 +1,6 @@
 // ignore_for_file: deprecated_member_use
-
-import 'package:fixer/features/home/presentation/services/home_location_service.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_polyline_points/flutter_polyline_points.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class HomeBody extends StatefulWidget {
@@ -12,33 +11,59 @@ class HomeBody extends StatefulWidget {
 }
 
 class _HomeBodyState extends State<HomeBody> {
-  late CameraPosition initialCameraPosition;
-  late HomeLocationService locationServices;
+  static const LatLng home = LatLng(29.959340, 30.941488);
+  static const LatLng office = LatLng(29.960141, 30.941797);
 
-  GoogleMapController? googleMapController;
-
-  void initMapStyle() async {
-    var style = await DefaultAssetBundle.of(context)
-        .loadString("assets/maps_styles/app_styles.json");
-    googleMapController!.setMapStyle(style);
-  }
+  List<LatLng> polylineCoordinates = [];
 
   @override
   void initState() {
     super.initState();
-    locationServices = HomeLocationService();
-    initialCameraPosition = const CameraPosition(
-        target: LatLng(37.42796133580664, -122.085749655962), zoom: 14.4746);
+    getPolyPoints();
+  }
+
+  void getPolyPoints() async {
+    String apiKey = 'AIzaSyDZDqr8Va2drRaWXkCJyddm6BwfmEXJyRgAIzaSyDZDqr8Va2drRaWXkCJyddm6BwfmEXJyRg';
+    PolylinePoints polylinePoints = PolylinePoints();
+    PolylineResult result = await polylinePoints.getRouteBetweenCoordinates(
+      apiKey,
+      PointLatLng(home.latitude, home.longitude),
+      PointLatLng(office.latitude, office.longitude),
+    );
+
+    if (result.points.isNotEmpty) {
+      print("Points found: ${result.points.length}");
+      polylineCoordinates.clear();
+      result.points.forEach((PointLatLng point) {
+        polylineCoordinates.add(LatLng(point.latitude, point.longitude));
+      });
+      setState(() {});
+    } else {
+      print("No points found: ${result.errorMessage}");
+    }
   }
 
   @override
   Widget build(BuildContext context) {
-    return GoogleMap(
-      onMapCreated: (controller) {
-        googleMapController = controller;
-        initMapStyle();
-      },
-      initialCameraPosition: initialCameraPosition,
+    return Scaffold(
+      body: GoogleMap(
+        mapType: MapType.normal,
+        initialCameraPosition: CameraPosition(
+          target: LatLng((home.latitude + office.latitude) / 2,
+              (home.longitude + office.longitude) / 2),
+          zoom: 15,
+        ),
+        polylines: {
+          Polyline(
+            polylineId: const PolylineId('poly'),
+            points: polylineCoordinates,
+          ),
+        },
+        markers: {
+          const Marker(markerId: MarkerId('home'), position: home),
+          const Marker(markerId: MarkerId('office'), position: office),
+        },
+      ),
     );
   }
 }
