@@ -1,69 +1,96 @@
-// ignore_for_file: deprecated_member_use
+import 'dart:async';
+
 import 'package:flutter/material.dart';
-import 'package:flutter_polyline_points/flutter_polyline_points.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:location/location.dart';
 
 class HomeBody extends StatefulWidget {
-  const HomeBody({super.key});
+  const HomeBody({Key? key}) : super(key: key);
 
   @override
   State<HomeBody> createState() => _HomeBodyState();
 }
 
 class _HomeBodyState extends State<HomeBody> {
-  static const LatLng home = LatLng(29.959340, 30.941488);
-  static const LatLng office = LatLng(29.960141, 30.941797);
-
-  List<LatLng> polylineCoordinates = [];
+  Completer<GoogleMapController> _googleMapController = Completer();
+  CameraPosition? _cameraPosition;
+  Location? _location;
+  LocationData? _currentLocation;
 
   @override
   void initState() {
+    _init();
     super.initState();
-    getPolyPoints();
   }
 
-  void getPolyPoints() async {
-    String apiKey = 'AIzaSyDZDqr8Va2drRaWXkCJyddm6BwfmEXJyRgAIzaSyDZDqr8Va2drRaWXkCJyddm6BwfmEXJyRg';
-    PolylinePoints polylinePoints = PolylinePoints();
-    PolylineResult result = await polylinePoints.getRouteBetweenCoordinates(
-      apiKey,
-      PointLatLng(home.latitude, home.longitude),
-      PointLatLng(office.latitude, office.longitude),
-    );
+  _init() async {
+    _location = Location();
+    _cameraPosition = CameraPosition(
+        target: LatLng(
+            0, 0), // this is just the example lat and lng for initializing
+        zoom: 15);
+    _initLocation();
+  }
 
-    if (result.points.isNotEmpty) {
-      print("Points found: ${result.points.length}");
-      polylineCoordinates.clear();
-      result.points.forEach((PointLatLng point) {
-        polylineCoordinates.add(LatLng(point.latitude, point.longitude));
-      });
-      setState(() {});
-    } else {
-      print("No points found: ${result.errorMessage}");
-    }
+  //function to listen when we move position
+  _initLocation() {
+    //use this to go to current location instead
+    _location?.getLocation().then((location) {
+      _currentLocation = location;
+    });
+    _location?.onLocationChanged.listen((newLocation) {
+      _currentLocation = newLocation;
+      moveToPosition(LatLng(
+          _currentLocation?.latitude ?? 0, _currentLocation?.longitude ?? 0));
+    });
+  }
+
+  moveToPosition(LatLng latLng) async {
+    GoogleMapController mapController = await _googleMapController.future;
+    mapController.animateCamera(CameraUpdate.newCameraPosition(
+        CameraPosition(target: latLng, zoom: 15)));
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: GoogleMap(
-        mapType: MapType.normal,
-        initialCameraPosition: CameraPosition(
-          target: LatLng((home.latitude + office.latitude) / 2,
-              (home.longitude + office.longitude) / 2),
-          zoom: 15,
+    return _getMap();
+  }
+
+  Widget _getMarker() {
+    return Container(
+      width: 40,
+      height: 40,
+      padding: const EdgeInsets.all(2),
+      decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(100),
+          boxShadow: const [
+            BoxShadow(
+                color: Colors.grey,
+                offset: Offset(0, 3),
+                spreadRadius: 4,
+                blurRadius: 6)
+          ]),
+      child: ClipOval(child: Image.asset("assets/images/briefcase.png")),
+    );
+  }
+
+  Widget _getMap() {
+    return Stack(
+      children: [
+        GoogleMap(
+          initialCameraPosition: _cameraPosition!,
+          mapType: MapType.normal,
+          onMapCreated: (GoogleMapController controller) {
+            // now we need a variable to get the controller of google map
+            if (!_googleMapController.isCompleted) {
+              _googleMapController.complete(controller);
+            }
+          },
         ),
-        polylines: {
-          Polyline(
-            polylineId: const PolylineId('poly'),
-            points: polylineCoordinates,
-          ),
-        },
-        markers: {
-          const Marker(markerId: MarkerId('home'), position: home),
-          const Marker(markerId: MarkerId('office'), position: office),
-        },
-      ),
+        Positioned.fill(
+            child: Align(alignment: Alignment.center, child: _getMarker()))
+      ],
     );
   }
 }
