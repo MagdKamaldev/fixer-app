@@ -65,31 +65,81 @@ The login screen is the first actual interaction with the user. Entering an emai
 
 ### 4.User Sign Up screen
 
-This screen gives the user the option to sign up as a user to sign up the as a client or as a craftsmen. 
+This screen gives the user the option to sign up as a client or as a craftsmen. 
 
 | English | Arabic |
 | ------- | ------ |
 | <img src="assets/docs/sign_up_eng.jpg" height="500" width="250"> | <img src="assets/docs/sign_up_arb.jpg" height="500" width="250" > |
 
-### 5.Phone number insert screen 
+### 5.Client Phone number insert screen  
 
-The user enters his phone number to get a confirmation code sent to his phone number.
+When the user chooses to sign up as a client this screen appears so that the user enters his phone number to get a confirmation code sent to his phone number.
+
 | English | Arabic |
 | ------- | ------ |
 | <img src="assets/docs/phone_num_eng.jpg" height="500" width="250"> | <img src="assets/docs/phone_num_arab.jpg" height="500" width="250"> |
 
-### 6.Confirmation code screen
+### 6.Client Confirmation code screen
 
-The code sent to teh user's number is entered to this screen and the code can be resent incase of faliure.
+The code is sent to the client's number and is entered in this screen and the code can be resent incase of faliure.
 
 | English | Arabic |
 | ------- | ------ |
 | <img src="assets/docs/confirmation_code_eng.jpg" height="500" width="250"> | <img src="assets/docs/confirmation_code_arb.jpg" height="500" width="250"> |
 
-### 7.User address screen 
+### 7.Cleint address screen 
 
-The user enters his address or the place he wishes to recieve the service.
+The client enters his address or the place he wishes to recieve the service.
 
 | English | Arabic |
 | ------- | ------ |
 | <img src="assets/docs/user_address_eng.jpg" height="500" width="250"> | <img src="assets/docs/user_address_arabic.jpg" height="500" width="250"> |
+
+
+### 8.Craftsman phone number insert screen
+
+When the user chooses to sign up as a craftman, this screens appears to enter his phone number 
+
+| English | Arabic |
+| ------- | ------ |
+| <img src="assets/docs/craftsman_phone_en.jpg" height="500" width="250"> | <img src="assets/docs/craftsman_phone_en.jpg" height="500" width="250"> |
+
+### 9.Craftsman confirmation code screen
+
+The code sent to the craftsman's number is entered to this screen and the code can be resent incase of faliure.
+
+| English | Arabic |
+| ------- | ------ |
+| <img src="assets/docs/confirmation_code_eng.jpg" height="500" width="250"> | <img src="assets/docs/confirmation_code_arb.jpg" height="500" width="250"> |
+
+### 10.Craftman's password screen
+
+When the craftman confirms the code sent to him, then he navigates to the password screen to set a password the meets the requirments for security.
+
+| English | Arabic |
+| ------- | ------ |
+| <img src="assets/docs/craftsman_password_en.jpg" height="500" width="250"> | <img src="assets/docs/craftsman_password_en.jpg" height="500" width="250"> |
+
+### 11.Craftmen information entry form screen
+
+After the craftman sets his password the he is navigated to a form to enter his personal information name, national Id, and the city he lives in.
+
+| English | Arabic |
+| ------- | ------ |
+| <img src="assets/docs/craftsman_form_en.jpg" height="500" width="250"> | <img src="assets/docs/craftsman_form_en.jpg" height="500" width="250"> |
+
+### 12.Craftemn service selection screen
+
+Then the craftmen is navigated to this screen to select which service does he wish to provide through the app. 
+
+| English | Arabic |
+| ------- | ------ |
+| <img src="assets/docs/craftsman_field_select_en.jpg" height="500" width="250"> | <img src="assets/docs/craftsman_field_select_en.jpg" height="500" width="250"> |
+
+### 13.Inserting personal IDs photos screen
+
+Them the craftsman is then navigated to this screen to enter his personal ID photo and his profile picture photo through the camera or through the mobile files. 
+
+| English | Arabic |
+| ------- | ------ |
+| <img src="assets/docs/craftsman_ids_en.jpg" height="500" width="250"> | <img src="assets/docs/craftsman_ids_en.jpg" height="500" width="250"> |
