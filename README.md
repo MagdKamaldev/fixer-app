@@ -61,7 +61,7 @@ The login screen is the first actual interaction with the user. Entering an emai
 
 | English | Arabic |
 | ------- | ------ |
-| <img src="assets/docs/login.jpg" height="500" width="250"> | <img src="assets/docs/log_in_arb.jpg" height="500" width="250"> |
+| <img src="assets/docs/login.jpg" height="500" width="250"> | <img src="assets/docs/login_arab.jpg" height="500" width="250"> |
 
 ### 4.User Sign Up screen
 
@@ -71,7 +71,9 @@ This screen gives the user the option to sign up as a client or as a craftsmen.
 | ------- | ------ |
 | <img src="assets/docs/sign_up_eng.jpg" height="500" width="250"> | <img src="assets/docs/sign_up_arb.jpg" height="500" width="250" > |
 
-### 5.Client Phone number insert screen  
+### 5.client app Journey 
+
+### 5.1.Client Phone number insert screen  
 
 When the user chooses to sign up as a client this screen appears so that the user enters his phone number to get a confirmation code sent to his phone number.
 
@@ -79,7 +81,7 @@ When the user chooses to sign up as a client this screen appears so that the use
 | ------- | ------ |
 | <img src="assets/docs/phone_num_eng.jpg" height="500" width="250"> | <img src="assets/docs/phone_num_arab.jpg" height="500" width="250"> |
 
-### 6.Client Confirmation code screen
+### 5.2.Client Confirmation code screen
 
 The code is sent to the client's number and is entered in this screen and the code can be resent incase of faliure.
 
@@ -87,16 +89,33 @@ The code is sent to the client's number and is entered in this screen and the co
 | ------- | ------ |
 | <img src="assets/docs/confirmation_code_eng.jpg" height="500" width="250"> | <img src="assets/docs/confirmation_code_arb.jpg" height="500" width="250"> |
 
-### 7.Cleint address screen 
+### 5.3.client sign up form 
 
-The client enters his address or the place he wishes to recieve the service.
+the client is navigated to this screen to enter his username,email and password 
 
 | English | Arabic |
 | ------- | ------ |
-| <img src="assets/docs/user_address_eng.jpg" height="500" width="250"> | <img src="assets/docs/user_address_arabic.jpg" height="500" width="250"> |
+| <img src="assets/docs/user_sign_up_form_eng.jpg" height="500" width="250"> | <img src="assets/docs/user_sign_up_form_arab.jpg" height="500" width="250"> |
 
+### 5.4.Cleint location detail screen 
 
-### 8.Craftsman phone number insert screen
+Then client enters his address details or the place he wishes to recieve the service.
+
+| English | Arabic |
+| ------- | ------ |
+| <img src="assets/docs/user_address_eng.jpg" height="500" width="250"> | <img src="assets/docs/user_address_arb.jpg" height="500" width="250"> |
+
+### 5.5.Clinet location on map selection screen 
+| English | Arabic |
+| ------- | ------ |
+| <img src="assets\docs\user_location_selection_eng.jpg" height="500" width="250"> | <img src="assets/docs/user_location_selection_arab.jpg" height="500" width="250"> |
+
+### 5.6.client homescreen
+
+After completeing the sign up process,the cilent is then navigated to the home screen 
+
+### 6.Craftman app journey
+### 6.1.Craftsman phone number insert screen
 
 When the user chooses to sign up as a craftman, this screens appears to enter his phone number 
 
@@ -104,7 +123,7 @@ When the user chooses to sign up as a craftman, this screens appears to enter hi
 | ------- | ------ |
 | <img src="assets/docs/craftsman_phone_en.jpg" height="500" width="250"> | <img src="assets/docs/craftsman_phone_en.jpg" height="500" width="250"> |
 
-### 9.Craftsman confirmation code screen
+### 6.2.Craftsman confirmation code screen
 
 The code sent to the craftsman's number is entered to this screen and the code can be resent incase of faliure.
 
@@ -112,7 +131,7 @@ The code sent to the craftsman's number is entered to this screen and the code c
 | ------- | ------ |
 | <img src="assets/docs/confirmation_code_eng.jpg" height="500" width="250"> | <img src="assets/docs/confirmation_code_arb.jpg" height="500" width="250"> |
 
-### 10.Craftman's password screen
+### 6.3.Craftman's password screen
 
 When the craftman confirms the code sent to him, then he navigates to the password screen to set a password the meets the requirments for security.
 
@@ -120,7 +139,7 @@ When the craftman confirms the code sent to him, then he navigates to the passwo
 | ------- | ------ |
 | <img src="assets/docs/craftsman_password_en.jpg" height="500" width="250"> | <img src="assets/docs/craftsman_password_en.jpg" height="500" width="250"> |
 
-### 11.Craftmen information entry form screen
+### 6.4.Craftmen information entry form screen
 
 After the craftman sets his password the he is navigated to a form to enter his personal information name, national Id, and the city he lives in.
 
@@ -128,7 +147,7 @@ After the craftman sets his password the he is navigated to a form to enter his 
 | ------- | ------ |
 | <img src="assets/docs/craftsman_form_en.jpg" height="500" width="250"> | <img src="assets/docs/craftsman_form_en.jpg" height="500" width="250"> |
 
-### 12.Craftemn service selection screen
+### 6.5.Craftemn service selection screen
 
 Then the craftmen is navigated to this screen to select which service does he wish to provide through the app. 
 
@@ -136,7 +155,7 @@ Then the craftmen is navigated to this screen to select which service does he wi
 | ------- | ------ |
 | <img src="assets/docs/craftsman_field_select_en.jpg" height="500" width="250"> | <img src="assets/docs/craftsman_field_select_en.jpg" height="500" width="250"> |
 
-### 13.Inserting personal IDs photos screen
+### 6.6.Inserting personal IDs photos screen
 
 Them the craftsman is then navigated to this screen to enter his personal ID photo and his profile picture photo through the camera or through the mobile files. 
 
