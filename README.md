@@ -108,7 +108,7 @@ Then client enters his address details or the place he wishes to recieve the ser
 ### 5.5.Clinet location on map selection screen 
 | English | Arabic |
 | ------- | ------ |
-| <img src="assets\docs\user_location_selection_eng.jpg" height="500" width="250"> | <img src="assets/docs/user_location_selection_arab.jpg" height="500" width="250"> |
+| <img src="assets/docs/user_location_selection_eng.jpg" height="500" width="250"> | <img src="assets/docs/user_location_selection_arab.jpg" height="500" width="250"> |
 
 ### 5.6.client homescreen
 
