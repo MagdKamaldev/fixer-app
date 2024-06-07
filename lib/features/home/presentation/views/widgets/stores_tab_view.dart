@@ -9,7 +9,12 @@ class Storestab extends StatelessWidget {
     return ListView.builder(
       itemCount: 8,
       itemBuilder: (context, index) {
-        return ContainerModel(text: "store name", description: "welcome to our store",backgroundpath: "assets/images/stores_background.jpg",);
-      },);
+        return const ContainerModel(
+          text: "store name",
+          description: "welcome to our store",
+          backgroundpath: "assets/images/stores_background.jpg",
+        );
+      },
+    );
   }
 }

@@ -68,7 +68,7 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => const HomeView(),
         );
-      case Routes.StoresBody:
+      case Routes.storesBody:
         return MaterialPageRoute(
           builder: (_) => const StoresBody(),
         );  

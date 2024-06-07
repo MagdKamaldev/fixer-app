@@ -1,9 +1,7 @@
 import 'package:fixer/core/helpers/spacing.dart';
 import 'package:fixer/core/themes/colors.dart';
 import 'package:fixer/features/home/presentation/views/widgets/stores_tab_view.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class StoresBody extends StatelessWidget {
@@ -65,10 +63,10 @@ class StoresBody extends StatelessWidget {
                 ),
               ),
               verticalSpace(10),
-              Container(
+              SizedBox(
                 width: 350.w,
                 height:515.h ,
-                child: Storestab())
+                child: const Storestab())
               
             ],
           ),

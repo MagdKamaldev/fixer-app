@@ -54,6 +54,9 @@ class _GoogleMapViewState extends State<GoogleMapView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text("Location"),
+      ),
       body: _buildBody(),
     );
   }

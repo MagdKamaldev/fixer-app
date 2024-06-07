@@ -6,12 +6,10 @@ import 'package:fixer/core/widgets/buttons/default_button.dart';
 import 'package:fixer/features/user_sign_up/presentation/user_signup_layout/presentation/views/widgets/user_address_view.dart';
 import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:location/location.dart';
-import 'dart:ui' as ui;
 
 String? cityName = "other";
 String? lat = "";

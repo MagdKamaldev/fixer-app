@@ -42,7 +42,7 @@ class TabBarConatiner extends StatelessWidget {
                         const Spacer(), // Pushes the "View All" text to the end of the row
                         TextButton(
                           onPressed: () {
-                            context.pushNamed(Routes.StoresBody);
+                            context.pushNamed(Routes.storesBody);
                           },
                           child: const Text(
                             'View All',
@@ -51,7 +51,7 @@ class TabBarConatiner extends StatelessWidget {
                         ),
                       ],
                     ),
-                  Container(
+                  SizedBox(
                     width: 350.w,
                     height: 210.h,
                     child: const TabBarView(

@@ -32,6 +32,7 @@ class TextForm extends StatelessWidget {
             if (value!.isEmpty) {
               return S.of(context).emptyValidation;
             }
+            return null;
           },
           controller: controller,
           keyboardType: textInputType,
