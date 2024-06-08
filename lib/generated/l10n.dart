@@ -91,10 +91,10 @@ class S {
   }
 
   /// `Welcome Back !`
-  String get welcome {
+  String get welcomeBack {
     return Intl.message(
       'Welcome Back !',
-      name: 'welcome',
+      name: 'welcomeBack',
       desc: '',
       args: [],
     );
@@ -440,10 +440,10 @@ class S {
     );
   }
 
-  /// `User Name`
+  /// `Username`
   String get userName {
     return Intl.message(
-      'User Name',
+      'Username',
       name: 'userName',
       desc: '',
       args: [],
@@ -1025,6 +1025,116 @@ class S {
     return Intl.message(
       'No Complain Messges Yet !',
       name: 'noComplains',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `welcome`
+  String get welcome {
+    return Intl.message(
+      'welcome',
+      name: 'welcome',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Request service`
+  String get Requestservice {
+    return Intl.message(
+      'Request service',
+      name: 'Requestservice',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Request Now`
+  String get requestnow {
+    return Intl.message(
+      'Request Now',
+      name: 'requestnow',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your Fix,Our Expertise`
+  String get yourfixOurExpertise {
+    return Intl.message(
+      'Your Fix,Our Expertise',
+      name: 'yourfixOurExpertise',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Services`
+  String get services {
+    return Intl.message(
+      'Services',
+      name: 'services',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Stores`
+  String get Stores {
+    return Intl.message(
+      'Stores',
+      name: 'Stores',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `View All`
+  String get viewAll {
+    return Intl.message(
+      'View All',
+      name: 'viewAll',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Home`
+  String get Home {
+    return Intl.message(
+      'Home',
+      name: 'Home',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Requests`
+  String get Requests {
+    return Intl.message(
+      'Requests',
+      name: 'Requests',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `profile`
+  String get Profile {
+    return Intl.message(
+      'profile',
+      name: 'Profile',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `search`
+  String get search {
+    return Intl.message(
+      'search',
+      name: 'search',
       desc: '',
       args: [],
     );

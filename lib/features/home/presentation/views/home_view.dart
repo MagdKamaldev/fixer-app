@@ -4,6 +4,7 @@ import 'package:fixer/features/home/presentation/views/widgets/app_drawer.dart';
 import 'package:fixer/features/home/presentation/views/widgets/home_body.dart';
 import 'package:fixer/features/home/presentation/views/widgets/store_body.dart';
 import 'package:fixer/features/login/data/repos/login_repository_implementation.dart';
+import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
@@ -50,34 +51,34 @@ class _HomeViewState extends State<HomeView> {
         tabBorderRadius: 150,
         color: ColorManager.primary,
         gap: 6,
-        padding: const EdgeInsets.all(14),
+        padding: const EdgeInsets.all(8),
         curve: Curves.easeIn,
         tabMargin: const EdgeInsets.all(8),
         backgroundColor: ColorManager.greywhite,
-        tabs: const [
+        tabs: [
           GButton(
             icon: Icons.home,
-            text: 'Home',
+            text: S.of(context).Home,
             iconSize: 25,
             iconColor: ColorManager.primary,
           ),
           GButton(
             icon: Icons.wysiwyg_outlined,
-            text: 'Requests',
+            text: S.of(context).Requests,
             iconSize: 25,
             iconColor: ColorManager.primary,
 
           ),
           GButton(
             icon: Icons.store,
-            text: 'Stores',
+            text: S.of(context).Stores,
             iconSize: 25,
             iconColor: ColorManager.primary,
 
           ),
           GButton(
             icon: Icons.person,
-            text: 'Profile',
+            text: S.of(context).Profile,
             iconSize: 25,
             iconColor: ColorManager.primary,
 

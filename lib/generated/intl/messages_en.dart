@@ -27,6 +27,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Confirm new password"),
         "Confirmnewpasswordfield":
             MessageLookupByLibrary.simpleMessage("Confirm your new password"),
+        "Home": MessageLookupByLibrary.simpleMessage("Home"),
+        "Profile": MessageLookupByLibrary.simpleMessage("profile"),
+        "Requests": MessageLookupByLibrary.simpleMessage("Requests"),
+        "Requestservice":
+            MessageLookupByLibrary.simpleMessage("Request service"),
+        "Stores": MessageLookupByLibrary.simpleMessage("Stores"),
         "UserNameField":
             MessageLookupByLibrary.simpleMessage("Enter your user name"),
         "accepttermsandpolicy": MessageLookupByLibrary.simpleMessage(
@@ -124,6 +130,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "phoneValidation": MessageLookupByLibrary.simpleMessage(
             "Please add your phone number !"),
         "remember": MessageLookupByLibrary.simpleMessage("Remember me"),
+        "requestnow": MessageLookupByLibrary.simpleMessage("Request Now"),
         "resendcodeCALL":
             MessageLookupByLibrary.simpleMessage("Resend code by Call"),
         "resendcodeSMS":
@@ -131,8 +138,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetpassword": MessageLookupByLibrary.simpleMessage("Reset password"),
         "reviewingApp": MessageLookupByLibrary.simpleMessage(
             "Please wait, Your application is Being Reviewd !"),
+        "search": MessageLookupByLibrary.simpleMessage("search"),
         "selectArea":
             MessageLookupByLibrary.simpleMessage("select your area !"),
+        "services": MessageLookupByLibrary.simpleMessage("Services"),
         "setHomeLocation":
             MessageLookupByLibrary.simpleMessage("Set your home location"),
         "setLocationFirst":
@@ -164,9 +173,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "uploading": MessageLookupByLibrary.simpleMessage("Uploading ..."),
         "uploadphoto":
             MessageLookupByLibrary.simpleMessage("Upload your Profile photo"),
-        "userName": MessageLookupByLibrary.simpleMessage("User Name"),
-        "welcome": MessageLookupByLibrary.simpleMessage("Welcome Back !"),
+        "userName": MessageLookupByLibrary.simpleMessage("Username"),
+        "viewAll": MessageLookupByLibrary.simpleMessage("View All"),
+        "welcome": MessageLookupByLibrary.simpleMessage("welcome"),
+        "welcomeBack": MessageLookupByLibrary.simpleMessage("Welcome Back !"),
         "withgoogle":
-            MessageLookupByLibrary.simpleMessage("Sign in with google")
+            MessageLookupByLibrary.simpleMessage("Sign in with google"),
+        "yourfixOurExpertise":
+            MessageLookupByLibrary.simpleMessage("Your Fix,Our Expertise")
       };
 }

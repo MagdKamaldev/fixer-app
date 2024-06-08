@@ -3,7 +3,7 @@
   "onBoardingText1" : " توصيل المستخدمين بالحرفيين \nالمهرة على الفور.",
   "onBoardingText2" : "احصل على عروض بأسعار تنافسية، وقارن الأسعار، واتخذ قرارات مستنيرة.",
   "onBoardingText3" : "قم بإجراء تحويلات خالية من \nالمتاعب داخل التطبيق لراحة البال."   ,
-  "welcome":"مرحباً بك مجدداً",
+  "welcomeBack":"مرحباً بك مجدداً",
   "password":"كلمة المرور",
   "passwordform":"أدخل كلمة المرور",
   "remember":"تذكرني",
@@ -96,5 +96,16 @@
   "addComplain":"إضافة شكوى",
   "complainMessage":"رسالة الشكوى",
   "contactMail":"البريد الإلكتروني للتواصل",
-  "noComplains":"لا توجد شكاوى !"
+  "noComplains":"لا توجد شكاوى !",
+  "welcome":"مرحباً",
+  "Requestservice":"طلب الخدمة",
+  "requestnow":"اطلب الآن",
+  "yourfixOurExpertise":"الإصلاح الخاص بك، خبرتنا",
+  "services":"خدمات",
+  "Stores":"متاجر",
+  "Home":"بيت",
+  "Requests":"طلبات",
+  "Profile":"حسابك",
+  "viewAll":"عرض الكل",
+  "search":"بحث"
 } 

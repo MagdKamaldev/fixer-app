@@ -14,9 +14,9 @@ class ContainerModel extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 350.w,
-      height: 95.h,
-      padding: const EdgeInsets.all(10),
-      margin: const EdgeInsets.all(5),
+      height: 90.h,
+      padding: const EdgeInsets.all(9),
+      margin: const EdgeInsets.all(3),
       decoration: BoxDecoration(
         image: DecorationImage(
                 image:AssetImage(backgroundpath),

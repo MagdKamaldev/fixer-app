@@ -7,7 +7,7 @@ class Storestab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      itemCount: 8,
+      itemCount: 20,
       itemBuilder: (context, index) {
         return const ContainerModel(
           text: "store name",

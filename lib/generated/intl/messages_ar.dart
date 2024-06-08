@@ -27,6 +27,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تأكيد كلمة المرور الجديدة"),
         "Confirmnewpasswordfield": MessageLookupByLibrary.simpleMessage(
             "قم بتأكيد كلمة المرور الجديدة"),
+        "Home": MessageLookupByLibrary.simpleMessage("بيت"),
+        "Profile": MessageLookupByLibrary.simpleMessage("حسابك"),
+        "Requests": MessageLookupByLibrary.simpleMessage("طلبات"),
+        "Requestservice": MessageLookupByLibrary.simpleMessage("طلب الخدمة"),
+        "Stores": MessageLookupByLibrary.simpleMessage("متاجر"),
         "UserNameField":
             MessageLookupByLibrary.simpleMessage("ادخل اسم المستخدم"),
         "accepttermsandpolicy": MessageLookupByLibrary.simpleMessage(
@@ -121,6 +126,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "phoneValidation":
             MessageLookupByLibrary.simpleMessage("الرجاء إدخال رقم هاتف صحيح"),
         "remember": MessageLookupByLibrary.simpleMessage("تذكرني"),
+        "requestnow": MessageLookupByLibrary.simpleMessage("اطلب الآن"),
         "resendcodeCALL": MessageLookupByLibrary.simpleMessage(
             "إعادة إرسال الرمز عن طريق الاتصال"),
         "resendcodeSMS": MessageLookupByLibrary.simpleMessage(
@@ -129,7 +135,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("إعادة تعيين كلمة المرور"),
         "reviewingApp": MessageLookupByLibrary.simpleMessage(
             "برجاء الانتظارو يتم مراجعة طلبك"),
+        "search": MessageLookupByLibrary.simpleMessage("بحث"),
         "selectArea": MessageLookupByLibrary.simpleMessage("ادخل منطقتك !"),
+        "services": MessageLookupByLibrary.simpleMessage("خدمات"),
         "setHomeLocation":
             MessageLookupByLibrary.simpleMessage("اختيار موقع المنزل"),
         "setLocationFirst":
@@ -161,8 +169,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "uploadphoto":
             MessageLookupByLibrary.simpleMessage("قم بتحميل صورة ملفك الشخصي"),
         "userName": MessageLookupByLibrary.simpleMessage("اسم المستخدم"),
-        "welcome": MessageLookupByLibrary.simpleMessage("مرحباً بك مجدداً"),
+        "viewAll": MessageLookupByLibrary.simpleMessage("عرض الكل"),
+        "welcome": MessageLookupByLibrary.simpleMessage("مرحباً"),
+        "welcomeBack": MessageLookupByLibrary.simpleMessage("مرحباً بك مجدداً"),
         "withgoogle":
-            MessageLookupByLibrary.simpleMessage("تسجيل الدخول باستخدام جوجل")
+            MessageLookupByLibrary.simpleMessage("تسجيل الدخول باستخدام جوجل"),
+        "yourfixOurExpertise":
+            MessageLookupByLibrary.simpleMessage("الإصلاح الخاص بك، خبرتنا")
       };
 }

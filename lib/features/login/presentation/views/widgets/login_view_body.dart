@@ -45,7 +45,7 @@ class _LoginViewBodyState extends State<LoginViewBody> {
               verticalSpace(50),
               const Logo(),
               verticalSpace(25),
-              Text(S.of(context).welcome,
+              Text(S.of(context).welcomeBack,
                   textAlign: TextAlign.center, style: TextStyles.headings),
               verticalSpace(25),
               TextContainer(

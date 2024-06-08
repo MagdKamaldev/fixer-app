@@ -3,9 +3,9 @@ import 'package:fixer/core/routing/app_router.dart';
 import 'package:fixer/core/themes/colors.dart';
 import 'package:fixer/core/themes/text_styles.dart';
 import 'package:fixer/features/home/presentation/views/widgets/google_map.dart';
+import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
 
 class RequestNowContainer extends StatelessWidget {
   const RequestNowContainer({super.key});
@@ -24,15 +24,11 @@ class RequestNowContainer extends StatelessWidget {
                   ColorManager.primary.withOpacity(0.8), BlendMode.srcOver)),
           color: ColorManager.primary,
           borderRadius: BorderRadius.circular(10)),
-      child: Stack(
-        alignment: Alignment.center,
-        children: [
-          SvgPicture.asset(""),
+      child: 
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
-                "YOUR FIX, OUR EXPERTISE.",
+              Text(S.of(context).yourfixOurExpertise,
                 style: TextStyles.lightHeadings
                     .copyWith(color: ColorManager.white),
               ),
@@ -54,8 +50,7 @@ class RequestNowContainer extends StatelessWidget {
                         borderRadius: BorderRadius.circular(10),
                         border:
                             Border.all(color: ColorManager.white, width: 0.5)),
-                    child: Text(
-                      "Request Now",
+                    child: Text(S.of(context).requestnow,
                       style: TextStyles.smallHeadings
                           .copyWith(color: ColorManager.white),
                     ),
@@ -64,8 +59,6 @@ class RequestNowContainer extends StatelessWidget {
               )
             ],
           )
-        ],
-      ),
     );
   }
 }

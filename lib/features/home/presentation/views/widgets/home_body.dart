@@ -3,6 +3,7 @@ import 'package:fixer/core/themes/text_styles.dart';
 import 'package:fixer/features/home/presentation/views/widgets/request_now_container.dart';
 import 'package:fixer/features/home/presentation/views/widgets/tab_bar.dart';
 import 'package:fixer/features/home/presentation/views/widgets/welcome_container.dart';
+import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -20,7 +21,7 @@ class HomeBody extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("Request Service",style: TextStyles.headings,),
+                Text(S.of(context).Requestservice,style: TextStyles.headings,),
                 verticalSpace(6),
                 const RequestNowContainer(),
                 verticalSpace(6),
