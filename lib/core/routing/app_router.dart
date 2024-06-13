@@ -1,6 +1,7 @@
 import 'package:fixer/core/routing/routes.dart';
 import 'package:fixer/features/complains/presentation/add_complain_view.dart';
 import 'package:fixer/features/complains/presentation/complains_view.dart';
+import 'package:fixer/features/home/presentation/stores_view/presentation/views/widgets/store_details.dart';
 import 'package:fixer/features/home/presentation/views/home_view.dart';
 import 'package:fixer/features/home/presentation/stores_view/presentation/views/stores_viewall.dart';
 import 'package:fixer/features/user_sign_up/presentation/user_signup_layout/presentation/views/widgets/set_user_location.dart';
@@ -71,7 +72,11 @@ class AppRouter {
       case Routes.storesviewAll:
         return MaterialPageRoute(
           builder: (_) => const StoresviewAll(),
-        );  
+        );
+      case Routes.storesDetails:
+       return MaterialPageRoute(
+        builder: (_) => const StoreDetails()
+        );   
       case Routes.complains:
         return MaterialPageRoute(
           builder: (_) => const ComplainsView(),

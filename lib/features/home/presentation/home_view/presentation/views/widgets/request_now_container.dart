@@ -21,7 +21,7 @@ class RequestNowContainer extends StatelessWidget {
                   const AssetImage("assets/images/requestnow_backgroung.jpg"),
               fit: BoxFit.cover,
               colorFilter: ColorFilter.mode(
-                  ColorManager.primary.withOpacity(0.8), BlendMode.srcOver)),
+                  ColorManager.primary.withOpacity(0.65), BlendMode.srcOver)),
           color: ColorManager.primary,
           borderRadius: BorderRadius.circular(10)),
       child: 

@@ -1,5 +1,5 @@
 import 'package:fixer/core/themes/colors.dart';
-import 'package:fixer/features/home/presentation/profile_view/presentation/views/widgets/info_row_model.dart';
+import 'package:fixer/features/home/presentation/profile_view/presentation/views/widgets/profile_info_row_model.dart';
 import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -19,10 +19,10 @@ class ProfileInfo extends StatelessWidget {
       child:  Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          InfoRowModel(labeltext: S.of(context).name, labelInfo: "Nadine", icon: Icons.perm_identity),
-          InfoRowModel(labeltext: S.of(context).phone, labelInfo: "010000000000", icon: Icons.phone_outlined),
-          InfoRowModel(labeltext: S.of(context).email, labelInfo: "BBBBB@gmail.com", icon: Icons.email_outlined),
-          InfoRowModel(labeltext: S.of(context).field, labelInfo: "pluming", icon: Icons.category_outlined),
+          ProlifeInfoRowModel(labeltext: S.of(context).name, labelInfo: "Nadine", icon: Icons.perm_identity),
+          ProlifeInfoRowModel(labeltext: S.of(context).phone, labelInfo: "010000000000", icon: Icons.phone_outlined),
+          ProlifeInfoRowModel(labeltext: S.of(context).email, labelInfo: "BBBBB@gmail.com", icon: Icons.email_outlined),
+          ProlifeInfoRowModel(labeltext: S.of(context).field, labelInfo: "pluming", icon: Icons.category_outlined),
 
         ],
       ),

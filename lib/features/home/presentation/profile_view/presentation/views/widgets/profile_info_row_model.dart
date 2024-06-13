@@ -4,11 +4,11 @@ import 'package:fixer/core/themes/text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class InfoRowModel extends StatelessWidget {
+class ProlifeInfoRowModel extends StatelessWidget {
   final String labeltext;
   final String labelInfo;
   final IconData icon;
-  const InfoRowModel({super.key, required this.labeltext, required this.labelInfo, required this.icon});
+  const ProlifeInfoRowModel({super.key, required this.labeltext, required this.labelInfo, required this.icon});
 
   @override
   Widget build(BuildContext context) {

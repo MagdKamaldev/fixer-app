@@ -15,6 +15,7 @@ class Routes {
   static const String setUserLocation = "/setUserLocation";
   static const String home = "/home";
   static const String storesviewAll = "/storesBody";
+  static const String storesDetails = "/storesDetails";
   static const String complains = "/complains";
   static const String addComplain = "/addComplain";
 }

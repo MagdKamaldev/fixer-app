@@ -21,7 +21,7 @@ class ContainerModel extends StatelessWidget {
         image: DecorationImage(
                 image:AssetImage(backgroundpath),
                 fit: BoxFit.cover,
-                colorFilter:ColorFilter.mode(ColorManager.primary.withOpacity(0.8),BlendMode.srcOver) 
+                colorFilter:ColorFilter.mode(ColorManager.primary.withOpacity(0.85),BlendMode.srcOver) 
               ),
         borderRadius: BorderRadius.circular(10),
       ),
