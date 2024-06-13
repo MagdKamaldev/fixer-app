@@ -48,6 +48,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "building": MessageLookupByLibrary.simpleMessage("اسم المبنى"),
         "camera": MessageLookupByLibrary.simpleMessage("الكاميرا"),
         "change": MessageLookupByLibrary.simpleMessage("تغيير"),
+        "chooseyourfield":
+            MessageLookupByLibrary.simpleMessage("اختر المجال الخاص بك"),
         "city": MessageLookupByLibrary.simpleMessage("المدينة"),
         "cityfield": MessageLookupByLibrary.simpleMessage("ادخل مدينتك"),
         "complainMessage": MessageLookupByLibrary.simpleMessage("رسالة الشكوى"),
@@ -75,7 +77,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "أدخل الرمز المكون من 6 أرقام الذي أرسلناه إلى "),
         "enteryphonenumber":
             MessageLookupByLibrary.simpleMessage("أدخل رقم هاتفك"),
-        "field": MessageLookupByLibrary.simpleMessage("اختر المجال الخاص بك"),
+        "field": MessageLookupByLibrary.simpleMessage("المجال"),
         "floor": MessageLookupByLibrary.simpleMessage("الطابق"),
         "forgot": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور"),
         "forgotpass": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور"),

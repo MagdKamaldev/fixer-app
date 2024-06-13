@@ -46,7 +46,7 @@
   "cityfield":"Enter your city",
   "agree":"I agree to the ",
   "termsandpolicy":" terms & policy",
-  "field":"Choose your field",
+  "chooseyourfield":"Choose your field",
   "passwordinstructions":"It must contain at least two of:numbers,letters,or symbols",
   "fullname":"Name",
   "email":"Email",
@@ -107,5 +107,6 @@
   "Home":"Home",
   "Requests":"Requests",
   "Profile":"profile",
-  "search":"search"
+  "search":"search",
+  "field":"Field"
 }

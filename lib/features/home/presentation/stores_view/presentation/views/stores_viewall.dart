@@ -1,4 +1,4 @@
-import 'package:fixer/features/home/presentation/views/widgets/store_body.dart';
+import 'package:fixer/features/home/presentation/stores_view/presentation/views/store_body.dart';
 import 'package:flutter/material.dart';
 
 class StoresviewAll extends StatelessWidget {

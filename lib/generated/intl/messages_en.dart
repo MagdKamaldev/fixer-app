@@ -49,6 +49,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "building": MessageLookupByLibrary.simpleMessage("Building name"),
         "camera": MessageLookupByLibrary.simpleMessage("Camera"),
         "change": MessageLookupByLibrary.simpleMessage("Change"),
+        "chooseyourfield":
+            MessageLookupByLibrary.simpleMessage("Choose your field"),
         "city": MessageLookupByLibrary.simpleMessage("city"),
         "cityfield": MessageLookupByLibrary.simpleMessage("Enter your city"),
         "complainMessage":
@@ -77,7 +79,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Enter the 6-digit code we sent to "),
         "enteryphonenumber":
             MessageLookupByLibrary.simpleMessage("Enter your phone number"),
-        "field": MessageLookupByLibrary.simpleMessage("Choose your field"),
+        "field": MessageLookupByLibrary.simpleMessage("Field"),
         "floor": MessageLookupByLibrary.simpleMessage("Floor"),
         "forgot": MessageLookupByLibrary.simpleMessage("Forgot Password"),
         "forgotpass": MessageLookupByLibrary.simpleMessage("Forgot password"),

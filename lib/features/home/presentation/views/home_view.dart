@@ -1,8 +1,9 @@
 import 'package:fixer/core/themes/colors.dart';
 import 'package:fixer/core/widgets/screens/reviewing_screen.dart';
 import 'package:fixer/features/home/presentation/views/widgets/app_drawer.dart';
-import 'package:fixer/features/home/presentation/views/widgets/home_body.dart';
-import 'package:fixer/features/home/presentation/views/widgets/store_body.dart';
+import 'package:fixer/features/home/presentation/home_view/presentation/views/home_body.dart';
+import 'package:fixer/features/home/presentation/profile_view/presentation/views/profile_body.dart';
+import 'package:fixer/features/home/presentation/stores_view/presentation/views/store_body.dart';
 import 'package:fixer/features/login/data/repos/login_repository_implementation.dart';
 import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
@@ -23,7 +24,7 @@ class _HomeViewState extends State<HomeView> {
     const HomeBody(),
     const Text("requets"),
     const StoresBody(),
-    const Text("profile"),
+    const ProfileBody(),
   ];
 
   void _onItemTapped(int index) {
@@ -57,27 +58,27 @@ class _HomeViewState extends State<HomeView> {
         backgroundColor: ColorManager.greywhite,
         tabs: [
           GButton(
-            icon: Icons.home,
+            icon: Icons.home_outlined,
             text: S.of(context).Home,
             iconSize: 25,
             iconColor: ColorManager.primary,
           ),
           GButton(
-            icon: Icons.wysiwyg_outlined,
+            icon: Icons.post_add_outlined,
             text: S.of(context).Requests,
             iconSize: 25,
             iconColor: ColorManager.primary,
 
           ),
           GButton(
-            icon: Icons.store,
+            icon: Icons.store_outlined,
             text: S.of(context).Stores,
             iconSize: 25,
             iconColor: ColorManager.primary,
 
           ),
           GButton(
-            icon: Icons.person,
+            icon: Icons.perm_identity,
             text: S.of(context).Profile,
             iconSize: 25,
             iconColor: ColorManager.primary,

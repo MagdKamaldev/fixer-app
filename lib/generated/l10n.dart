@@ -521,10 +521,10 @@ class S {
   }
 
   /// `Choose your field`
-  String get field {
+  String get chooseyourfield {
     return Intl.message(
       'Choose your field',
-      name: 'field',
+      name: 'chooseyourfield',
       desc: '',
       args: [],
     );
@@ -1135,6 +1135,16 @@ class S {
     return Intl.message(
       'search',
       name: 'search',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Field`
+  String get field {
+    return Intl.message(
+      'Field',
+      name: 'field',
       desc: '',
       args: [],
     );

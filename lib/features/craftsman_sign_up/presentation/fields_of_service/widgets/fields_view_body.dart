@@ -40,7 +40,7 @@ class FieldOfServiceBody extends StatelessWidget {
                   const Logo(),
                   verticalSpace(30),
                   Text(
-                    S.of(context).field,
+                    S.of(context).chooseyourfield,
                     style: TextStyles.subHeadingsBold,
                   ),
                   verticalSpace(30),

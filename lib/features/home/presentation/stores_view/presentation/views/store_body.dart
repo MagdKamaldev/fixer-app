@@ -1,7 +1,7 @@
 import 'package:fixer/core/constants/constants.dart';
 import 'package:fixer/core/helpers/spacing.dart';
 import 'package:fixer/core/themes/colors.dart';
-import 'package:fixer/features/home/presentation/views/widgets/stores_tab_view.dart';
+import 'package:fixer/features/home/presentation/stores_view/presentation/views/widgets/stores_tab_view.dart';
 import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

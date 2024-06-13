@@ -46,7 +46,7 @@
   "cityfield":"ادخل مدينتك",
   "agree":"اوافق على ",
   "termsandpolicy":"الشروط والسياسات",
-  "field":"اختر المجال الخاص بك",
+  "chooseyourfield":"اختر المجال الخاص بك",
   "forgotpass":"نسيت كلمة المرور",
   "messageforgotpass":"سنرسل رمز التحقق إلى هذا الرقم \n إذا كان يطابق حسابًا موجودًا",
   "nextbutton":"التالي",
@@ -107,5 +107,6 @@
   "Requests":"طلبات",
   "Profile":"حسابك",
   "viewAll":"عرض الكل",
-  "search":"بحث"
+  "search":"بحث",
+  "field":"المجال"
 } 
