@@ -14,11 +14,11 @@ class ProfilePictureContainer extends StatelessWidget {
       margin: EdgeInsets.only(top: 75.h),
       decoration: BoxDecoration(
         color: ColorManager.grey,
-        borderRadius: BorderRadius.circular(70.sp),
+        borderRadius: BorderRadius.circular(60.sp),
         image:const DecorationImage(image: AssetImage("assets/images/profile_photo.png"),
         fit: BoxFit.contain
         ),
-        border: Border.all(width:5,color: ColorManager.white)
+        border: Border.all(width:3,color: ColorManager.white)
       ),
     );
   }
