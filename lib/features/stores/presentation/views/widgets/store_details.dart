@@ -1,5 +1,5 @@
 import 'package:fixer/core/themes/colors.dart';
-import 'package:fixer/features/home/presentation/stores_view/presentation/views/widgets/store_stack_container.dart';
+import 'package:fixer/features/stores/presentation/views/widgets/store_stack_container.dart';
 import 'package:flutter/material.dart';
 
 class StoreDetails extends StatelessWidget {

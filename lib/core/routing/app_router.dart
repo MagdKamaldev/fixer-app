@@ -1,9 +1,9 @@
 import 'package:fixer/core/routing/routes.dart';
 import 'package:fixer/features/complains/presentation/add_complain_view.dart';
 import 'package:fixer/features/complains/presentation/complains_view.dart';
-import 'package:fixer/features/home/presentation/stores_view/presentation/views/widgets/store_details.dart';
+import 'package:fixer/features/stores/presentation/views/widgets/store_details.dart';
 import 'package:fixer/features/home/presentation/views/home_view.dart';
-import 'package:fixer/features/home/presentation/stores_view/presentation/views/stores_viewall.dart';
+import 'package:fixer/features/stores/presentation/views/stores_viewall.dart';
 import 'package:fixer/features/user_sign_up/presentation/user_signup_layout/presentation/views/widgets/set_user_location.dart';
 import 'package:fixer/features/craftsman_sign_up/presentation/views/craftsman_signup_view.dart';
 import 'package:fixer/features/get_started/presentation/views/get_started_view.dart';

@@ -1,6 +1,6 @@
 import 'package:fixer/core/themes/colors.dart';
 import 'package:fixer/core/themes/text_styles.dart';
-import 'package:fixer/features/home/presentation/profile_view/presentation/views/widgets/profile_picture_container.dart';
+import 'package:fixer/features/profile/presentation/views/widgets/profile_picture_container.dart';
 import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
