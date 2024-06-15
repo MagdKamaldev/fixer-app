@@ -9,13 +9,13 @@ class StoreInfoContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 330.w,
-      height: 220.h,
+      width: 340.w,
+      height: 180.h,
       margin: EdgeInsets.only(top: 80.h),
       decoration: BoxDecoration(
         color: ColorManager.white,
         borderRadius: BorderRadius.circular(8),
-        border: Border.all(color: ColorManager.primary100,width: 1)
+        border: Border.all(color: ColorManager.grey,width: 1)
       ),
       child: const Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
