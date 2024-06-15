@@ -26,7 +26,7 @@ class SearchbarContainer extends StatelessWidget {
                       child: TextFormField(
                         decoration: InputDecoration(
                           hintText: S.of(context).search,
-                          hintStyle: TextStyle(color: ColorManager.grey),
+                          hintStyle: const TextStyle(color: ColorManager.grey),
                           border: InputBorder.none,
                           contentPadding: const EdgeInsets.all(10),
                         ),

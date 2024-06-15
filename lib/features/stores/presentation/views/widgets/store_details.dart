@@ -5,7 +5,6 @@ import 'package:fixer/features/stores/presentation/views/widgets/item_container_
 import 'package:fixer/features/stores/presentation/views/widgets/searchbar_container.dart';
 import 'package:fixer/features/stores/presentation/views/widgets/store_stack_container.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class StoreDetails extends StatelessWidget {
