@@ -2,6 +2,7 @@
 import 'dart:io';
 import 'package:fixer/core/helpers/spacing.dart';
 import 'package:fixer/core/service_locator/service_locator.dart';
+import 'package:fixer/core/themes/colors.dart';
 import 'package:fixer/core/widgets/buttons/default_button.dart';
 import 'package:fixer/features/craftsman_sign_up/data/repos/craftsman_signup_repo_implementation.dart';
 import 'package:fixer/features/craftsman_sign_up/manager/craftsman_sign_up_cubit/craftsman_sign_up_cubit.dart';
@@ -52,32 +53,58 @@ class _CraftsmanProfileScreenState extends State<CraftsmanProfileScreen> {
                 children: [
                   verticalSpace(size.height * 0.2),
                   Center(
-                    child: GestureDetector(
-                      onTap: _pickImage,
-                      child: CircleAvatar(
-                        radius: 60,
-                        backgroundColor: Colors.grey[300],
-                        backgroundImage: _profileImage != null
-                            ? FileImage(_profileImage!)
-                            : const AssetImage('assets/placeholder.png')
-                                as ImageProvider,
-                        child: _profileImage == null
-                            ? Icon(
-                                Icons.camera_alt,
-                                size: 40,
-                                color: Colors.grey[800],
-                              )
-                            : null,
-                      ),
-                    ),
+                    child: Stack(alignment: Alignment.bottomLeft, children: [
+                      Stack(alignment: Alignment.bottomRight, children: [
+                        CircleAvatar(
+                          radius: 80,
+                          backgroundColor: Colors.grey[300],
+                          backgroundImage: _profileImage != null
+                              ? FileImage(_profileImage!)
+                              : const AssetImage(
+                                      'assets/images/profile_photo.png')
+                                  as ImageProvider,
+                        ),
+                        GestureDetector(
+                          onTap: _pickImage,
+                          child: const CircleAvatar(
+                            backgroundColor: ColorManager.lightblue,
+                            radius: 25,
+                            child: Icon(
+                              Icons.edit,
+                              size: 40,
+                              color: ColorManager.primary,
+                            ),
+                          ),
+                        ),
+                      ]),
+                      GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            _profileImage = null;
+                          });
+                        },
+                        child: const CircleAvatar(
+                          backgroundColor: ColorManager.lightblue,
+                          radius: 25,
+                          child: Icon(
+                            Icons.delete,
+                            size: 40,
+                            color: Colors.red,
+                          ),
+                        ),
+                      )
+                    ]),
                   ),
                   verticalSpace(40),
                   if (state is! CraftsmenUploadProfileImageLoading)
                     DefaultButton(
                       text: "Upload",
-                      onPressed: () {},
+                      onPressed: () {
+                        CraftsmanSignUpCubit.get(context)
+                            .uploadProfileImage(_profileImage!, context);
+                      },
                     ),
-                  if (state is! CraftsmenUploadProfileImageLoading)
+                  if (state is CraftsmenUploadProfileImageLoading)
                     const CircularProgressIndicator.adaptive()
                 ],
               ),
