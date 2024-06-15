@@ -30,7 +30,9 @@ class FixerApp extends StatelessWidget {
         supportedLocales: S.delegate.supportedLocales,
         debugShowCheckedModeBanner: false,
         onGenerateRoute: appRouter.generateRoute,
-        initialRoute: kTokenBox.get(kTokenBoxString) ==null? Routes.onBoarding: Routes.home,
+        initialRoute: kTokenBox.get(kTokenBoxString) == ""
+            ? Routes.onBoarding
+            : Routes.home,
       ),
     );
   }

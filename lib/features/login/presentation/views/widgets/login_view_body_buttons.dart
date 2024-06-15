@@ -42,7 +42,7 @@ class ButtonLogin extends StatelessWidget {
               verticalSpace(10),
               Text(S.of(context).or, style: TextStyles.smallbold),
               verticalSpace(10),
-              if (state is GoogleSignUpLoading)
+              if (state is GoogleSignUpLoading || state is LoginLoading)
                 const Center(child: CircularProgressIndicator()),
               if (state is! GoogleSignUpLoading)
                 ElevatedButton(

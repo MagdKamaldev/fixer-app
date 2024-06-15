@@ -52,9 +52,8 @@ class AppDrawer extends StatelessWidget {
               ),
               onTap: () async {
                 token = "";
-                await kTokenBox.delete(kTokenBoxString).then((value) {
-                  context.pushReplacementNamed(Routes.login);
-                });
+                kTokenBox.put(kTokenBoxString, token);
+                context.pushReplacementNamed(Routes.login);
               },
             ),
           ],

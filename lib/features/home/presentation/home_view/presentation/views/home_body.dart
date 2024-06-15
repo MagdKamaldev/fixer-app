@@ -27,7 +27,7 @@ class HomeBody extends StatelessWidget {
               verticalSpace(6),
               const RequestNowContainer(),
               verticalSpace(6),
-              const TabBarConatiner()
+              const TabBarConatiner(),
             ],
           ),
         )

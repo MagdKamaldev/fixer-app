@@ -3,7 +3,6 @@ import 'dart:io';
 import 'package:fixer/core/models/operating_area_model.dart';
 import 'package:fixer/core/networks/errors/error_snackbar.dart';
 import 'package:fixer/core/routing/app_router.dart';
-import 'package:fixer/core/routing/routes.dart';
 import 'package:fixer/features/craftsman_sign_up/data/models/craftsman_model.dart';
 import 'package:fixer/features/craftsman_sign_up/data/repos/craftsman_signup_repo_implementation.dart';
 import 'package:fixer/features/craftsman_sign_up/presentation/craftsmen_upload_image/upload_image_screen.dart';
