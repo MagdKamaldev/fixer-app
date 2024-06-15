@@ -28,7 +28,7 @@ class TextForm extends StatelessWidget {
             borderRadius: BorderRadius.circular(10),
             border: Border.all(color: ColorManager.primary)),
         child: TextFormField(
-          validator: (String ? value) {
+          validator: (String? value) {
             if (value!.isEmpty) {
               return S.of(context).emptyValidation;
             }

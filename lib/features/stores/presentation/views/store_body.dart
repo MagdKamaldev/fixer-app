@@ -10,20 +10,16 @@ class StoresBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-        padding: const EdgeInsets.only(top: 20,left: 15,right:15 ),
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              const SearchbarContainer(),
-              verticalSpace(10),
-              SizedBox(
-                width: 350.w,
-                height:96*6.h ,
-                child: const Storestab())
-              
-            ],
-          ),
+      padding: const EdgeInsets.only(top: 20, left: 15, right: 15),
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            const SearchbarContainer(),
+            verticalSpace(10),
+            SizedBox(width: 350.w, height: 96 * 6.h, child: const Storestab())
+          ],
         ),
-      );
+      ),
+    );
   }
 }

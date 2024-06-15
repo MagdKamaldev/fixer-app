@@ -35,11 +35,11 @@ class LargeTextForm extends StatelessWidget {
         border: Border.all(color: ColorManager.primary),
       ),
       child: TextFormField(
-         validator: (String ? value) {
-            if (value!.isEmpty) {
-              return S.of(context).emptyValidation;
-            }
-          },
+        validator: (String? value) {
+          if (value!.isEmpty) {
+            return S.of(context).emptyValidation;
+          }
+        },
         controller: controller,
         keyboardType: textInputType,
         obscureText: obscure,

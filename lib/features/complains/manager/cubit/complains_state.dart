@@ -1,6 +1,5 @@
 part of 'complains_cubit.dart';
 
-
 sealed class ComplainsState {}
 
 final class ComplainsInitial extends ComplainsState {}

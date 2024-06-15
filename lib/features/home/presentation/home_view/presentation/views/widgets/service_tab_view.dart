@@ -9,9 +9,16 @@ class ServiceTab extends StatelessWidget {
     return const SingleChildScrollView(
       child: Column(
         children: [
-          ContainerModel(text: "Electric", description:"Expert electrical repairs, fast and reliable.",backgroundpath: "assets/images/plumbing_background.jpg",),
-          ContainerModel(text: "Plumbing", description:"Swift plumbing fixes.",backgroundpath: "assets/images/electric_background.jpg",),
-          
+          ContainerModel(
+            text: "Electric",
+            description: "Expert electrical repairs, fast and reliable.",
+            backgroundpath: "assets/images/plumbing_background.jpg",
+          ),
+          ContainerModel(
+            text: "Plumbing",
+            description: "Swift plumbing fixes.",
+            backgroundpath: "assets/images/electric_background.jpg",
+          ),
         ],
       ),
     );

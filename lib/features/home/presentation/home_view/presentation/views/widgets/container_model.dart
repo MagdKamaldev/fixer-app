@@ -8,7 +8,10 @@ class ContainerModel extends StatelessWidget {
   final String description;
   final String backgroundpath;
   const ContainerModel(
-      {super.key, required this.text, required this.description, required this.backgroundpath});
+      {super.key,
+      required this.text,
+      required this.description,
+      required this.backgroundpath});
 
   @override
   Widget build(BuildContext context) {
@@ -19,10 +22,10 @@ class ContainerModel extends StatelessWidget {
       margin: const EdgeInsets.all(3),
       decoration: BoxDecoration(
         image: DecorationImage(
-                image:AssetImage(backgroundpath),
-                fit: BoxFit.cover,
-                colorFilter:ColorFilter.mode(ColorManager.primary.withOpacity(0.85),BlendMode.srcOver) 
-              ),
+            image: AssetImage(backgroundpath),
+            fit: BoxFit.cover,
+            colorFilter: ColorFilter.mode(
+                ColorManager.primary.withOpacity(0.85), BlendMode.srcOver)),
         borderRadius: BorderRadius.circular(10),
       ),
       child: Row(
@@ -36,10 +39,12 @@ class ContainerModel extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  text,style: TextStyles.whitesmallHeadings,
+                  text,
+                  style: TextStyles.whitesmallHeadings,
                 ),
                 Text(
-                  description,style: TextStyles.small.copyWith(color: ColorManager.white),
+                  description,
+                  style: TextStyles.small.copyWith(color: ColorManager.white),
                 )
               ],
             ),

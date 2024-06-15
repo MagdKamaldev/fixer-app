@@ -9,39 +9,40 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
 class ProfileStackConatiner extends StatelessWidget {
-  const ProfileStackConatiner({super.key});
+  final String image;
+  const ProfileStackConatiner({super.key, required this.image});
 
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
-            Container(
-              height: 150.h,
-              width:MediaQuery.sizeOf(context).width,
-              decoration: const BoxDecoration(
-                color: ColorManager.primary,
-                borderRadius: BorderRadius.only(bottomLeft: Radius.circular(30),bottomRight: Radius.circular(30))
-              ),
-              child: Stack(
-                children: [
-                  Align(
-                    alignment: Alignment.bottomRight,
-                    child: SvgPicture.asset("assets/images/two_waves.svg")),
-                  Align(
-                    alignment: Alignment.topLeft,
-                    child: SvgPicture.asset("assets/images/one_wave.svg")),
-                  Align(
-                    alignment: Alignment.topCenter,
-                    child: Text(S.of(context).Profile,style: TextStyles.normal.copyWith(color: ColorManager.white))),
-                  
-                ],
-              ),
-            ),
-          const Align(
-            alignment: Alignment.center,
-            child: ProfilePictureContainer())
-
-          ],
+        Container(
+          height: 150.h,
+          width: MediaQuery.sizeOf(context).width,
+          decoration: const BoxDecoration(
+              color: ColorManager.primary,
+              borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(30),
+                  bottomRight: Radius.circular(30))),
+          child: Stack(
+            children: [
+              Align(
+                  alignment: Alignment.bottomRight,
+                  child: SvgPicture.asset("assets/images/two_waves.svg")),
+              Align(
+                  alignment: Alignment.topLeft,
+                  child: SvgPicture.asset("assets/images/one_wave.svg")),
+              Align(
+                  alignment: Alignment.topCenter,
+                  child: Text(S.of(context).Profile,
+                      style: TextStyles.normal
+                          .copyWith(color: ColorManager.white))),
+            ],
+          ),
+        ),
+        Align(
+            alignment: Alignment.center, child: ProfilePictureContainer(image: image,))
+      ],
     );
   }
 }

@@ -13,7 +13,7 @@ class Storestab extends StatelessWidget {
       itemBuilder: (context, index) {
         return InkWell(
           onTap: () {
-           context.pushNamed(Routes.storesDetails) ;
+            context.pushNamed(Routes.storesDetails);
           },
           child: const ContainerModel(
             text: "store name",

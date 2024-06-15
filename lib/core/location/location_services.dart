@@ -40,10 +40,8 @@ class LocationServices {
     await checkAndRequestLocationPermission();
     return await location.getLocation();
   }
-
 }
 
 class LocationServiceException implements Exception {}
 
 class LocationPermissionException implements Exception {}
-

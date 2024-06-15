@@ -15,24 +15,24 @@ class LoginRepositoryImplementation implements LoginRepository {
   LoginRepositoryImplementation({required this.apiServices});
 
   @override
-    Future<Either<Failure, void>> login(String email, String password) async {
-      try {
-        final response = await apiServices.post(
-          endPoint: ApiConstants.login,
-          data: {
-            "handler": email,
-            "password": password,
-          },
-        );
-        if (response['jwt'] != null) {
-          token = response["jwt"];
-          kTokenBox.put(kTokenBoxString, token);
-          return Right(response["message"]);
-        } else {
-          isPending = true;
-          return Right(response["message"]);
-        }
-      } catch (e) {
+  Future<Either<Failure, void>> login(String email, String password) async {
+    try {
+      final response = await apiServices.post(
+        endPoint: ApiConstants.login,
+        data: {
+          "handler": email,
+          "password": password,
+        },
+      );
+      if (response['jwt'] != null) {
+        token = response["jwt"];
+        kTokenBox.put(kTokenBoxString, token);
+        return Right(response["message"]);
+      } else {
+        isPending = true;
+        return Right(response["message"]);
+      }
+    } catch (e) {
       if (e is DioError) {
         return Left(ServerFailure.fromDioError(e));
       } else {
