@@ -52,9 +52,9 @@ class _HomeViewState extends State<HomeView> {
         tabBorderRadius: 150,
         color: ColorManager.primary,
         gap: 6,
-        padding: const EdgeInsets.all(8),
+        padding: const EdgeInsets.all(12),
         curve: Curves.easeIn,
-        tabMargin: const EdgeInsets.all(8),
+        tabMargin: const EdgeInsets.all(15),
         backgroundColor: ColorManager.greywhite,
         tabs: [
           GButton(
@@ -68,21 +68,18 @@ class _HomeViewState extends State<HomeView> {
             text: S.of(context).Requests,
             iconSize: 25,
             iconColor: ColorManager.primary,
-
           ),
           GButton(
             icon: Icons.store_outlined,
             text: S.of(context).Stores,
             iconSize: 25,
             iconColor: ColorManager.primary,
-
           ),
           GButton(
             icon: Icons.perm_identity,
             text: S.of(context).Profile,
             iconSize: 25,
             iconColor: ColorManager.primary,
-
           ),
         ],
         selectedIndex: _selectedIndex,

@@ -17,20 +17,20 @@ class HomeBody extends StatelessWidget {
         const WelcomeContainer(),
         Padding(
           padding: const EdgeInsets.all(15.0),
-          child: Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(S.of(context).Requestservice,style: TextStyles.headings,),
-                verticalSpace(6),
-                const RequestNowContainer(),
-                verticalSpace(6),
-                const TabBarConatiner() 
-              ],
-            ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                S.of(context).Requestservice,
+                style: TextStyles.headings,
+              ),
+              verticalSpace(6),
+              const RequestNowContainer(),
+              verticalSpace(6),
+              const TabBarConatiner()
+            ],
           ),
         )
-          
       ],
     );
   }
