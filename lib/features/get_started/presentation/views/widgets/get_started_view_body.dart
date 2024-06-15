@@ -12,8 +12,6 @@ class GetStartedBody extends StatelessWidget {
         appBar: AppBar(),
         body: ListView(children: [
           Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-            // verticalSpace(195),
-            // horizontalSpace(62),
             const UpperBody(),
             verticalSpace(35),
             const StartButtons()

@@ -13,6 +13,7 @@ class Routes {
   static const String forgetPassword = "/forgetPassword";
   static const String resetPassword = "/resetPassword";
   static const String setUserLocation = "/setUserLocation";
+  static const String craftsmanUploadImage = "/craftsmanUpload_image";
   static const String home = "/home";
   static const String storesviewAll = "/storesBody";
   static const String storesDetails = "/storesDetails";

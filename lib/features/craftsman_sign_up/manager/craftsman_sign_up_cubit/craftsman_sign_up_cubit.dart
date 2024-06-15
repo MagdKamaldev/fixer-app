@@ -3,8 +3,10 @@ import 'dart:io';
 import 'package:fixer/core/models/operating_area_model.dart';
 import 'package:fixer/core/networks/errors/error_snackbar.dart';
 import 'package:fixer/core/routing/app_router.dart';
+import 'package:fixer/core/routing/routes.dart';
 import 'package:fixer/features/craftsman_sign_up/data/models/craftsman_model.dart';
 import 'package:fixer/features/craftsman_sign_up/data/repos/craftsman_signup_repo_implementation.dart';
+import 'package:fixer/features/craftsman_sign_up/presentation/craftsmen_upload_image/upload_image_screen.dart';
 import 'package:fixer/features/craftsman_sign_up/presentation/reviewing/reviewing.dart';
 import 'package:fixer/features/craftsman_sign_up/presentation/upload_photos/presentation/views/upload_photos_view.dart';
 import 'package:fixer/features/craftsman_sign_up/presentation/views/widgets/set_operating_locations.dart';
@@ -152,8 +154,22 @@ class CraftsmanSignUpCubit extends Cubit<CraftsmanSignUpState> {
         emit(SetOperatinLocationsError(l.message));
       },
       (r) {
-        navigateTo(context, const Reviewing());
+        navigateTo(context, const CraftsmanProfileScreen());
         emit(SetOperatinLocationsSuccess(r));
+      },
+    );
+  }
+
+  Future<void> uploadProfileImage(File image, context) async {
+    emit(CraftsmenUploadProfileImageLoading());
+    final response = await repositoryImplementation.uploadProfile(image);
+    response.fold(
+      (l) {
+        emit(CraftsmenUploadProfileImageError(l.message));
+      },
+      (r) {
+        navigateTo(context, const Reviewing());
+        emit(CraftsmenUploadProfileImageSuccess(r));
       },
     );
   }

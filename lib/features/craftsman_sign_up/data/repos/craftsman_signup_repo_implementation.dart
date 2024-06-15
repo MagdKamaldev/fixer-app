@@ -92,4 +92,23 @@ class CraftsmanSignUpRepositoryImplementation
       }
     }
   }
+
+  @override
+  Future<Either<Failure, String>> uploadProfile(File image) async {
+    try {
+      final response = await apiServices.put(
+          endPoint: ApiConstants.craftsmanProfile,
+          jwt: token,
+          data: FormData.fromMap({
+            "profile": await MultipartFile.fromFile(image.path),
+          }));
+      return Right(response["Message"]);
+    } catch (e) {
+      if (e is DioError) {
+        return Left(ServerFailure.fromDioError(e));
+      } else {
+        return Left(ServerFailure(e.toString()));
+      }
+    }
+  }
 }

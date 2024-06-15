@@ -108,5 +108,6 @@
   "Requests":"Requests",
   "Profile":"profile",
   "search":"search",
-  "field":"Field"
+  "field":"Field",
+  "uploadProfile":"Upload Profile Image"
 }

@@ -73,3 +73,15 @@ class SetOperatinLocationsError extends CraftsmanSignUpState {
   final String message;
   SetOperatinLocationsError(this.message);
 }
+
+class CraftsmenUploadProfileImageLoading extends CraftsmanSignUpState {}
+
+class CraftsmenUploadProfileImageSuccess extends CraftsmanSignUpState {
+  final String imageUrl;
+  CraftsmenUploadProfileImageSuccess(this.imageUrl);
+}
+
+class CraftsmenUploadProfileImageError extends CraftsmanSignUpState {
+  final String message;
+  CraftsmenUploadProfileImageError(this.message);
+}

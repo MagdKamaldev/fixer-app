@@ -170,6 +170,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "uploadBack": MessageLookupByLibrary.simpleMessage("Back"),
         "uploadFront": MessageLookupByLibrary.simpleMessage("Front"),
         "uploadOptions": MessageLookupByLibrary.simpleMessage("upload option"),
+        "uploadProfile":
+            MessageLookupByLibrary.simpleMessage("Upload Profile Image"),
         "uploadid":
             MessageLookupByLibrary.simpleMessage("Upload your national ID"),
         "uploading": MessageLookupByLibrary.simpleMessage("Uploading ..."),

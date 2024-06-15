@@ -165,6 +165,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "uploadFront": MessageLookupByLibrary.simpleMessage("الامام"),
         "uploadOptions":
             MessageLookupByLibrary.simpleMessage("اختر طريقة التحميل"),
+        "uploadProfile":
+            MessageLookupByLibrary.simpleMessage("تحميل الصورة الشخصية"),
         "uploadid": MessageLookupByLibrary.simpleMessage(
             "قم بتحميل رقم الهوية الوطنية الخاص بك"),
         "uploading": MessageLookupByLibrary.simpleMessage(" ... يتم الرفع"),

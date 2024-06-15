@@ -12,4 +12,5 @@ abstract class CraftsmanSignUpRepository {
   Future<Either<Failure, List<OperatingAreaModel>>> getOperatingAreas();
   Future<Either<Failure, String>> setOperatingAreas(List<dynamic> areas);
   Future<Either<Failure, String>> uploadImage(File fonr, File back);
+  Future<Either<Failure, String>> uploadProfile(File image);
 }
