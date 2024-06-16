@@ -42,6 +42,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Aditional directions (options)"),
         "after40sec":
             MessageLookupByLibrary.simpleMessage("After 40 seconds you can"),
+        "afternoon": MessageLookupByLibrary.simpleMessage("Good Afternoon"),
         "agree": MessageLookupByLibrary.simpleMessage("I agree to the "),
         "allItems": MessageLookupByLibrary.simpleMessage("All Items"),
         "alreadyhaveaccount":
@@ -80,6 +81,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Enter the 6-digit code we sent to "),
         "enteryphonenumber":
             MessageLookupByLibrary.simpleMessage("Enter your phone number"),
+        "evening": MessageLookupByLibrary.simpleMessage("Good Evening"),
         "field": MessageLookupByLibrary.simpleMessage("Field"),
         "floor": MessageLookupByLibrary.simpleMessage("Floor"),
         "forgot": MessageLookupByLibrary.simpleMessage("Forgot Password"),
@@ -101,6 +103,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "logout": MessageLookupByLibrary.simpleMessage("Logout"),
         "messageforgotpass": MessageLookupByLibrary.simpleMessage(
             "  We’ll send a verification code to this\nnumber if it matches an existing account"),
+        "morning": MessageLookupByLibrary.simpleMessage("Good Morning"),
         "name": MessageLookupByLibrary.simpleMessage("Name"),
         "nameField": MessageLookupByLibrary.simpleMessage("Enter your Name"),
         "nationalid": MessageLookupByLibrary.simpleMessage("National ID"),

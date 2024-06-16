@@ -41,6 +41,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("اتجاهات إضافية (اختياري)"),
         "after40sec":
             MessageLookupByLibrary.simpleMessage("بعد 40 ثانية يمكنك"),
+        "afternoon": MessageLookupByLibrary.simpleMessage("مساء الخير"),
         "agree": MessageLookupByLibrary.simpleMessage("اوافق على "),
         "allItems": MessageLookupByLibrary.simpleMessage("جميع العناصر"),
         "alreadyhaveaccount":
@@ -78,6 +79,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "أدخل الرمز المكون من 6 أرقام الذي أرسلناه إلى "),
         "enteryphonenumber":
             MessageLookupByLibrary.simpleMessage("أدخل رقم هاتفك"),
+        "evening": MessageLookupByLibrary.simpleMessage("مساء الخير"),
         "field": MessageLookupByLibrary.simpleMessage("المجال"),
         "floor": MessageLookupByLibrary.simpleMessage("الطابق"),
         "forgot": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور"),
@@ -98,6 +100,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "logout": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
         "messageforgotpass": MessageLookupByLibrary.simpleMessage(
             "سنرسل رمز التحقق إلى هذا الرقم \n إذا كان يطابق حسابًا موجودًا"),
+        "morning": MessageLookupByLibrary.simpleMessage("صباح الخير"),
         "name": MessageLookupByLibrary.simpleMessage("الاسم"),
         "nameField": MessageLookupByLibrary.simpleMessage("ادخل اسمك"),
         "nationalid": MessageLookupByLibrary.simpleMessage("الرقم القومي"),

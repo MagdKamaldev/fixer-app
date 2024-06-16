@@ -1,3 +1,4 @@
+import 'package:fixer/core/helpers/spacing.dart';
 import 'package:fixer/core/service_locator/service_locator.dart';
 import 'package:fixer/core/themes/colors.dart';
 import 'package:fixer/core/themes/text_styles.dart';
@@ -9,11 +10,30 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
-class WelcomeContainer extends StatelessWidget {
+class WelcomeContainer extends StatefulWidget {
   const WelcomeContainer({super.key});
 
   @override
+  State<WelcomeContainer> createState() => _WelcomeContainerState();
+}
+
+String? welcomeText;
+
+DateTime currentDateTime = DateTime.now();
+void selectWelcomeTime(context) {
+  if (currentDateTime.hour < 12) {
+    welcomeText = S.of(context).morning;
+  } else if (currentDateTime.hour < 18) {
+    welcomeText = S.of(context).afternoon;
+  } else {
+    welcomeText = S.of(context).evening;
+  }
+}
+
+class _WelcomeContainerState extends State<WelcomeContainer> {
+  @override
   Widget build(BuildContext context) {
+    selectWelcomeTime(context);
     return Container(
       height: 140.h,
       width: MediaQuery.sizeOf(context).width,
@@ -36,10 +56,11 @@ class WelcomeContainer extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  S.of(context).welcome,
+                  welcomeText ?? S.of(context).welcome,
                   style: TextStyles.subHeadingsBold
                       .copyWith(color: ColorManager.white),
                 ),
+                verticalSpace(20),
                 BlocProvider(
                   create: (context) =>
                       ProfileCubit(getIt<ProfileRepoImpl>())..getProfile(),
