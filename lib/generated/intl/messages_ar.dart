@@ -42,6 +42,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "after40sec":
             MessageLookupByLibrary.simpleMessage("بعد 40 ثانية يمكنك"),
         "agree": MessageLookupByLibrary.simpleMessage("اوافق على "),
+        "allItems": MessageLookupByLibrary.simpleMessage("جميع العناصر"),
         "alreadyhaveaccount":
             MessageLookupByLibrary.simpleMessage(" لديك حساب بالفعل ؟"),
         "area": MessageLookupByLibrary.simpleMessage("منطقة"),

@@ -43,6 +43,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "after40sec":
             MessageLookupByLibrary.simpleMessage("After 40 seconds you can"),
         "agree": MessageLookupByLibrary.simpleMessage("I agree to the "),
+        "allItems": MessageLookupByLibrary.simpleMessage("All Items"),
         "alreadyhaveaccount":
             MessageLookupByLibrary.simpleMessage(" Already have an account?"),
         "area": MessageLookupByLibrary.simpleMessage("Area"),

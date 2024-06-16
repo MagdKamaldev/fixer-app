@@ -1,10 +1,12 @@
 import 'package:fixer/core/themes/colors.dart';
+import 'package:fixer/features/stores/data/models/stores_model.dart';
 import 'package:fixer/features/stores/presentation/views/widgets/store_info_row_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class StoreInfoContainer extends StatelessWidget {
-  const StoreInfoContainer({super.key});
+  final StoreModel store;
+  const StoreInfoContainer({super.key, required this.store});
 
   @override
   Widget build(BuildContext context) {
@@ -16,19 +18,20 @@ class StoreInfoContainer extends StatelessWidget {
           color: ColorManager.white,
           borderRadius: BorderRadius.circular(8),
           border: Border.all(color: ColorManager.grey, width: 1)),
-      child: const Column(
+      child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           StoreInfoRowModel(
             icon: Icons.store_outlined,
-            labeltext: "store name",
-            labelInfo: "store description",
+            labeltext: store.name!,
+            labelInfo: store.description ?? "Description",
           ),
           StoreInfoRowModel(
             icon: Icons.place_outlined,
-            labeltext: "location",
+            labeltext: store.location ?? "Location",
           ),
-          StoreInfoRowModel(
+          //TODO: Add the phone number to the store model
+          const StoreInfoRowModel(
             icon: Icons.phone_outlined,
             labeltext: "010000000",
           ),

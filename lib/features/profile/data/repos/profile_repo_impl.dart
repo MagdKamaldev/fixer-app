@@ -1,10 +1,9 @@
 import 'package:dartz/dartz.dart';
-import 'package:fixer/core/models/user_model.dart';
+import 'package:fixer/core/constants/constants.dart';
 import 'package:fixer/core/networks/api_services/api_services.dart';
 import 'package:fixer/core/networks/errors/errors.dart';
 import 'package:fixer/features/profile/data/models/profile_model.dart';
 import 'package:fixer/features/profile/data/repos/profile_repo.dart';
-import 'package:fixer/main.dart';
 
 class ProfileRepoImpl implements ProfileRepository {
   final ApiServices apiServices;
@@ -12,8 +11,9 @@ class ProfileRepoImpl implements ProfileRepository {
   @override
   Future<Either<Failure, ProfileModel>> getProfile() async {
     try {
-      final response = await apiServices.get(endPoint: 'Profile', jwt: token);
-      final user =ProfileModel.fromJson(response["User"]);
+      final response = await apiServices.get(
+          endPoint: 'Profile', jwt: kTokenBox.get(kTokenBoxString));
+      final user = ProfileModel.fromJson(response["User"]);
       return Right(user);
     } catch (e) {
       if (e is ServerFailure) {

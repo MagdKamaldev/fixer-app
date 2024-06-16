@@ -10,4 +10,5 @@ class ApiConstants {
   static const String userComplains = "MyProfile/Messages";
   static const String sendComplain = "SendMessage";
   static const String craftsmanProfile = "Craftsman/ProfilePicture";
+    static const String getStores = "Stores/data";
 }

@@ -16,7 +16,6 @@ class Routes {
   static const String craftsmanUploadImage = "/craftsmanUpload_image";
   static const String home = "/home";
   static const String storesviewAll = "/storesBody";
-  static const String storesDetails = "/storesDetails";
   static const String complains = "/complains";
   static const String addComplain = "/addComplain";
 }
