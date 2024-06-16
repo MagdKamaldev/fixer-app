@@ -14,15 +14,13 @@ class ShimmerLoading extends StatelessWidget {
         return Shimmer.fromColors(
           baseColor: ColorManager.primary,
           highlightColor: ColorManager.primary.withOpacity(0.6),
-          child: Padding(
-            padding: const EdgeInsets.all(4.0),
-            child: Container(
-              width: double.infinity,
-              height: 100.h,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(10),
-              ),
+          child: Container(
+            width: 350.w,
+            height: 96.h,
+            margin: const EdgeInsets.symmetric(horizontal:10,vertical:4),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(10),
             ),
           ),
         );

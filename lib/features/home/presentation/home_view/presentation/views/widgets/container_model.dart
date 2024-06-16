@@ -19,7 +19,7 @@ class ContainerModel extends StatelessWidget {
       width: 355.w,
       height: 96.h,
       padding: const EdgeInsets.symmetric(vertical: 8,horizontal:25),
-      margin: const EdgeInsets.all(4),
+      margin: const EdgeInsets.symmetric(horizontal:0,vertical: 4),
       decoration: BoxDecoration(
         image: DecorationImage(
             image: AssetImage(backgroundpath),

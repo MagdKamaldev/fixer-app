@@ -34,13 +34,13 @@ class StoreDetails extends StatelessWidget {
               store: store,
             ),
             verticalSpace(20),
-            Padding(
+            const Padding(
               padding: EdgeInsets.symmetric(horizontal: 20),
-              child: const SearchbarContainer(),
+              child: SearchbarContainer(),
             ),
             verticalSpace(20),
             Container(
-              padding: EdgeInsets.symmetric(horizontal: 20),
+              padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Text(
                 S.of(context).allItems,
                 style: TextStyles.bodybold
@@ -57,7 +57,7 @@ class StoreDetails extends StatelessWidget {
                       return const ShimmerLoading();
                     } else if (state is GetStoreItemsSuccess) {
                       return Padding(
-                        padding: const EdgeInsets.all(10.0),
+                        padding: const EdgeInsets.all(16.0),
                         child: ListView.builder(
                           itemCount: state
                               .storeItems.length, // Adjust to actual item count
