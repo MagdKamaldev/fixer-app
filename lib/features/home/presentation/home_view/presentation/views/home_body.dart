@@ -15,6 +15,7 @@ class HomeBody extends StatelessWidget {
     return Column(
       children: [
         const WelcomeContainer(),
+        verticalSpace(3),
         Padding(
           padding: const EdgeInsets.all(15.0),
           child: Column(
@@ -22,11 +23,11 @@ class HomeBody extends StatelessWidget {
             children: [
               Text(
                 S.of(context).Requestservice,
-                style: TextStyles.headings,
+                style: TextStyles.bodybold,
               ),
-              verticalSpace(6),
+              verticalSpace(13),
               const RequestNowContainer(),
-              verticalSpace(6),
+              verticalSpace(4),
               const TabBarConatiner(),
             ],
           ),

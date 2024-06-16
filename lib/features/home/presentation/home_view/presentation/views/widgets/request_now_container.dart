@@ -30,9 +30,9 @@ class RequestNowContainer extends StatelessWidget {
             Text(
               S.of(context).yourfixOurExpertise,
               style:
-                  TextStyles.lightHeadings.copyWith(color: ColorManager.white),
+                  TextStyles.lightHeadings.copyWith(color: ColorManager.white,fontWeight: FontWeight.w700),
             ),
-            verticalSpace(20),
+            verticalSpace(25),
             GestureDetector(
               onTap: () {
                 navigateTo(

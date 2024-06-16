@@ -13,29 +13,32 @@ class StoreInfoRowModel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        horizontalSpace(20),
-        Icon(
-          icon,
-          size: 25.sp,
-          color: ColorManager.primary,
-        ),
-        horizontalSpace(20),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(labeltext,
-                style:
-                    TextStyles.smallbold.copyWith(color: ColorManager.primary)),
-            if (labelInfo != null)
-              Text(
-                labelInfo!,
-                style: TextStyles.small.copyWith(color: ColorManager.primary),
-              )
-          ],
-        )
-      ],
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Row(
+        children: [
+          horizontalSpace(20),
+          Icon(
+            icon,
+            size: 25.sp,
+            color: ColorManager.primary,
+          ),
+          horizontalSpace(20),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(labeltext,
+                  style: TextStyles.smallbold
+                      .copyWith(color: ColorManager.primary)),
+              if (labelInfo != null)
+                Text(
+                  labelInfo!,
+                  style: TextStyles.small.copyWith(color: ColorManager.primary),
+                ),
+            ],
+          )
+        ],
+      ),
     );
   }
 }

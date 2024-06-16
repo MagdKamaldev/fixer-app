@@ -15,8 +15,8 @@ class ProfileInfo extends StatelessWidget {
       width: 320.w,
       height: 336.h,
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(8),
-          border: Border.all(color: ColorManager.grey, width: 1)),
+          borderRadius: BorderRadius.circular(10),
+          border: Border.all(color: ColorManager.babyblue, width: 1)),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [

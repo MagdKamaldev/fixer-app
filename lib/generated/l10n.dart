@@ -1080,11 +1080,61 @@ class S {
     );
   }
 
+  /// `Electric`
+  String get electric {
+    return Intl.message(
+      'Electric',
+      name: 'electric',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Plumbing`
+  String get plumbing {
+    return Intl.message(
+      'Plumbing',
+      name: 'plumbing',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Expert electrical repairs, fast and reliable.`
+  String get electricDes {
+    return Intl.message(
+      'Expert electrical repairs, fast and reliable.',
+      name: 'electricDes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Swift plumbing fixes.`
+  String get plumbingDes {
+    return Intl.message(
+      'Swift plumbing fixes.',
+      name: 'plumbingDes',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Stores`
   String get Stores {
     return Intl.message(
       'Stores',
       name: 'Stores',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `All stores`
+  String get allStores {
+    return Intl.message(
+      'All stores',
+      name: 'allStores',
       desc: '',
       args: [],
     );

@@ -16,8 +16,8 @@ class SearchbarContainer extends StatelessWidget {
         color: Colors.white,
         borderRadius: BorderRadius.circular(8),
         border: Border.all(
-          width: 1,
-          color: Colors.grey,
+          width: 1.5,
+          color: ColorManager.babyblue,
         ),
       ),
       child: Row(
@@ -33,23 +33,20 @@ class SearchbarContainer extends StatelessWidget {
             ),
           ),
           Stack(
-            alignment: Alignment.centerRight,
+            alignment: Alignment.center,
             children: [
-              Align(
-                alignment: Alignment.centerRight,
-                child: Container(
-                  width: 60.w,
-                  height: 51.h,
-                  decoration: const BoxDecoration(
-                      color: ColorManager.primary,
-                      borderRadius: locale == "en"
-                          ? BorderRadius.only(
-                              topRight: Radius.circular(8),
-                              bottomRight: Radius.circular(8))
-                          : BorderRadius.only(
-                              bottomLeft: Radius.circular(8),
-                              topLeft: Radius.circular(8))),
-                ),
+              Container(
+                width: 45.w,
+                height: 51.h,
+                decoration: const BoxDecoration(
+                    color: ColorManager.primary,
+                    borderRadius: locale == "en"
+                        ? BorderRadius.only(
+                            topRight: Radius.circular(8),
+                            bottomRight: Radius.circular(8))
+                        : BorderRadius.only(
+                            bottomLeft: Radius.circular(8),
+                            topLeft: Radius.circular(8))),
               ),
               IconButton(
                 icon: const Icon(

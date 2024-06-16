@@ -26,7 +26,7 @@ class TextStyles {
     color: ColorManager.black,
     fontSize: 19.sp,
     fontFamily: GoogleFonts.roboto().fontFamily,
-    fontWeight: FontWeight.w500,
+    fontWeight: FontWeight.w600,
   );
   static TextStyle subHeadings = TextStyle(
     color: ColorManager.black,

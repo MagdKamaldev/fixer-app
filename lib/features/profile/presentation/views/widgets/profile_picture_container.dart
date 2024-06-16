@@ -12,7 +12,7 @@ class ProfilePictureContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 125.w,
-      height: 125.h,
+      height: 130.h,
       margin: EdgeInsets.only(top: 75.h),
       decoration: BoxDecoration(
           color: ColorManager.grey,

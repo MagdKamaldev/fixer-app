@@ -13,11 +13,12 @@ class StoreInfoContainer extends StatelessWidget {
     return Container(
       width: 340.w,
       height: 180.h,
-      margin: EdgeInsets.only(top: 80.h),
+      margin: EdgeInsets.only(top: 65.h),
+      padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 15),
       decoration: BoxDecoration(
           color: ColorManager.white,
           borderRadius: BorderRadius.circular(8),
-          border: Border.all(color: ColorManager.grey, width: 1)),
+          border: Border.all(color: ColorManager.babyblue, width: 1)),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [

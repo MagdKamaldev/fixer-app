@@ -44,6 +44,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "afternoon": MessageLookupByLibrary.simpleMessage("مساء الخير"),
         "agree": MessageLookupByLibrary.simpleMessage("اوافق على "),
         "allItems": MessageLookupByLibrary.simpleMessage("جميع العناصر"),
+        "allStores": MessageLookupByLibrary.simpleMessage("كل المتاجر"),
         "alreadyhaveaccount":
             MessageLookupByLibrary.simpleMessage(" لديك حساب بالفعل ؟"),
         "area": MessageLookupByLibrary.simpleMessage("منطقة"),
@@ -67,6 +68,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "doneField":
             MessageLookupByLibrary.simpleMessage("تم تخطي هذا بالفعل !"),
         "edit": MessageLookupByLibrary.simpleMessage("تعديل"),
+        "electric": MessageLookupByLibrary.simpleMessage("كهربائي"),
+        "electricDes": MessageLookupByLibrary.simpleMessage(
+            "إصلاحات كهربائية احترافية، سريعة وموثوقة."),
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
         "emailfield":
             MessageLookupByLibrary.simpleMessage("ادخل بريدك الإلكتروني"),
@@ -132,6 +136,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "phone": MessageLookupByLibrary.simpleMessage("رقم التليفون"),
         "phoneValidation":
             MessageLookupByLibrary.simpleMessage("الرجاء إدخال رقم هاتف صحيح"),
+        "plumbing": MessageLookupByLibrary.simpleMessage("سباكة"),
+        "plumbingDes":
+            MessageLookupByLibrary.simpleMessage("إصلاحات السباكة السريعة."),
         "remember": MessageLookupByLibrary.simpleMessage("تذكرني"),
         "requestnow": MessageLookupByLibrary.simpleMessage("اطلب الآن"),
         "resendcodeCALL": MessageLookupByLibrary.simpleMessage(

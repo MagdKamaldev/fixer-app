@@ -45,6 +45,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "afternoon": MessageLookupByLibrary.simpleMessage("Good Afternoon"),
         "agree": MessageLookupByLibrary.simpleMessage("I agree to the "),
         "allItems": MessageLookupByLibrary.simpleMessage("All Items"),
+        "allStores": MessageLookupByLibrary.simpleMessage("All stores"),
         "alreadyhaveaccount":
             MessageLookupByLibrary.simpleMessage(" Already have an account?"),
         "area": MessageLookupByLibrary.simpleMessage("Area"),
@@ -69,6 +70,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "doneField": MessageLookupByLibrary.simpleMessage(
             "This field already is Done !"),
         "edit": MessageLookupByLibrary.simpleMessage("Edit"),
+        "electric": MessageLookupByLibrary.simpleMessage("Electric"),
+        "electricDes": MessageLookupByLibrary.simpleMessage(
+            "Expert electrical repairs, fast and reliable."),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "emailfield": MessageLookupByLibrary.simpleMessage("Enter your email"),
         "emptyValidation":
@@ -136,6 +140,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "phone": MessageLookupByLibrary.simpleMessage("Phone number"),
         "phoneValidation": MessageLookupByLibrary.simpleMessage(
             "Please add your phone number !"),
+        "plumbing": MessageLookupByLibrary.simpleMessage("Plumbing"),
+        "plumbingDes":
+            MessageLookupByLibrary.simpleMessage("Swift plumbing fixes."),
         "remember": MessageLookupByLibrary.simpleMessage("Remember me"),
         "requestnow": MessageLookupByLibrary.simpleMessage("Request Now"),
         "resendcodeCALL":

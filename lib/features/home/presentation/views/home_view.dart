@@ -51,10 +51,10 @@ class _HomeViewState extends State<HomeView> {
         tabBackgroundColor: ColorManager.lightblue,
         tabBorderRadius: 150,
         color: ColorManager.primary,
-        gap: 6,
-        padding: const EdgeInsets.all(12),
+        gap: 3,
+        padding: const EdgeInsets.all(10),
         curve: Curves.easeIn,
-        tabMargin: const EdgeInsets.all(15),
+        tabMargin: const EdgeInsets.all(10),
         backgroundColor: ColorManager.greywhite,
         tabs: [
           GButton(

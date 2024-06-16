@@ -29,10 +29,10 @@ class ProlifeInfoRowModel extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(labeltext,
-                style: TextStyles.small.copyWith(color: ColorManager.grey)),
+                style: TextStyles.smallbold.copyWith(color: ColorManager.grey)),
             Text(
               labelInfo,
-              style: TextStyles.small.copyWith(color: ColorManager.primary),
+              style: TextStyles.smallbold.copyWith(color: ColorManager.primary),
             )
           ],
         )

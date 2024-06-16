@@ -16,10 +16,10 @@ class ContainerModel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 350.w,
-      height: 90.h,
-      padding: const EdgeInsets.all(9),
-      margin: const EdgeInsets.all(3),
+      width: 355.w,
+      height: 96.h,
+      padding: const EdgeInsets.symmetric(vertical: 8,horizontal:25),
+      margin: const EdgeInsets.all(4),
       decoration: BoxDecoration(
         image: DecorationImage(
             image: AssetImage(backgroundpath),
@@ -37,10 +37,11 @@ class ContainerModel extends StatelessWidget {
             width: 250.w,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
                   text,
-                  style: TextStyles.whitesmallHeadings,
+                  style: TextStyles.bodybold.copyWith(color: ColorManager.white ),
                 ),
                 Text(
                   description,

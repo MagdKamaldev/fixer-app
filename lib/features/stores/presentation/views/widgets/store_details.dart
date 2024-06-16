@@ -28,23 +28,25 @@ class StoreDetails extends StatelessWidget {
       body: Container(
         color: ColorManager.white,
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             StoreStackContainer(
               store: store,
             ),
-            verticalSpace(10),
-            const SearchbarContainer(),
-            verticalSpace(10),
+            verticalSpace(20),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              child: const SearchbarContainer(),
+            ),
+            verticalSpace(20),
             Container(
-              margin: const EdgeInsets.symmetric(horizontal: 20),
-              alignment: Alignment.centerLeft,
+              padding: EdgeInsets.symmetric(horizontal: 20),
               child: Text(
                 S.of(context).allItems,
-                style: TextStyles.smallHeadings
+                style: TextStyles.bodybold
                     .copyWith(color: ColorManager.black),
               ),
             ),
-            verticalSpace(15),
             Expanded(
               child: BlocProvider(
                 create: (context) => StoresCubit(getIt<StoresRepoImpl>())
@@ -55,7 +57,7 @@ class StoreDetails extends StatelessWidget {
                       return const ShimmerLoading();
                     } else if (state is GetStoreItemsSuccess) {
                       return Padding(
-                        padding: const EdgeInsets.all(20.0),
+                        padding: const EdgeInsets.all(10.0),
                         child: ListView.builder(
                           itemCount: state
                               .storeItems.length, // Adjust to actual item count

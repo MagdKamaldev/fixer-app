@@ -25,13 +25,13 @@ class ProfileBody extends StatelessWidget {
               const ProfileStackConatiner(
                 image: "",
               ),
-              verticalSpace(15),
+              verticalSpace(10),
               Text(
                 "user name",
-                style: TextStyles.subHeadings
+                style: TextStyles.primarytextbutton
                     .copyWith(color: ColorManager.primary),
               ),
-              verticalSpace(15),
+              verticalSpace(24),
               ProfileInfo(
                 user: ProfileModel(
                   name: "John Doe",
