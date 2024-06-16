@@ -89,6 +89,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "getstarted": MessageLookupByLibrary.simpleMessage("البدء"),
         "getstartintro": MessageLookupByLibrary.simpleMessage(
             "تصفح حرفيين لخدمات الإصلاح والصيانة."),
+        "left": MessageLookupByLibrary.simpleMessage("باقي"),
         "locationPermissionDenied":
             MessageLookupByLibrary.simpleMessage("تم رفض إذن الموقع"),
         "locationServicesDisabled":

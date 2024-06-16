@@ -1,13 +1,17 @@
 import 'package:fixer/core/helpers/spacing.dart';
+import 'package:fixer/core/service_locator/service_locator.dart';
 import 'package:fixer/core/themes/colors.dart';
 import 'package:fixer/core/themes/text_styles.dart';
+import 'package:fixer/features/home/presentation/home_view/presentation/views/widgets/shimmer_loading.dart';
 import 'package:fixer/features/stores/data/models/stores_model.dart';
+import 'package:fixer/features/stores/data/repos/stores_repo_impl.dart';
+import 'package:fixer/features/stores/manager/cubit/stores_cubit.dart';
 import 'package:fixer/features/stores/presentation/views/widgets/item_container_model.dart';
 import 'package:fixer/features/stores/presentation/views/widgets/searchbar_container.dart';
 import 'package:fixer/features/stores/presentation/views/widgets/store_stack_container.dart';
 import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class StoreDetails extends StatelessWidget {
   final StoreModel store;
@@ -22,8 +26,6 @@ class StoreDetails extends StatelessWidget {
         iconTheme: const IconThemeData(color: ColorManager.white),
       ),
       body: Container(
-        height: MediaQuery.of(context).size.height,
-        width: MediaQuery.of(context).size.width,
         color: ColorManager.white,
         child: Column(
           children: [
@@ -34,22 +36,42 @@ class StoreDetails extends StatelessWidget {
             const SearchbarContainer(),
             verticalSpace(10),
             Container(
-                margin: const EdgeInsets.symmetric(horizontal: 20),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  S.of(context).allItems,
-                  style: TextStyles.smallHeadings
-                      .copyWith(color: ColorManager.black),
-                )),
-            verticalSpace(15),
-            SizedBox(
-              width: 340.w,
-              height: 106 * 3.h,
-              child: ListView.builder(
-                itemBuilder: (context, index) => const ItemConatinerModel(),
-                itemCount: 15,
+              margin: const EdgeInsets.symmetric(horizontal: 20),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                S.of(context).allItems,
+                style: TextStyles.smallHeadings
+                    .copyWith(color: ColorManager.black),
               ),
-            )
+            ),
+            verticalSpace(15),
+            Expanded(
+              child: BlocProvider(
+                create: (context) => StoresCubit(getIt<StoresRepoImpl>())
+                  ..getStoreItems(store.id!),
+                child: BlocBuilder<StoresCubit, StoresState>(
+                  builder: (context, state) {
+                    if (state is StoresLoading) {
+                      return const ShimmerLoading();
+                    } else if (state is GetStoreItemsSuccess) {
+                      return Padding(
+                        padding: const EdgeInsets.all(20.0),
+                        child: ListView.builder(
+                          itemCount: state
+                              .storeItems.length, // Adjust to actual item count
+                          itemBuilder: (context, index) => ItemConatinerModel(
+                            item: state.storeItems[
+                                index], // Adjust to actual item model
+                          ),
+                        ),
+                      );
+                    } else {
+                      return const ShimmerLoading();
+                    }
+                  },
+                ),
+              ),
+            ),
           ],
         ),
       ),

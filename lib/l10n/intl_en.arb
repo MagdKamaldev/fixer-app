@@ -110,5 +110,6 @@
   "search":"search",
   "field":"Field",
   "uploadProfile":"Upload Profile Image",
-  "allItems":"All Items"
+  "allItems":"All Items",
+  "left":"Left"
 }

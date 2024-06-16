@@ -92,6 +92,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "getstarted": MessageLookupByLibrary.simpleMessage("Get started"),
         "getstartintro": MessageLookupByLibrary.simpleMessage(
             "Browse craftsmen for repair \n and maintainance service"),
+        "left": MessageLookupByLibrary.simpleMessage("Left"),
         "locationPermissionDenied":
             MessageLookupByLibrary.simpleMessage("Location permission denied"),
         "locationServicesDisabled": MessageLookupByLibrary.simpleMessage(

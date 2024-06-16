@@ -63,7 +63,7 @@ class TabBarConatiner extends StatelessWidget {
           verticalSpace(10),
           SizedBox(
             width: 350.w,
-            height: 96 * 2.h,
+            height: 105 * 2.h,
             child: const TabBarView(
               children: [ServiceTab(), Storestab()],
             ),
