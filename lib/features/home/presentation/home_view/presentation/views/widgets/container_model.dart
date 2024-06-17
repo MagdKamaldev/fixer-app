@@ -18,8 +18,8 @@ class ContainerModel extends StatelessWidget {
     return Container(
       width: 355.w,
       height: 96.h,
-      padding: const EdgeInsets.symmetric(vertical: 8,horizontal:25),
-      margin: const EdgeInsets.symmetric(horizontal:0,vertical: 4),
+      padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 25),
+      margin: const EdgeInsets.symmetric(horizontal: 0, vertical: 4),
       decoration: BoxDecoration(
         image: DecorationImage(
             image: AssetImage(backgroundpath),
@@ -41,7 +41,8 @@ class ContainerModel extends StatelessWidget {
               children: [
                 Text(
                   text,
-                  style: TextStyles.bodybold.copyWith(color: ColorManager.white ),
+                  style:
+                      TextStyles.bodybold.copyWith(color: ColorManager.white),
                 ),
                 Text(
                   description,

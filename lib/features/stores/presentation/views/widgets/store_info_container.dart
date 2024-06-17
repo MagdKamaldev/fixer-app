@@ -14,7 +14,7 @@ class StoreInfoContainer extends StatelessWidget {
       width: 340.w,
       height: 180.h,
       margin: EdgeInsets.only(top: 65.h),
-      padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 15),
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
       decoration: BoxDecoration(
           color: ColorManager.white,
           borderRadius: BorderRadius.circular(8),
@@ -25,7 +25,7 @@ class StoreInfoContainer extends StatelessWidget {
           StoreInfoRowModel(
             icon: Icons.store_outlined,
             labeltext: store.name!,
-            labelInfo: store.description ?? "Description",
+            labelInfo: store.description.toString(),
           ),
           StoreInfoRowModel(
             icon: Icons.place_outlined,

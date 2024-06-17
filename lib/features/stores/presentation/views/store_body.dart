@@ -20,9 +20,15 @@ class StoresBody extends StatelessWidget {
           children: [
             const SearchbarContainer(),
             verticalSpace(16),
-            Text(S.of(context).allStores,style: TextStyles.bodybold,),
-            verticalSpace(8),  
-            SizedBox(width: 355.w, height: 108 *5.h, child: const Storestab())
+            Text(
+              S.of(context).allStores,
+              style: TextStyles.bodybold,
+            ),
+            verticalSpace(8),
+            SizedBox(
+                width: 355.w,
+                height: MediaQuery.of(context).size.height * 0.69,
+                child: const Storestab()),
           ],
         ),
       ),
