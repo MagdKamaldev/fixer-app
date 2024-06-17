@@ -12,6 +12,8 @@ import 'package:fixer/features/stores/presentation/views/widgets/store_stack_con
 import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:lottie/lottie.dart';
 
 class StoreDetails extends StatelessWidget {
   final StoreModel store;
@@ -19,6 +21,7 @@ class StoreDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: ColorManager.primary,
       appBar: AppBar(
@@ -43,8 +46,7 @@ class StoreDetails extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Text(
                 S.of(context).allItems,
-                style: TextStyles.bodybold
-                    .copyWith(color: ColorManager.black),
+                style: TextStyles.bodybold.copyWith(color: ColorManager.black),
               ),
             ),
             Expanded(
@@ -56,17 +58,38 @@ class StoreDetails extends StatelessWidget {
                     if (state is StoresLoading) {
                       return const ShimmerLoading();
                     } else if (state is GetStoreItemsSuccess) {
-                      return Padding(
-                        padding: const EdgeInsets.all(16.0),
-                        child: ListView.builder(
-                          itemCount: state
-                              .storeItems.length, // Adjust to actual item count
-                          itemBuilder: (context, index) => ItemConatinerModel(
-                            item: state.storeItems[
-                                index], // Adjust to actual item model
+                      if (StoresCubit.get(context).storeItems.isEmpty) {
+                        return Padding(
+                            padding: EdgeInsets.only(
+                                top: 20.h, left: 20.w, right: 20.w),
+                            child: Column(
+                              children: [
+                                SizedBox(
+                                  height: size.height * 0.25,
+                                  width: size.width,
+                                  child: LottieBuilder.asset(
+                                      "assets/animations/no items found.json"),
+                                ),
+                                verticalSpace(30),
+                                Text(
+                                  S.of(context).noItems,
+                                  style: TextStyles.lightHeadings,
+                                ),
+                              ],
+                            ));
+                      } else {
+                        return Padding(
+                          padding: const EdgeInsets.all(16.0),
+                          child: ListView.builder(
+                            itemCount: state.storeItems
+                                .length, // Adjust to actual item count
+                            itemBuilder: (context, index) => ItemConatinerModel(
+                              item: state.storeItems[
+                                  index], // Adjust to actual item model
+                            ),
                           ),
-                        ),
-                      );
+                        );
+                      }
                     } else {
                       return const ShimmerLoading();
                     }

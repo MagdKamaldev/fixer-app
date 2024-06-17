@@ -116,6 +116,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ادخل كلمة المرور الجديدة"),
         "nextbutton": MessageLookupByLibrary.simpleMessage("التالي"),
         "noComplains": MessageLookupByLibrary.simpleMessage("لا توجد شكاوى !"),
+        "noItems": MessageLookupByLibrary.simpleMessage("لا توجد عناصر"),
         "noaccount": MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
         "nocoderecieved": MessageLookupByLibrary.simpleMessage(
             "إذا لم تتلقى الرمز عن طريق الرسائل القصيرة، يرجى الطلب"),

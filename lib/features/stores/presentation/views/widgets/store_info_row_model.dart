@@ -13,6 +13,7 @@ class StoreInfoRowModel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double size = MediaQuery.of(context).size.width * 0.5;
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Row(
@@ -27,9 +28,14 @@ class StoreInfoRowModel extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(labeltext,
-                  style: TextStyles.smallbold
-                      .copyWith(color: ColorManager.primary)),
+              SizedBox(
+                width: size,
+                child: Text(labeltext,
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 1,
+                    style: TextStyles.smallbold
+                        .copyWith(color: ColorManager.primary)),
+              ),
               if (labelInfo != null)
                 Text(
                   labelInfo!,

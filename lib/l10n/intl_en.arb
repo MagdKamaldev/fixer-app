@@ -119,5 +119,6 @@
   "left":"Left in the store",
   "morning": "Good Morning",
   "afternoon": "Good Afternoon",
-  "evening": "Good Evening"
+  "evening": "Good Evening",
+  "noItems":"No items Yet !"
 }

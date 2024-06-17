@@ -15,6 +15,7 @@ class ContainerModel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Container(
       width: 355.w,
       height: 96.h,
@@ -33,7 +34,6 @@ class ContainerModel extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           SizedBox(
-            // color: Colors.blueGrey,
             width: 250.w,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -41,11 +41,15 @@ class ContainerModel extends StatelessWidget {
               children: [
                 Text(
                   text,
+                  overflow: TextOverflow.ellipsis,
+                  maxLines: 1,
                   style:
                       TextStyles.bodybold.copyWith(color: ColorManager.white),
                 ),
                 Text(
                   description,
+                  overflow: TextOverflow.ellipsis,
+                  maxLines: 1,
                   style: TextStyles.small.copyWith(color: ColorManager.white),
                 )
               ],

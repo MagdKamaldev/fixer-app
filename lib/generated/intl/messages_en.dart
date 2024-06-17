@@ -119,6 +119,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "nextbutton": MessageLookupByLibrary.simpleMessage("Next"),
         "noComplains":
             MessageLookupByLibrary.simpleMessage("No Complain Messges Yet !"),
+        "noItems": MessageLookupByLibrary.simpleMessage("No items Yet !"),
         "noaccount":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
         "nocoderecieved": MessageLookupByLibrary.simpleMessage(

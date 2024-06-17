@@ -1259,6 +1259,16 @@ class S {
       args: [],
     );
   }
+
+  /// `No items Yet !`
+  String get noItems {
+    return Intl.message(
+      'No items Yet !',
+      name: 'noItems',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
