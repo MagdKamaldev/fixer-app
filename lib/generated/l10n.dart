@@ -1220,10 +1220,10 @@ class S {
     );
   }
 
-  /// `Left`
+  /// `Left in the store`
   String get left {
     return Intl.message(
-      'Left',
+      'Left in the store',
       name: 'left',
       desc: '',
       args: [],

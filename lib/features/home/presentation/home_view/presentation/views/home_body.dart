@@ -5,6 +5,7 @@ import 'package:fixer/features/home/presentation/home_view/presentation/views/wi
 import 'package:fixer/features/home/presentation/home_view/presentation/views/widgets/welcome_container.dart';
 import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class HomeBody extends StatelessWidget {
   const HomeBody({super.key});
@@ -16,7 +17,7 @@ class HomeBody extends StatelessWidget {
         const WelcomeContainer(),
         verticalSpace(3),
         Padding(
-          padding: const EdgeInsets.only(top: 15, left: 15, right: 15),
+          padding: EdgeInsets.only(top: 15.h, left: 15.w, right: 15.w),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -24,7 +25,7 @@ class HomeBody extends StatelessWidget {
                 S.of(context).Requestservice,
                 style: TextStyles.bodybold,
               ),
-              verticalSpace(13),
+              verticalSpace(10),
               const RequestNowContainer(),
               verticalSpace(4),
               SizedBox(

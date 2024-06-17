@@ -1,8 +1,10 @@
+import 'package:fixer/core/constants/constants.dart';
 import 'package:fixer/core/helpers/spacing.dart';
 import 'package:fixer/core/themes/colors.dart';
 import 'package:fixer/core/themes/text_styles.dart';
 import 'package:fixer/features/stores/data/models/item_model/item_model.dart';
 import 'package:fixer/generated/l10n.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -42,31 +44,28 @@ class ItemConatinerModel extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(10.0),
+          Container(
+            width: 230.w,
+            padding: const EdgeInsets.all(8),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                // verticalSpace(10),
                 Text(
                   item.name!,
                   style: TextStyles.smallHeadings.copyWith(color: ColorManager.black),
                 ),
-                verticalSpace(15),
-                Row(
-                  children: [
-                    Text(
+                verticalSpace(10),
+                 Text(
                       "${item.price!} LE",
                       style: TextStyles.smallHeadings.copyWith(color: ColorManager.black,fontWeight: FontWeight.w600),
                     ),
-                    horizontalSpace(70),
-                    Text(
-                      "${item.quantity.toString()} ${S.of(context).left}",
-                      style: TextStyles.smallHeadings.copyWith(color: ColorManager.black,fontWeight: FontWeight.w600),
+                    Align(
+                      alignment: locale=="en"?Alignment.bottomRight:Alignment.bottomLeft,
+                      child: Text(
+                        "${item.quantity.toString()} ${S.of(context).left}",
+                        style: TextStyles.small.copyWith(color: const Color(0xffB70202),fontSize: 14),
+                      ),
                     ),
-                  ],
-                ),
               ],
             ),
           )

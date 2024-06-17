@@ -20,20 +20,19 @@ class TabBarContainer extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Expanded(
-                child: TabBar(
-                  tabAlignment: TabAlignment.start,
-                  isScrollable: true,
-                  labelColor: ColorManager.primary,
-                  unselectedLabelColor: ColorManager.grey,
-                  indicatorColor: ColorManager.primary,
-                  indicatorWeight: 2.5,
-                  indicatorSize: TabBarIndicatorSize.label,
-                  tabs: [
-                    Tab(text: S.of(context).services),
-                    Tab(text: S.of(context).Stores),
-                  ],
-                ),
+              TabBar(
+                tabAlignment: TabAlignment.start,
+                isScrollable: true,
+                labelColor: ColorManager.primary,
+                unselectedLabelColor: ColorManager.grey,
+                indicatorColor: ColorManager.primary,
+                indicatorWeight: 1,
+                dividerHeight: 0,
+                indicatorSize: TabBarIndicatorSize.label,
+                tabs: [
+                  Tab(text: S.of(context).services),
+                  Tab(text: S.of(context).Stores),
+                ],
               ),
               TextButton(
                 onPressed: () {
