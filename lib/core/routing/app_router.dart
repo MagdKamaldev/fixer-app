@@ -3,6 +3,7 @@ import 'package:fixer/features/complains/presentation/add_complain_view.dart';
 import 'package:fixer/features/complains/presentation/complains_view.dart';
 import 'package:fixer/features/craftsman_sign_up/presentation/craftsmen_upload_image/upload_image_screen.dart';
 import 'package:fixer/features/home/presentation/views/home_view.dart';
+import 'package:fixer/features/payment/presentation/payment_view.dart';
 import 'package:fixer/features/stores/presentation/views/stores_viewall.dart';
 import 'package:fixer/features/user_sign_up/presentation/user_signup_layout/presentation/views/widgets/set_user_location.dart';
 import 'package:fixer/features/craftsman_sign_up/presentation/views/craftsman_signup_view.dart';
@@ -84,6 +85,10 @@ class AppRouter {
       case Routes.addComplain:
         return MaterialPageRoute(
           builder: (_) => const AddComplain(),
+        );
+        case Routes.payment:
+        return MaterialPageRoute(
+          builder: (_) => const PaymentView(),
         );
       default:
         return MaterialPageRoute(

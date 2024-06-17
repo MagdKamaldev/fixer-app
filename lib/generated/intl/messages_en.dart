@@ -138,6 +138,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Enter your password"),
         "passwordinstructions": MessageLookupByLibrary.simpleMessage(
             "It must contain at least two of:numbers,letters,or symbols"),
+        "payment": MessageLookupByLibrary.simpleMessage("Payment"),
         "phone": MessageLookupByLibrary.simpleMessage("Phone number"),
         "phoneValidation": MessageLookupByLibrary.simpleMessage(
             "Please add your phone number !"),

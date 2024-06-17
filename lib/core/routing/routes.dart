@@ -18,4 +18,5 @@ class Routes {
   static const String storesviewAll = "/storesBody";
   static const String complains = "/complains";
   static const String addComplain = "/addComplain";
+  static const String payment = "/payment";
 }

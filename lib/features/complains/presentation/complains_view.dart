@@ -61,20 +61,23 @@ class ComplainsView extends StatelessWidget {
                                   sender: cubit.complains[index].contactEmail!,
                                 );
                               }))
-                      : Padding(
-                          padding: EdgeInsets.only(
-                              top: 20.h, left: 20.w, right: 20.w),
-                          child: Column(
-                            children: [
-                              LottieBuilder.asset(
-                                  "assets/animations/no items found.json"),
-                              verticalSpace(80),
-                              Text(
-                                S.of(context).noComplains,
-                                style: TextStyles.lightHeadings,
-                              ),
-                            ],
-                          )),
+                      : Container(
+                          color: Colors.white,
+                          child: Padding(
+                              padding: EdgeInsets.only(
+                                  top: 20.h, left: 20.w, right: 20.w),
+                              child: Column(
+                                children: [
+                                  LottieBuilder.asset(
+                                      "assets/animations/no items found.json"),
+                                  verticalSpace(80),
+                                  Text(
+                                    S.of(context).noComplains,
+                                    style: TextStyles.lightHeadings,
+                                  ),
+                                ],
+                              )),
+                        ),
               floatingActionButton: FloatingActionButton(
                 backgroundColor: ColorManager.primary100,
                 onPressed: () {

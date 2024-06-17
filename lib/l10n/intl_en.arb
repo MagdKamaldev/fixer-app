@@ -120,5 +120,6 @@
   "morning": "Good Morning",
   "afternoon": "Good Afternoon",
   "evening": "Good Evening",
-  "noItems":"No items Yet !"
+  "noItems":"No items Yet !",
+  "payment":"Payment"
 }
