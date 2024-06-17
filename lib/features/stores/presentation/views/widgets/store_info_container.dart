@@ -24,17 +24,16 @@ class StoreInfoContainer extends StatelessWidget {
         children: [
           StoreInfoRowModel(
             icon: Icons.store_outlined,
-            labeltext: store.name!,
-            labelInfo: store.description.toString(),
+            labeltext: store.name ?? "No Name Yet !",
+            labelInfo: store.description ?? "No Description Yet !",
           ),
           StoreInfoRowModel(
             icon: Icons.place_outlined,
-            labeltext: store.location ?? "Location",
+            labeltext: store.location ?? "No Location Yet !",
           ),
-          //TODO: Add the phone number to the store model
-          const StoreInfoRowModel(
+          StoreInfoRowModel(
             icon: Icons.phone_outlined,
-            labeltext: "010000000",
+            labeltext: store.phone ?? "No Phone Yet !",
           ),
         ],
       ),
