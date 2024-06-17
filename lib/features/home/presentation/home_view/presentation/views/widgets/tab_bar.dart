@@ -51,8 +51,8 @@ class TabBarContainer extends StatelessWidget {
             ],
           ),
           verticalSpace(3),
-          Flexible(
-            child: const TabBarView(
+          const Flexible(
+            child: TabBarView(
               children: [ServiceTab(), Storestab()],
             ),
           )

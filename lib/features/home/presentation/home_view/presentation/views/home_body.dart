@@ -29,7 +29,7 @@ class HomeBody extends StatelessWidget {
               verticalSpace(4),
               SizedBox(
                 height: MediaQuery.of(context).size.height *
-                    0.375, // Make TabBarView dynamic
+                    0.373, // Make TabBarView dynamic
                 child: const TabBarContainer(),
               ),
             ],
