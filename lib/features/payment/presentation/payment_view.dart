@@ -33,7 +33,7 @@ class PaymentView extends StatelessWidget {
                     onPressed: () {
                       CheckoutCubit.get(context).checkout(
                           model: PaymentIntentInputModel(
-                              amount: "10000", currency: "EGP"));
+                              amount: "500", currency: "EGP"));
                     })
               ],
             )),
