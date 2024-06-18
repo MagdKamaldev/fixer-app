@@ -8,10 +8,10 @@ class PaymentView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(),
-        body: Column(
+        body: const Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text('Payment View'),
+            Text('Payment View'),
           ],
         ));
   }

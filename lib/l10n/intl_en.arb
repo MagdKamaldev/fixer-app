@@ -121,5 +121,6 @@
   "afternoon": "Good Afternoon",
   "evening": "Good Evening",
   "noItems":"No items Yet !",
-  "payment":"Payment"
+  "payment":"Payment",
+  "doyouwanttorequestservice":"Do you want to Request a service?"
 }

@@ -121,5 +121,6 @@
    "afternoon": "مساء الخير",
    "evening": "مساء الخير",
    "noItems":"لا توجد عناصر",
-   "payment":"الدفع"
+   "payment":"الدفع",
+   "doyouwanttorequestservice":"هل تريد طلب خدمة ؟"
 } 

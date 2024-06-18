@@ -69,6 +69,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "district": MessageLookupByLibrary.simpleMessage("District"),
         "doneField": MessageLookupByLibrary.simpleMessage(
             "This field already is Done !"),
+        "doyouwanttorequestservice": MessageLookupByLibrary.simpleMessage(
+            "Do you want to Request a service?"),
         "edit": MessageLookupByLibrary.simpleMessage("Edit"),
         "electric": MessageLookupByLibrary.simpleMessage("Electric"),
         "electricDes": MessageLookupByLibrary.simpleMessage(

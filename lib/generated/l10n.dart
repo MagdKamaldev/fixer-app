@@ -1279,6 +1279,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Do you want to Request a service?`
+  String get doyouwanttorequestservice {
+    return Intl.message(
+      'Do you want to Request a service?',
+      name: 'doyouwanttorequestservice',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
