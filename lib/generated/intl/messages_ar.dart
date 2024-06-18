@@ -98,6 +98,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "getstartintro": MessageLookupByLibrary.simpleMessage(
             "تصفح حرفيين لخدمات الإصلاح والصيانة."),
         "left": MessageLookupByLibrary.simpleMessage(" باقي في المتجر"),
+        "location": MessageLookupByLibrary.simpleMessage("موقعك"),
         "locationPermissionDenied":
             MessageLookupByLibrary.simpleMessage("تم رفض إذن الموقع"),
         "locationServicesDisabled":
@@ -143,6 +144,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "plumbing": MessageLookupByLibrary.simpleMessage("سباكة"),
         "plumbingDes":
             MessageLookupByLibrary.simpleMessage("إصلاحات السباكة السريعة."),
+        "price": MessageLookupByLibrary.simpleMessage("سعر"),
         "remember": MessageLookupByLibrary.simpleMessage("تذكرني"),
         "requestnow": MessageLookupByLibrary.simpleMessage("اطلب الآن"),
         "resendcodeCALL": MessageLookupByLibrary.simpleMessage(
@@ -155,6 +157,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "برجاء الانتظارو يتم مراجعة طلبك"),
         "search": MessageLookupByLibrary.simpleMessage("بحث"),
         "selectArea": MessageLookupByLibrary.simpleMessage("ادخل منطقتك !"),
+        "service": MessageLookupByLibrary.simpleMessage("خدمه"),
         "services": MessageLookupByLibrary.simpleMessage("خدمات"),
         "setHomeLocation":
             MessageLookupByLibrary.simpleMessage("اختيار موقع المنزل"),

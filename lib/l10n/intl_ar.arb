@@ -123,6 +123,10 @@
    "noItems":"لا توجد عناصر",
    "payment":"الدفع",
    "doyouwanttorequestservice":"هل تريد طلب خدمة ؟",
-  "whichservicedoyouliketorequest":"ما هي الخدمة التي ترغب في طلبها؟"
+  "whichservicedoyouliketorequest":"ما هي الخدمة التي ترغب في طلبها؟",
+  "service":"خدمه",
+  "Area":"منطقة",
+  "price":"سعر",
+  "location":"موقعك"
 
 } 

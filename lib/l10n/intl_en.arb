@@ -123,5 +123,8 @@
   "noItems":"No items Yet !",
   "payment":"Payment",
   "doyouwanttorequestservice":"Do you want to Request a service?",
-  "whichservicedoyouliketorequest":"Which service would you like to request?"
+  "whichservicedoyouliketorequest":"Which service would you like to request?",
+  "service":"Service",
+  "price":"Price",
+  "location":"Your Location"
 }

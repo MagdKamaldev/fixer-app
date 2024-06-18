@@ -3,7 +3,7 @@ import 'package:fixer/core/helpers/spacing.dart';
 import 'package:fixer/core/routing/app_router.dart';
 import 'package:fixer/core/themes/colors.dart';
 import 'package:fixer/core/themes/text_styles.dart';
-import 'package:fixer/features/home/presentation/views/widgets/google_map.dart';
+import 'package:fixer/features/requests/presentation/views/requests_views.dart';
 import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -48,7 +48,7 @@ class PopUpMessage extends StatelessWidget {
             onPressed: () {
               navigateTo(
                   context,
-                  const GoogleMapView(),
+                  const RequestView(),
                 );
             },
             color: ColorManager.primary,
