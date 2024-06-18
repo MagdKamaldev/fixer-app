@@ -1,15 +1,17 @@
-
 import 'package:fixer/core/helpers/spacing.dart';
 import 'package:fixer/core/routing/app_router.dart';
 import 'package:fixer/core/themes/colors.dart';
 import 'package:fixer/core/themes/text_styles.dart';
 import 'package:fixer/features/requests/presentation/views/requests_views.dart';
+import 'package:fixer/features/services/data/models/service_model.dart';
 import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class PopUpMessage extends StatelessWidget {
-  const PopUpMessage ({super.key});
+  final int id;
+  final ServiceModel service;
+  const PopUpMessage({super.key, required this.id, required this.service});
 
   @override
   Widget build(BuildContext context) {
@@ -24,44 +26,50 @@ class PopUpMessage extends StatelessWidget {
           borderRadius: BorderRadius.circular(10.0),
           color: Colors.white,
         ),
-        width: 350.w, 
-        height: 180.h, 
+        width: 350.w,
+        height: 180.h,
         child: Column(
           children: <Widget>[
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 IconButton(
-                  icon: const Icon(Icons.close,size: 20,),
+                  icon: const Icon(
+                    Icons.close,
+                    size: 20,
+                  ),
                   onPressed: () {
-                    Navigator.of(context).pop(); // Close the dialog
+                    Navigator.of(context).pop();
                   },
                 ),
               ],
             ),
             Text(
-              S.of(context).doyouwanttorequestservice,
+              "${S.of(context).doyouwanttorequestservice} ${service.name!} ?",
               style: TextStyles.small,
             ),
             verticalSpace(20),
             MaterialButton(
-            onPressed: () {
-              navigateTo(
+              onPressed: () {
+                navigateTo(
                   context,
-                  const RequestView(),
-                ); 
-            },
-            color: ColorManager.primary,
-            height: 40,
-            minWidth: 110,
-            textColor: ColorManager.white,
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-            child: Text(S.of(context).requestnow),
+                  RequestView(
+                    id: id,
+                    service: service,
+                  ),
+                );
+              },
+              color: ColorManager.primary,
+              height: 40,
+              minWidth: 110,
+              textColor: ColorManager.white,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10)),
+              child: Text(S.of(context).requestnow),
             )
           ],
         ),
       ),
-    )
-    ;
+    );
   }
 }

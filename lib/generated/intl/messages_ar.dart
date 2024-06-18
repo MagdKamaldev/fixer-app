@@ -69,7 +69,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "doneField":
             MessageLookupByLibrary.simpleMessage("تم تخطي هذا بالفعل !"),
         "doyouwanttorequestservice":
-            MessageLookupByLibrary.simpleMessage("هل تريد طلب خدمة ؟"),
+            MessageLookupByLibrary.simpleMessage("هل تريد طلب خدمة "),
         "edit": MessageLookupByLibrary.simpleMessage("تعديل"),
         "electric": MessageLookupByLibrary.simpleMessage("كهربائي"),
         "electricDes": MessageLookupByLibrary.simpleMessage(

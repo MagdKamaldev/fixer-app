@@ -16,11 +16,18 @@ class ServicesContainerModel extends StatelessWidget {
           width: 109.w,
           height: 95.h,
           decoration: BoxDecoration(
-            border: Border.all(color: ColorManager.lightblue,width: 1,),
+            border: Border.all(
+              color: ColorManager.lightblue,
+              width: 1,
+            ),
             borderRadius: BorderRadius.circular(10),
           ),
         ),
-        SvgPicture.asset(image,width: 99.w,height: 100.h,)
+        SvgPicture.asset(
+          image,
+          width: 99.w,
+          height: 100.h,
+        )
       ],
     );
   }

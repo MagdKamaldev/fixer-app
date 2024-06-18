@@ -10,9 +10,9 @@ class CheckoutRepoImpl extends CheckoutRepo {
   @override
   Future<Either<Failure, void>> makePayment(
       {required PaymentIntentInputModel model}) async {
-      try {
-    await services.makePayment(paymentIntentInputModel: model);
-    return Future.value(const Right(null));
+    try {
+      await services.makePayment(paymentIntentInputModel: model);
+      return Future.value(const Right(null));
     } on Exception catch (e) {
       return Future.value(Left(ServerFailure(e.toString())));
     }

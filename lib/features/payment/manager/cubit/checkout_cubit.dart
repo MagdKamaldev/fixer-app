@@ -11,8 +11,8 @@ class CheckoutCubit extends Cubit<CheckoutState> {
   void checkout({required PaymentIntentInputModel model}) async {
     emit(CheckoutLoading());
     try {
-    await repo.makePayment(model: model);
-    emit(CheckoutSuccess());
+      await repo.makePayment(model: model);
+      emit(CheckoutSuccess());
     } catch (e) {
       emit(CheckoutFailed(message: e.toString()));
     }

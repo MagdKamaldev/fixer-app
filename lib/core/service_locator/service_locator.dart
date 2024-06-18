@@ -4,6 +4,7 @@ import 'package:fixer/features/complains/data/repos/complains_repo_impl.dart';
 import 'package:fixer/features/craftsman_sign_up/data/repos/craftsman_signup_repo_implementation.dart';
 import 'package:fixer/features/login/data/repos/login_repository_implementation.dart';
 import 'package:fixer/features/profile/data/repos/profile_repo_impl.dart';
+import 'package:fixer/features/services/data/reepos/services_repo_impl.dart';
 import 'package:fixer/features/stores/data/repos/stores_repo_impl.dart';
 import 'package:fixer/features/user_sign_up/data/repos/user_signup_repository_implementation.dart';
 import 'package:get_it/get_it.dart';
@@ -43,6 +44,11 @@ void setupLocator() {
   getIt.registerLazySingleton<StoresRepoImpl>(
     () => StoresRepoImpl(
       apiservices: getIt<ApiServices>(),
+    ),
+  );
+  getIt.registerLazySingleton<ServicesRepoImpl>(
+    () => ServicesRepoImpl(
+      apiServices: getIt<ApiServices>(),
     ),
   );
 }

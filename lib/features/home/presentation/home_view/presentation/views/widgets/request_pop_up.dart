@@ -1,8 +1,10 @@
 import 'package:fixer/core/helpers/extensions.dart';
 import 'package:fixer/core/helpers/spacing.dart';
+import 'package:fixer/core/routing/app_router.dart';
 import 'package:fixer/core/routing/routes.dart';
 import 'package:fixer/core/themes/text_styles.dart';
 import 'package:fixer/features/home/presentation/home_view/presentation/views/widgets/services_container_model.dart';
+import 'package:fixer/features/services/presentation/view/services_view.dart';
 import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -23,17 +25,20 @@ class RequestPopUp extends StatelessWidget {
           borderRadius: BorderRadius.circular(10.0),
           color: Colors.white,
         ),
-        width: 380.w, 
-        height: 213.h, 
+        width: 380.w,
+        height: 213.h,
         child: Column(
           children: <Widget>[
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 IconButton(
-                  icon: const Icon(Icons.close,size: 20,),
+                  icon: const Icon(
+                    Icons.close,
+                    size: 20,
+                  ),
                   onPressed: () {
-                    Navigator.of(context).pop(); // Close the dialog
+                    Navigator.of(context).pop();
                   },
                 ),
               ],
@@ -47,19 +52,20 @@ class RequestPopUp extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 InkWell(
-                  onTap: () {
-                    context.pushNamed(Routes.services);
-                  },
-                  child: const ServicesContainerModel(image: "assets/images/plumbing_card.svg")),
+                    onTap: () {
+                    navigateTo(context, const ServicesView(id: 14, category: "Plumbing"));
+                    },
+                    child: const ServicesContainerModel(
+                        image: "assets/images/plumbing_card.svg")),
                 horizontalSpace(10),
                 InkWell(
-                  onTap: () {
-                    context.pushNamed(Routes.services);
-                  },
-                  child: const ServicesContainerModel(image: "assets/images/Electrical_card.svg"))
+                    onTap: () {
+                      navigateTo(context, const ServicesView(id: 16, category: "Electrical"));
+                    },
+                    child: const ServicesContainerModel(
+                        image: "assets/images/Electrical_card.svg"))
               ],
             )
-
           ],
         ),
       ),

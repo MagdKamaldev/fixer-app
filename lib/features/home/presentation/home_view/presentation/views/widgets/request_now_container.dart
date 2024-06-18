@@ -34,10 +34,12 @@ class RequestNowContainer extends StatelessWidget {
             verticalSpace(25),
             GestureDetector(
               onTap: () {
-                showDialog(context: context, 
-        builder: (context) {
-          return const RequestPopUp();
-        },);
+                showDialog(
+                  context: context,
+                  builder: (context) {
+                    return const RequestPopUp();
+                  },
+                );
               },
               child: InkWell(
                 child: Container(

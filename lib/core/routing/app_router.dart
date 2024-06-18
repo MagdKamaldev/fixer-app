@@ -92,14 +92,6 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => const PaymentView(),
         );
-        case Routes.services:
-        return MaterialPageRoute(
-          builder: (_) => const ServicesView(),
-        );
-        case Routes.request:
-        return MaterialPageRoute(
-          builder: (_) => const RequestView(),
-        );
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(
