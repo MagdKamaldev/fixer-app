@@ -1,8 +1,7 @@
 import 'package:fixer/core/helpers/spacing.dart';
-import 'package:fixer/core/routing/app_router.dart';
 import 'package:fixer/core/themes/colors.dart';
 import 'package:fixer/core/themes/text_styles.dart';
-import 'package:fixer/features/home/presentation/views/widgets/google_map.dart';
+import 'package:fixer/features/home/presentation/home_view/presentation/views/widgets/request_pop_up.dart';
 import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -35,10 +34,14 @@ class RequestNowContainer extends StatelessWidget {
             verticalSpace(25),
             GestureDetector(
               onTap: () {
-                navigateTo(
-                  context,
-                  const GoogleMapView(),
-                );
+                showDialog(context: context, 
+        builder: (context) {
+          return const RequestPopUp();
+        },);
+                // navigateTo(
+                //   context,
+                //   const GoogleMapView(),
+                // );
               },
               child: InkWell(
                 child: Container(

@@ -197,6 +197,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "viewAll": MessageLookupByLibrary.simpleMessage("View All"),
         "welcome": MessageLookupByLibrary.simpleMessage("welcome"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("Welcome Back !"),
+        "whichservicedoyouliketorequest": MessageLookupByLibrary.simpleMessage(
+            "Which service would you like to request?"),
         "withgoogle":
             MessageLookupByLibrary.simpleMessage("Sign in with google"),
         "yourfixOurExpertise":

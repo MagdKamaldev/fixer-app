@@ -192,6 +192,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "viewAll": MessageLookupByLibrary.simpleMessage("عرض الكل"),
         "welcome": MessageLookupByLibrary.simpleMessage("مرحباً"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("مرحباً بك مجدداً"),
+        "whichservicedoyouliketorequest": MessageLookupByLibrary.simpleMessage(
+            "ما هي الخدمة التي ترغب في طلبها؟"),
         "withgoogle":
             MessageLookupByLibrary.simpleMessage("تسجيل الدخول باستخدام جوجل"),
         "yourfixOurExpertise":
