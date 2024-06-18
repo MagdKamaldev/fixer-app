@@ -22,7 +22,7 @@ class _HomeViewState extends State<HomeView> {
   // List of widgets corresponding to each tab
   final List<Widget> _widgetOptions = <Widget>[
     const HomeBody(),
-    const Text("requets"),
+    const Text("requests"),
     const StoresBody(),
     const ProfileBody(),
   ];

@@ -57,7 +57,7 @@ class _WelcomeContainerState extends State<WelcomeContainer> {
               children: [
                 Text(
                   welcomeText ?? S.of(context).welcome,
-                  style: TextStyles.subHeadingsBold
+                  style: TextStyles.subHeadings
                       .copyWith(color: ColorManager.white),
                 ),
                 verticalSpace(20),
@@ -68,7 +68,7 @@ class _WelcomeContainerState extends State<WelcomeContainer> {
                     builder: (context, state) {
                       if (ProfileCubit.get(context).user == null) {
                         return Text("user name",
-                            style: TextStyles.normal
+                            style: TextStyles.smallHeadings
                                 .copyWith(color: ColorManager.white));
                       } else {
                         return Text(ProfileCubit.get(context).user!.name!,

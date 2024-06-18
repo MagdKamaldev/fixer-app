@@ -64,6 +64,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "confirm": MessageLookupByLibrary.simpleMessage("Confirm"),
         "confirmLocation":
             MessageLookupByLibrary.simpleMessage("Confirm location"),
+        "confirmrequest":
+            MessageLookupByLibrary.simpleMessage("Confirm Request"),
         "contactMail": MessageLookupByLibrary.simpleMessage("Contact Mail"),
         "continuee": MessageLookupByLibrary.simpleMessage("Continue"),
         "district": MessageLookupByLibrary.simpleMessage("District"),
@@ -101,6 +103,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "getstartintro": MessageLookupByLibrary.simpleMessage(
             "Browse craftsmen for repair \n and maintainance service"),
         "left": MessageLookupByLibrary.simpleMessage("Left in the store"),
+        "location": MessageLookupByLibrary.simpleMessage("Your Location"),
         "locationPermissionDenied":
             MessageLookupByLibrary.simpleMessage("Location permission denied"),
         "locationServicesDisabled": MessageLookupByLibrary.simpleMessage(
@@ -147,6 +150,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "plumbing": MessageLookupByLibrary.simpleMessage("Plumbing"),
         "plumbingDes":
             MessageLookupByLibrary.simpleMessage("Swift plumbing fixes."),
+        "price": MessageLookupByLibrary.simpleMessage("Price"),
         "remember": MessageLookupByLibrary.simpleMessage("Remember me"),
         "requestnow": MessageLookupByLibrary.simpleMessage("Request Now"),
         "resendcodeCALL":
@@ -159,6 +163,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "search": MessageLookupByLibrary.simpleMessage("search"),
         "selectArea":
             MessageLookupByLibrary.simpleMessage("select your area !"),
+        "service": MessageLookupByLibrary.simpleMessage("Service"),
         "services": MessageLookupByLibrary.simpleMessage("Services"),
         "setHomeLocation":
             MessageLookupByLibrary.simpleMessage("Set your home location"),
@@ -197,6 +202,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "viewAll": MessageLookupByLibrary.simpleMessage("View All"),
         "welcome": MessageLookupByLibrary.simpleMessage("welcome"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("Welcome Back !"),
+        "whichservicedoyouliketorequest": MessageLookupByLibrary.simpleMessage(
+            "Which service would you like to request?"),
         "withgoogle":
             MessageLookupByLibrary.simpleMessage("Sign in with google"),
         "yourfixOurExpertise":

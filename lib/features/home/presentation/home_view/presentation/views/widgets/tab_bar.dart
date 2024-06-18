@@ -26,6 +26,7 @@ class TabBarContainer extends StatelessWidget {
                 labelColor: ColorManager.primary,
                 unselectedLabelColor: ColorManager.grey,
                 indicatorColor: ColorManager.primary,
+                indicatorPadding: const EdgeInsets.only(bottom:8),
                 indicatorWeight: 1,
                 dividerHeight: 0,
                 indicatorSize: TabBarIndicatorSize.label,

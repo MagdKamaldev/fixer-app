@@ -1289,6 +1289,56 @@ class S {
       args: [],
     );
   }
+
+  /// `Which service would you like to request?`
+  String get whichservicedoyouliketorequest {
+    return Intl.message(
+      'Which service would you like to request?',
+      name: 'whichservicedoyouliketorequest',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Service`
+  String get service {
+    return Intl.message(
+      'Service',
+      name: 'service',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Price`
+  String get price {
+    return Intl.message(
+      'Price',
+      name: 'price',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your Location`
+  String get location {
+    return Intl.message(
+      'Your Location',
+      name: 'location',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm Request`
+  String get confirmrequest {
+    return Intl.message(
+      'Confirm Request',
+      name: 'confirmrequest',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

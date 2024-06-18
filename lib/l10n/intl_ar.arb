@@ -122,5 +122,12 @@
    "evening": "مساء الخير",
    "noItems":"لا توجد عناصر",
    "payment":"الدفع",
-   "doyouwanttorequestservice":"هل تريد طلب خدمة ؟"
+   "doyouwanttorequestservice":"هل تريد طلب خدمة ؟",
+  "whichservicedoyouliketorequest":"ما هي الخدمة التي ترغب في طلبها؟",
+  "service":"خدمه",
+  "Area":"منطقة",
+  "price":"سعر",
+  "location":"موقعك",
+  "confirmrequest":"تأكيد الطلب"
+
 } 

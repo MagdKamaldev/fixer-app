@@ -61,6 +61,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "الرجاء إدخال الرمز المكون من 6 أرقام"),
         "confirm": MessageLookupByLibrary.simpleMessage("تأكيد"),
         "confirmLocation": MessageLookupByLibrary.simpleMessage("تأكيد الموقع"),
+        "confirmrequest": MessageLookupByLibrary.simpleMessage("تأكيد الطلب"),
         "contactMail":
             MessageLookupByLibrary.simpleMessage("البريد الإلكتروني للتواصل"),
         "continuee": MessageLookupByLibrary.simpleMessage("استمرار"),
@@ -98,6 +99,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "getstartintro": MessageLookupByLibrary.simpleMessage(
             "تصفح حرفيين لخدمات الإصلاح والصيانة."),
         "left": MessageLookupByLibrary.simpleMessage(" باقي في المتجر"),
+        "location": MessageLookupByLibrary.simpleMessage("موقعك"),
         "locationPermissionDenied":
             MessageLookupByLibrary.simpleMessage("تم رفض إذن الموقع"),
         "locationServicesDisabled":
@@ -143,6 +145,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "plumbing": MessageLookupByLibrary.simpleMessage("سباكة"),
         "plumbingDes":
             MessageLookupByLibrary.simpleMessage("إصلاحات السباكة السريعة."),
+        "price": MessageLookupByLibrary.simpleMessage("سعر"),
         "remember": MessageLookupByLibrary.simpleMessage("تذكرني"),
         "requestnow": MessageLookupByLibrary.simpleMessage("اطلب الآن"),
         "resendcodeCALL": MessageLookupByLibrary.simpleMessage(
@@ -155,6 +158,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "برجاء الانتظارو يتم مراجعة طلبك"),
         "search": MessageLookupByLibrary.simpleMessage("بحث"),
         "selectArea": MessageLookupByLibrary.simpleMessage("ادخل منطقتك !"),
+        "service": MessageLookupByLibrary.simpleMessage("خدمه"),
         "services": MessageLookupByLibrary.simpleMessage("خدمات"),
         "setHomeLocation":
             MessageLookupByLibrary.simpleMessage("اختيار موقع المنزل"),
@@ -192,6 +196,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "viewAll": MessageLookupByLibrary.simpleMessage("عرض الكل"),
         "welcome": MessageLookupByLibrary.simpleMessage("مرحباً"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("مرحباً بك مجدداً"),
+        "whichservicedoyouliketorequest": MessageLookupByLibrary.simpleMessage(
+            "ما هي الخدمة التي ترغب في طلبها؟"),
         "withgoogle":
             MessageLookupByLibrary.simpleMessage("تسجيل الدخول باستخدام جوجل"),
         "yourfixOurExpertise":
