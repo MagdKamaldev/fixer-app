@@ -47,7 +47,8 @@ class ProfileBody extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               ProfileStackConatiner(
-                image: ProfileCubit.get(context).user!.profilePic!,
+                image: ProfileCubit.get(context).user!.profilePic ??
+                    "https://th.bing.com/th?id=OIP.TctatNGs7RN-Dfc3NZf91AAAAA&w=212&h=212&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2",
               ),
               verticalSpace(15),
               Text(

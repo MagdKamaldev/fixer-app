@@ -38,10 +38,6 @@ class RequestNowContainer extends StatelessWidget {
         builder: (context) {
           return const RequestPopUp();
         },);
-                // navigateTo(
-                //   context,
-                //   const GoogleMapView(),
-                // );
               },
               child: InkWell(
                 child: Container(
