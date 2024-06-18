@@ -43,16 +43,17 @@ class ApiServices {
     return response.data;
   }
 
-  Future<Map<String, dynamic>> stripePost({
-    required String endPoint,
-    required dynamic data,
-    String? jwt,
+  Future<Response> stripePost({
+    required String url,
+    required body,
+    required String token,
+    String ? contentType,
   }) async {
     _dio.options.headers = {
-      "Authorization": "Bearer $jwt",
+      "Authorization": "Bearer $token",
     };
-    var response = await _dio.post("${ApiConstants.baseUrl}$endPoint",
-        data: data,
+    var response = await _dio.post(url,
+        data: body,
         options: Options(contentType: Headers.formUrlEncodedContentType));
     return response.data;
   }
