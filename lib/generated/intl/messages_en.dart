@@ -64,6 +64,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "confirm": MessageLookupByLibrary.simpleMessage("Confirm"),
         "confirmLocation":
             MessageLookupByLibrary.simpleMessage("Confirm location"),
+        "confirmrequest":
+            MessageLookupByLibrary.simpleMessage("Confirm Request"),
         "contactMail": MessageLookupByLibrary.simpleMessage("Contact Mail"),
         "continuee": MessageLookupByLibrary.simpleMessage("Continue"),
         "district": MessageLookupByLibrary.simpleMessage("District"),

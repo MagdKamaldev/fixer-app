@@ -49,7 +49,7 @@ class PopUpMessage extends StatelessWidget {
               navigateTo(
                   context,
                   const RequestView(),
-                );
+                ); 
             },
             color: ColorManager.primary,
             height: 40,

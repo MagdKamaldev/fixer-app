@@ -19,8 +19,8 @@ class RequestRowModel extends StatelessWidget {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-          Text(label,style: TextStyles.small,),
-          Text(description,style: TextStyles.body,)
+          Text(label,style: TextStyles.small.copyWith(color: ColorManager.grey),),
+          Text(description,style: TextStyles.body)
         ],),
         horizontalSpace(100),
       ],

@@ -126,5 +126,6 @@
   "whichservicedoyouliketorequest":"Which service would you like to request?",
   "service":"Service",
   "price":"Price",
-  "location":"Your Location"
+  "location":"Your Location",
+  "confirmrequest":"Confirm Request"
 }

@@ -61,6 +61,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "الرجاء إدخال الرمز المكون من 6 أرقام"),
         "confirm": MessageLookupByLibrary.simpleMessage("تأكيد"),
         "confirmLocation": MessageLookupByLibrary.simpleMessage("تأكيد الموقع"),
+        "confirmrequest": MessageLookupByLibrary.simpleMessage("تأكيد الطلب"),
         "contactMail":
             MessageLookupByLibrary.simpleMessage("البريد الإلكتروني للتواصل"),
         "continuee": MessageLookupByLibrary.simpleMessage("استمرار"),

@@ -127,6 +127,7 @@
   "service":"خدمه",
   "Area":"منطقة",
   "price":"سعر",
-  "location":"موقعك"
+  "location":"موقعك",
+  "confirmrequest":"تأكيد الطلب"
 
 } 
