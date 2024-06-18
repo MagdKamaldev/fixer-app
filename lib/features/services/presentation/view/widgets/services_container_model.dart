@@ -27,14 +27,14 @@ class ServicesContainermodel extends StatelessWidget {
             color: ColorManager.white,
             borderRadius: BorderRadius.circular(5),
             border: Border.all(color: ColorManager.lightblue),
-            // boxShadow: const [
-            //         BoxShadow(
-            //           color:ColorManager.babyblue,
-            //           spreadRadius:0,
-            //           blurRadius: 4,
-            //           offset: Offset(0, 2), // changes position of shadow
-            //         ),
-            //       ],       
+            boxShadow: const [
+                    BoxShadow(
+                      color:ColorManager.babyblue,
+                      spreadRadius:0,
+                      blurRadius: 4,
+                      offset: Offset(0, 2), // changes position of shadow
+                    ),
+                  ],       
           ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
