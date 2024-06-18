@@ -47,15 +47,16 @@ class ApiServices {
     required String url,
     required body,
     required String token,
-    String ? contentType,
+    String? contentType,
   }) async {
-    _dio.options.headers = {
-      "Authorization": "Bearer $token",
-    };
-    var response = await _dio.post(url,
-        data: body,
-        options: Options(contentType: Headers.formUrlEncodedContentType));
-    return response.data;
+    var response = await _dio.post(
+      url,
+      data: body,
+      options: Options(contentType: contentType, headers: {
+        "Authorization": "Bearer $token",
+      }),
+    );
+    return response;
   }
 
   Future<Map<String, dynamic>> put({
