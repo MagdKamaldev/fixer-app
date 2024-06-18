@@ -86,7 +86,7 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => const AddComplain(),
         );
-        case Routes.payment:
+      case Routes.payment:
         return MaterialPageRoute(
           builder: (_) => const PaymentView(),
         );

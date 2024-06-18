@@ -29,8 +29,8 @@ class RequestNowContainer extends StatelessWidget {
           children: [
             Text(
               S.of(context).yourfixOurExpertise,
-              style:
-                  TextStyles.lightHeadings.copyWith(color: ColorManager.white,fontWeight: FontWeight.w700),
+              style: TextStyles.lightHeadings.copyWith(
+                  color: ColorManager.white, fontWeight: FontWeight.w700),
             ),
             verticalSpace(25),
             GestureDetector(

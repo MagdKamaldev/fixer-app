@@ -23,13 +23,13 @@ class ItemConatinerModel extends StatelessWidget {
         borderRadius: BorderRadius.circular(8),
         border: Border.all(color: ColorManager.babyblue),
         boxShadow: const [
-                BoxShadow(
-                  color:ColorManager.babyblue,
-                  spreadRadius:0,
-                  blurRadius: 4,
-                  offset: Offset(0, 2), // changes position of shadow
-                ),
-              ],
+          BoxShadow(
+            color: ColorManager.babyblue,
+            spreadRadius: 0,
+            blurRadius: 4,
+            offset: Offset(0, 2), // changes position of shadow
+          ),
+        ],
         color: ColorManager.white,
       ),
       child: Row(
@@ -52,20 +52,25 @@ class ItemConatinerModel extends StatelessWidget {
               children: [
                 Text(
                   item.name!,
-                  style: TextStyles.smallHeadings.copyWith(color: ColorManager.black),
+                  style: TextStyles.smallHeadings
+                      .copyWith(color: ColorManager.black),
                 ),
                 verticalSpace(10),
-                 Text(
-                      "${item.price!} LE",
-                      style: TextStyles.smallHeadings.copyWith(color: ColorManager.black,fontWeight: FontWeight.w600),
-                    ),
-                    Align(
-                      alignment: locale=="en"?Alignment.bottomRight:Alignment.bottomLeft,
-                      child: Text(
-                        "${item.quantity.toString()} ${S.of(context).left}",
-                        style: TextStyles.small.copyWith(color: const Color(0xffB70202),fontSize: 14),
-                      ),
-                    ),
+                Text(
+                  "${item.price!} LE",
+                  style: TextStyles.smallHeadings.copyWith(
+                      color: ColorManager.black, fontWeight: FontWeight.w600),
+                ),
+                Align(
+                  alignment: locale == "en"
+                      ? Alignment.bottomRight
+                      : Alignment.bottomLeft,
+                  child: Text(
+                    "${item.quantity.toString()} ${S.of(context).left}",
+                    style: TextStyles.small
+                        .copyWith(color: const Color(0xffB70202), fontSize: 14),
+                  ),
+                ),
               ],
             ),
           )

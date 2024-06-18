@@ -11,7 +11,7 @@ class ServiceTab extends StatelessWidget {
       child: Column(
         children: [
           ContainerModel(
-            text:S.of(context).electric,
+            text: S.of(context).electric,
             description: S.of(context).electricDes,
             backgroundpath: "assets/images/plumbing_background.jpg",
           ),

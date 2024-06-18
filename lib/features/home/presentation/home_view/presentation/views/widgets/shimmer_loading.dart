@@ -9,7 +9,7 @@ class ShimmerLoading extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      itemCount:5, // Example count, adjust as needed
+      itemCount: 5, // Example count, adjust as needed
       itemBuilder: (context, index) {
         return Shimmer.fromColors(
           baseColor: ColorManager.primary,
@@ -17,7 +17,7 @@ class ShimmerLoading extends StatelessWidget {
           child: Container(
             width: 350.w,
             height: 96.h,
-            margin: const EdgeInsets.symmetric(horizontal:10,vertical:4),
+            margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(10),

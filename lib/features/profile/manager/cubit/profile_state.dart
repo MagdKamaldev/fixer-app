@@ -9,7 +9,7 @@ final class ProfileLoading extends ProfileState {}
 final class ProfileLoaded extends ProfileState {
   final ProfileModel profileModel;
   ProfileLoaded(this.profileModel);
-} 
+}
 
 final class ProfileError extends ProfileState {
   final String message;

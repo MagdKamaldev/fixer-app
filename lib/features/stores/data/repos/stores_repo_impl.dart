@@ -1,4 +1,3 @@
-
 // ignore_for_file: deprecated_member_use
 
 import 'package:dartz/dartz.dart';
@@ -50,6 +49,4 @@ class StoresRepoImpl implements StoresRepo {
       }
     }
   }
-
-
 }

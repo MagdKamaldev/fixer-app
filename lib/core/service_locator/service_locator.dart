@@ -40,7 +40,7 @@ void setupLocator() {
       apiServices: getIt<ApiServices>(),
     ),
   );
-   getIt.registerLazySingleton<StoresRepoImpl>(
+  getIt.registerLazySingleton<StoresRepoImpl>(
     () => StoresRepoImpl(
       apiservices: getIt<ApiServices>(),
     ),

@@ -31,7 +31,7 @@ class ProfileStackConatiner extends StatelessWidget {
                   child: SvgPicture.asset("assets/images/two_waves.svg")),
               Align(
                   alignment: Alignment.topLeft,
-                  child: SvgPicture.asset("assets/images/one_wave.svg")),  
+                  child: SvgPicture.asset("assets/images/one_wave.svg")),
               Align(
                   alignment: Alignment.topCenter,
                   child: Text(S.of(context).Profile,
@@ -41,7 +41,10 @@ class ProfileStackConatiner extends StatelessWidget {
           ),
         ),
         Align(
-            alignment: Alignment.center, child: ProfilePictureContainer(image: image,))
+            alignment: Alignment.center,
+            child: ProfilePictureContainer(
+              image: image,
+            ))
       ],
     );
   }
