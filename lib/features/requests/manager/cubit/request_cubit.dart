@@ -3,6 +3,7 @@ import 'package:fixer/core/networks/errors/error_snackbar.dart';
 import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:geocoding/geocoding.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:location/location.dart';
 part 'request_state.dart';
@@ -16,7 +17,7 @@ class RequestCubit extends Cubit<RequestState> {
 
   Set<Marker> markers = {};
 
-  late CameraPosition cameraPosition;
+  CameraPosition? cameraPosition;
 
   void updateLocation(context) async {
     bool hasService = await locationServices.checkAndRequestLocationService();
@@ -75,4 +76,5 @@ class RequestCubit extends Cubit<RequestState> {
     googleMapController!
         .animateCamera(CameraUpdate.newCameraPosition(cameraPosition));
   }
+
 }

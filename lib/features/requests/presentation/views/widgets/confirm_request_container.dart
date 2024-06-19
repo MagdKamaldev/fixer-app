@@ -4,6 +4,7 @@ import 'package:fixer/core/routing/routes.dart';
 import 'package:fixer/core/service_locator/service_locator.dart';
 import 'package:fixer/core/themes/colors.dart';
 import 'package:fixer/core/themes/text_styles.dart';
+import 'package:fixer/features/requests/manager/cubit/request_cubit.dart';
 import 'package:fixer/features/requests/presentation/views/widgets/cancel_request_bottom_sheet.dart';
 import 'package:fixer/features/requests/presentation/views/widgets/google_map.dart';
 import 'package:fixer/features/requests/presentation/views/widgets/request_row_model.dart';
@@ -31,10 +32,13 @@ class ConfirmRequestContainer extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            RequestRowModel(
-                icon: Icons.location_on_outlined,
-                label: S.of(context).area,
-                description: orderLocation),
+            BlocProvider(
+              create: (context) => RequestCubit(),
+              child: RequestRowModel(
+                  icon: Icons.location_on_outlined,
+                  label: S.of(context).area,
+                  description: orderLocation),
+            ),
             InkWell(
                 onTap: () {
                   context.pushNamed(Routes.confirmlocation);

@@ -40,6 +40,8 @@ class LocationServices {
     await checkAndRequestLocationPermission();
     return await location.getLocation();
   }
+
+  getPlacemarkFromCoordinates(double d, double e) {}
 }
 
 class LocationServiceException implements Exception {}

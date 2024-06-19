@@ -1,5 +1,4 @@
-// ignore_for_file: deprecated_member_use
-import 'package:fixer/core/location/location_services.dart';
+// ignore_for_file: deprecated_member_use, use_build_context_synchronously
 import 'package:fixer/core/networks/errors/error_snackbar.dart';
 import 'package:fixer/core/themes/text_styles.dart';
 import 'package:fixer/core/widgets/buttons/default_button.dart';
@@ -10,7 +9,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:location/location.dart';
 
 String orderLocation = "";
 
@@ -72,7 +70,7 @@ class _GoogleMapViewState extends State<GoogleMapView> {
                     RequestCubit.get(context).initMapStyle(context);
                   },
                   initialCameraPosition:
-                      RequestCubit.get(context).cameraPosition,
+                      RequestCubit.get(context).cameraPosition!,
                   zoomControlsEnabled: true,
                   zoomGesturesEnabled: true,
                 ),

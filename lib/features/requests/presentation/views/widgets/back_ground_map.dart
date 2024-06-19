@@ -1,8 +1,12 @@
+// ignore_for_file: deprecated_member_use, unrelated_type_equality_checks
+
 import 'package:fixer/core/location/location_services.dart';
 import 'package:fixer/core/networks/errors/error_snackbar.dart';
+import 'package:fixer/features/requests/manager/cubit/request_cubit.dart';
 import 'package:fixer/features/requests/presentation/views/widgets/google_map.dart';
 import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:location/location.dart';
 
@@ -21,7 +25,7 @@ class _BackGroundMapState extends State<BackGroundMap> {
   void initState() {
     if (markers.isNotEmpty) {
       cameraPosition = CameraPosition(
-          zoom: 15.5,
+          zoom: 16,
           target: LatLng(markers.first.position.latitude,
               markers.first.position.longitude));
     }
@@ -29,8 +33,6 @@ class _BackGroundMapState extends State<BackGroundMap> {
     locationServices = LocationServices();
 
     updateLocation(context);
-
-   
 
     super.initState();
   }
@@ -48,43 +50,40 @@ class _BackGroundMapState extends State<BackGroundMap> {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        if (markers.isEmpty)
-          const Center(
-            child: CircularProgressIndicator(),
-          ),
-        if (markers.isNotEmpty && locationServices.isPermissionGranted == true)
-          GoogleMap(
-            myLocationButtonEnabled: true,
-            onTap: (LatLng latLng) async {
-              markers.clear();
-              markers.add(Marker(
-                onTap: () => showErrorSnackbar(
-                  context,
-                  "Long press to move",
+    return BlocProvider(
+      create: (context) => RequestCubit(),
+      child: BlocBuilder<RequestCubit, RequestState>(
+        builder: (context, state) {
+          return Stack(
+            children: [
+              if (markers.isEmpty)
+                const Center(
+                  child: CircularProgressIndicator(),
                 ),
-                markerId: const MarkerId('userLocationMarker'),
-                position: latLng,
-                draggable: true,
-                onDragEnd: (LatLng t) {},
-                icon: icon ??
-                    await BitmapDescriptor.fromAssetImage(
-                      ImageConfiguration.empty,
-                      "assets/images/house.png",
-                    ),
-              ));
-
-              setState(() {});
-            },
-           markers: markers,
-            onMapCreated: (controller) {
-              googleMapController = controller;
-              initMapStyle();
-            },
-            initialCameraPosition: cameraPosition,
-          ),
-      ],
+              if (markers.isNotEmpty &&
+                  locationServices.isPermissionGranted == true)
+                GoogleMap(
+                  myLocationButtonEnabled: true,
+                  markers: RequestCubit.get(context).markers.isEmpty
+                      ? markers
+                      : RequestCubit.get(context).markers,
+                  onMapCreated: (controller) {
+                    googleMapController = controller;
+                    initMapStyle();
+                  },
+                  initialCameraPosition:
+                      RequestCubit.get(context).cameraPosition ??
+                          cameraPosition,
+                  zoomControlsEnabled: false,
+                  tiltGesturesEnabled: false,
+                  scrollGesturesEnabled: false,
+                  rotateGesturesEnabled: false,
+                  zoomGesturesEnabled: false,
+                ),
+            ],
+          );
+        },
+      ),
     );
   }
 
@@ -103,7 +102,7 @@ class _BackGroundMapState extends State<BackGroundMap> {
         cameraPosition = CameraPosition(
             target:
                 LatLng(currentLocation.latitude!, currentLocation.longitude!),
-            zoom: 18);
+            zoom: 16);
 
         setLocationMarker(currentLocation);
         setCameraPosition(currentLocation);
@@ -131,7 +130,7 @@ class _BackGroundMapState extends State<BackGroundMap> {
   void setCameraPosition(LocationData currentLocation) {
     CameraPosition cameraPosition = CameraPosition(
         target: LatLng(currentLocation.latitude!, currentLocation.longitude!),
-        zoom: 18);
+        zoom: 16);
     googleMapController!
         .animateCamera(CameraUpdate.newCameraPosition(cameraPosition));
   }
