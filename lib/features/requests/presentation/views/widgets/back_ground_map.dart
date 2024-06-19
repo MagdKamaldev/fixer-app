@@ -1,9 +1,7 @@
 // ignore_for_file: deprecated_member_use, unrelated_type_equality_checks
-
 import 'package:fixer/core/location/location_services.dart';
 import 'package:fixer/core/networks/errors/error_snackbar.dart';
-import 'package:fixer/features/requests/manager/cubit/request_cubit.dart';
-import 'package:fixer/features/requests/presentation/views/widgets/google_map.dart';
+import 'package:fixer/features/requests/manager/maps_cubit/maps_cubit.dart';
 import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -51,8 +49,8 @@ class _BackGroundMapState extends State<BackGroundMap> {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => RequestCubit(),
-      child: BlocBuilder<RequestCubit, RequestState>(
+      create: (context) => MapsCubit(),
+      child: BlocBuilder<MapsCubit, MapsState>(
         builder: (context, state) {
           return Stack(
             children: [
@@ -64,15 +62,15 @@ class _BackGroundMapState extends State<BackGroundMap> {
                   locationServices.isPermissionGranted == true)
                 GoogleMap(
                   myLocationButtonEnabled: true,
-                  markers: RequestCubit.get(context).markers.isEmpty
+                  markers: MapsCubit.get(context).markers.isEmpty
                       ? markers
-                      : RequestCubit.get(context).markers,
+                      : MapsCubit.get(context).markers,
                   onMapCreated: (controller) {
                     googleMapController = controller;
                     initMapStyle();
                   },
                   initialCameraPosition:
-                      RequestCubit.get(context).cameraPosition ??
+                      MapsCubit.get(context).cameraPosition ??
                           cameraPosition,
                   zoomControlsEnabled: false,
                   tiltGesturesEnabled: false,

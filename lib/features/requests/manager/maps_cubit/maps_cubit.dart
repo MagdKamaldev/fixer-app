@@ -3,17 +3,16 @@ import 'package:fixer/core/networks/errors/error_snackbar.dart';
 import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:geocoding/geocoding.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:location/location.dart';
-part 'request_state.dart';
+part 'maps_state.dart';
 
-class RequestCubit extends Cubit<RequestState> {
-  RequestCubit() : super(RequestInitial());
+class MapsCubit extends Cubit<MapsState> {
+  MapsCubit() : super(MapsInitial());
 
   LocationServices locationServices = LocationServices();
 
-  static RequestCubit get(context) => BlocProvider.of(context);
+  static MapsCubit get(context) => BlocProvider.of(context);
 
   Set<Marker> markers = {};
 

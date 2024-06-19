@@ -1,7 +1,6 @@
 import 'package:fixer/core/themes/colors.dart';
 import 'package:fixer/features/requests/presentation/views/widgets/back_ground_map.dart';
 import 'package:fixer/features/requests/presentation/views/widgets/confirm_request_container.dart';
-import 'package:fixer/features/requests/presentation/views/widgets/google_map.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

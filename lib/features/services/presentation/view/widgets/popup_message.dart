@@ -70,7 +70,6 @@ class _PopUpMessageState extends State<PopUpMessage> {
                       setState(() {
                         selected.add(widget.service);
                       });
-
                       if (selected.isNotEmpty) {
                         navigateTo(
                           context,

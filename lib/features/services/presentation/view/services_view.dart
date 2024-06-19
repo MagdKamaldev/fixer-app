@@ -1,31 +1,92 @@
 import 'package:fixer/core/service_locator/service_locator.dart';
 import 'package:fixer/core/themes/text_styles.dart';
+import 'package:fixer/features/requests/manager/request%20cubit/request_cubit.dart';
 import 'package:fixer/features/services/data/reepos/services_repo_impl.dart';
 import 'package:fixer/features/services/manager/cubit/services_cubit.dart';
 import 'package:fixer/features/services/presentation/view/widgets/services_body.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:location/location.dart';
 
-class ServicesView extends StatelessWidget {
+class ServicesView extends StatefulWidget {
   final int id;
   final String category;
-  const ServicesView({super.key, required this.id, required this.category,});
+  const ServicesView({
+    super.key,
+    required this.id,
+    required this.category,
+  });
+
+  @override
+  State<ServicesView> createState() => _ServicesViewState();
+}
+
+class _ServicesViewState extends State<ServicesView> {
+  LocationData? _currentLocation;
+
+  Future<void> _getCurrentLocation() async {
+    Location location = Location();
+
+    bool serviceEnabled;
+    PermissionStatus permissionGranted;
+
+    // Check if location service is enabled
+    serviceEnabled = await location.serviceEnabled();
+    if (!serviceEnabled) {
+      serviceEnabled = await location.requestService();
+      if (!serviceEnabled) {
+        return;
+      }
+    }
+
+    // Check if permission is granted
+    permissionGranted = await location.hasPermission();
+    if (permissionGranted == PermissionStatus.denied) {
+      permissionGranted = await location.requestPermission();
+      if (permissionGranted != PermissionStatus.granted) {
+        return;
+      }
+    }
+
+    // Get the current location
+    final locationData = await location.getLocation();
+
+    // Update the state with the current location
+    setState(() {
+      _currentLocation = locationData;
+    });
+
+    // Optionally, you can use the location data here or pass it to another function
+    getAdministrativeArea(_currentLocation!);
+
+    setState(() {
+      orderLocation = orderLocation;
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _getCurrentLocation();
+  }
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) =>
-          ServicesCubit(getIt<ServicesRepoImpl>())..getServices(id),
+          ServicesCubit(getIt<ServicesRepoImpl>())..getServices(widget.id),
       child: Scaffold(
           appBar: AppBar(
             title: Text(
-              " $category services",
+              " ${widget.category} services",
               style: TextStyles.subHeadingsBold,
             ),
             centerTitle: true,
             toolbarHeight: 100,
           ),
-          body: ServicesBody(id: id,)),
+          body: ServicesBody(
+            id: widget.id,
+          )),
     );
   }
 }
