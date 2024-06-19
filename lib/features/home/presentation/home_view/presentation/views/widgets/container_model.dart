@@ -15,7 +15,6 @@ class ContainerModel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return Container(
       width: 355.w,
       height: 96.h,

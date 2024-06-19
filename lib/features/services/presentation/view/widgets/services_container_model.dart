@@ -7,8 +7,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ServicesContainermodel extends StatelessWidget {
-  final ServiceModel service;
   final int id;
+  final ServiceModel service;
   const ServicesContainermodel(
       {super.key, required this.id, required this.service});
 

@@ -17,7 +17,7 @@ class ConfirmLocation extends StatelessWidget {
       body: Stack(
         alignment: Alignment.bottomCenter,
         children: [
-          const GoogleMapView(),
+        const GoogleMapView(),
           Container(
             width: MediaQuery.of(context).size.width,
             height: 95,

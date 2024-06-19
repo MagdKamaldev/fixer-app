@@ -9,12 +9,13 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 class ServicesView extends StatelessWidget {
   final int id;
   final String category;
-  const ServicesView({super.key, required this.id, required this.category});
+  const ServicesView({super.key, required this.id, required this.category,});
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => ServicesCubit(getIt<ServicesRepoImpl>())..getServices(id),
+      create: (context) =>
+          ServicesCubit(getIt<ServicesRepoImpl>())..getServices(id),
       child: Scaffold(
           appBar: AppBar(
             title: Text(
@@ -24,7 +25,7 @@ class ServicesView extends StatelessWidget {
             centerTitle: true,
             toolbarHeight: 100,
           ),
-          body: ServicesBody(id:id)),
+          body: ServicesBody(id: id,)),
     );
   }
 }

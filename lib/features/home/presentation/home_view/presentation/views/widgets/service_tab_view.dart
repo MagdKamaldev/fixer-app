@@ -14,7 +14,7 @@ class ServiceTab extends StatelessWidget {
         children: [
           InkWell(
             onTap: () {
-              navigateTo(context, const ServicesView(id: 16, category: "Electric"));
+              navigateTo(context, const ServicesView(id: 16, category: "Electric",));
             },
             child: ContainerModel(
               text: S.of(context).electric,
