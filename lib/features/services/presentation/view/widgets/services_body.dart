@@ -26,6 +26,7 @@ class ServicesBody extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
+                  SearchbarContainer(),
                   verticalSpace(30),
                   ServicesWrapRow(
                     services: state.services,

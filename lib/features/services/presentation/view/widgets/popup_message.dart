@@ -20,6 +20,7 @@ class PopUpMessage extends StatelessWidget {
         borderRadius: BorderRadius.circular(10.0),
       ),
       elevation: 0.0,
+      insetPadding: EdgeInsets.all(24),
       backgroundColor: Colors.transparent,
       child: Container(
         decoration: BoxDecoration(
@@ -45,8 +46,9 @@ class PopUpMessage extends StatelessWidget {
               ],
             ),
             Text(
-              "${S.of(context).doyouwanttorequestservice} ${service.name!} ?",
+              "${S.of(context).doyouwanttorequestservice} \n ${service.name!} ?",
               style: TextStyles.small,
+              textAlign:TextAlign.center ,
             ),
             verticalSpace(20),
             MaterialButton(
