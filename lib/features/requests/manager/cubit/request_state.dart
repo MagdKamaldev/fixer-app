@@ -3,4 +3,4 @@ sealed class RequestState {}
 
 final class RequestInitial extends RequestState {}
 
-final class GetLocation extends RequestState {}
+final class SetLocation extends RequestState {}

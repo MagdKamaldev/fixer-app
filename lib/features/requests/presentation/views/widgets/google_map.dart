@@ -1,8 +1,18 @@
 // ignore_for_file: deprecated_member_use
-import 'dart:async';
+import 'package:fixer/core/location/location_services.dart';
+import 'package:fixer/core/networks/errors/error_snackbar.dart';
+import 'package:fixer/core/themes/text_styles.dart';
+import 'package:fixer/core/widgets/buttons/default_button.dart';
+import 'package:fixer/features/requests/manager/cubit/request_cubit.dart';
+import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:geocoding/geocoding.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:location/location.dart';
+
+String orderLocation = "";
 
 class GoogleMapView extends StatefulWidget {
   const GoogleMapView({super.key});
@@ -12,91 +22,99 @@ class GoogleMapView extends StatefulWidget {
 }
 
 class _GoogleMapViewState extends State<GoogleMapView> {
-  final Completer<GoogleMapController> _googleMapController = Completer();
-  CameraPosition? _cameraPosition;
-  Location? _location;
-  LocationData? _currentLocation;
-
-  @override
-  void initState() {
-    _init();
-    super.initState();
-  }
-
-  _init() async {
-    _location = Location();
-    _cameraPosition = const CameraPosition(
-        target: LatLng(
-            0, 0), // this is just the example lat and lng for initializing
-        zoom: 15);
-    _initLocation();
-  }
-
-  //function to listen when we move position
-  _initLocation() {
-    //use this to go to current location instead
-    _location?.getLocation().then((location) {
-      _currentLocation = location;
-    });
-    _location?.onLocationChanged.listen((newLocation) {
-      _currentLocation = newLocation;
-      moveToPosition(LatLng(
-          _currentLocation?.latitude ?? 0, _currentLocation?.longitude ?? 0));
-    });
-  }
-
-  moveToPosition(LatLng latLng) async {
-    GoogleMapController mapController = await _googleMapController.future;
-    mapController.animateCamera(CameraUpdate.newCameraPosition(
-        CameraPosition(target: latLng, zoom: 15)));
-  }
-
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: _buildBody(),
-    );
-  }
+    return BlocProvider(
+      create: (context) => RequestCubit()..updateLocation(context),
+      child: BlocBuilder<RequestCubit, RequestState>(
+        builder: (context, state) => Scaffold(
+          appBar: AppBar(
+            title: Text(S.of(context).location, style: TextStyles.bodybold),
+            toolbarHeight: 60.h,
+            centerTitle: true,
+          ),
+          body: Stack(
+            children: [
+              if (RequestCubit.get(context).markers.isEmpty)
+                const Center(
+                  child: CircularProgressIndicator(),
+                ),
+              if (RequestCubit.get(context).markers.isNotEmpty &&
+                  RequestCubit.get(context)
+                          .locationServices
+                          .isPermissionGranted ==
+                      true)
+                GoogleMap(
+                  myLocationButtonEnabled: true,
+                  onTap: (LatLng latLng) async {
+                    RequestCubit.get(context).markers.clear();
+                    RequestCubit.get(context).markers.add(Marker(
+                          onTap: () => showErrorSnackbar(
+                            context,
+                            "Long press to move",
+                          ),
+                          markerId: const MarkerId('userLocationMarker'),
+                          position: latLng,
+                          draggable: true,
+                          onDragEnd: (LatLng t) {},
+                          icon: RequestCubit.get(context).icon ??
+                              await BitmapDescriptor.fromAssetImage(
+                                ImageConfiguration.empty,
+                                "assets/images/house.png",
+                              ),
+                        ));
 
-  Widget _buildBody() {
-    return _getMap();
-  }
-
-  Widget _getMarker() {
-    return Container(
-      width: 40,
-      height: 40,
-      padding: const EdgeInsets.all(2),
-      decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(100),
-          boxShadow: const [
-            BoxShadow(
-                color: Colors.grey,
-                offset: Offset(0, 3),
-                spreadRadius: 4,
-                blurRadius: 6)
-          ]),
-      child: ClipOval(child: Image.asset("assets/images/briefcase.png")),
-    );
-  }
-
-  Widget _getMap() {
-    return Stack(
-      children: [
-        GoogleMap(
-          initialCameraPosition: _cameraPosition!,
-          mapType: MapType.normal,
-          onMapCreated: (GoogleMapController controller) {
-            // now we need a variable to get the controller of google map
-            if (!_googleMapController.isCompleted) {
-              _googleMapController.complete(controller);
-            }
-          },
+                    setState(() {});
+                  },
+                  markers: RequestCubit.get(context).markers,
+                  onMapCreated: (controller) {
+                    RequestCubit.get(context).googleMapController = controller;
+                    RequestCubit.get(context).initMapStyle(context);
+                  },
+                  initialCameraPosition:
+                      RequestCubit.get(context).cameraPosition,
+                  zoomControlsEnabled: true,
+                  zoomGesturesEnabled: true,
+                ),
+              if (RequestCubit.get(context).markers.isNotEmpty &&
+                  RequestCubit.get(context)
+                          .locationServices
+                          .isPermissionGranted ==
+                      true)
+                Padding(
+                  padding: EdgeInsets.only(
+                      left: 20.sp, right: 100.sp, top: 20.sp, bottom: 20.sp),
+                  child: Align(
+                      alignment: Alignment.bottomCenter,
+                      child: DefaultButton(
+                          text: S.of(context).confirmLocation,
+                          onPressed: () async {
+                            Navigator.pop(
+                              context,
+                            );
+                            List<Placemark> placemarks =
+                                await placemarkFromCoordinates(
+                              RequestCubit.get(context)
+                                  .markers
+                                  .first
+                                  .position
+                                  .latitude,
+                              RequestCubit.get(context)
+                                  .markers
+                                  .first
+                                  .position
+                                  .longitude,
+                            );
+                            setState(() {
+                              orderLocation =
+                                  placemarks.first.subAdministrativeArea!;
+                            });
+                          })),
+                )
+            ],
+          ),
         ),
-        Positioned.fill(
-            child: Align(alignment: Alignment.center, child: _getMarker()))
-      ],
+      ),
     );
   }
 }

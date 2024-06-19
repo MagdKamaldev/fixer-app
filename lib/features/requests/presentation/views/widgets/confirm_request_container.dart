@@ -5,6 +5,7 @@ import 'package:fixer/core/service_locator/service_locator.dart';
 import 'package:fixer/core/themes/colors.dart';
 import 'package:fixer/core/themes/text_styles.dart';
 import 'package:fixer/features/requests/presentation/views/widgets/cancel_request_bottom_sheet.dart';
+import 'package:fixer/features/requests/presentation/views/widgets/google_map.dart';
 import 'package:fixer/features/requests/presentation/views/widgets/request_row_model.dart';
 import 'package:fixer/features/requests/presentation/views/widgets/requested_services_bottom_sheet.dart';
 import 'package:fixer/features/services/data/reepos/services_repo_impl.dart';
@@ -33,7 +34,7 @@ class ConfirmRequestContainer extends StatelessWidget {
             RequestRowModel(
                 icon: Icons.location_on_outlined,
                 label: S.of(context).area,
-                description: "tagamo3"),
+                description: orderLocation),
             InkWell(
                 onTap: () {
                   context.pushNamed(Routes.confirmlocation);

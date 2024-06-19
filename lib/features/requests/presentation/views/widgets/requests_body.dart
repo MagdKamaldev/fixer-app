@@ -1,4 +1,5 @@
 import 'package:fixer/core/themes/colors.dart';
+import 'package:fixer/features/requests/presentation/views/widgets/back_ground_map.dart';
 import 'package:fixer/features/requests/presentation/views/widgets/confirm_request_container.dart';
 import 'package:fixer/features/requests/presentation/views/widgets/google_map.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +17,7 @@ class RequestBody extends StatelessWidget {
     return Stack(
       alignment: Alignment.bottomCenter,
       children: [
-         const GoogleMapView(),
+        const BackGroundMap(),
         Container(
           width: MediaQuery.of(context).size.width,
           height: 320.h,

@@ -1,5 +1,7 @@
 import 'package:fixer/core/location/location_services.dart';
 import 'package:fixer/core/networks/errors/error_snackbar.dart';
+import 'package:fixer/features/requests/presentation/views/widgets/google_map.dart';
+import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:location/location.dart';
@@ -25,6 +27,10 @@ class _BackGroundMapState extends State<BackGroundMap> {
     }
 
     locationServices = LocationServices();
+
+    updateLocation(context);
+
+   
 
     super.initState();
   }
@@ -71,7 +77,7 @@ class _BackGroundMapState extends State<BackGroundMap> {
 
               setState(() {});
             },
-            markers: markers,
+           markers: markers,
             onMapCreated: (controller) {
               googleMapController = controller;
               initMapStyle();
@@ -80,6 +86,31 @@ class _BackGroundMapState extends State<BackGroundMap> {
           ),
       ],
     );
+  }
+
+  void updateLocation(context) async {
+    bool hasService = await locationServices.checkAndRequestLocationService();
+    if (!hasService) {
+      showErrorSnackbar(context, S.of(context).locationServicesDisabled);
+      return;
+    }
+
+    bool hasPermission =
+        await locationServices.checkAndRequestLocationPermission();
+
+    if (hasPermission) {
+      locationServices.getRealTimeLocationData((currentLocation) {
+        cameraPosition = CameraPosition(
+            target:
+                LatLng(currentLocation.latitude!, currentLocation.longitude!),
+            zoom: 18);
+
+        setLocationMarker(currentLocation);
+        setCameraPosition(currentLocation);
+      });
+    } else {
+      showErrorSnackbar(context, S.of(context).locationPermissionDenied);
+    }
   }
 
   void setLocationMarker(LocationData currentLocation) async {

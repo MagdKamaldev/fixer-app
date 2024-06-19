@@ -35,7 +35,6 @@ class RequestRowModel extends StatelessWidget {
             Text(description, style: TextStyles.body)
           ],
         ),
-        horizontalSpace(100),
       ],
     );
   }
