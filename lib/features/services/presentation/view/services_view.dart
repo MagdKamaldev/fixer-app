@@ -48,15 +48,12 @@ class _ServicesViewState extends State<ServicesView> {
       }
     }
 
-    // Get the current location
     final locationData = await location.getLocation();
 
-    // Update the state with the current location
     setState(() {
       _currentLocation = locationData;
     });
 
-    // Optionally, you can use the location data here or pass it to another function
     getAdministrativeArea(_currentLocation!);
 
     setState(() {

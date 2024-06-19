@@ -12,11 +12,11 @@ class ProfileRepoImpl implements ProfileRepository {
   @override
   Future<Either<Failure, ProfileModel>> getProfile() async {
     try {
-    final response = await apiServices.get(
-        endPoint: 'Profile',
-        jwt: token == "" ? kTokenBox.get(kTokenBoxString) : token);
-    final user = ProfileModel.fromJson(response["User"]?? response["user"]);
-    return Right(user);
+      final response = await apiServices.get(
+          endPoint: 'Profile',
+          jwt: token == "" ? kTokenBox.get(kTokenBoxString) : token);
+      final user = ProfileModel.fromJson(response["User"] ?? response["user"]);
+      return Right(user);
     } catch (e) {
       if (e is ServerFailure) {
         return Left(ServerFailure(e.message));

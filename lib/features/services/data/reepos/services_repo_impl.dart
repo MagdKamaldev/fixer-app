@@ -7,7 +7,7 @@ import 'package:fixer/features/services/data/reepos/services_repo.dart';
 class ServicesRepoImpl implements ServicesRepo {
   final ApiServices apiServices;
   ServicesRepoImpl({required this.apiServices});
-  
+
   @override
   Future<Either<Failure, List<ServiceModel>>> getServices(int category) async {
     try {

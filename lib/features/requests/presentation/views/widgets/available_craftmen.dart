@@ -10,17 +10,21 @@ class AvailableCraftmen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("available craftmen",style: TextStyles.subHeadingsBold.copyWith(color: ColorManager.black),),
+        title: Text(
+          "available craftmen",
+          style: TextStyles.subHeadingsBold.copyWith(color: ColorManager.black),
+        ),
         centerTitle: true,
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 24,vertical:12),
+        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
         child: Expanded(
           child: ListView.builder(
             itemCount: 12,
             itemBuilder: (context, index) {
-            return const AvailableCraftmenCard();
-          },),
+              return const AvailableCraftmenCard();
+            },
+          ),
         ),
       ),
     );

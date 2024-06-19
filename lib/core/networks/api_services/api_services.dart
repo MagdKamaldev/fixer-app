@@ -8,12 +8,13 @@ class ApiServices {
   Future<Map<String, dynamic>> get({
     required String endPoint,
     String? jwt,
+    dynamic data,
   }) async {
     _dio.options.headers = {
       "Authorization": "Bearer $jwt",
       "Content-Type": "application/json",
     };
-    var response = await _dio.get("${ApiConstants.baseUrl}$endPoint");
+    var response = await _dio.get("${ApiConstants.baseUrl}$endPoint",data: data);
     return response.data;
   }
 

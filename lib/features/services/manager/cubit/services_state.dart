@@ -1,6 +1,5 @@
 part of 'services_cubit.dart';
 
-
 sealed class ServicesState {}
 
 final class ServicesInitial extends ServicesState {}

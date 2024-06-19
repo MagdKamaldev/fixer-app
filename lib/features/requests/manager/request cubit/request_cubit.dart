@@ -1,3 +1,4 @@
+import 'package:fixer/features/requests/data/models/order_carftsmen_model.dart';
 import 'package:fixer/features/requests/data/repos/request_repo_impl.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:geocoding/geocoding.dart';
@@ -19,9 +20,10 @@ class RequestCubit extends Cubit<RequestState> {
 
   static RequestCubit get(context) => BlocProvider.of(context);
 
-  int orderId = 0;
+  int ? orderId;
 
-  void request({required List<String> services}) async {
+  void request(
+      {required List<String> services, required String location}) async {
     emit(RequestLoading());
 
     final result = await repo.request(services);
@@ -29,8 +31,21 @@ class RequestCubit extends Cubit<RequestState> {
       (l) => emit(RequestFailed(l.message)),
       (r) {
         orderId = r;
+        requestCraftsmen(location: location);
         emit(RequestSuccess(r));
       },
     );
+  }
+
+  List<OrderCarftsmenModel> craftsmen = [];
+
+  void requestCraftsmen({required String location}) async {
+    emit(RequestCraftsmenLoading());
+
+    final result = await repo.requestCraftsmen(orderId!, location);
+    result.fold((l) => emit(RequestCraftsmenFailed(l.message)), (r) {
+      craftsmen = r;
+      emit(RequestCraftsmenSuccess(r));
+    });
   }
 }

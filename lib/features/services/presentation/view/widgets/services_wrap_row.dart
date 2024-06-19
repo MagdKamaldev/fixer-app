@@ -15,7 +15,7 @@ class ServicesWrapRow extends StatelessWidget {
       alignment: WrapAlignment.start,
       children: services
           .map((service) => ServicesContainermodel(
-            id: id,
+                id: id,
                 service: service,
               ))
           .toList(),

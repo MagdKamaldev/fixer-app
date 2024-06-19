@@ -70,8 +70,7 @@ class _BackGroundMapState extends State<BackGroundMap> {
                     initMapStyle();
                   },
                   initialCameraPosition:
-                      MapsCubit.get(context).cameraPosition ??
-                          cameraPosition,
+                      MapsCubit.get(context).cameraPosition ?? cameraPosition,
                   zoomControlsEnabled: false,
                   tiltGesturesEnabled: false,
                   scrollGesturesEnabled: false,

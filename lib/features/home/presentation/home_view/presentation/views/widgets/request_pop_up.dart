@@ -51,14 +51,24 @@ class RequestPopUp extends StatelessWidget {
               children: [
                 InkWell(
                     onTap: () {
-                    navigateTo(context, const ServicesView(id: 14, category: "Plumbing",));
+                      navigateTo(
+                          context,
+                          const ServicesView(
+                            id: 14,
+                            category: "Plumbing",
+                          ));
                     },
                     child: const ServicesContainerModel(
                         image: "assets/images/plumbing_card.svg")),
                 horizontalSpace(10),
                 InkWell(
                     onTap: () {
-                      navigateTo(context, const ServicesView(id: 16, category: "Electrical",));
+                      navigateTo(
+                          context,
+                          const ServicesView(
+                            id: 16,
+                            category: "Electrical",
+                          ));
                     },
                     child: const ServicesContainerModel(
                         image: "assets/images/Electrical_card.svg"))

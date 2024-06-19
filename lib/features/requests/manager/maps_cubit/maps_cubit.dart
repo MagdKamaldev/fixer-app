@@ -75,5 +75,4 @@ class MapsCubit extends Cubit<MapsState> {
     googleMapController!
         .animateCamera(CameraUpdate.newCameraPosition(cameraPosition));
   }
-
 }

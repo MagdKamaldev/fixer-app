@@ -7,7 +7,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ServicesBody extends StatelessWidget {
   final int id;
-  const ServicesBody({super.key, required this.id,});
+  const ServicesBody({
+    super.key,
+    required this.id,
+  });
 
   @override
   Widget build(BuildContext context) {

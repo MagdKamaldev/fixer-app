@@ -3,7 +3,7 @@ import 'package:fixer/features/services/data/reepos/services_repo_impl.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 part 'services_state.dart';
 
- List<ServiceModel> selected = [];
+List<ServiceModel> selected = [];
 
 class ServicesCubit extends Cubit<ServicesState> {
   final ServicesRepoImpl repo;
@@ -12,8 +12,6 @@ class ServicesCubit extends Cubit<ServicesState> {
   static ServicesCubit get(context) => BlocProvider.of(context);
 
   List<ServiceModel> services = [];
-
- 
 
   void getServices(int category) async {
     emit(ServicesLoading());

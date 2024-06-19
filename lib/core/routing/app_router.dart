@@ -91,7 +91,7 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => const PaymentView(),
         );
-        case Routes.availablecraftmen:
+      case Routes.availablecraftmen:
         return MaterialPageRoute(
           builder: (_) => const AvailableCraftmen(),
         );
