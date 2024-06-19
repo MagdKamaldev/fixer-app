@@ -51,7 +51,7 @@ class CancelRequestBottomSheet extends StatelessWidget {
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
             child: Text(
-              "cancel request",
+              "Cancel Request",
               style: TextStyles.body.copyWith(color: ColorManager.white),
             ),
           ),
