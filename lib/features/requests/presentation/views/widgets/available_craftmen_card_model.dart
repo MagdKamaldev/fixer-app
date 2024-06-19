@@ -49,7 +49,7 @@ class AvailableCraftmenCard extends StatelessWidget {
           ),
           horizontalSpace(20),
           SizedBox(
-            width: 230.w,
+            width: 200.w,
             height: 110.h,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.end,
@@ -70,7 +70,7 @@ class AvailableCraftmenCard extends StatelessWidget {
                           size: 20,
                         ),
                         Text(
-                          model.fair.toString(),
+                          model.rating.toString(),
                           style: TextStyles.small,
                         )
                       ],

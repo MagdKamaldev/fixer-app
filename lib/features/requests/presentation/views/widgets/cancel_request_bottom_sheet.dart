@@ -8,12 +8,14 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
 class CancelRequestBottomSheet extends StatelessWidget {
-  const CancelRequestBottomSheet({super.key});
+  final String message;
+  const CancelRequestBottomSheet({super.key, required this.message});
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Container(
-      height: 350.h,
+      height: 380.h,
       width: MediaQuery.of(context).size.width,
       padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 42),
       decoration: const BoxDecoration(
@@ -25,32 +27,33 @@ class CancelRequestBottomSheet extends StatelessWidget {
         children: [
           SvgPicture.asset(
             "assets/images/uncovered_area.svg",
-            height: 120.h,
+            height: 110.h,
             width: 177.w,
           ),
           verticalSpace(30),
-          Text(
-            "Sorry ,We don’t Cover this area",
-            style: TextStyles.bodybold,
+          SizedBox(
+            width: size.width * 0.8,
+            child: Text(
+              message,
+              overflow: TextOverflow.ellipsis,
+              maxLines: 3,
+              style: TextStyles.bodybold,
+            ),
           ),
           verticalSpace(30),
-          Row(
-            children: [
-              MaterialButton(
-                onPressed: () {
-                  context.pushReplacementNamed(Routes.home);
-                },
-                color: ColorManager.primary,
-                height: 50.h,
-                minWidth: 150.w,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10)),
-                child: Text(
-                  "cancel request",
-                  style: TextStyles.body.copyWith(color: ColorManager.white),
-                ),
-              ),
-            ],
+          MaterialButton(
+            onPressed: () {
+              context.pushReplacementNamed(Routes.home);
+            },
+            color: ColorManager.primary,
+            height: 50.h,
+            minWidth: 150.w,
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+            child: Text(
+              "cancel request",
+              style: TextStyles.body.copyWith(color: ColorManager.white),
+            ),
           ),
         ],
       ),

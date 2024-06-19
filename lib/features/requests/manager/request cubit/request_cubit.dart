@@ -57,7 +57,9 @@ class RequestCubit extends Cubit<RequestState> {
       showModalBottomSheet(
         context: context,
         builder: (context) {
-          return const CancelRequestBottomSheet();
+          return CancelRequestBottomSheet(
+            message: l.message,
+          );
         },
       );
     }, (r) {
