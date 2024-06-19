@@ -15,7 +15,7 @@ class CancelRequestBottomSheet extends StatelessWidget {
     return Container(
       height: 350.h,
       width: MediaQuery.of(context).size.width,
-      padding: EdgeInsets.symmetric(horizontal:24,vertical:42),
+      padding: const EdgeInsets.symmetric(horizontal:24,vertical:42),
       decoration: const BoxDecoration(
         color: ColorManager.white,
         borderRadius: BorderRadius.only(topLeft: Radius.circular(30),topRight: Radius.circular(30))

@@ -2,9 +2,7 @@ import 'package:fixer/core/helpers/spacing.dart';
 import 'package:fixer/core/themes/colors.dart';
 import 'package:fixer/core/themes/text_styles.dart';
 import 'package:fixer/features/requests/presentation/views/widgets/requested_services_model.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class RequestedServicesBottomSheet extends StatelessWidget {
@@ -15,7 +13,7 @@ class RequestedServicesBottomSheet extends StatelessWidget {
     return Container(
       width: MediaQuery.of(context).size.width,
       height: 234.h,
-      padding: EdgeInsets.all(24),
+      padding: const EdgeInsets.all(24),
       decoration: const BoxDecoration(
         color: ColorManager.white,
         borderRadius: BorderRadius.only(topLeft: Radius.circular(30),topRight: Radius.circular(30))

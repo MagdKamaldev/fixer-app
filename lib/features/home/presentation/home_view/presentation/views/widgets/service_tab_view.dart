@@ -1,6 +1,4 @@
-import 'package:fixer/core/helpers/extensions.dart';
 import 'package:fixer/core/routing/app_router.dart';
-import 'package:fixer/core/routing/routes.dart';
 import 'package:fixer/features/home/presentation/home_view/presentation/views/widgets/container_model.dart';
 import 'package:fixer/features/services/presentation/view/services_view.dart';
 import 'package:fixer/generated/l10n.dart';
