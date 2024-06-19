@@ -1,12 +1,17 @@
+import 'package:fixer/core/routing/app_router.dart';
+import 'package:fixer/core/routing/routes.dart';
 import 'package:fixer/features/requests/data/models/order_carftsmen_model.dart';
 import 'package:fixer/features/requests/data/repos/request_repo_impl.dart';
+import 'package:fixer/features/requests/presentation/views/widgets/available_craftmen.dart';
+import 'package:fixer/features/requests/presentation/views/widgets/cancel_request_bottom_sheet.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:location/location.dart';
 
 part 'request_state.dart';
 
-String orderLocation = "";
+String orderLocation = "Loading ...";
 
 void getAdministrativeArea(LocationData location) async {
   List<Placemark> placemarks =
@@ -20,10 +25,12 @@ class RequestCubit extends Cubit<RequestState> {
 
   static RequestCubit get(context) => BlocProvider.of(context);
 
-  int ? orderId;
+  int? orderId;
 
   void request(
-      {required List<String> services, required String location}) async {
+      {required List<String> services,
+      required String location,
+      required context}) async {
     emit(RequestLoading());
 
     final result = await repo.request(services);
@@ -31,7 +38,7 @@ class RequestCubit extends Cubit<RequestState> {
       (l) => emit(RequestFailed(l.message)),
       (r) {
         orderId = r;
-        requestCraftsmen(location: location);
+        requestCraftsmen(location: location, context: context);
         emit(RequestSuccess(r));
       },
     );
@@ -39,12 +46,23 @@ class RequestCubit extends Cubit<RequestState> {
 
   List<OrderCarftsmenModel> craftsmen = [];
 
-  void requestCraftsmen({required String location}) async {
+  void requestCraftsmen({required String location, required context}) async {
     emit(RequestCraftsmenLoading());
 
+    print(location);
+    print(orderId!);
+
     final result = await repo.requestCraftsmen(orderId!, location);
-    result.fold((l) => emit(RequestCraftsmenFailed(l.message)), (r) {
+    result.fold((l) {
+      showModalBottomSheet(
+        context: context,
+        builder: (context) {
+          return const CancelRequestBottomSheet();
+        },
+      );
+    }, (r) {
       craftsmen = r;
+      navigateTo(context, AvailableCraftmen(craftsmen: craftsmen));
       emit(RequestCraftsmenSuccess(r));
     });
   }

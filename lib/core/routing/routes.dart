@@ -19,5 +19,4 @@ class Routes {
   static const String complains = "/complains";
   static const String addComplain = "/addComplain";
   static const String payment = "/payment";
-  static const String availablecraftmen = "/availableCraftmen";
 }

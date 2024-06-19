@@ -1,10 +1,12 @@
 import 'package:fixer/core/themes/colors.dart';
 import 'package:fixer/core/themes/text_styles.dart';
+import 'package:fixer/features/requests/data/models/order_carftsmen_model.dart';
 import 'package:fixer/features/requests/presentation/views/widgets/available_craftmen_card_model.dart';
 import 'package:flutter/material.dart';
 
 class AvailableCraftmen extends StatelessWidget {
-  const AvailableCraftmen({super.key});
+  final List<OrderCarftsmenModel> craftsmen;
+  const AvailableCraftmen({super.key, required this.craftsmen});
 
   @override
   Widget build(BuildContext context) {
@@ -20,9 +22,9 @@ class AvailableCraftmen extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
         child: Expanded(
           child: ListView.builder(
-            itemCount: 12,
+            itemCount: craftsmen.length,
             itemBuilder: (context, index) {
-              return const AvailableCraftmenCard();
+              return AvailableCraftmenCard(model: craftsmen[index]);
             },
           ),
         ),

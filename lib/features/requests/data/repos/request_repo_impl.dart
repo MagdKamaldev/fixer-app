@@ -33,21 +33,25 @@ class RequestRepoImpl implements RequestRepo {
   @override
   Future<Either<Failure, List<OrderCarftsmenModel>>> requestCraftsmen(
       int orderId, String location) async {
-    try {
-      final response = await apiServices.get(
-          endPoint: "craftsmenForOrder",
-          data: {"order_id": id, "city": location});
+    // try {
+    final response = await apiServices.get(
+        endPoint: "craftsmenForOrder",
+        data: {"order_id": orderId, "city": location});
 
-      final craftsmen = (response["Craftsmen"] as List)
+    if (response["Craftsmen"] == null) {
+      return Left(ServerFailure(response["Message"]));
+    } else {
+      List<OrderCarftsmenModel> craftsmen = (response["Craftsmen"] as List)
           .map((e) => OrderCarftsmenModel.fromJson(e))
           .toList();
       return Right(craftsmen);
-    } catch (e) {
-      if (e is ServerFailure) {
-        return Left(ServerFailure(e.message));
-      } else {
-        return Left(ServerFailure(e.toString()));
-      }
     }
+    // } catch (e) {
+    //   if (e is ServerFailure) {
+    //     return Left(ServerFailure(e.message));
+    //   } else {
+    //     return Left(ServerFailure(e.toString()));
+    //   }
+    // }
   }
 }

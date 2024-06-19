@@ -50,20 +50,6 @@ class CancelRequestBottomSheet extends StatelessWidget {
                   style: TextStyles.body.copyWith(color: ColorManager.white),
                 ),
               ),
-              MaterialButton(
-                onPressed: () {
-                  context.pushNamed(Routes.availablecraftmen);
-                },
-                color: ColorManager.primary,
-                height: 50.h,
-                minWidth: 150.w,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10)),
-                child: Text(
-                  "text button ",
-                  style: TextStyles.body.copyWith(color: ColorManager.white),
-                ),
-              ),
             ],
           ),
         ],

@@ -2,9 +2,9 @@ import 'package:fixer/core/routing/app_router.dart';
 import 'package:fixer/core/service_locator/service_locator.dart';
 import 'package:fixer/core/themes/colors.dart';
 import 'package:fixer/core/themes/text_styles.dart';
+import 'package:fixer/features/requests/data/repos/request_repo_impl.dart';
 import 'package:fixer/features/requests/manager/maps_cubit/maps_cubit.dart';
 import 'package:fixer/features/requests/manager/request%20cubit/request_cubit.dart';
-import 'package:fixer/features/requests/presentation/views/widgets/cancel_request_bottom_sheet.dart';
 import 'package:fixer/features/requests/presentation/views/widgets/request_row_model.dart';
 import 'package:fixer/features/requests/presentation/views/widgets/requested_services_bottom_sheet.dart';
 import 'package:fixer/features/services/data/reepos/services_repo_impl.dart';
@@ -88,24 +88,34 @@ class ConfirmRequestContainer extends StatelessWidget {
           label: S.of(context).price,
           description: "${selected.first.price} LE",
         ),
-        MaterialButton(
-          onPressed: () {
-            showModalBottomSheet(
-              context: context,
-              builder: (context) {
-                return const CancelRequestBottomSheet();
-              },
-            );
-          },
-          color: ColorManager.primary,
-          height: 50.h,
-          minWidth: 330.w,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(10),
-          ),
-          child: Text(
-            S.of(context).confirmrequest,
-            style: TextStyles.body.copyWith(color: ColorManager.white),
+        BlocProvider(
+          create: (context) => RequestCubit(getIt<RequestRepoImpl>()),
+          child: BlocBuilder<RequestCubit, RequestState>(
+            builder: (context, state) {
+              if (state is RequestCraftsmenLoading || state is RequestLoading) {
+                return const CircularProgressIndicator();
+              } else {
+                return MaterialButton(
+                  onPressed: () {
+                    RequestCubit.get(context).request(
+                      context: context,
+                      services: selected.map((e) => e.name.toString()).toList(),
+                      location: orderLocation.toLowerCase(),
+                    );
+                  },
+                  color: ColorManager.primary,
+                  height: 50.h,
+                  minWidth: 330.w,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Text(
+                    S.of(context).confirmrequest,
+                    style: TextStyles.body.copyWith(color: ColorManager.white),
+                  ),
+                );
+              }
+            },
           ),
         ),
       ],

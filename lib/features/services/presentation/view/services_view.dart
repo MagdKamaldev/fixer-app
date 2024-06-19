@@ -59,6 +59,9 @@ class _ServicesViewState extends State<ServicesView> {
     setState(() {
       orderLocation = orderLocation;
     });
+
+    print(
+        "11111111111111111111111111111111111111111111111111111111 $orderLocation");
   }
 
   @override

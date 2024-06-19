@@ -91,10 +91,6 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => const PaymentView(),
         );
-      case Routes.availablecraftmen:
-        return MaterialPageRoute(
-          builder: (_) => const AvailableCraftmen(),
-        );
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(
