@@ -1429,6 +1429,16 @@ class S {
       args: [],
     );
   }
+
+  /// `(Prices may vary depending on craftsmen rates)`
+  String get pricesmayvary {
+    return Intl.message(
+      '(Prices may vary depending on craftsmen rates)',
+      name: 'pricesmayvary',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

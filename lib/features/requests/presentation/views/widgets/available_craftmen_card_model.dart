@@ -124,7 +124,7 @@ class _AvailableCraftmenCardState extends State<AvailableCraftmenCard> {
                       height: 35.h,
                       minWidth: 117.w,
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10)),
+                          borderRadius: BorderRadius.circular(5)),
                       child: Text(
                         isCalled ? S.of(context).confirm : S.of(context).call,
                         style:
@@ -137,7 +137,8 @@ class _AvailableCraftmenCardState extends State<AvailableCraftmenCard> {
                       height: 35.h,
                       minWidth: 117.w,
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10)),
+                          borderRadius: BorderRadius.circular(5),
+                          side: BorderSide(color: ColorManager.primary)),
                       child: Text(
                         S.of(context).skip,
                         style: TextStyles.body

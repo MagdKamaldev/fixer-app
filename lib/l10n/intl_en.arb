@@ -136,5 +136,6 @@
   "call":"Call",
   "noRequests":"No Requests Yet !",
   "wallet":"Wallet",
-  "totalBalance":"Total Balance"
+  "totalBalance":"Total Balance",
+  "pricesmayvary":"(Prices may vary depending on craftsmen rates)"
 }

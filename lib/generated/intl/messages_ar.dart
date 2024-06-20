@@ -153,6 +153,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "plumbingDes":
             MessageLookupByLibrary.simpleMessage("إصلاحات السباكة السريعة."),
         "price": MessageLookupByLibrary.simpleMessage("سعر"),
+        "pricesmayvary": MessageLookupByLibrary.simpleMessage(
+            "(قد تختلف الأسعار حسب أسعار الحرفيين)"),
         "remember": MessageLookupByLibrary.simpleMessage("تذكرني"),
         "requestedservices":
             MessageLookupByLibrary.simpleMessage("الخدمات المطلوبة"),

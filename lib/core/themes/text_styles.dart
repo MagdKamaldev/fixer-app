@@ -88,4 +88,5 @@ class TextStyles {
     fontFamily: GoogleFonts.roboto().fontFamily,
     fontWeight: FontWeight.w600,
   );
+  
 }

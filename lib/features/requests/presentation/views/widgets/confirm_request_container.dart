@@ -83,10 +83,19 @@ class ConfirmRequestContainer extends StatelessWidget {
             },
           ),
         ),
-        RequestRowModel(
-          icon: Icons.price_change_outlined,
-          label: S.of(context).price,
-          description: "${selected.first.price} LE",
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            RequestRowModel(
+              icon: Icons.price_change_outlined,
+              label: S.of(context).price,
+              description: "${selected.first.price} LE",
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 63.0),
+              child: Text(S.of(context).pricesmayvary,style: TextStyles.small.copyWith(color: ColorManager.grey),),
+            )
+          ],
         ),
         BlocProvider(
           create: (context) => RequestCubit(getIt<RequestRepoImpl>()),
