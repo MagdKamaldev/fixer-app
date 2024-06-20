@@ -104,7 +104,6 @@ class _AvailableCraftmenCardState extends State<AvailableCraftmenCard> {
                           borderRadius: BorderRadius.circular(10)),
                       child: Text(
                         isCalled ? "confirm" : "call",
-                      
                         style:
                             TextStyles.body.copyWith(color: ColorManager.white),
                       ),

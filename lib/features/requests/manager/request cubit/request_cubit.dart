@@ -48,9 +48,6 @@ class RequestCubit extends Cubit<RequestState> {
   void requestCraftsmen({required String location, required context}) async {
     emit(RequestCraftsmenLoading());
 
-    print(location);
-    print(orderId!);
-
     final result = await repo.requestCraftsmen(orderId!, location);
     result.fold((l) {
       showModalBottomSheet(

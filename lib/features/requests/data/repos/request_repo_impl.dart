@@ -12,15 +12,15 @@ class RequestRepoImpl implements RequestRepo {
   RequestRepoImpl({required this.apiServices});
   @override
   Future<Either<Failure, int>> request(List<String> services) async {
-     try {
-    final response = await apiServices.post(
-        endPoint: "request",
-        data: {
-          "services": services,
-        },
-        jwt: token == "" ? kTokenBox.get(kTokenBoxString) : token);
+    try {
+      final response = await apiServices.post(
+          endPoint: "request",
+          data: {
+            "services": services,
+          },
+          jwt: token == "" ? kTokenBox.get(kTokenBoxString) : token);
 
-    return Right(response["Order number "]);
+      return Right(response["Order number "]);
     } catch (e) {
       if (e is ServerFailure) {
         return Left(ServerFailure(e.message));
@@ -33,19 +33,21 @@ class RequestRepoImpl implements RequestRepo {
   @override
   Future<Either<Failure, List<OrderCarftsmenModel>>> requestCraftsmen(
       int orderId, String location) async {
-     try {
-    final response = await apiServices.get(
-        endPoint: "craftsmenForOrder",
-        data: {"order_id": orderId, "city": location});
+    try {
+      final response = await apiServices.get(
+          endPoint: "craftsmenForOrder",
+          data: {"order_id": orderId, "city": location});
 
-    if (response["Craftsmen"] == null) {
-      return Left(ServerFailure(response["Message"]));
-    } else {
-      List<OrderCarftsmenModel> craftsmen = (response["Craftsmen"] as List)
-          .map((e) => OrderCarftsmenModel.fromJson(e))
-          .toList();
-      return Right(craftsmen);
-    }
+      
+
+      if (response["Craftsmen"] == null) {
+        return Left(ServerFailure(response["Message"]));
+      } else {
+        List<OrderCarftsmenModel> craftsmen = (response["Craftsmen"] as List)
+            .map((e) => OrderCarftsmenModel.fromJson(e))
+            .toList();
+        return Right(craftsmen);
+      }
     } catch (e) {
       if (e is ServerFailure) {
         return Left(ServerFailure(e.message));
