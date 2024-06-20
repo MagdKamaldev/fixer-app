@@ -159,13 +159,13 @@ after confirming the request the client is then navigated to a screen showing al
 
 | English | Arabic |
 | ------- | ------ |
-| <img src="assets/docs/RequestedServices_en.jpg" height="500" width="250"> | <img src="assets/docs/RequestedServices_arab.jpg" height="500" width="250"> |
+| <img src="assets/docs/Availablecraftmen_eng.jpg" height="500" width="250"> | <img src="assets/docs/AvailableCraftman_arab.jpg" height="500" width="250"> |
 
 incase the service is not availabe in his area this message will appear
 
 | English | Arabic |
 | ------- | ------ |
-| <img src="assets/docs/Availablecraftmen_eng.jpg" height="500" width="250"> | <img src="assets/docs/AvailableCraftman_arab.jpg" height="500" width="250"> |
+| <img src="assets/docs/AreaNotAvailab_en.jpg" height="500" width="250"> | <img src="assets/docs/AreaNotAvailable_arab.jpg" height="500" width="250"> |
 
 then he have to click on "cancel request" to return to home screen 
 
@@ -238,7 +238,7 @@ Then the craftsman is then navigated to this screen to enter his personal ID pho
 
 | English | Arabic |
 | ------- | ------ |
-| <img src="assets\docs\upload_id_en.jpg" height="500" width="250"> | <img src="assets\docs\upload_id_ar.jpg" height="500" width="250"> |
+| <img src="assets/docs/upload_id_en.jpg" height="500" width="250"> | <img src="assets/docs/upload_id_ar.jpg" height="500" width="250"> |
 
 ### 6.7.Inserting Operating Locations
 
@@ -246,7 +246,7 @@ Them the craftsman is then navigated to this screen to enter the locations he wi
 
 | English | Arabic |
 | ------- | ------ |
-| <img src="assets\docs\set_locations_en.jpg" height="500" width="250"> | <img src="assets\docs\set_locations_ar.jpg" height="500" width="250"> |
+| <img src="assets/docs/set_locations_en.jpg" height="500" width="250"> | <img src="assets/docs/set_locations_ar.jpg" height="500" width="250"> |
 
 ### 6.8.Inserting personal profile image
 
@@ -254,7 +254,7 @@ Them the craftsman is then navigated to upload his profile image.
 
 | English | Arabic |
 | ------- | ------ |
-| <img src="assets\docs\upload_profile_en.jpg" height="500" width="250"> | <img src="assets\docs\upload_profile_ar.jpg" height="500" width="250"> |
+| <img src="assets/docs/upload_profile_en.jpg" height="500" width="250"> | <img src="assets/docs/upload_profile_ar.jpg" height="500" width="250"> |
 
 ### 6.9.waiting screen
 
@@ -262,4 +262,4 @@ Them the craftsman is then navigated to this untill an admin approves his applic
 
 | English | Arabic |
 | ------- | ------ |
-| <img src="assets\docs\waiting_en.jpg" height="500" width="250"> | <img src="assets\docs\waiting_ar.jpg" height="500" width="250"> |
+| <img src="assets/docs/waiting_en.jpg" height="500" width="250"> | <img src="assets/docs/waiting_ar.jpg" height="500" width="250"> |
