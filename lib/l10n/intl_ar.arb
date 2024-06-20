@@ -138,7 +138,14 @@
    "noRequests":"لا توجد طلبات",
    "wallet":"المحفظة",
    "totalBalance":"الرصيد الإجمالي",
-  "pricesmayvary":"(قد تختلف الأسعار حسب أسعار الحرفيين)"
+  "pricesmayvary":"(قد تختلف الأسعار حسب أسعار الحرفيين)",
+  "requestdetails":"تفاصيل الطلب",
+  "pricedetails":"تفاصيل السعر",
+  "yourtotal":"مجموعك",
+  "subtotal":"المجموع الفرعي"
+
+
+  
 
 
 

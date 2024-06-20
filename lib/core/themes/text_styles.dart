@@ -88,5 +88,11 @@ class TextStyles {
     fontFamily: GoogleFonts.roboto().fontFamily,
     fontWeight: FontWeight.w600,
   );
+  static TextStyle extrasmall = TextStyle(
+    color: ColorManager.grey,
+    fontSize: 12.sp,
+    fontFamily: GoogleFonts.roboto().fontFamily,
+    fontWeight: FontWeight.w400,
+  );
   
 }

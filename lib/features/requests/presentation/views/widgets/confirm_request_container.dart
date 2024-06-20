@@ -1,3 +1,4 @@
+import 'package:fixer/core/constants/constants.dart';
 import 'package:fixer/core/routing/app_router.dart';
 import 'package:fixer/core/service_locator/service_locator.dart';
 import 'package:fixer/core/themes/colors.dart';
@@ -92,8 +93,8 @@ class ConfirmRequestContainer extends StatelessWidget {
               description: "${selected.first.price} LE",
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 63.0),
-              child: Text(S.of(context).pricesmayvary,style: TextStyles.small.copyWith(color: ColorManager.grey),),
+              padding: locale=="en"?EdgeInsets.only(left: 60.0.w):EdgeInsets.only(right: 60.0.w),
+              child: Text(S.of(context).pricesmayvary,style: TextStyles.extrasmall),
             )
           ],
         ),

@@ -24,7 +24,7 @@ class RequestRowModel extends StatelessWidget {
           color: ColorManager.primary,
           size: 30,
         ),
-        horizontalSpace(32),
+        horizontalSpace(30),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

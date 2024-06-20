@@ -137,5 +137,10 @@
   "noRequests":"No Requests Yet !",
   "wallet":"Wallet",
   "totalBalance":"Total Balance",
-  "pricesmayvary":"(Prices may vary depending on craftsmen rates)"
+  "pricesmayvary":"(Prices may vary depending on craftsmen rates)",
+  "requestdetails":"Request Details",
+  "pricedetails":"Price details",
+  "yourtotal":"Your Total",
+  "subtotal":"Subtotal"
+
 }

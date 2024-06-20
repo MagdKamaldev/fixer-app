@@ -1,9 +1,11 @@
 // ignore_for_file: use_build_context_synchronously, must_be_immutable
 import 'package:fixer/core/helpers/spacing.dart';
 import 'package:fixer/core/networks/errors/error_snackbar.dart';
+import 'package:fixer/core/routing/app_router.dart';
 import 'package:fixer/core/themes/colors.dart';
 import 'package:fixer/core/themes/text_styles.dart';
 import 'package:fixer/features/requests/data/models/order_carftsmen_model.dart';
+import 'package:fixer/features/requests/presentation/views/widgets/ending_request.dart';
 import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -131,7 +133,10 @@ class _AvailableCraftmenCardState extends State<AvailableCraftmenCard> {
                       ),
                     ),
                     MaterialButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        navigateTo(context,
+                        EndingRequest());
+                      },
                       color: ColorManager.white,
                       height: 35.h,
                       minWidth: 117.w,

@@ -153,9 +153,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "plumbingDes":
             MessageLookupByLibrary.simpleMessage("إصلاحات السباكة السريعة."),
         "price": MessageLookupByLibrary.simpleMessage("سعر"),
+        "pricedetails": MessageLookupByLibrary.simpleMessage("تفاصيل السعر"),
         "pricesmayvary": MessageLookupByLibrary.simpleMessage(
             "(قد تختلف الأسعار حسب أسعار الحرفيين)"),
         "remember": MessageLookupByLibrary.simpleMessage("تذكرني"),
+        "requestdetails": MessageLookupByLibrary.simpleMessage("تفاصيل الطلب"),
         "requestedservices":
             MessageLookupByLibrary.simpleMessage("الخدمات المطلوبة"),
         "requestnow": MessageLookupByLibrary.simpleMessage("اطلب الآن"),
@@ -189,6 +191,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "skip": MessageLookupByLibrary.simpleMessage("تخطي"),
         "slogan": MessageLookupByLibrary.simpleMessage("إصلاحك، خبرتنا"),
         "street": MessageLookupByLibrary.simpleMessage("الشارع"),
+        "subtotal": MessageLookupByLibrary.simpleMessage("المجموع الفرعي"),
         "termsandpolicy":
             MessageLookupByLibrary.simpleMessage("الشروط والسياسات"),
         "totalBalance": MessageLookupByLibrary.simpleMessage("الرصيد الإجمالي"),
@@ -214,6 +217,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "withgoogle":
             MessageLookupByLibrary.simpleMessage("تسجيل الدخول باستخدام جوجل"),
         "yourfixOurExpertise":
-            MessageLookupByLibrary.simpleMessage("الإصلاح الخاص بك، خبرتنا")
+            MessageLookupByLibrary.simpleMessage("الإصلاح الخاص بك، خبرتنا"),
+        "yourtotal": MessageLookupByLibrary.simpleMessage("مجموعك")
       };
 }

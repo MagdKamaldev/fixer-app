@@ -147,7 +147,7 @@ then he is then navigated to the a screen that lists the location , requested se
 
 | English | Arabic |
 | ------- | ------ |
-| <img src="assets/docs/ConfirmServiceMap_en.jpg" height="500" width="250"> | <img src="assets/docs/ConfirmServiceMap_arab.jpg" height="500" width="250"> |
+| <img src="assets/docs/ConfirmRequestMap_en.jpg" height="500" width="250"> | <img src="assets/docs/ConfirmRequestMap_arab.jpg" height="500" width="250"> |
 
 if he clicks on the service than a list of all services requested will appear as bottom sheet
 
@@ -159,7 +159,7 @@ after confirming the request the client is then navigated to a screen showing al
 
 | English | Arabic |
 | ------- | ------ |
-| <img src="assets/docs/Availablecraftmen_eng.jpg" height="500" width="250"> | <img src="assets/docs/AvailableCraftman_arab.jpg" height="500" width="250"> |
+| <img src="assets/docs/Availablecraftman_en.jpg" height="500" width="250"> | <img src="assets/docs/Availablecraftmen_arab.jpg" height="500" width="250"> |
 
 incase the service is not availabe in his area this message will appear
 

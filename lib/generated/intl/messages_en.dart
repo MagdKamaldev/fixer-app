@@ -158,9 +158,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "plumbingDes":
             MessageLookupByLibrary.simpleMessage("Swift plumbing fixes."),
         "price": MessageLookupByLibrary.simpleMessage("Price"),
+        "pricedetails": MessageLookupByLibrary.simpleMessage("Price details"),
         "pricesmayvary": MessageLookupByLibrary.simpleMessage(
             "(Prices may vary depending on craftsmen rates)"),
         "remember": MessageLookupByLibrary.simpleMessage("Remember me"),
+        "requestdetails":
+            MessageLookupByLibrary.simpleMessage("Request Details"),
         "requestedservices":
             MessageLookupByLibrary.simpleMessage("Requested Services"),
         "requestnow": MessageLookupByLibrary.simpleMessage("Request Now"),
@@ -196,6 +199,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "slogan":
             MessageLookupByLibrary.simpleMessage("YOUR FIX , OUR EXPERTISE."),
         "street": MessageLookupByLibrary.simpleMessage("Street"),
+        "subtotal": MessageLookupByLibrary.simpleMessage("Subtotal"),
         "termsandpolicy":
             MessageLookupByLibrary.simpleMessage(" terms & policy"),
         "totalBalance": MessageLookupByLibrary.simpleMessage("Total Balance"),
@@ -220,6 +224,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "withgoogle":
             MessageLookupByLibrary.simpleMessage("Sign in with google"),
         "yourfixOurExpertise":
-            MessageLookupByLibrary.simpleMessage("Your Fix,Our Expertise")
+            MessageLookupByLibrary.simpleMessage("Your Fix,Our Expertise"),
+        "yourtotal": MessageLookupByLibrary.simpleMessage("Your Total")
       };
 }
