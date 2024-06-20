@@ -38,8 +38,6 @@ class RequestRepoImpl implements RequestRepo {
           endPoint: "craftsmenForOrder",
           data: {"order_id": orderId, "city": location});
 
-      
-
       if (response["Craftsmen"] == null) {
         return Left(ServerFailure(response["Message"]));
       } else {

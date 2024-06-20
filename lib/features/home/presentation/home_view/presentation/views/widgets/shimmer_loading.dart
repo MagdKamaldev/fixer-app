@@ -9,7 +9,7 @@ class ShimmerLoading extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      itemCount: 5, // Example count, adjust as needed
+      itemCount: 10,
       itemBuilder: (context, index) {
         return Shimmer.fromColors(
           baseColor: ColorManager.primary,

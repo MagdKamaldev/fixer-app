@@ -67,7 +67,7 @@ class RequestPopUp extends StatelessWidget {
                           context,
                           ServicesView(
                             id: 16,
-                            category:S.of(context).electric,
+                            category: S.of(context).electric,
                           ));
                     },
                     child: const ServicesContainerModel(

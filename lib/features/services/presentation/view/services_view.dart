@@ -61,7 +61,6 @@ class _ServicesViewState extends State<ServicesView> {
     setState(() {
       orderLocation = orderLocation;
     });
-
   }
 
   @override
@@ -78,7 +77,9 @@ class _ServicesViewState extends State<ServicesView> {
       child: Scaffold(
           appBar: AppBar(
             title: Text(
-              locale=="en"?"${widget.category} ${S.of(context).services} ":" ${S.of(context).services} ${widget.category}" ,
+              locale == "en"
+                  ? "${widget.category} ${S.of(context).services} "
+                  : " ${S.of(context).services} ${widget.category}",
               style: TextStyles.subHeadingsBold,
             ),
             centerTitle: true,

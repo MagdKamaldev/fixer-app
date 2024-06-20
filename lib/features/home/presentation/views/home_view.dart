@@ -2,6 +2,7 @@ import 'package:fixer/core/themes/colors.dart';
 import 'package:fixer/core/widgets/screens/reviewing_screen.dart';
 import 'package:fixer/features/home/presentation/views/widgets/app_drawer.dart';
 import 'package:fixer/features/home/presentation/home_view/presentation/views/home_body.dart';
+import 'package:fixer/features/my%20orders/presentation/my_orders_view.dart';
 import 'package:fixer/features/profile/presentation/views/profile_body.dart';
 import 'package:fixer/features/stores/presentation/views/store_body.dart';
 import 'package:fixer/features/login/data/repos/login_repository_implementation.dart';
@@ -22,7 +23,7 @@ class _HomeViewState extends State<HomeView> {
   // List of widgets corresponding to each tab
   final List<Widget> _widgetOptions = <Widget>[
     const HomeBody(),
-    const Text("requests"),
+    const MyOrders(),
     const StoresBody(),
     const ProfileBody(),
   ];
