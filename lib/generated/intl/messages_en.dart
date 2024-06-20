@@ -106,6 +106,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "getstarted": MessageLookupByLibrary.simpleMessage("Get started"),
         "getstartintro": MessageLookupByLibrary.simpleMessage(
             "Browse craftsmen for repair \n and maintainance service"),
+        "howwasyourexperience":
+            MessageLookupByLibrary.simpleMessage("How was your service with "),
+        "leavecomment": MessageLookupByLibrary.simpleMessage("Leave a comment"),
         "left": MessageLookupByLibrary.simpleMessage("Left in the store"),
         "location": MessageLookupByLibrary.simpleMessage("Your Location"),
         "locationPermissionDenied":
@@ -151,6 +154,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "passwordinstructions": MessageLookupByLibrary.simpleMessage(
             "It must contain at least two of:numbers,letters,or symbols"),
         "payment": MessageLookupByLibrary.simpleMessage("Payment"),
+        "performance": MessageLookupByLibrary.simpleMessage("performance"),
         "phone": MessageLookupByLibrary.simpleMessage("Phone number"),
         "phoneValidation": MessageLookupByLibrary.simpleMessage(
             "Please add your phone number !"),
@@ -199,6 +203,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "slogan":
             MessageLookupByLibrary.simpleMessage("YOUR FIX , OUR EXPERTISE."),
         "street": MessageLookupByLibrary.simpleMessage("Street"),
+        "submit": MessageLookupByLibrary.simpleMessage("Submit"),
         "subtotal": MessageLookupByLibrary.simpleMessage("Subtotal"),
         "termsandpolicy":
             MessageLookupByLibrary.simpleMessage(" terms & policy"),

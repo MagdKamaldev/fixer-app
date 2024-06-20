@@ -102,6 +102,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "getstarted": MessageLookupByLibrary.simpleMessage("البدء"),
         "getstartintro": MessageLookupByLibrary.simpleMessage(
             "تصفح حرفيين لخدمات الإصلاح والصيانة."),
+        "howwasyourexperience":
+            MessageLookupByLibrary.simpleMessage("كيف كانت خدمتك مع "),
+        "leavecomment": MessageLookupByLibrary.simpleMessage("اترك تعليق"),
         "left": MessageLookupByLibrary.simpleMessage(" باقي في المتجر"),
         "location": MessageLookupByLibrary.simpleMessage("موقعك"),
         "locationPermissionDenied":
@@ -146,6 +149,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "passwordinstructions": MessageLookupByLibrary.simpleMessage(
             "ويجب أن تحتوي على اثنين على الأقل من: أرقام أو أحرف \nأو رموز"),
         "payment": MessageLookupByLibrary.simpleMessage("الدفع"),
+        "performance": MessageLookupByLibrary.simpleMessage("أداء"),
         "phone": MessageLookupByLibrary.simpleMessage("رقم التليفون"),
         "phoneValidation":
             MessageLookupByLibrary.simpleMessage("الرجاء إدخال رقم هاتف صحيح"),
@@ -191,6 +195,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "skip": MessageLookupByLibrary.simpleMessage("تخطي"),
         "slogan": MessageLookupByLibrary.simpleMessage("إصلاحك، خبرتنا"),
         "street": MessageLookupByLibrary.simpleMessage("الشارع"),
+        "submit": MessageLookupByLibrary.simpleMessage("رفع"),
         "subtotal": MessageLookupByLibrary.simpleMessage("المجموع الفرعي"),
         "termsandpolicy":
             MessageLookupByLibrary.simpleMessage("الشروط والسياسات"),

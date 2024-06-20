@@ -69,7 +69,7 @@ class CraftsmanWalletScreen extends StatelessWidget {
                     Text(S.of(context).totalBalance,
                         style: TextStyles.whitesmallHeadings),
                     verticalSpace(30),
-                    Text('\ج.م. ${state.amount}',
+                    Text('ج.م. ${state.amount}',
                         style: TextStyles.whitesmallHeadings),
                   ],
                 ),

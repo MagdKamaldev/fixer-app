@@ -135,14 +135,14 @@ class _AvailableCraftmenCardState extends State<AvailableCraftmenCard> {
                     MaterialButton(
                       onPressed: () {
                         navigateTo(context,
-                        EndingRequest());
+                        const EndingRequest());
                       },
                       color: ColorManager.white,
                       height: 35.h,
                       minWidth: 117.w,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(5),
-                          side: BorderSide(color: ColorManager.primary)),
+                          side: const BorderSide(color: ColorManager.primary)),
                       child: Text(
                         S.of(context).skip,
                         style: TextStyles.body

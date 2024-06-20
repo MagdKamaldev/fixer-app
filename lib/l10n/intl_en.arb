@@ -141,6 +141,10 @@
   "requestdetails":"Request Details",
   "pricedetails":"Price details",
   "yourtotal":"Your Total",
-  "subtotal":"Subtotal"
+  "subtotal":"Subtotal",
+  "submit":"Submit",
+  "leavecomment":"Leave a comment",
+  "howwasyourexperience":"How was your service with ",
+  "performance":"performance"
 
 }

@@ -142,7 +142,12 @@
   "requestdetails":"تفاصيل الطلب",
   "pricedetails":"تفاصيل السعر",
   "yourtotal":"مجموعك",
-  "subtotal":"المجموع الفرعي"
+  "subtotal":"المجموع الفرعي",
+  "submit":"رفع",
+  "leavecomment":"اترك تعليق",
+  "howwasyourexperience":"كيف كانت خدمتك مع ",
+  "performance":"أداء"
+
 
 
   

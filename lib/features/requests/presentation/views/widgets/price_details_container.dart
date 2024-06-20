@@ -43,8 +43,8 @@ class Pricedetails extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text("${S.of(context).subtotal} (EPG) ",style:TextStyles.body.copyWith(color: ColorManager.grey)),
-              Text("600 LE ",style:TextStyles.body.copyWith(color: ColorManager.grey)),
+              Text("${S.of(context).subtotal} (EPG)",style:TextStyles.body.copyWith(color: ColorManager.grey)),
+              Text("600 LE",style:TextStyles.body.copyWith(color: ColorManager.grey)),
 
             ],
           )
