@@ -28,6 +28,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Confirmnewpasswordfield":
             MessageLookupByLibrary.simpleMessage("Confirm your new password"),
         "Home": MessageLookupByLibrary.simpleMessage("Home"),
+        "NoReviews": MessageLookupByLibrary.simpleMessage(" No Reviews Yet !"),
         "Profile": MessageLookupByLibrary.simpleMessage("profile"),
         "Requests": MessageLookupByLibrary.simpleMessage("Requests"),
         "Requestservice":

@@ -5,6 +5,7 @@ import 'package:fixer/core/routing/app_router.dart';
 import 'package:fixer/core/themes/colors.dart';
 import 'package:fixer/core/themes/text_styles.dart';
 import 'package:fixer/features/requests/data/models/order_carftsmen_model.dart';
+import 'package:fixer/features/requests/presentation/views/widgets/craftsman_details.dart';
 import 'package:fixer/features/requests/presentation/views/widgets/ending_request.dart';
 import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
@@ -45,7 +46,6 @@ class _AvailableCraftmenCardState extends State<AvailableCraftmenCard> {
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        // crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Column(
             children: [
@@ -99,7 +99,13 @@ class _AvailableCraftmenCardState extends State<AvailableCraftmenCard> {
                     ),
                     horizontalSpace(5),
                     InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        navigateTo(
+                            context,
+                            CraftsmanDetails(
+                              craftsman: widget.model,
+                            ));
+                      },
                       child: Text(
                         "(${widget.model.completedOrders} ${S.of(context).services})",
                         style: TextStyles.small.copyWith(
@@ -134,8 +140,7 @@ class _AvailableCraftmenCardState extends State<AvailableCraftmenCard> {
                     ),
                     MaterialButton(
                       onPressed: () {
-                        navigateTo(context,
-                        const EndingRequest());
+                        navigateTo(context, const EndingRequest());
                       },
                       color: ColorManager.white,
                       height: 35.h,

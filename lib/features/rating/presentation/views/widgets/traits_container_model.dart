@@ -13,7 +13,7 @@ class TraitsContainerModel extends StatefulWidget {
 }
 
 class _TraitsContainerModelState extends State<TraitsContainerModel> {
-bool isSelected = false;
+  bool isSelected = false;
 
   @override
   Widget build(BuildContext context) {
@@ -25,28 +25,30 @@ bool isSelected = false;
         if (widget.onTap != null) {
           widget.onTap!();
         }
-        
-        },
+      },
       child: IntrinsicWidth(
-          child: Container(
-            height: 50.h,
-            padding: const EdgeInsets.all(10),
-            decoration: BoxDecoration(
-              color: ColorManager.white,
-              borderRadius: BorderRadius.circular(30),
-              border: isSelected?Border.all(color: ColorManager.primary):Border.all(color: ColorManager.lightblue),
-              boxShadow: const [
-                BoxShadow(
-                  color: ColorManager.babyblue,
-                  spreadRadius: 0,
-                  blurRadius: 4,
-                  offset: Offset(0, 2), // changes position of shadow
-                ),
-              ],
-            ),
-            child: Text("traits",style: TextStyles.body.copyWith(color: ColorManager.primary)),
+        child: Container(
+          height: 50.h,
+          padding: const EdgeInsets.all(10),
+          decoration: BoxDecoration(
+            color: ColorManager.white,
+            borderRadius: BorderRadius.circular(30),
+            border: isSelected
+                ? Border.all(color: ColorManager.primary)
+                : Border.all(color: ColorManager.lightblue),
+            boxShadow: const [
+              BoxShadow(
+                color: ColorManager.babyblue,
+                spreadRadius: 0,
+                blurRadius: 4,
+                offset: Offset(0, 2), // changes position of shadow
+              ),
+            ],
           ),
+          child: Text("traits",
+              style: TextStyles.body.copyWith(color: ColorManager.primary)),
         ),
+      ),
     );
   }
 }

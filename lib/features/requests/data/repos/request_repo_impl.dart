@@ -3,6 +3,7 @@ import 'package:fixer/core/constants/constants.dart';
 import 'package:fixer/core/networks/api_services/api_services.dart';
 import 'package:fixer/core/networks/errors/errors.dart';
 import 'package:fixer/features/requests/data/models/order_carftsmen_model.dart';
+import 'package:fixer/features/requests/data/models/review_model.dart';
 import 'package:fixer/features/requests/data/repos/request_repo.dart';
 import 'package:fixer/main.dart';
 
@@ -45,6 +46,29 @@ class RequestRepoImpl implements RequestRepo {
             .map((e) => OrderCarftsmenModel.fromJson(e))
             .toList();
         return Right(craftsmen);
+      }
+    } catch (e) {
+      if (e is ServerFailure) {
+        return Left(ServerFailure(e.message));
+      } else {
+        return Left(ServerFailure(e.toString()));
+      }
+    }
+  }
+
+  @override
+  Future<Either<Failure, List<ReviewModel>>> craftsmanReviews(int craftsmanId) async{
+    try {
+      final response = await apiServices.get(
+          endPoint: "CraftsmanReviews/$craftsmanId",);
+
+      if (response["Reviews"] == null) {
+        return Left(ServerFailure(response["Message"]));
+      } else {
+        List<ReviewModel> reviews = (response["Reviews"] as List)
+            .map((e) => ReviewModel.fromJson(e))
+            .toList();
+        return Right(reviews);
       }
     } catch (e) {
       if (e is ServerFailure) {

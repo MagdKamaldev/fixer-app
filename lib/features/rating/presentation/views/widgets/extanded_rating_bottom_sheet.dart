@@ -17,9 +17,7 @@ class ExpandedContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(24.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         Align(
           alignment: locale == "en" ? Alignment.topRight : Alignment.topLeft,
           child: InkWell(
@@ -32,9 +30,7 @@ class ExpandedContent extends StatelessWidget {
                 size: 25,
               )),
         ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center, 
-          children: [
+        Row(mainAxisAlignment: MainAxisAlignment.center, children: [
           const CircleAvatar(
             backgroundImage: NetworkImage(
                 "https://th.bing.com/th?id=OIP.TctatNGs7RN-Dfc3NZf91AAAAA&w=212&h=212&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"),

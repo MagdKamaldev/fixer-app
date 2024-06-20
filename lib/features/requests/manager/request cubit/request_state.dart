@@ -31,3 +31,17 @@ final class RequestCraftsmenFailed extends RequestState {
 
   RequestCraftsmenFailed(this.message);
 }
+
+final class RequestReviewsLoading extends RequestState {}
+
+final class RequestReviewsSuccess extends RequestState {
+  final List<ReviewModel> reviews;
+
+  RequestReviewsSuccess(this.reviews);
+}
+
+final class RequestReviewsFailed extends RequestState {
+  final String message;
+
+  RequestReviewsFailed(this.message);
+}

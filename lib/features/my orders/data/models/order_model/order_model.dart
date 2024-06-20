@@ -1,5 +1,3 @@
-
-
 class OrderModel {
   int? clientId;
   int? craftsmanId;

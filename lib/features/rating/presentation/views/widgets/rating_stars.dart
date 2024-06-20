@@ -10,15 +10,15 @@ class RatingStarsRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RatingBar(
-      filledIcon:Icons.star, 
-      emptyIcon:Icons.star_border_outlined,
-      filledColor: Colors.amber, 
-      emptyColor: ColorManager.grey,
-      size: 30,
-      initialRating: 1,
-      alignment: Alignment.center,
-      onRatingChanged: (rating){
-        onStarTap();
-      });
+        filledIcon: Icons.star,
+        emptyIcon: Icons.star_border_outlined,
+        filledColor: Colors.amber,
+        emptyColor: ColorManager.grey,
+        size: 30,
+        initialRating: 1,
+        alignment: Alignment.center,
+        onRatingChanged: (rating) {
+          onStarTap();
+        });
   }
 }

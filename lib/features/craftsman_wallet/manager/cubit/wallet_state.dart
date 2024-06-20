@@ -1,6 +1,5 @@
 part of 'wallet_cubit.dart';
 
-
 sealed class WalletState {}
 
 final class WalletInitial extends WalletState {}
@@ -16,5 +15,3 @@ final class WalletError extends WalletState {
   final String message;
   WalletError({required this.message});
 }
-
-

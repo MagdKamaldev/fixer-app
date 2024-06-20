@@ -14,41 +14,49 @@ class Pricedetails extends StatelessWidget {
     return Container(
       width: MediaQuery.of(context).size.width,
       height: 235.h,
-      padding: const EdgeInsets.only(top: 30,left: 24,right: 24,bottom: 24),
+      padding: const EdgeInsets.only(top: 30, left: 24, right: 24, bottom: 24),
       color: ColorManager.white,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(S.of(context).pricedetails,style: TextStyles.bodybold,),
+          Text(
+            S.of(context).pricedetails,
+            style: TextStyles.bodybold,
+          ),
           verticalSpace(16),
           Expanded(
             child: SizedBox(
-              height: 80.h,
-              child: ListView.builder(
-              itemCount: 10,
-              itemBuilder: (context, index) {
-              return  Padding(
-                padding: const EdgeInsets.symmetric(vertical: 6.0),
-                child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text("service",style:TextStyles.small.copyWith(color: ColorManager.grey)),
-                  Text("price LE",style:TextStyles.small.copyWith(color: ColorManager.grey))
-                ],
-                            ),
-              );
-                          },)),
+                height: 80.h,
+                child: ListView.builder(
+                  itemCount: 10,
+                  itemBuilder: (context, index) {
+                    return Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 6.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text("service",
+                              style: TextStyles.small
+                                  .copyWith(color: ColorManager.grey)),
+                          Text("price LE",
+                              style: TextStyles.small
+                                  .copyWith(color: ColorManager.grey))
+                        ],
+                      ),
+                    );
+                  },
+                )),
           ),
           verticalSpace(5),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text("${S.of(context).subtotal} (EPG)",style:TextStyles.body.copyWith(color: ColorManager.grey)),
-              Text("600 LE",style:TextStyles.body.copyWith(color: ColorManager.grey)),
-
+              Text("${S.of(context).subtotal} (EPG)",
+                  style: TextStyles.body.copyWith(color: ColorManager.grey)),
+              Text("600 LE",
+                  style: TextStyles.body.copyWith(color: ColorManager.grey)),
             ],
           )
-         
         ],
       ),
     );

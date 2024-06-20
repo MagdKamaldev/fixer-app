@@ -28,6 +28,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Confirmnewpasswordfield": MessageLookupByLibrary.simpleMessage(
             "قم بتأكيد كلمة المرور الجديدة"),
         "Home": MessageLookupByLibrary.simpleMessage("بيت"),
+        "NoReviews": MessageLookupByLibrary.simpleMessage(" لا توجد تقييمات"),
         "Profile": MessageLookupByLibrary.simpleMessage("حسابك"),
         "Requests": MessageLookupByLibrary.simpleMessage("طلبات"),
         "Requestservice": MessageLookupByLibrary.simpleMessage("طلب الخدمة"),

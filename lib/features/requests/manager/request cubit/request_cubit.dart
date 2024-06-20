@@ -1,5 +1,6 @@
 import 'package:fixer/core/routing/app_router.dart';
 import 'package:fixer/features/requests/data/models/order_carftsmen_model.dart';
+import 'package:fixer/features/requests/data/models/review_model.dart';
 import 'package:fixer/features/requests/data/repos/request_repo_impl.dart';
 import 'package:fixer/features/requests/presentation/views/widgets/available_craftmen.dart';
 import 'package:fixer/features/requests/presentation/views/widgets/cancel_request_bottom_sheet.dart';
@@ -62,6 +63,20 @@ class RequestCubit extends Cubit<RequestState> {
       craftsmen = r;
       navigateTo(context, AvailableCraftmen(craftsmen: craftsmen));
       emit(RequestCraftsmenSuccess(r));
+    });
+  }
+
+  List<ReviewModel> reviews = [];
+
+  void craftsmanReviews(int craftsmanId) async {
+    emit(RequestReviewsLoading());
+
+    final result = await repo.craftsmanReviews(craftsmanId);
+    result.fold((l) {
+      emit(RequestReviewsFailed(l.message));
+    }, (r) {
+      reviews = r;
+      emit(RequestReviewsSuccess(r));
     });
   }
 }

@@ -1519,6 +1519,16 @@ class S {
       args: [],
     );
   }
+
+  /// ` No Reviews Yet !`
+  String get NoReviews {
+    return Intl.message(
+      ' No Reviews Yet !',
+      name: 'NoReviews',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

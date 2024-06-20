@@ -13,20 +13,19 @@ class _TraitsWrapRowState extends State<TraitsWrapRow> {
   @override
   Widget build(BuildContext context) {
     return Wrap(
-      spacing: 10.0,
-      runSpacing: 10.0,
-      alignment: WrapAlignment.start,
-      children: List.generate(
-        6, // Replace with your desired number of items
-        (index) => TraitsContainerModel(
-          isSelected: isSelectedList[index],
-          onTap: () {
-            setState(() {
-              isSelectedList[index] = !isSelectedList[index];
-            });
-          },
-        ),
-    )
-    );
+        spacing: 10.0,
+        runSpacing: 10.0,
+        alignment: WrapAlignment.start,
+        children: List.generate(
+          6, // Replace with your desired number of items
+          (index) => TraitsContainerModel(
+            isSelected: isSelectedList[index],
+            onTap: () {
+              setState(() {
+                isSelectedList[index] = !isSelectedList[index];
+              });
+            },
+          ),
+        ));
   }
 }
