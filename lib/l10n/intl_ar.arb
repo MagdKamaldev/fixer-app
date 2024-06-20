@@ -131,6 +131,8 @@
   "requestedservices":"الخدمات المطلوبة",
   "confirmrequest":"تأكيد الطلب",
   "cancelrequest":"إلغاء الطلب",
-  "availablecraftmen":"الحرفيين المتاحين"
+  "availablecraftmen":"الحرفيين المتاحين",
+   "myOrders":"طلباتي",
+    "orderDeatils":"تفاصيل الطلب"
 
 } 

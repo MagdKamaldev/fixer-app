@@ -112,6 +112,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "messageforgotpass": MessageLookupByLibrary.simpleMessage(
             "سنرسل رمز التحقق إلى هذا الرقم \n إذا كان يطابق حسابًا موجودًا"),
         "morning": MessageLookupByLibrary.simpleMessage("صباح الخير"),
+        "myOrders": MessageLookupByLibrary.simpleMessage("طلباتي"),
         "name": MessageLookupByLibrary.simpleMessage("الاسم"),
         "nameField": MessageLookupByLibrary.simpleMessage("ادخل اسمك"),
         "nationalid": MessageLookupByLibrary.simpleMessage("الرقم القومي"),
@@ -134,6 +135,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "onBoardingText3": MessageLookupByLibrary.simpleMessage(
             "قم بإجراء تحويلات خالية من \nالمتاعب داخل التطبيق لراحة البال."),
         "or": MessageLookupByLibrary.simpleMessage("أو"),
+        "orderDeatils": MessageLookupByLibrary.simpleMessage("تفاصيل الطلب"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "passwordLength": MessageLookupByLibrary.simpleMessage(
             "يجب أن تحتوي كلمة المرور على 8 أحرف على الأقل"),

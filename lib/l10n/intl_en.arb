@@ -130,5 +130,7 @@
   "requestedservices":"Requested Services",
   "confirmrequest":"Confirm Request",
   "cancelrequest":"Cancel Request",
-  "availablecraftmen":"Available Craftsmen"
+  "availablecraftmen":"Available Craftsmen",
+  "myOrders":"My Orders",
+  "orderDeatils":"Order Details"
 }

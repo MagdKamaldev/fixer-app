@@ -1369,6 +1369,26 @@ class S {
       args: [],
     );
   }
+
+  /// `My Orders`
+  String get myOrders {
+    return Intl.message(
+      'My Orders',
+      name: 'myOrders',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Order Details`
+  String get orderDeatils {
+    return Intl.message(
+      'Order Details',
+      name: 'orderDeatils',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -15,3 +15,15 @@ final class OrdersFailed extends OrdersState {
   final String message;
   OrdersFailed(this.message);
 }
+
+final class GetOrderServicesLoading extends OrdersState {}
+
+final class GetOrderServicesSuccess extends OrdersState {
+  final List<ServiceModel> services;
+  GetOrderServicesSuccess(this.services);
+}
+
+final class GetOrderServicesFailed extends OrdersState {
+  final String message;
+  GetOrderServicesFailed(this.message);
+}

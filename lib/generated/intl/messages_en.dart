@@ -116,6 +116,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "messageforgotpass": MessageLookupByLibrary.simpleMessage(
             "  We’ll send a verification code to this\nnumber if it matches an existing account"),
         "morning": MessageLookupByLibrary.simpleMessage("Good Morning"),
+        "myOrders": MessageLookupByLibrary.simpleMessage("My Orders"),
         "name": MessageLookupByLibrary.simpleMessage("Name"),
         "nameField": MessageLookupByLibrary.simpleMessage("Enter your Name"),
         "nationalid": MessageLookupByLibrary.simpleMessage("National ID"),
@@ -139,6 +140,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "onBoardingText3": MessageLookupByLibrary.simpleMessage(
             "Make hassle-free transcations \n within the app for peace of \n mind."),
         "or": MessageLookupByLibrary.simpleMessage("Or"),
+        "orderDeatils": MessageLookupByLibrary.simpleMessage("Order Details"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "passwordLength": MessageLookupByLibrary.simpleMessage(
             "Password must be at least 8 characters"),
