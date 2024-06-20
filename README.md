@@ -234,8 +234,32 @@ Then the craftmen is navigated to this screen to select which service does he wi
 
 ### 6.6.Inserting personal IDs photos screen
 
-Them the craftsman is then navigated to this screen to enter his personal ID photo and his profile picture photo through the camera or through the mobile files. 
+Then the craftsman is then navigated to this screen to enter his personal ID photo.
 
 | English | Arabic |
 | ------- | ------ |
-| <img src="assets/docs/craftsman_ids_en.jpg" height="500" width="250"> | <img src="assets/docs/craftsman_ids_en.jpg" height="500" width="250"> |
+| <img src="assets\docs\upload_id_en.jpg" height="500" width="250"> | <img src="assets\docs\upload_id_ar.jpg" height="500" width="250"> |
+
+### 6.7.Inserting Operating Locations
+
+Them the craftsman is then navigated to this screen to enter the locations he will operate in.
+
+| English | Arabic |
+| ------- | ------ |
+| <img src="assets\docs\set_locations_en.jpg" height="500" width="250"> | <img src="assets\docs\set_locations_ar.jpg" height="500" width="250"> |
+
+### 6.8.Inserting personal profile image
+
+Them the craftsman is then navigated to upload his profile image.
+
+| English | Arabic |
+| ------- | ------ |
+| <img src="assets\docs\upload_profile_en.jpg" height="500" width="250"> | <img src="assets\docs\upload_profile_ar.jpg" height="500" width="250"> |
+
+### 6.9.waiting screen
+
+Them the craftsman is then navigated to this untill an admin approves his application.
+
+| English | Arabic |
+| ------- | ------ |
+| <img src="assets\docs\waiting_en.jpg" height="500" width="250"> | <img src="assets\docs\waiting_ar.jpg" height="500" width="250"> |

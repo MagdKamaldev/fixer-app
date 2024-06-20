@@ -163,7 +163,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetpassword":
             MessageLookupByLibrary.simpleMessage("إعادة تعيين كلمة المرور"),
         "reviewingApp": MessageLookupByLibrary.simpleMessage(
-            "برجاء الانتظارو يتم مراجعة طلبك"),
+            "برجاء الانتظار يتم مراجعة طلبك"),
         "search": MessageLookupByLibrary.simpleMessage("بحث"),
         "selectArea": MessageLookupByLibrary.simpleMessage("ادخل منطقتك !"),
         "service": MessageLookupByLibrary.simpleMessage("خدمه"),

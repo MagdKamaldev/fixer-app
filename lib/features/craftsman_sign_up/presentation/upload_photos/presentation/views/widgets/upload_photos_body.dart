@@ -36,9 +36,12 @@ class UploadPhotosBody extends StatelessWidget {
                           width: 134.85.w, height: 91.h),
                     ),
                     verticalSpace(50),
-                    Text(
-                      S.of(context).uploadid,
-                      style: TextStyles.headings,
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                      child: Text(
+                        S.of(context).uploadid,
+                        style: TextStyles.headings,
+                      ),
                     ),
                     verticalSpace(50),
                     SizedBox(
