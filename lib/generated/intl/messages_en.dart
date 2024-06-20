@@ -52,6 +52,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "availablecraftmen":
             MessageLookupByLibrary.simpleMessage("Available Craftsmen"),
         "building": MessageLookupByLibrary.simpleMessage("Building name"),
+        "call": MessageLookupByLibrary.simpleMessage("Call"),
         "camera": MessageLookupByLibrary.simpleMessage("Camera"),
         "cancelrequest": MessageLookupByLibrary.simpleMessage("Cancel Request"),
         "change": MessageLookupByLibrary.simpleMessage("Change"),

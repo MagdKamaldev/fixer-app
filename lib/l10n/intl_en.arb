@@ -132,5 +132,6 @@
   "cancelrequest":"Cancel Request",
   "availablecraftmen":"Available Craftsmen",
   "myOrders":"My Orders",
-  "orderDeatils":"Order Details"
+  "orderDeatils":"Order Details",
+  "call":"Call"
 }

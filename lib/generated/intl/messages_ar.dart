@@ -51,6 +51,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "availablecraftmen":
             MessageLookupByLibrary.simpleMessage("الحرفيين المتاحين"),
         "building": MessageLookupByLibrary.simpleMessage("اسم المبنى"),
+        "call": MessageLookupByLibrary.simpleMessage("اتصل"),
         "camera": MessageLookupByLibrary.simpleMessage("الكاميرا"),
         "cancelrequest": MessageLookupByLibrary.simpleMessage("إلغاء الطلب"),
         "change": MessageLookupByLibrary.simpleMessage("تغيير"),

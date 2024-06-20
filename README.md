@@ -114,7 +114,82 @@ Then client enters his address details or the place he wishes to recieve the ser
 
 After completeing the sign up process,the cilent is then navigated to the home screen 
 
+| English | Arabic |
+| ------- | ------ |
+| <img src="assets/docs/HomeView_en.jpg" height="500" width="250"> | <img src="assets/docs/HomeView_arab.jpg" height="500" width="250"> |
 
+### 5.7.client request process 
+
+when teh client clicks on request now button, a pop up appears to choose between electric or plumbing category
+
+| English | Arabic |
+| ------- | ------ |
+| <img src="assets/docs/RequestNowPopUp_en.jpg" height="500" width="250"> | <img src="assets/docs/RequestNowPopUp_arab.jpg" height="500" width="250"> |
+
+then the depending on his choice he is then navigated to all services available in each category 
+
+in case of choosing electric:
+
+| English | Arabic |
+| ------- | ------ |
+| <img src="assets/docs/ServicesView_en.jpg" height="500" width="250"> | <img src="assets/docs/ServicesView_arab.jpg" height="500" width="250"> |
+
+in case of choosing plumbing: 
+
+
+then after selecting a service a pop up appears to confirm requesting the right service 
+
+| English | Arabic |
+| ------- | ------ |
+| <img src="assets/docs/ServicePopUp_en.jpg" height="500" width="250"> | <img src="assets/docs/ServicePopUp_arab.jpg" height="500" width="250"> |
+
+then he is then navigated to the a screen that lists the location , requested services and total price of request
+
+| English | Arabic |
+| ------- | ------ |
+| <img src="assets/docs/ConfirmServiceMap_en.jpg" height="500" width="250"> | <img src="assets/docs/ConfirmServiceMap_arab.jpg" height="500" width="250"> |
+
+if he clicks on the service than a list of all services requested will appear as bottom sheet
+
+| English | Arabic |
+| ------- | ------ |
+| <img src="assets/docs/RequestedServices_en.jpg" height="500" width="250"> | <img src="assets/docs/RequestedServices_arab.jpg" height="500" width="250"> |
+
+after confirming the request the client is then navigated to a screen showing all the available craftsmen in his area with their ratings , prices and number of services they have done before.
+
+| English | Arabic |
+| ------- | ------ |
+| <img src="assets/docs/RequestedServices_en.jpg" height="500" width="250"> | <img src="assets/docs/RequestedServices_arab.jpg" height="500" width="250"> |
+
+incase the service is not availabe in his area this message will appear
+
+| English | Arabic |
+| ------- | ------ |
+| <img src="assets/docs/Availablecraftmen_eng.jpg" height="500" width="250"> | <img src="assets/docs/AvailableCraftman_arab.jpg" height="500" width="250"> |
+
+then he have to click on "cancel request" to return to home screen 
+
+### 5.8 stores screen 
+
+the store icon in nav bar navigates to all available stores.
+
+| English | Arabic |
+| ------- | ------ |
+| <img src="assets/docs/AllStores_en.jpg" height="500" width="250"> | <img src="assets/docs/AllStores_arab.jpg" height="500" width="250"> |
+
+if the client clicks on any store then a screen displaying all items in that store appears
+
+| English | Arabic |
+| ------- | ------ |
+| <img src="assets/docs/StoresItems_en.jpg" height="500" width="250"> | <img src="assets/docs/StoreItems_arab .jpg" height="500" width="250"> |
+
+### 5.9 client profile 
+
+the profile icon in nav bar navigates to profile of client
+
+| English | Arabic |
+| ------- | ------ |
+| <img src="assets/docs/Profile_en.jpg" height="500" width="250"> | <img src="assets/docs/Profile_arab.jpg" height="500" width="250"> |
 
 ### 6.Craftman app journey
 ### 6.1.Craftsman phone number insert screen

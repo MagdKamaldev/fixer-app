@@ -5,6 +5,7 @@ import 'package:fixer/core/themes/colors.dart';
 import 'package:fixer/core/themes/text_styles.dart';
 import 'package:fixer/features/requests/data/models/order_carftsmen_model.dart';
 import 'package:fixer/generated/l10n.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -25,13 +26,13 @@ class _AvailableCraftmenCardState extends State<AvailableCraftmenCard> {
   Widget build(BuildContext context) {
     return Container(
       width: 380.w,
-      height: 120.h,
-      padding: const EdgeInsets.all(10),
-      margin: const EdgeInsets.symmetric(vertical: 10),
+      height: 135.h,
+      padding: const EdgeInsets.symmetric(horizontal: 8,vertical:9),
+      margin: const EdgeInsets.symmetric(vertical: 6),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
         border: Border.all(color: ColorManager.lightblue),
-        color: ColorManager.greywhite,
+        color: ColorManager.white,
         boxShadow: const [
           BoxShadow(
             color: ColorManager.babyblue,
@@ -43,29 +44,21 @@ class _AvailableCraftmenCardState extends State<AvailableCraftmenCard> {
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        crossAxisAlignment: CrossAxisAlignment.start,
+        // crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Column(
             children: [
               CircleAvatar(
                 backgroundImage: NetworkImage(widget.model.profilePic ??
                     "https://th.bing.com/th?id=OIP.TctatNGs7RN-Dfc3NZf91AAAAA&w=212&h=212&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"),
-                radius: 30,
-              ),
-              verticalSpace(15),
-              Text(
-                "${widget.model.fair} EGP",
-                style: TextStyles.bodybold,
+                radius: 25,
               ),
             ],
           ),
-          horizontalSpace(20),
           SizedBox(
-            width: 200.w,
+            width: 250.w,
             height: 110.h,
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.end,
-              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -76,20 +69,42 @@ class _AvailableCraftmenCardState extends State<AvailableCraftmenCard> {
                     ),
                     Row(
                       children: [
-                        const Icon(
+                        const Icon(Icons.money,color:Colors.green,size: 20,),
+                        horizontalSpace(5),
+                        Text("EGP ${widget.model.fair} ",style: TextStyles.body,),
+                      ],
+                    ),
+                    
+                  ],
+                ),
+                verticalSpace(6),
+                Row(
+                  children: [
+                    const Icon(
                           Icons.star,
                           color: Colors.yellow,
                           size: 20,
                         ),
-                        Text(
+                    horizontalSpace(2),
+                    Text(
                           widget.model.rating.toString(),
-                          style: TextStyles.small,
-                        )
-                      ],
+                          style: TextStyles.body,
+                        ),
+                    horizontalSpace(5),
+                    InkWell(
+                      onTap: () {
+                        
+                      },
+                      child: Text("(200 ${S.of(context).services})",style:TextStyles.small.copyWith(color: ColorManager.grey,
+                            decoration: TextDecoration.underline,
+                            decorationStyle:TextDecorationStyle.solid ,
+                            decorationColor: ColorManager.grey,
+                            // fontSize: 14
+                            ),),
                     )
-                  ],
-                ),
-                verticalSpace(15),
+                      ],
+                    ),
+                verticalSpace(5),    
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -98,12 +113,12 @@ class _AvailableCraftmenCardState extends State<AvailableCraftmenCard> {
                         makePhoneCall(widget.model.phone!, context);
                       },
                       color: ColorManager.primary,
-                      height: 30.h,
-                      minWidth: 85.w,
+                      height: 35.h,
+                      minWidth: 117.w,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10)),
                       child: Text(
-                        isCalled ? "confirm" : "call",
+                        isCalled ? S.of(context).confirm : S.of(context).call,
                         style:
                             TextStyles.body.copyWith(color: ColorManager.white),
                       ),
@@ -111,8 +126,8 @@ class _AvailableCraftmenCardState extends State<AvailableCraftmenCard> {
                     MaterialButton(
                       onPressed: () {},
                       color: ColorManager.white,
-                      height: 30.h,
-                      minWidth: 85.w,
+                      height: 35.h,
+                      minWidth: 117.w,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10)),
                       child: Text(

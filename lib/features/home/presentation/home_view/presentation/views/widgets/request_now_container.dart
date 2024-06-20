@@ -13,7 +13,7 @@ class RequestNowContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         width: 350.w,
-        height: 170.h,
+        height: 167.h,
         decoration: BoxDecoration(
             image: DecorationImage(
                 image:
@@ -31,7 +31,7 @@ class RequestNowContainer extends StatelessWidget {
               style: TextStyles.lightHeadings.copyWith(
                   color: ColorManager.white, fontWeight: FontWeight.w700),
             ),
-            verticalSpace(25),
+            verticalSpace(20),
             GestureDetector(
               onTap: () {
                 showDialog(

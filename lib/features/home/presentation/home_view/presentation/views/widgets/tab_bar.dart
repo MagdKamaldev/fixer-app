@@ -1,5 +1,4 @@
 import 'package:fixer/core/helpers/extensions.dart';
-import 'package:fixer/core/helpers/spacing.dart';
 import 'package:fixer/core/routing/routes.dart';
 import 'package:fixer/core/themes/colors.dart';
 import 'package:fixer/features/home/presentation/home_view/presentation/views/widgets/service_tab_view.dart';
@@ -26,7 +25,7 @@ class TabBarContainer extends StatelessWidget {
                 labelColor: ColorManager.primary,
                 unselectedLabelColor: ColorManager.grey,
                 indicatorColor: ColorManager.primary,
-                indicatorPadding: const EdgeInsets.only(bottom: 8),
+                indicatorPadding: const EdgeInsets.only(bottom: 9),
                 indicatorWeight: 1,
                 dividerHeight: 0,
                 indicatorSize: TabBarIndicatorSize.label,
@@ -50,7 +49,6 @@ class TabBarContainer extends StatelessWidget {
               ),
             ],
           ),
-          verticalSpace(3),
           const Flexible(
             child: TabBarView(
               children: [ServiceTab(), Storestab()],
