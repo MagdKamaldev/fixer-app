@@ -114,6 +114,8 @@ Then client enters his address details or the place he wishes to recieve the ser
 
 After completeing the sign up process,the cilent is then navigated to the home screen 
 
+
+
 ### 6.Craftman app journey
 ### 6.1.Craftsman phone number insert screen
 

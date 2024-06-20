@@ -48,8 +48,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "alreadyhaveaccount":
             MessageLookupByLibrary.simpleMessage(" لديك حساب بالفعل ؟"),
         "area": MessageLookupByLibrary.simpleMessage("منطقة"),
+        "availablecraftmen":
+            MessageLookupByLibrary.simpleMessage("الحرفيين المتاحين"),
         "building": MessageLookupByLibrary.simpleMessage("اسم المبنى"),
         "camera": MessageLookupByLibrary.simpleMessage("الكاميرا"),
+        "cancelrequest": MessageLookupByLibrary.simpleMessage("إلغاء الطلب"),
         "change": MessageLookupByLibrary.simpleMessage("تغيير"),
         "chooseyourfield":
             MessageLookupByLibrary.simpleMessage("اختر المجال الخاص بك"),
@@ -147,6 +150,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("إصلاحات السباكة السريعة."),
         "price": MessageLookupByLibrary.simpleMessage("سعر"),
         "remember": MessageLookupByLibrary.simpleMessage("تذكرني"),
+        "requestedservices":
+            MessageLookupByLibrary.simpleMessage("الخدمات المطلوبة"),
         "requestnow": MessageLookupByLibrary.simpleMessage("اطلب الآن"),
         "resendcodeCALL": MessageLookupByLibrary.simpleMessage(
             "إعادة إرسال الرمز عن طريق الاتصال"),

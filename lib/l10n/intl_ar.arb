@@ -128,6 +128,9 @@
   "Area":"منطقة",
   "price":"سعر",
   "location":"موقعك",
-  "confirmrequest":"تأكيد الطلب"
+  "requestedservices":"الخدمات المطلوبة",
+  "confirmrequest":"تأكيد الطلب",
+  "cancelrequest":"إلغاء الطلب",
+  "availablecraftmen":"الحرفيين المتاحين"
 
 } 

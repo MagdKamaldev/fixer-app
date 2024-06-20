@@ -49,8 +49,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "alreadyhaveaccount":
             MessageLookupByLibrary.simpleMessage(" Already have an account?"),
         "area": MessageLookupByLibrary.simpleMessage("Area"),
+        "availablecraftmen":
+            MessageLookupByLibrary.simpleMessage("Available Craftsmen"),
         "building": MessageLookupByLibrary.simpleMessage("Building name"),
         "camera": MessageLookupByLibrary.simpleMessage("Camera"),
+        "cancelrequest": MessageLookupByLibrary.simpleMessage("Cancel Request"),
         "change": MessageLookupByLibrary.simpleMessage("Change"),
         "chooseyourfield":
             MessageLookupByLibrary.simpleMessage("Choose your field"),
@@ -152,6 +155,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Swift plumbing fixes."),
         "price": MessageLookupByLibrary.simpleMessage("Price"),
         "remember": MessageLookupByLibrary.simpleMessage("Remember me"),
+        "requestedservices":
+            MessageLookupByLibrary.simpleMessage("Requested Services"),
         "requestnow": MessageLookupByLibrary.simpleMessage("Request Now"),
         "resendcodeCALL":
             MessageLookupByLibrary.simpleMessage("Resend code by Call"),

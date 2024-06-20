@@ -127,5 +127,8 @@
   "service":"Service",
   "price":"Price",
   "location":"Your Location",
-  "confirmrequest":"Confirm Request"
+  "requestedservices":"Requested Services",
+  "confirmrequest":"Confirm Request",
+  "cancelrequest":"Cancel Request",
+  "availablecraftmen":"Available Craftsmen"
 }
