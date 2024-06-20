@@ -27,7 +27,7 @@ class _AvailableCraftmenCardState extends State<AvailableCraftmenCard> {
     return Container(
       width: 380.w,
       height: 135.h,
-      padding: const EdgeInsets.symmetric(horizontal: 8,vertical:9),
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 9),
       margin: const EdgeInsets.symmetric(vertical: 6),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
@@ -69,42 +69,50 @@ class _AvailableCraftmenCardState extends State<AvailableCraftmenCard> {
                     ),
                     Row(
                       children: [
-                        const Icon(Icons.money,color:Colors.green,size: 20,),
+                        const Icon(
+                          Icons.money,
+                          color: Colors.green,
+                          size: 20,
+                        ),
                         horizontalSpace(5),
-                        Text("EGP ${widget.model.fair} ",style: TextStyles.body,),
+                        Text(
+                          "EGP ${widget.model.fair} ",
+                          style: TextStyles.body,
+                        ),
                       ],
                     ),
-                    
                   ],
                 ),
                 verticalSpace(6),
                 Row(
                   children: [
                     const Icon(
-                          Icons.star,
-                          color: Colors.yellow,
-                          size: 20,
-                        ),
+                      Icons.star,
+                      color: Colors.yellow,
+                      size: 20,
+                    ),
                     horizontalSpace(2),
                     Text(
-                          widget.model.rating.toString(),
-                          style: TextStyles.body,
-                        ),
+                      widget.model.rating.toString(),
+                      style: TextStyles.body,
+                    ),
                     horizontalSpace(5),
                     InkWell(
-                      onTap: () {
-                        
-                      },
-                      child: Text("(200 ${S.of(context).services})",style:TextStyles.small.copyWith(color: ColorManager.grey,
-                            decoration: TextDecoration.underline,
-                            decorationStyle:TextDecorationStyle.solid ,
-                            decorationColor: ColorManager.grey,
-                            // fontSize: 14
-                            ),),
+                      onTap: () {},
+                      child: Text(
+                        "(200 ${S.of(context).services})",
+                        style: TextStyles.small.copyWith(
+                          color: ColorManager.grey,
+                          decoration: TextDecoration.underline,
+                          decorationStyle: TextDecorationStyle.solid,
+                          decorationColor: ColorManager.grey,
+                          // fontSize: 14
+                        ),
+                      ),
                     )
-                      ],
-                    ),
-                verticalSpace(5),    
+                  ],
+                ),
+                verticalSpace(5),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
