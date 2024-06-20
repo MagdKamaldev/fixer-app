@@ -1,13 +1,24 @@
+// ignore_for_file: use_build_context_synchronously, must_be_immutable
 import 'package:fixer/core/helpers/spacing.dart';
+import 'package:fixer/core/networks/errors/error_snackbar.dart';
 import 'package:fixer/core/themes/colors.dart';
 import 'package:fixer/core/themes/text_styles.dart';
 import 'package:fixer/features/requests/data/models/order_carftsmen_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:url_launcher/url_launcher.dart';
 
-class AvailableCraftmenCard extends StatelessWidget {
+class AvailableCraftmenCard extends StatefulWidget {
   final OrderCarftsmenModel model;
+
   const AvailableCraftmenCard({super.key, required this.model});
+
+  @override
+  State<AvailableCraftmenCard> createState() => _AvailableCraftmenCardState();
+}
+
+class _AvailableCraftmenCardState extends State<AvailableCraftmenCard> {
+  bool isCalled = false;
 
   @override
   Widget build(BuildContext context) {
@@ -36,13 +47,13 @@ class AvailableCraftmenCard extends StatelessWidget {
           Column(
             children: [
               CircleAvatar(
-                backgroundImage: NetworkImage(model.profilePic ??
+                backgroundImage: NetworkImage(widget.model.profilePic ??
                     "https://th.bing.com/th?id=OIP.TctatNGs7RN-Dfc3NZf91AAAAA&w=212&h=212&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"),
                 radius: 30,
               ),
               verticalSpace(15),
               Text(
-                "${model.fair} EGP",
+                "${widget.model.fair} EGP",
                 style: TextStyles.bodybold,
               ),
             ],
@@ -59,7 +70,7 @@ class AvailableCraftmenCard extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      model.name!,
+                      widget.model.name!,
                       style: TextStyles.body,
                     ),
                     Row(
@@ -70,7 +81,7 @@ class AvailableCraftmenCard extends StatelessWidget {
                           size: 20,
                         ),
                         Text(
-                          model.rating.toString(),
+                          widget.model.rating.toString(),
                           style: TextStyles.small,
                         )
                       ],
@@ -82,14 +93,16 @@ class AvailableCraftmenCard extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     MaterialButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        makePhoneCall(widget.model.phone!, context);
+                      },
                       color: ColorManager.primary,
                       height: 30.h,
                       minWidth: 85.w,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10)),
                       child: Text(
-                        "confirm",
+                        isCalled ? "confirm" : "call",
                         style:
                             TextStyles.body.copyWith(color: ColorManager.white),
                       ),
@@ -115,5 +128,20 @@ class AvailableCraftmenCard extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  Future<void> makePhoneCall(String phoneNumber, BuildContext context) async {
+    final Uri launchUri = Uri(
+      scheme: 'tel',
+      path: phoneNumber,
+    );
+    if (await canLaunch(launchUri.toString())) {
+      await launch(launchUri.toString());
+      setState(() {
+        isCalled = true;
+      });
+    } else {
+      showErrorSnackbar(context, "Coludn't Make call");
+    }
   }
 }
