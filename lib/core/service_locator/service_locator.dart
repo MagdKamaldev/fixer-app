@@ -2,6 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:fixer/core/networks/api_services/api_services.dart';
 import 'package:fixer/features/complains/data/repos/complains_repo_impl.dart';
 import 'package:fixer/features/craftsman_sign_up/data/repos/craftsman_signup_repo_implementation.dart';
+import 'package:fixer/features/craftsman_wallet/data/wallet_repo_impl.dart';
 import 'package:fixer/features/login/data/repos/login_repository_implementation.dart';
 import 'package:fixer/features/my%20orders/data/repos/orders_repo_impl.dart';
 import 'package:fixer/features/profile/data/repos/profile_repo_impl.dart';
@@ -60,6 +61,11 @@ void setupLocator() {
   );
   getIt.registerLazySingleton<OrdersRepoImpl>(
     () => OrdersRepoImpl(
+      apiServices: getIt<ApiServices>(),
+    ),
+  );
+  getIt.registerLazySingleton<WalletRepoImpl>(
+    () => WalletRepoImpl(
       apiServices: getIt<ApiServices>(),
     ),
   );
