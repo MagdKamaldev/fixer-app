@@ -93,7 +93,7 @@ class ConfirmRequestContainer extends StatelessWidget {
               description: "${selected.first.price} LE",
             ),
             Padding(
-              padding: locale=="en"?EdgeInsets.only(left: 50.0.w):EdgeInsets.only(right: 50.0.w),
+              padding: locale=="en"?EdgeInsets.only(left: 60.0.w):EdgeInsets.only(right: 60.0.w),
               child: Text(S.of(context).pricesmayvary,style: TextStyles.extrasmall),
             )
           ],
