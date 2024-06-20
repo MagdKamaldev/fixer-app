@@ -126,6 +126,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "nextbutton": MessageLookupByLibrary.simpleMessage("التالي"),
         "noComplains": MessageLookupByLibrary.simpleMessage("لا توجد شكاوى !"),
         "noItems": MessageLookupByLibrary.simpleMessage("لا توجد عناصر"),
+        "noRequests": MessageLookupByLibrary.simpleMessage("لا توجد طلبات"),
         "noaccount": MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
         "nocoderecieved": MessageLookupByLibrary.simpleMessage(
             "إذا لم تتلقى الرمز عن طريق الرسائل القصيرة، يرجى الطلب"),
@@ -188,6 +189,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "street": MessageLookupByLibrary.simpleMessage("الشارع"),
         "termsandpolicy":
             MessageLookupByLibrary.simpleMessage("الشروط والسياسات"),
+        "totalBalance": MessageLookupByLibrary.simpleMessage("الرصيد الإجمالي"),
         "upload": MessageLookupByLibrary.simpleMessage("تحميل"),
         "uploadBack": MessageLookupByLibrary.simpleMessage("الخلف"),
         "uploadFront": MessageLookupByLibrary.simpleMessage("الامام"),
@@ -202,6 +204,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("قم بتحميل صورة ملفك الشخصي"),
         "userName": MessageLookupByLibrary.simpleMessage("اسم المستخدم"),
         "viewAll": MessageLookupByLibrary.simpleMessage("عرض الكل"),
+        "wallet": MessageLookupByLibrary.simpleMessage("المحفظة"),
         "welcome": MessageLookupByLibrary.simpleMessage("مرحباً"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("مرحباً بك مجدداً"),
         "whichservicedoyouliketorequest": MessageLookupByLibrary.simpleMessage(

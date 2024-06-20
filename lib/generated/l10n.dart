@@ -1399,6 +1399,36 @@ class S {
       args: [],
     );
   }
+
+  /// `No Requests Yet !`
+  String get noRequests {
+    return Intl.message(
+      'No Requests Yet !',
+      name: 'noRequests',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Wallet`
+  String get wallet {
+    return Intl.message(
+      'Wallet',
+      name: 'wallet',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Total Balance`
+  String get totalBalance {
+    return Intl.message(
+      'Total Balance',
+      name: 'totalBalance',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

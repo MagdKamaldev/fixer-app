@@ -134,7 +134,10 @@
   "availablecraftmen":"الحرفيين المتاحين",
    "myOrders":"طلباتي",
     "orderDeatils":"تفاصيل الطلب",
-  "call":"اتصل"
+  "call":"اتصل",
+   "noRequests":"لا توجد طلبات",
+   "wallet":"المحفظة",
+   "totalBalance":"الرصيد الإجمالي"
 
 
 } 

@@ -133,5 +133,8 @@
   "availablecraftmen":"Available Craftsmen",
   "myOrders":"My Orders",
   "orderDeatils":"Order Details",
-  "call":"Call"
+  "call":"Call",
+  "noRequests":"No Requests Yet !",
+  "wallet":"Wallet",
+  "totalBalance":"Total Balance"
 }

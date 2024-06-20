@@ -130,6 +130,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "noComplains":
             MessageLookupByLibrary.simpleMessage("No Complain Messges Yet !"),
         "noItems": MessageLookupByLibrary.simpleMessage("No items Yet !"),
+        "noRequests": MessageLookupByLibrary.simpleMessage("No Requests Yet !"),
         "noaccount":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
         "nocoderecieved": MessageLookupByLibrary.simpleMessage(
@@ -195,6 +196,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "street": MessageLookupByLibrary.simpleMessage("Street"),
         "termsandpolicy":
             MessageLookupByLibrary.simpleMessage(" terms & policy"),
+        "totalBalance": MessageLookupByLibrary.simpleMessage("Total Balance"),
         "upload": MessageLookupByLibrary.simpleMessage("Upload"),
         "uploadBack": MessageLookupByLibrary.simpleMessage("Back"),
         "uploadFront": MessageLookupByLibrary.simpleMessage("Front"),
@@ -208,6 +210,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Upload your Profile photo"),
         "userName": MessageLookupByLibrary.simpleMessage("Username"),
         "viewAll": MessageLookupByLibrary.simpleMessage("View All"),
+        "wallet": MessageLookupByLibrary.simpleMessage("Wallet"),
         "welcome": MessageLookupByLibrary.simpleMessage("welcome"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("Welcome Back !"),
         "whichservicedoyouliketorequest": MessageLookupByLibrary.simpleMessage(
