@@ -15,9 +15,9 @@ class HomeBody extends StatelessWidget {
     return Column(
       children: [
         const WelcomeContainer(),
-        verticalSpace(3),
+        // verticalSpace(3),
         Padding(
-          padding: EdgeInsets.only(top: 15.h, left: 15.w, right: 15.w),
+          padding: EdgeInsets.only(top: 10.h, left: 15.w, right: 15.w),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -25,7 +25,7 @@ class HomeBody extends StatelessWidget {
                 S.of(context).Requestservice,
                 style: TextStyles.bodybold,
               ),
-              verticalSpace(10),
+              verticalSpace(8),
               const RequestNowContainer(),
               verticalSpace(4),
               SizedBox(

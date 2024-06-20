@@ -3,6 +3,7 @@ import 'package:fixer/core/helpers/spacing.dart';
 import 'package:fixer/core/routing/routes.dart';
 import 'package:fixer/core/themes/colors.dart';
 import 'package:fixer/core/themes/text_styles.dart';
+import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -51,7 +52,7 @@ class CancelRequestBottomSheet extends StatelessWidget {
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
             child: Text(
-              "Cancel Request",
+              S.of(context).cancelrequest,
               style: TextStyles.body.copyWith(color: ColorManager.white),
             ),
           ),

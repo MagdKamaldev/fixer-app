@@ -1330,11 +1330,41 @@ class S {
     );
   }
 
+  /// `Requested Services`
+  String get requestedservices {
+    return Intl.message(
+      'Requested Services',
+      name: 'requestedservices',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Confirm Request`
   String get confirmrequest {
     return Intl.message(
       'Confirm Request',
       name: 'confirmrequest',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cancel Request`
+  String get cancelrequest {
+    return Intl.message(
+      'Cancel Request',
+      name: 'cancelrequest',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Available Craftsmen`
+  String get availablecraftmen {
+    return Intl.message(
+      'Available Craftsmen',
+      name: 'availablecraftmen',
       desc: '',
       args: [],
     );

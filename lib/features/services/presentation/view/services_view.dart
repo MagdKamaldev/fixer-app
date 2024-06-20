@@ -1,9 +1,11 @@
+import 'package:fixer/core/constants/constants.dart';
 import 'package:fixer/core/service_locator/service_locator.dart';
 import 'package:fixer/core/themes/text_styles.dart';
 import 'package:fixer/features/requests/manager/request%20cubit/request_cubit.dart';
 import 'package:fixer/features/services/data/reepos/services_repo_impl.dart';
 import 'package:fixer/features/services/manager/cubit/services_cubit.dart';
 import 'package:fixer/features/services/presentation/view/widgets/services_body.dart';
+import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:location/location.dart';
@@ -78,7 +80,7 @@ class _ServicesViewState extends State<ServicesView> {
       child: Scaffold(
           appBar: AppBar(
             title: Text(
-              " ${widget.category} services",
+              locale=="en"?"${widget.category} ${S.of(context).services} ":" ${S.of(context).services} ${widget.category}" ,
               style: TextStyles.subHeadingsBold,
             ),
             centerTitle: true,

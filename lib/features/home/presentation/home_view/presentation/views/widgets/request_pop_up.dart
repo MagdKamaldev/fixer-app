@@ -53,9 +53,9 @@ class RequestPopUp extends StatelessWidget {
                     onTap: () {
                       navigateTo(
                           context,
-                          const ServicesView(
+                          ServicesView(
                             id: 14,
-                            category: "Plumbing",
+                            category: S.of(context).plumbing,
                           ));
                     },
                     child: const ServicesContainerModel(
@@ -65,9 +65,9 @@ class RequestPopUp extends StatelessWidget {
                     onTap: () {
                       navigateTo(
                           context,
-                          const ServicesView(
+                          ServicesView(
                             id: 16,
-                            category: "Electrical",
+                            category:S.of(context).electric,
                           ));
                     },
                     child: const ServicesContainerModel(
