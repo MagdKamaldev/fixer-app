@@ -1,31 +1,27 @@
 import 'package:fixer/core/themes/colors.dart';
 import 'package:fixer/core/themes/text_styles.dart';
+import 'package:fixer/features/rating/presentation/views/widgets/extanded_rating_bottom_sheet.dart';
 import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SubmitBotton extends StatefulWidget {
-  const SubmitBotton({super.key});
+  final Function() onPressed;
+  const SubmitBotton({super.key, required this.onPressed});
 
   @override
   State<SubmitBotton> createState() => _SubmitBottonState();
 }
 
 class _SubmitBottonState extends State<SubmitBotton> {
-  Color _buttonColor = ColorManager.darkgrey; // Initial button color
-
-  void _changeColor() {
-    setState(() {
-      _buttonColor =
-          ColorManager.primary; // Change button color to green when pressed
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
-      onPressed: _changeColor,
-      color: _buttonColor,
+      onPressed: () {
+        // Trigger form validation
+        widget.onPressed();
+      },
+      color: ColorManager.primary,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
       padding: const EdgeInsets.all(10),
       minWidth: 119.w,

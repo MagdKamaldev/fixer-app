@@ -11,7 +11,8 @@ import 'package:lottie/lottie.dart';
 
 class EndingRequest extends StatefulWidget {
   final OrderCarftsmenModel model;
-  const EndingRequest({super.key, required this.model});
+  final int orderId;
+  const EndingRequest({super.key, required this.model, required this.orderId});
 
   @override
   State<EndingRequest> createState() => _EndingRequestState();
@@ -31,6 +32,7 @@ class _EndingRequestState extends State<EndingRequest> {
               height: MediaQuery.of(context).size.height * 0.5,
               child: Center(
                   child: ExpandedContent(
+                orderId: widget.orderId,
                 image: widget.model.profilePic,
               )),
             );

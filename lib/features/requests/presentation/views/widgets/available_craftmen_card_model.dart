@@ -19,7 +19,8 @@ import 'package:url_launcher/url_launcher.dart';
 class AvailableCraftmenCard extends StatefulWidget {
   final OrderCarftsmenModel model;
   final int orderId;
-  const AvailableCraftmenCard({super.key, required this.model, required this.orderId});
+  const AvailableCraftmenCard(
+      {super.key, required this.model, required this.orderId});
 
   @override
   State<AvailableCraftmenCard> createState() => _AvailableCraftmenCardState();
@@ -138,9 +139,11 @@ class _AvailableCraftmenCardState extends State<AvailableCraftmenCard> {
                               onPressed: () {
                                 isCalled
                                     ? RequestCubit.get(context).selectCraftsman(
-                                        widget.orderId,widget.model.id!,
+                                        widget.orderId,
+                                        widget.model.id!,
                                         context,
                                         EndingRequest(
+                                          orderId: widget.orderId,
                                           model: widget.model,
                                         ))
                                     : makePhoneCall(

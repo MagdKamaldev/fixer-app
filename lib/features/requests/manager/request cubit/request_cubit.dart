@@ -1,10 +1,10 @@
 import 'package:fixer/core/routing/app_router.dart';
+import 'package:fixer/features/payment/presentation/payment_view.dart';
 import 'package:fixer/features/requests/data/models/order_carftsmen_model.dart';
 import 'package:fixer/features/requests/data/models/review_model.dart';
 import 'package:fixer/features/requests/data/repos/request_repo_impl.dart';
 import 'package:fixer/features/requests/presentation/views/widgets/available_craftmen.dart';
 import 'package:fixer/features/requests/presentation/views/widgets/cancel_request_bottom_sheet.dart';
-import 'package:fixer/features/requests/presentation/views/widgets/ending_request.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:geocoding/geocoding.dart';
@@ -94,8 +94,22 @@ class RequestCubit extends Cubit<RequestState> {
     result.fold((l) {
       emit(SelectCraftsmanFailed(l.message));
     }, (r) {
+      print(orderId);
       navigateTo(context, widget);
       emit(SelectCraftsmanSuccess(r));
+    });
+  }
+
+  void endRequest(
+      int orderId, int rate, String feedBack, BuildContext context) async {
+    emit(EndRequestLoading());
+
+    final result = await repo.endRequest(orderId, rate, feedBack);
+    result.fold((l) {
+      emit(EndRequestFailed(l.message));
+    }, (r) {
+      navigateTo(context, PaymentView());
+      emit(EndRequestSuccess(r));
     });
   }
 }

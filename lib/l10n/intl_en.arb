@@ -152,6 +152,11 @@
    "poor":"Poor Performance",
    "fair":"Fair Quality",
    "good":"Good Craftsmanship",
-   "amazing":"Excellent Workmanship"
+   "amazing":"Excellent Workmanship",
+   "clientName":"Client Name",
+   "craftsmanName":"Craftsman Name",
+   "requestStatus":"Request Status",
+   "orderId":"Order ID",
+   "pay":"Pay"
 
 }

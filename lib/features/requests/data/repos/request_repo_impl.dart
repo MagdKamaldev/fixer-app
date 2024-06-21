@@ -82,26 +82,33 @@ class RequestRepoImpl implements RequestRepo {
   }
 
   @override
-  Future<Either<Failure, String>> endRequest(int requestId) {
-    // TODO: implement endRequest
-    throw UnimplementedError();
+  Future<Either<Failure, String>> endRequest(
+      int requestId, int rate, String feedBack) async {
+    try {
+      final response = await apiServices.post(
+          endPoint: "CloseRequest/$requestId",
+          data: {"rate": rate, "feedback": feedBack});
+      return Right(response["Message"]);
+    } on ServerFailure catch (e) {
+      return Left(ServerFailure(e.message));
+    } catch (e) {
+      return Left(ServerFailure(e.toString()));
+    }
   }
 
   @override
   Future<Either<Failure, String>> selectCraftsman(
       int requestId, int craftsmanId) async {
-    //  try {
-    final response = await apiServices
-        .post(endPoint: "SelectCraftsman/$requestId/$craftsmanId", data: {});
-    print(response);
-    return Right(response["Message"]);
-
-    // } catch (e) {
-    //   if (e is ServerFailure) {
-    //     return Left(ServerFailure(e.message));
-    //   } else {
-    //     return Left(ServerFailure(e.toString()));
-    //   }
-    // }
+    try {
+      final response = await apiServices
+          .post(endPoint: "SelectCraftsman/$requestId/$craftsmanId", data: {});
+      return Right(response["Message"]);
+    } catch (e) {
+      if (e is ServerFailure) {
+        return Left(ServerFailure(e.message));
+      } else {
+        return Left(ServerFailure(e.toString()));
+      }
+    }
   }
 }

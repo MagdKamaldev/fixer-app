@@ -61,6 +61,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("اختر المجال الخاص بك"),
         "city": MessageLookupByLibrary.simpleMessage("المدينة"),
         "cityfield": MessageLookupByLibrary.simpleMessage("ادخل مدينتك"),
+        "clientName": MessageLookupByLibrary.simpleMessage("اسم العميل"),
         "complainMessage": MessageLookupByLibrary.simpleMessage("رسالة الشكوى"),
         "complains": MessageLookupByLibrary.simpleMessage("الشكاوى"),
         "completeCode": MessageLookupByLibrary.simpleMessage(
@@ -71,6 +72,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "contactMail":
             MessageLookupByLibrary.simpleMessage("البريد الإلكتروني للتواصل"),
         "continuee": MessageLookupByLibrary.simpleMessage("استمرار"),
+        "craftsmanName": MessageLookupByLibrary.simpleMessage("اسم الحرفي"),
         "district": MessageLookupByLibrary.simpleMessage("الحي"),
         "doneField":
             MessageLookupByLibrary.simpleMessage("تم تخطي هذا بالفعل !"),
@@ -147,6 +149,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "ongoing": MessageLookupByLibrary.simpleMessage("الطلب جاري حاليا !"),
         "or": MessageLookupByLibrary.simpleMessage("أو"),
         "orderDeatils": MessageLookupByLibrary.simpleMessage("تفاصيل الطلب"),
+        "orderId": MessageLookupByLibrary.simpleMessage("رقم الطلب"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "passwordLength": MessageLookupByLibrary.simpleMessage(
             "يجب أن تحتوي كلمة المرور على 8 أحرف على الأقل"),
@@ -154,6 +157,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("أدخل كلمة المرور"),
         "passwordinstructions": MessageLookupByLibrary.simpleMessage(
             "ويجب أن تحتوي على اثنين على الأقل من: أرقام أو أحرف \nأو رموز"),
+        "pay": MessageLookupByLibrary.simpleMessage("دفع"),
         "payment": MessageLookupByLibrary.simpleMessage("الدفع"),
         "performance": MessageLookupByLibrary.simpleMessage("أداء"),
         "phone": MessageLookupByLibrary.simpleMessage("رقم التليفون"),
@@ -168,6 +172,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "pricesmayvary": MessageLookupByLibrary.simpleMessage(
             "(قد تختلف الأسعار حسب أسعار الحرفيين)"),
         "remember": MessageLookupByLibrary.simpleMessage("تذكرني"),
+        "requestStatus": MessageLookupByLibrary.simpleMessage("حالة الطلب"),
         "requestdetails": MessageLookupByLibrary.simpleMessage("تفاصيل الطلب"),
         "requestedservices":
             MessageLookupByLibrary.simpleMessage("الخدمات المطلوبة"),

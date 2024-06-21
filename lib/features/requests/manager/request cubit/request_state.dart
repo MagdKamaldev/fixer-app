@@ -59,3 +59,17 @@ final class SelectCraftsmanFailed extends RequestState {
 
   SelectCraftsmanFailed(this.message);
 }
+
+final class EndRequestLoading extends RequestState {}
+
+final class EndRequestSuccess extends RequestState {
+  final String message;
+
+  EndRequestSuccess(this.message);
+}
+
+final class EndRequestFailed extends RequestState {
+  final String message;
+
+  EndRequestFailed(this.message);
+}

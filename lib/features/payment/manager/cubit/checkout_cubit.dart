@@ -1,4 +1,4 @@
-import 'package:fixer/features/payment/data/models/payment_intent_input_model.dart';
+import 'package:fixer/features/payment/data/models/payment_intent_model/payment_intent_input_model.dart';
 import 'package:fixer/features/payment/data/repos/checkout_repo_impl.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 part 'checkout_state.dart';

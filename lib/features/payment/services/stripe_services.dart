@@ -2,7 +2,7 @@
 import 'package:dio/dio.dart';
 import 'package:fixer/core/keys/api_keys.dart';
 import 'package:fixer/core/networks/api_services/api_services.dart';
-import 'package:fixer/features/payment/data/models/payment_intent_input_model.dart';
+import 'package:fixer/features/payment/data/models/payment_intent_model/payment_intent_input_model.dart';
 import 'package:fixer/features/payment/data/models/payment_intent_model/payment_intent_model.dart';
 import 'package:flutter_stripe/flutter_stripe.dart';
 

@@ -63,6 +63,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Choose your field"),
         "city": MessageLookupByLibrary.simpleMessage("city"),
         "cityfield": MessageLookupByLibrary.simpleMessage("Enter your city"),
+        "clientName": MessageLookupByLibrary.simpleMessage("Client Name"),
         "complainMessage":
             MessageLookupByLibrary.simpleMessage("Complain Message"),
         "complains": MessageLookupByLibrary.simpleMessage("Complains"),
@@ -75,6 +76,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Confirm Request"),
         "contactMail": MessageLookupByLibrary.simpleMessage("Contact Mail"),
         "continuee": MessageLookupByLibrary.simpleMessage("Continue"),
+        "craftsmanName": MessageLookupByLibrary.simpleMessage("Craftsman Name"),
         "district": MessageLookupByLibrary.simpleMessage("District"),
         "doneField": MessageLookupByLibrary.simpleMessage(
             "This field already is Done !"),
@@ -153,6 +155,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "ongoing": MessageLookupByLibrary.simpleMessage("Request is ongoing !"),
         "or": MessageLookupByLibrary.simpleMessage("Or"),
         "orderDeatils": MessageLookupByLibrary.simpleMessage("Order Details"),
+        "orderId": MessageLookupByLibrary.simpleMessage("Order ID"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "passwordLength": MessageLookupByLibrary.simpleMessage(
             "Password must be at least 8 characters"),
@@ -160,6 +163,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Enter your password"),
         "passwordinstructions": MessageLookupByLibrary.simpleMessage(
             "It must contain at least two of:numbers,letters,or symbols"),
+        "pay": MessageLookupByLibrary.simpleMessage("Pay"),
         "payment": MessageLookupByLibrary.simpleMessage("Payment"),
         "performance": MessageLookupByLibrary.simpleMessage("performance"),
         "phone": MessageLookupByLibrary.simpleMessage("Phone number"),
@@ -174,6 +178,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "pricesmayvary": MessageLookupByLibrary.simpleMessage(
             "(Prices may vary depending on craftsmen rates)"),
         "remember": MessageLookupByLibrary.simpleMessage("Remember me"),
+        "requestStatus": MessageLookupByLibrary.simpleMessage("Request Status"),
         "requestdetails":
             MessageLookupByLibrary.simpleMessage("Request Details"),
         "requestedservices":

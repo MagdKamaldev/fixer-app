@@ -18,7 +18,13 @@ class CommentContainer extends StatelessWidget {
       ),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 12.0),
-        child: TextField(
+        child: TextFormField(
+          validator: (value) {
+            if (value == null || value.isEmpty) {
+              return "Please enter a comment";
+            }
+            return null;
+          },
           decoration: InputDecoration(
             hintText: S.of(context).leavecomment,
             hintStyle: TextStyles.body,
