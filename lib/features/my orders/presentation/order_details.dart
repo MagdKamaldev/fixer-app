@@ -2,7 +2,7 @@ import 'package:fixer/core/helpers/spacing.dart';
 import 'package:fixer/core/service_locator/service_locator.dart';
 import 'package:fixer/features/my%20orders/data/repos/orders_repo_impl.dart';
 import 'package:fixer/features/my%20orders/manager/cubit/orders_cubit.dart';
-import 'package:fixer/features/my%20orders/presentation/order_item.dart';
+import 'package:fixer/features/my%20orders/presentation/order_details_model.dart';
 import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -39,13 +39,12 @@ class OrderDetails extends StatelessWidget {
                   separatorBuilder: (context, index) => verticalSpace(12),
                   itemCount: cubit.services.length,
                   itemBuilder: (context, index) {
-                    return OrderContainerModel(
-                      text: cubit.services[index].name == null
+                    return OrderDetailsModel(
+                      serviceName:cubit.services[index].name == null
                           ? "Unknown"
                           : cubit.services[index].name.toString(),
-                      description: cubit.services[index].price.toString(),
-                      backgroundpath: "assets/images/stores_background.jpg",
-                    );
+                      price: cubit.services[index].price.toString(),
+                      ) ;
                   },
                 ),
               ),
@@ -56,3 +55,11 @@ class OrderDetails extends StatelessWidget {
     );
   }
 }
+
+// OrderContainerModel(
+//                       text: cubit.services[index].name == null
+//                           ? "Unknown"
+//                           : cubit.services[index].name.toString(),
+//                       description: cubit.services[index].price.toString(),
+//                       backgroundpath: "assets/images/stores_background.jpg",
+//                     )

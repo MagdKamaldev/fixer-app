@@ -2,7 +2,6 @@ import 'package:fixer/core/themes/text_styles.dart';
 import 'package:fixer/core/widgets/buttons/default_button.dart';
 import 'package:fixer/features/payment/data/models/payment_intent_model/payment_intent_input_model.dart';
 import 'package:fixer/features/payment/data/models/payment_models/order_sumary_model/order_sumary_model.dart';
-import 'package:fixer/features/payment/data/models/payment_models/payment_model.dart';
 import 'package:fixer/features/payment/data/repos/checkout_repo_impl.dart';
 import 'package:fixer/features/payment/manager/cubit/checkout_cubit.dart';
 import 'package:fixer/features/requests/presentation/views/widgets/price_details_container.dart';

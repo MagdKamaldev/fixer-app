@@ -4,11 +4,9 @@ import 'package:fixer/core/helpers/spacing.dart';
 import 'package:fixer/core/themes/colors.dart';
 import 'package:fixer/core/themes/text_styles.dart';
 import 'package:fixer/features/payment/data/models/payment_models/order_sumary_model/order_sumary_model.dart';
-import 'package:fixer/features/payment/data/models/payment_models/payment_model.dart';
 import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Pricedetails extends StatelessWidget {
   final OrderSumaryModel model;
@@ -82,8 +80,8 @@ class Pricedetails extends StatelessWidget {
 
   Widget _buildServiceRowContainer(String serviceName, String price) {
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 12, horizontal: 16),
-      margin: EdgeInsets.symmetric(vertical: 6),
+      padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
+      margin: const EdgeInsets.symmetric(vertical: 6),
       decoration: BoxDecoration(
         color: ColorManager.grey,
         borderRadius: BorderRadius.circular(10),

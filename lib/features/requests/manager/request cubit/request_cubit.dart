@@ -108,7 +108,7 @@ class RequestCubit extends Cubit<RequestState> {
     result.fold((l) {
       emit(EndRequestFailed(l.message));
     }, (r) {
-      navigateTo(context, PaymentView());
+      navigateTo(context, const PaymentView());
       emit(EndRequestSuccess(r));
     });
   }

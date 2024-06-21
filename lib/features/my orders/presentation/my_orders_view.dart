@@ -10,8 +10,6 @@ import 'package:fixer/features/my%20orders/presentation/order_item.dart';
 import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:lottie/lottie.dart';
 
 class MyOrders extends StatelessWidget {
   const MyOrders({super.key});
@@ -35,7 +33,7 @@ class MyOrders extends StatelessWidget {
                   children: [
                     Text(
                       S.of(context).myOrders,
-                      style: TextStyles.headings,
+                      style: TextStyles.subHeadingsBold,
                     ),
                     verticalSpace(20),
                     Expanded(
@@ -50,7 +48,7 @@ class MyOrders extends StatelessWidget {
                                   OrderDetails(
                                       orderid: cubit.orders[index].orderId!));
                             },
-                            child: OrderContainerModel(
+                            child:OrderContainerModel(
                               text: cubit.orders[index].total == null
                                   ? "Unknown"
                                   : cubit.orders[index].total.toString(),
@@ -59,7 +57,7 @@ class MyOrders extends StatelessWidget {
                                   : "Ongoing",
                               backgroundpath:
                                   "assets/images/stores_background.jpg",
-                            ),
+                            ) 
                           );
                         },
                       ),
@@ -99,3 +97,17 @@ class MyOrders extends StatelessWidget {
     );
   }
 }
+
+
+// OrderDetailsModel(
+//                               orderStatus:cubit.orders[index].done == true
+//                                   ? "Done"
+//                                   : "Ongoing", 
+//                               text: cubit.orders[index].total == null
+//                                   ? "Unknown"
+//                                   : cubit.orders[index].total.toString(),
+//                               serviceName: cubit.services[index].name == null
+//                           ? "Unknown"
+//                           : cubit.services[index].name.toString(), 
+//                               price: cubit.services[index].price.toString(),)
+//                           );
