@@ -10,6 +10,8 @@ import 'package:fixer/features/my%20orders/presentation/order_item.dart';
 import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:lottie/lottie.dart';
 
 class MyOrders extends StatelessWidget {
   const MyOrders({super.key});
@@ -22,75 +24,83 @@ class MyOrders extends StatelessWidget {
       child: BlocBuilder<OrdersCubit, OrdersState>(
         builder: (context, state) {
           OrdersCubit cubit = OrdersCubit.get(context);
-          if (state is! OrdersLoading) {
-            //  if (cubit.services.isNotEmpty) {
-            return Container(
-              color: Colors.white,
-              child: Padding(
-                padding: const EdgeInsets.all(15.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      S.of(context).myOrders,
-                      style: TextStyles.subHeadingsBold,
-                    ),
-                    verticalSpace(20),
-                    Expanded(
-                      child: ListView.separated(
-                        separatorBuilder: (context, index) => verticalSpace(12),
-                        itemCount: cubit.orders.length,
-                        itemBuilder: (context, index) {
-                          return GestureDetector(
-                            onTap: () {
-                              navigateTo(
-                                  context,
-                                  OrderDetails(
-                                      orderid: cubit.orders[index].orderId!));
-                            },
-                            child:OrderContainerModel(
-                              text: cubit.orders[index].total == null
-                                  ? "Unknown"
-                                  : cubit.orders[index].total.toString(),
-                              description: cubit.orders[index].done == true
-                                  ? "Done"
-                                  : "Ongoing",
-                              backgroundpath:
-                                  "assets/images/stores_background.jpg",
-                            ) 
-                          );
-                        },
+          if (state is OrdersLoading) {
+            return const ShimmerLoading();
+          } else if (state is OrdersSuccess) {
+            if (cubit.orders.isNotEmpty) {
+              return Container(
+                color: Colors.white,
+                child: Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        S.of(context).myOrders,
+                        style: TextStyles.subHeadingsBold,
                       ),
-                    ),
-                  ],
+                      verticalSpace(20),
+                      Expanded(
+                        child: ListView.separated(
+                          separatorBuilder: (context, index) =>
+                              verticalSpace(12),
+                          itemCount: cubit.orders.length,
+                          itemBuilder: (context, index) {
+                            return GestureDetector(
+                                onTap: () {
+                                  navigateTo(
+                                      context,
+                                      OrderDetails(
+                                          orderid:
+                                              cubit.orders[index].orderId!));
+                                },
+                                child: OrderContainerModel(
+                                  text: cubit.orders[index].total == null
+                                      ? "Unknown"
+                                      : cubit.orders[index].total.toString(),
+                                  description: "good",
+                                  backgroundpath:
+                                      "assets/images/stores_background.jpg",
+                                ));
+                          },
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
+              );
+            } else {
+              return Container(
+                color: Colors.white,
+                child: Padding(
+                    padding:
+                        EdgeInsets.only(top: 20.h, left: 20.w, right: 20.w),
+                    child: Column(
+                      children: [
+                        SizedBox(
+                          height: size.height * 0.4,
+                          width: size.width,
+                          child: LottieBuilder.asset(
+                              "assets/animations/no items found.json"),
+                        ),
+                        verticalSpace(30),
+                        Text(
+                          S.of(context).noRequests,
+                          style: TextStyles.lightHeadings,
+                        ),
+                      ],
+                    )),
+              );
+            }
+          } else if (state is OrdersFailed) {
+            return Center(
+              child: Text(
+                state.message,
+                style: const TextStyle(color: Colors.red),
               ),
             );
-            // } else {
-            //   return Container(
-            //     color: Colors.white,
-            //     child: Padding(
-            //         padding:
-            //             EdgeInsets.only(top: 20.h, left: 20.w, right: 20.w),
-            //         child: Column(
-            //           children: [
-            //             SizedBox(
-            //               height: size.height * 0.4,
-            //               width: size.width,
-            //               child: LottieBuilder.asset(
-            //                   "assets/animations/no items found.json"),
-            //             ),
-            //             verticalSpace(30),
-            //             Text(
-            //               S.of(context).noRequests,
-            //               style: TextStyles.lightHeadings,
-            //             ),
-            //           ],
-            //         )),
-            //   );
-            // }
           } else {
-            return const ShimmerLoading();
+            return Container();
           }
         },
       ),
@@ -98,16 +108,15 @@ class MyOrders extends StatelessWidget {
   }
 }
 
-
 // OrderDetailsModel(
 //                               orderStatus:cubit.orders[index].done == true
 //                                   ? "Done"
-//                                   : "Ongoing", 
+//                                   : "Ongoing",
 //                               text: cubit.orders[index].total == null
 //                                   ? "Unknown"
 //                                   : cubit.orders[index].total.toString(),
 //                               serviceName: cubit.services[index].name == null
 //                           ? "Unknown"
-//                           : cubit.services[index].name.toString(), 
+//                           : cubit.services[index].name.toString(),
 //                               price: cubit.services[index].price.toString(),)
 //                           );

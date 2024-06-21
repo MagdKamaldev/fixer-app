@@ -41,21 +41,22 @@ class OrdersRepoImpl implements OrdersRepo {
 
   @override
   Future<Either<Failure, List<OrderModel>>> getOrders() async {
-    try {
-      final response = await apiServices.get(
-          endPoint: "MyOrders",
-          jwt: token == "" ? kTokenBox.get(kTokenBoxString) : token);
+    // try {
+    final response = await apiServices.get(
+        endPoint: "MyOrders",
+        jwt: token == "" ? kTokenBox.get(kTokenBoxString) : token);
 
-      List<OrderModel> orders = (response["My orders"] as List)
-          .map((e) => OrderModel.fromJson(e))
-          .toList();
-      return Right(orders);
-    } catch (e) {
-      if (e is ServerFailure) {
-        return Left(ServerFailure(e.message));
-      } else {
-        return Left(ServerFailure(e.toString()));
-      }
-    }
+    List<OrderModel> orders = (response["My orders"] as List)
+        .map((e) => OrderModel.fromJson(e))
+        .toList();
+    print(response);
+    return Right(orders);
+    // } catch (e) {
+    //   if (e is ServerFailure) {
+    //     return Left(ServerFailure(e.message));
+    //   } else {
+    //     return Left(ServerFailure(e.toString()));
+    //   }
+    // }
   }
 }
