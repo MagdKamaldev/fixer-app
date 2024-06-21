@@ -1,6 +1,7 @@
 import 'package:fixer/core/helpers/spacing.dart';
 import 'package:fixer/core/routing/app_router.dart';
 import 'package:fixer/core/service_locator/service_locator.dart';
+import 'package:fixer/core/themes/colors.dart';
 import 'package:fixer/core/themes/text_styles.dart';
 import 'package:fixer/features/home/presentation/home_view/presentation/views/widgets/shimmer_loading.dart';
 import 'package:fixer/features/my%20orders/data/repos/orders_repo_impl.dart';
