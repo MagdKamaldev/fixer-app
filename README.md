@@ -159,7 +159,7 @@ after confirming the request the client is then navigated to a screen showing al
 
 | English | Arabic |
 | ------- | ------ |
-| <img src="assets/docs/Availablecraftman_en.jpg" height="500" width="250"> | <img src="assets/docs/Availablecraftmen_arab.jpg" height="500" width="250"> |
+| <img src="assets/docs/Availablecraftmen_arab.jpg" height="500" width="250"> | <img src="assets/docs/Availablecraftmen_eng.jpg" height="500" width="250"> |
 
 incase the service is not availabe in his area this message will appear
 
@@ -168,6 +168,38 @@ incase the service is not availabe in his area this message will appear
 | <img src="assets/docs/AreaNotAvailab_en.jpg" height="500" width="250"> | <img src="assets/docs/AreaNotAvailable_arab.jpg" height="500" width="250"> |
 
 then he have to click on "cancel request" to return to home screen 
+
+### 5.8 call craftman
+
+when the user clicks confrim then he is navigated to a screen to all the craftman
+
+| English | Arabic |
+| ------- | ------ |
+| <img src="assets/docs/Callcraftmen_ar.jpg" height="500" width="250"> | <img src="assets/docs/Callcraftmen_ar.jpg" height="500" width="250"> |
+
+### 5.9 Ongoing service screen 
+
+this screen appears as long as the service is still ongoing 
+
+| English | Arabic |
+| ------- | ------ |
+| <img src="assets/docs/Ongoingservice_en.jpg" height="500" width="250"> | <img src="assets/docs/Ongoingservice_arab.jpg" height="500" width="250"> |
+
+### 5.10 rating craftmen screen 
+
+after the service is done the clients rates the craftfen on his service 
+
+| English | Arabic |
+| ------- | ------ |
+| <img src="assets/docs/Ratecraftmen_en.jpg" height="500" width="250"> | <img src="assets/docs/Ratecraftmen_arab.jpg" height="500" width="250"> |
+
+### 5.11 payment screen 
+
+after completeing the service tha user is then navigated to the payment screen 
+
+| English | Arabic |
+| ------- | ------ |
+| <img src="assets/docs/Paymentprocess_en.jpg" height="500" width="250"> | <img src="assets/docs/Paymentprocess_arab.jpg" height="500" width="250"> |
 
 ### 5.8 stores screen 
 
@@ -182,6 +214,7 @@ if the client clicks on any store then a screen displaying all items in that sto
 | English | Arabic |
 | ------- | ------ |
 | <img src="assets/docs/StoresItems_en.jpg" height="500" width="250"> | <img src="assets/docs/StoreItems_arab .jpg" height="500" width="250"> |
+
 
 ### 5.9 client profile 
 
