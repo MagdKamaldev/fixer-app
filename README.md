@@ -201,7 +201,17 @@ after completeing the service tha user is then navigated to the payment screen
 | ------- | ------ |
 | <img src="assets/docs/Paymentprocess_en.jpg" height="500" width="250"> | <img src="assets/docs/Paymentprocess_arab.jpg" height="500" width="250"> |
 
-### 5.12 stores screen 
+### 5.12 client request history screen 
+
+the request icon in nav bar shows the history of ongonig or done services that the client had recieved.
+
+| English | Arabic |
+| ------- | ------ |
+| <img src="" height="500" width="250"> | <img src="" height="500" width="250"> |
+
+
+
+### 5.13 stores screen 
 
 the store icon in nav bar navigates to all available stores.
 
@@ -216,7 +226,7 @@ if the client clicks on any store then a screen displaying all items in that sto
 | <img src="assets/docs/StoresItems_en.jpg" height="500" width="250"> | <img src="assets/docs/StoreItems_arab .jpg" height="500" width="250"> |
 
 
-### 5.13 client profile 
+### 5.14 client profile 
 
 the profile icon in nav bar navigates to profile of client
 
@@ -296,3 +306,9 @@ Them the craftsman is then navigated to this untill an admin approves his applic
 | English | Arabic |
 | ------- | ------ |
 | <img src="assets/docs/waiting_en.jpg" height="500" width="250"> | <img src="assets/docs/waiting_ar.jpg" height="500" width="250"> |
+
+### 7.terms and condition screen
+
+| English | Arabic |
+| ------- | ------ |
+| <img src="assets/docs/Termsandconditions_eng.jpg" height="500" width="250"> | <img src="assets/docs/Termsandcondtions_arab.jpg" height="500" width="250"> |

@@ -1649,6 +1649,176 @@ class S {
       args: [],
     );
   }
+
+  /// `Terms and Conditions`
+  String get termsandconditions {
+    return Intl.message(
+      'Terms and Conditions',
+      name: 'termsandconditions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `1.Introduction`
+  String get intoductions {
+    return Intl.message(
+      '1.Introduction',
+      name: 'intoductions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `2.Services Provided`
+  String get providedservices {
+    return Intl.message(
+      '2.Services Provided',
+      name: 'providedservices',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `3.User Responsibilities`
+  String get userresponsibilities {
+    return Intl.message(
+      '3.User Responsibilities',
+      name: 'userresponsibilities',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `4.Payment Terms`
+  String get paymentterms {
+    return Intl.message(
+      '4.Payment Terms',
+      name: 'paymentterms',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `5.Limitation of Liabilities`
+  String get limitationofliabilities {
+    return Intl.message(
+      '5.Limitation of Liabilities',
+      name: 'limitationofliabilities',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `6.Termination`
+  String get termination {
+    return Intl.message(
+      '6.Termination',
+      name: 'termination',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `7.Changes to Terms`
+  String get changestoterms {
+    return Intl.message(
+      '7.Changes to Terms',
+      name: 'changestoterms',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `8.Contact Us`
+  String get contactus {
+    return Intl.message(
+      '8.Contact Us',
+      name: 'contactus',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Welcome to our craftsman service app. By using our services, you agree to the following terms and conditions. Please read them carefully.`
+  String get intoductionstext {
+    return Intl.message(
+      'Welcome to our craftsman service app. By using our services, you agree to the following terms and conditions. Please read them carefully.',
+      name: 'intoductionstext',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Our app connects you with skilled craftsmen who can assist with various household repairs and maintenance tasks. We act as an intermediary platform and are not responsible for the actual services provided by the craftsmen.`
+  String get providedservicestext {
+    return Intl.message(
+      'Our app connects you with skilled craftsmen who can assist with various household repairs and maintenance tasks. We act as an intermediary platform and are not responsible for the actual services provided by the craftsmen.',
+      name: 'providedservicestext',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `As a user, you are responsible for providing accurate information when requesting a service. You must ensure that the craftsmen have safe and reasonable access to the location where the service is needed.`
+  String get userresponsibilitiestext {
+    return Intl.message(
+      'As a user, you are responsible for providing accurate information when requesting a service. You must ensure that the craftsmen have safe and reasonable access to the location where the service is needed.',
+      name: 'userresponsibilitiestext',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Payments for services are handled through our app. You agree to pay the quoted amount for the requested services. All payments are final and non-refundable once the service has been completed.`
+  String get paymenttermstext {
+    return Intl.message(
+      'Payments for services are handled through our app. You agree to pay the quoted amount for the requested services. All payments are final and non-refundable once the service has been completed.',
+      name: 'paymenttermstext',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Our app is not liable for any damages or losses resulting from the services provided by the craftsmen. We do not guarantee the quality of the services, and any disputes must be resolved directly with the craftsman`
+  String get limitationofliabilitiestext {
+    return Intl.message(
+      'Our app is not liable for any damages or losses resulting from the services provided by the craftsmen. We do not guarantee the quality of the services, and any disputes must be resolved directly with the craftsman',
+      name: 'limitationofliabilitiestext',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We reserve the right to terminate or suspend your access to our app at any time, without prior notice, if you violate these terms and conditions or engage in any conduct that we deem inappropriate or harmful.`
+  String get terminationtext {
+    return Intl.message(
+      'We reserve the right to terminate or suspend your access to our app at any time, without prior notice, if you violate these terms and conditions or engage in any conduct that we deem inappropriate or harmful.',
+      name: 'terminationtext',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We may update these terms and conditions from time to time. Any changes will be posted on this page, and your continued use of the app signifies your acceptance of the updated terms.`
+  String get changestotermstext {
+    return Intl.message(
+      'We may update these terms and conditions from time to time. Any changes will be posted on this page, and your continued use of the app signifies your acceptance of the updated terms.',
+      name: 'changestotermstext',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If you have any questions or concerns about these terms and conditions, please contact us at fixregypt@gmail.com.`
+  String get contactustext {
+    return Intl.message(
+      'If you have any questions or concerns about these terms and conditions, please contact us at fixregypt@gmail.com.',
+      name: 'contactustext',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
