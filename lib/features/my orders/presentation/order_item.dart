@@ -21,11 +21,15 @@ class OrderContainerModel extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 25),
       margin: const EdgeInsets.symmetric(horizontal: 0, vertical: 4),
       decoration: BoxDecoration(
-        image: DecorationImage(
-            image: AssetImage(backgroundpath),
-            fit: BoxFit.cover,
-            colorFilter: ColorFilter.mode(
-                ColorManager.primary.withOpacity(0.85), BlendMode.srcOver)),
+        color: ColorManager.white,
+        border: Border.all(color: ColorManager.lightblue),
+        boxShadow: const [
+              BoxShadow(
+                color: ColorManager.babyblue,
+                spreadRadius: 0,
+                blurRadius: 4,
+                offset: Offset(0, 2), // changes position of shadow
+              ),],
         borderRadius: BorderRadius.circular(10),
       ),
       child: Row(
@@ -43,20 +47,20 @@ class OrderContainerModel extends StatelessWidget {
                   overflow: TextOverflow.ellipsis,
                   maxLines: 1,
                   style:
-                      TextStyles.bodybold.copyWith(color: ColorManager.white),
+                      TextStyles.bodybold.copyWith(color: ColorManager.primary),
                 ),
                 Text(
                   description,
                   overflow: TextOverflow.ellipsis,
                   maxLines: 1,
-                  style: TextStyles.small.copyWith(color: ColorManager.white),
+                  style: TextStyles.small.copyWith(color: ColorManager.primary),
                 )
               ],
             ),
           ),
           const Icon(
             Icons.arrow_forward_ios,
-            color: ColorManager.white,
+            color: ColorManager.primary,
             size: 25,
           )
         ],
