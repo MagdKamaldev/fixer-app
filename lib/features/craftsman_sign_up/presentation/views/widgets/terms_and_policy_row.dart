@@ -1,5 +1,7 @@
+import 'package:fixer/core/routing/app_router.dart';
 import 'package:fixer/core/themes/colors.dart';
 import 'package:fixer/core/themes/text_styles.dart';
+import 'package:fixer/features/user_sign_up/presentation/terms_and_conditions/terms_and_conditions.dart';
 import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -33,7 +35,9 @@ class _TermsandPolicyState extends State<TermsandPolicy> {
           ),
           Text(S.of(context).agree, style: TextStyles.smallbold),
           GestureDetector(
-              onTap: () {},
+              onTap: () {
+                navigateTo(context, const TermsAndConditionsPage());
+              },
               child: Text(S.of(context).termsandpolicy,
                   style: TextStyles.smallbold.copyWith(
                       decoration: TextDecoration.underline,

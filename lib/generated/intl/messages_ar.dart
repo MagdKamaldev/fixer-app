@@ -166,6 +166,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "plumbing": MessageLookupByLibrary.simpleMessage("سباكة"),
         "plumbingDes":
             MessageLookupByLibrary.simpleMessage("إصلاحات السباكة السريعة."),
+        "policy": MessageLookupByLibrary.simpleMessage("سياسات"),
         "poor": MessageLookupByLibrary.simpleMessage("جودة ضعيفة"),
         "price": MessageLookupByLibrary.simpleMessage("سعر"),
         "pricedetails": MessageLookupByLibrary.simpleMessage("تفاصيل السعر"),

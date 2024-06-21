@@ -172,6 +172,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "plumbing": MessageLookupByLibrary.simpleMessage("Plumbing"),
         "plumbingDes":
             MessageLookupByLibrary.simpleMessage("Swift plumbing fixes."),
+        "policy": MessageLookupByLibrary.simpleMessage("Policy"),
         "poor": MessageLookupByLibrary.simpleMessage("Poor Performance"),
         "price": MessageLookupByLibrary.simpleMessage("Price"),
         "pricedetails": MessageLookupByLibrary.simpleMessage("Price details"),

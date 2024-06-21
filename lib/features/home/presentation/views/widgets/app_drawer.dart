@@ -8,6 +8,7 @@ import 'package:fixer/core/themes/text_styles.dart';
 import 'package:fixer/features/craftsman_wallet/presentation/craftsmna_wallet_view.dart';
 import 'package:fixer/features/profile/data/repos/profile_repo_impl.dart';
 import 'package:fixer/features/profile/manager/cubit/profile_cubit.dart';
+import 'package:fixer/features/user_sign_up/presentation/terms_and_conditions/terms_and_conditions.dart';
 import 'package:fixer/generated/l10n.dart';
 import 'package:fixer/main.dart';
 import 'package:flutter/material.dart';
@@ -47,6 +48,22 @@ class AppDrawer extends StatelessWidget {
                       ),
                       onTap: () {
                         context.pushNamed(Routes.complains);
+                      },
+                    ),
+                    verticalSpace(20),
+                    ListTile(
+                      title: Row(
+                        children: [
+                          Text(
+                            S.of(context).policy,
+                            style: TextStyles.lightHeadings,
+                          ),
+                          const Spacer(),
+                          const Icon(Icons.business)
+                        ],
+                      ),
+                      onTap: () {
+                        navigateTo(context, const TermsAndConditionsPage());
                       },
                     ),
                     verticalSpace(20),
@@ -114,6 +131,22 @@ class AppDrawer extends StatelessWidget {
                           navigateTo(context, const CraftsmanWalletScreen());
                         },
                       ),
+                    verticalSpace(20),
+                    ListTile(
+                      title: Row(
+                        children: [
+                          Text(
+                            S.of(context).policy,
+                            style: TextStyles.lightHeadings,
+                          ),
+                          const Spacer(),
+                          const Icon(Icons.business)
+                        ],
+                      ),
+                      onTap: () {
+                        navigateTo(context, const TermsAndConditionsPage());
+                      },
+                    ),
                     verticalSpace(20),
                     ListTile(
                       title: Row(

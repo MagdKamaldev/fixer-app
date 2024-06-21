@@ -157,6 +157,7 @@
    "craftsmanName":"Craftsman Name",
    "requestStatus":"Request Status",
    "orderId":"Order ID",
-   "pay":"Pay"
+   "pay":"Pay",
+   "policy":"Policy"
 
 }

@@ -158,7 +158,8 @@
    "craftsmanName":"اسم الحرفي",
    "requestStatus":"حالة الطلب",
    "orderId":"رقم الطلب",
-   "pay":"دفع"
+   "pay":"دفع",
+   "policy":"سياسات"
 
 
 
