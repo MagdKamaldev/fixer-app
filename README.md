@@ -159,7 +159,7 @@ after confirming the request the client is then navigated to a screen showing al
 
 | English | Arabic |
 | ------- | ------ |
-| <img src="assets/docs/Availablecraftmen_arab.jpg" height="500" width="250"> | <img src="assets/docs/Availablecraftmen_eng.jpg" height="500" width="250"> |
+| <img src="assets/docs/Availablecraftmen_eng.jpg" height="500" width="250"> | <img src="assets/docs/Availablecraftmen_arab.jpg" height="500" width="250"> |
 
 incase the service is not availabe in his area this message will appear
 
@@ -201,7 +201,7 @@ after completeing the service tha user is then navigated to the payment screen
 | ------- | ------ |
 | <img src="assets/docs/Paymentprocess_en.jpg" height="500" width="250"> | <img src="assets/docs/Paymentprocess_arab.jpg" height="500" width="250"> |
 
-### 5.8 stores screen 
+### 5.12 stores screen 
 
 the store icon in nav bar navigates to all available stores.
 
@@ -216,7 +216,7 @@ if the client clicks on any store then a screen displaying all items in that sto
 | <img src="assets/docs/StoresItems_en.jpg" height="500" width="250"> | <img src="assets/docs/StoreItems_arab .jpg" height="500" width="250"> |
 
 
-### 5.9 client profile 
+### 5.13 client profile 
 
 the profile icon in nav bar navigates to profile of client
 
