@@ -171,7 +171,7 @@ incase there are no available craftsman this meassage will appear
 
 | English | Arabic |
 | ------- | ------ |
-| <img src="assets/docs/Availablecraftmen_eng.jpg" height="500" width="250"> | <img src="assets/docs/Availablecraftmen_arab.jpg" height="500" width="250"> |
+| <img src="assets/docs/Noavailablecraftmen_en.jpg" height="500" width="250"> | <img src="assets/docs/Noavailablecraftmen_arab.jpg" height="500" width="250"> |
 
 incase the service is not availabe in his area this message will appear
 
