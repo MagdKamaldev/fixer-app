@@ -86,10 +86,7 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => const AddComplain(),
         );
-      case Routes.payment:
-        return MaterialPageRoute(
-          builder: (_) => const PaymentView(),
-        );
+
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(

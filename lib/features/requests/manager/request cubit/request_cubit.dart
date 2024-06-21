@@ -91,10 +91,10 @@ class RequestCubit extends Cubit<RequestState> {
     emit(SelectCraftsmanLoading());
 
     final result = await repo.selectCraftsman(orderId, craftsmanId);
+    print(orderId);
     result.fold((l) {
       emit(SelectCraftsmanFailed(l.message));
     }, (r) {
-      print(orderId);
       navigateTo(context, widget);
       emit(SelectCraftsmanSuccess(r));
     });
@@ -108,7 +108,11 @@ class RequestCubit extends Cubit<RequestState> {
     result.fold((l) {
       emit(EndRequestFailed(l.message));
     }, (r) {
-      navigateTo(context, PaymentView());
+      navigateTo(
+          context,
+          PaymentView(
+            orderId: orderId,
+          ));
       emit(EndRequestSuccess(r));
     });
   }

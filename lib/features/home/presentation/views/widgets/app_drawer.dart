@@ -54,22 +54,6 @@ class AppDrawer extends StatelessWidget {
                       title: Row(
                         children: [
                           Text(
-                            S.of(context).payment,
-                            style: TextStyles.lightHeadings,
-                          ),
-                          const Spacer(),
-                          const Icon(Icons.money)
-                        ],
-                      ),
-                      onTap: () {
-                        context.pushNamed(Routes.payment);
-                      },
-                    ),
-                    verticalSpace(20),
-                    ListTile(
-                      title: Row(
-                        children: [
-                          Text(
                             S.of(context).logout,
                             style: TextStyles.lightHeadings,
                           ),
@@ -110,22 +94,6 @@ class AppDrawer extends StatelessWidget {
                       ),
                       onTap: () {
                         context.pushNamed(Routes.complains);
-                      },
-                    ),
-                    verticalSpace(20),
-                    ListTile(
-                      title: Row(
-                        children: [
-                          Text(
-                            S.of(context).payment,
-                            style: TextStyles.lightHeadings,
-                          ),
-                          const Spacer(),
-                          const Icon(Icons.money)
-                        ],
-                      ),
-                      onTap: () {
-                        context.pushNamed(Routes.payment);
                       },
                     ),
                     if (ProfileCubit.get(context).user?.userType == "craftsman")

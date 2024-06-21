@@ -1,17 +1,14 @@
 // ignore_for_file: use_key_in_widget_constructors
-
 import 'package:fixer/core/helpers/spacing.dart';
 import 'package:fixer/core/themes/colors.dart';
 import 'package:fixer/core/themes/text_styles.dart';
-import 'package:fixer/features/payment/data/models/payment_models/order_sumary_model/order_sumary_model.dart';
-import 'package:fixer/features/payment/data/models/payment_models/payment_model.dart';
+import 'package:fixer/features/payment/data/models/payment_model/payment_model.dart';
 import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Pricedetails extends StatelessWidget {
-  final OrderSumaryModel model;
+  final PaymentModel model;
 
   const Pricedetails({Key? key, required this.model});
 
@@ -25,12 +22,14 @@ class Pricedetails extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          _buildRowContainer(S.of(context).orderId, model.orderId.toString()),
-          _buildRowContainer(S.of(context).clientName, model.clientName ?? ''),
           _buildRowContainer(
-              S.of(context).craftsmanName, model.craftsmanName ?? ''),
+              S.of(context).orderId, model.orderSummary!.orderId.toString()),
           _buildRowContainer(
-              S.of(context).requestStatus, model.done.toString()),
+              S.of(context).clientName, model.orderSummary!.clientName ?? ''),
+          _buildRowContainer(S.of(context).craftsmanName,
+              model.orderSummary!.craftsmanName ?? ''),
+          _buildRowContainer(S.of(context).requestStatus,
+              model.orderSummary!.done == true ? "Done" : "Ongoing"),
           verticalSpace(24),
           Text(
             S.of(context).pricedetails,
@@ -39,18 +38,18 @@ class Pricedetails extends StatelessWidget {
           verticalSpace(16),
           Expanded(
             child: ListView.builder(
-              itemCount: model.services!.length,
+              itemCount: model.orderSummary!.services!.length,
               itemBuilder: (context, index) {
                 return _buildServiceRowContainer(
-                  model.services![index].name!,
-                  "${model.services![index].price} ج.م.",
+                  model.orderSummary!.services![index].name!,
+                  "${model.orderSummary!.services![index].price} ج.م.",
                 );
               },
             ),
           ),
           verticalSpace(16),
-          _buildRowContainer(
-              '${S.of(context).subtotal} (EPG)', '${model.total} LE'),
+          _buildRowContainer('${S.of(context).subtotal} (EPG)',
+              '${model.orderSummary!.total} LE'),
         ],
       ),
     );

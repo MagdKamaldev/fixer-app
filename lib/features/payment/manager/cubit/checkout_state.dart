@@ -12,3 +12,15 @@ final class CheckoutFailed extends CheckoutState {
   final String message;
   CheckoutFailed({required this.message});
 }
+
+final class GetPaymentDetailsLoading extends CheckoutState {}
+
+final class GetPaymentDetailsSuccess extends CheckoutState {
+  final PaymentModel payment;
+  GetPaymentDetailsSuccess({required this.payment});
+}
+
+final class GetPaymentDetailsFailed extends CheckoutState {
+  final String message;
+  GetPaymentDetailsFailed({required this.message});
+}

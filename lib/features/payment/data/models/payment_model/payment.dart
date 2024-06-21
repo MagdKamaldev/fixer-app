@@ -1,12 +1,12 @@
-class PaymentModel {
+class Payment {
   int? clientId;
   int? id;
   int? orderId;
   int? total;
 
-  PaymentModel({this.clientId, this.id, this.orderId, this.total});
+  Payment({this.clientId, this.id, this.orderId, this.total});
 
-  factory PaymentModel.fromJson(Map<String, dynamic> json) => PaymentModel(
+  factory Payment.fromJson(Map<String, dynamic> json) => Payment(
         clientId: json['client_id'] as int?,
         id: json['id'] as int?,
         orderId: json['order_id'] as int?,
