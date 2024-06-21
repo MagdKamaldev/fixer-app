@@ -20,15 +20,14 @@ class OrdersRepoImpl implements OrdersRepo {
         jwt: token == "" ? kTokenBox.get(kTokenBoxString) : token,
       );
 
-      if (response["Message : services"] == null ||
-          response["Message : services"]["services"] == null) {
+      if (response["services"] == null ||
+          response["services"]["services"] == null) {
         return Left(ServerFailure("No services found"));
       }
 
-      List<ServiceModel> services =
-          (response["Message : services"]["services"] as List)
-              .map((item) => ServiceModel.fromJson(item))
-              .toList();
+      List<ServiceModel> services = (response["services"]["services"] as List)
+          .map((item) => ServiceModel.fromJson(item))
+          .toList();
 
       return Right(services);
     } catch (e) {
