@@ -57,6 +57,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "camera": MessageLookupByLibrary.simpleMessage("الكاميرا"),
         "cancelrequest": MessageLookupByLibrary.simpleMessage("إلغاء الطلب"),
         "change": MessageLookupByLibrary.simpleMessage("تغيير"),
+        "changestoterms":
+            MessageLookupByLibrary.simpleMessage("7. التغييرات في الشروط"),
+        "changestotermstext": MessageLookupByLibrary.simpleMessage(
+            "قد نقوم بتحديث هذه الشروط والأحكام من وقت لآخر. سيتم نشر أي تغييرات على هذه الصفحة، واستمرارك في استخدام التطبيق يعني موافقتك على الشروط المحدثة."),
         "chooseyourfield":
             MessageLookupByLibrary.simpleMessage("اختر المجال الخاص بك"),
         "city": MessageLookupByLibrary.simpleMessage("المدينة"),
@@ -71,6 +75,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "confirmrequest": MessageLookupByLibrary.simpleMessage("تأكيد الطلب"),
         "contactMail":
             MessageLookupByLibrary.simpleMessage("البريد الإلكتروني للتواصل"),
+        "contactus": MessageLookupByLibrary.simpleMessage("8. اتصل بنا"),
+        "contactustext": MessageLookupByLibrary.simpleMessage(
+            "إذا كانت لديك أية أسئلة أو استفسارات بشأن هذه الشروط والأحكام، فيرجى الاتصال بنا علىfixregypt@gmail.com."),
         "continuee": MessageLookupByLibrary.simpleMessage("استمرار"),
         "craftsmanName": MessageLookupByLibrary.simpleMessage("اسم الحرفي"),
         "district": MessageLookupByLibrary.simpleMessage("الحي"),
@@ -111,8 +118,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "good": MessageLookupByLibrary.simpleMessage("جودة جيدة"),
         "howwasyourexperience":
             MessageLookupByLibrary.simpleMessage("كيف كانت خدمتك مع "),
+        "intoductions": MessageLookupByLibrary.simpleMessage("1. المقدمة"),
+        "intoductionstext": MessageLookupByLibrary.simpleMessage(
+            "مرحبًا بك في تطبيق خدمة الحرفيين لدينا. باستخدام خدماتنا، فإنك توافق على الشروط والأحكام التالية. يرجى قراءتها بعناية."),
         "leavecomment": MessageLookupByLibrary.simpleMessage("اترك تعليق"),
         "left": MessageLookupByLibrary.simpleMessage(" باقي في المتجر"),
+        "limitationofliabilities":
+            MessageLookupByLibrary.simpleMessage("5. تحديد المسؤولية"),
+        "limitationofliabilitiestext": MessageLookupByLibrary.simpleMessage(
+            "تطبيقنا غير مسؤول عن أي أضرار أو خسائر ناتجة عن الخدمات المقدمة من قبل الحرفيين. نحن لا نضمن جودة الخدمات، وأي خلافات يجب حلها مباشرة مع الحرفي"),
         "location": MessageLookupByLibrary.simpleMessage("موقعك"),
         "locationPermissionDenied":
             MessageLookupByLibrary.simpleMessage("تم رفض إذن الموقع"),
@@ -159,6 +173,9 @@ class MessageLookup extends MessageLookupByLibrary {
             "ويجب أن تحتوي على اثنين على الأقل من: أرقام أو أحرف \nأو رموز"),
         "pay": MessageLookupByLibrary.simpleMessage("دفع"),
         "payment": MessageLookupByLibrary.simpleMessage("الدفع"),
+        "paymentterms": MessageLookupByLibrary.simpleMessage("4. شروط الدفع"),
+        "paymenttermstext": MessageLookupByLibrary.simpleMessage(
+            "تتم معالجة المدفوعات مقابل الخدمات من خلال تطبيقنا. أنت توافق على دفع المبلغ المعروض مقابل الخدمات المطلوبة. جميع المدفوعات نهائية وغير قابلة للاسترداد بمجرد اكتمال الخدمة."),
         "performance": MessageLookupByLibrary.simpleMessage("أداء"),
         "phone": MessageLookupByLibrary.simpleMessage("رقم التليفون"),
         "phoneValidation":
@@ -172,6 +189,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "pricedetails": MessageLookupByLibrary.simpleMessage("تفاصيل السعر"),
         "pricesmayvary": MessageLookupByLibrary.simpleMessage(
             "(قد تختلف الأسعار حسب أسعار الحرفيين)"),
+        "providedservices":
+            MessageLookupByLibrary.simpleMessage("2. الخدمات المقدمة"),
+        "providedservicestext": MessageLookupByLibrary.simpleMessage(
+            "يوصلك تطبيقنا بالحرفيين المهرة الذين يمكنهم المساعدة في مختلف مهام الإصلاح والصيانة المنزلية. نحن نعمل كمنصة وسيطة ولسنا مسؤولين عن الخدمات الفعلية التي يقدمها الحرفيون."),
         "remember": MessageLookupByLibrary.simpleMessage("تذكرني"),
         "requestStatus": MessageLookupByLibrary.simpleMessage("حالة الطلب"),
         "requestdetails": MessageLookupByLibrary.simpleMessage("تفاصيل الطلب"),
@@ -210,6 +231,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "street": MessageLookupByLibrary.simpleMessage("الشارع"),
         "submit": MessageLookupByLibrary.simpleMessage("رفع"),
         "subtotal": MessageLookupByLibrary.simpleMessage("المجموع الفرعي"),
+        "termination": MessageLookupByLibrary.simpleMessage("6. الإنهاءات"),
+        "terminationtext": MessageLookupByLibrary.simpleMessage(
+            "نحن نحتفظ بالحق في إنهاء أو تعليق وصولك إلى تطبيقنا في أي وقت، دون إشعار مسبق، إذا قمت بانتهاك هذه الشروط والأحكام أو انخرطت في أي سلوك نعتبره غير مناسب أو ضار."),
+        "termsandconditions":
+            MessageLookupByLibrary.simpleMessage("الأحكام والشروط"),
         "termsandpolicy":
             MessageLookupByLibrary.simpleMessage("الشروط والسياسات"),
         "totalBalance": MessageLookupByLibrary.simpleMessage("الرصيد الإجمالي"),
@@ -226,6 +252,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "uploadphoto":
             MessageLookupByLibrary.simpleMessage("قم بتحميل صورة ملفك الشخصي"),
         "userName": MessageLookupByLibrary.simpleMessage("اسم المستخدم"),
+        "userresponsibilities":
+            MessageLookupByLibrary.simpleMessage("3.مسؤوليات المستخدم"),
+        "userresponsibilitiestext": MessageLookupByLibrary.simpleMessage(
+            "كمستخدم، أنت مسؤول عن تقديم معلومات دقيقة عند طلب الخدمة. يجب عليك التأكد من أن الحرفيين لديهم وصول آمن ومعقول إلى الموقع الذي تحتاج فيه الخدمة."),
         "viewAll": MessageLookupByLibrary.simpleMessage("عرض الكل"),
         "wallet": MessageLookupByLibrary.simpleMessage("المحفظة"),
         "welcome": MessageLookupByLibrary.simpleMessage("مرحباً"),

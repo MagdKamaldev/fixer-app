@@ -151,7 +151,7 @@ class _AvailableCraftmenCardState extends State<AvailableCraftmenCard> {
                               },
                               color: ColorManager.primary,
                               height: 35.h,
-                              minWidth: 117.w,
+                              minWidth: 250.w,
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(5)),
                               child: Text(

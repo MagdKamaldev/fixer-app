@@ -59,6 +59,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "camera": MessageLookupByLibrary.simpleMessage("Camera"),
         "cancelrequest": MessageLookupByLibrary.simpleMessage("Cancel Request"),
         "change": MessageLookupByLibrary.simpleMessage("Change"),
+        "changestoterms":
+            MessageLookupByLibrary.simpleMessage("7.Changes to Terms"),
+        "changestotermstext": MessageLookupByLibrary.simpleMessage(
+            "We may update these terms and conditions from time to time. Any changes will be posted on this page, and your continued use of the app signifies your acceptance of the updated terms."),
         "chooseyourfield":
             MessageLookupByLibrary.simpleMessage("Choose your field"),
         "city": MessageLookupByLibrary.simpleMessage("city"),
@@ -75,6 +79,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "confirmrequest":
             MessageLookupByLibrary.simpleMessage("Confirm Request"),
         "contactMail": MessageLookupByLibrary.simpleMessage("Contact Mail"),
+        "contactus": MessageLookupByLibrary.simpleMessage("8.Contact Us"),
+        "contactustext": MessageLookupByLibrary.simpleMessage(
+            "If you have any questions or concerns about these terms and conditions, please contact us at fixregypt@gmail.com."),
         "continuee": MessageLookupByLibrary.simpleMessage("Continue"),
         "craftsmanName": MessageLookupByLibrary.simpleMessage("Craftsman Name"),
         "district": MessageLookupByLibrary.simpleMessage("District"),
@@ -116,8 +123,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "good": MessageLookupByLibrary.simpleMessage("Good Craftsmanship"),
         "howwasyourexperience":
             MessageLookupByLibrary.simpleMessage("How was your service with "),
+        "intoductions": MessageLookupByLibrary.simpleMessage("1.Introduction"),
+        "intoductionstext": MessageLookupByLibrary.simpleMessage(
+            "Welcome to our craftsman service app. By using our services, you agree to the following terms and conditions. Please read them carefully."),
         "leavecomment": MessageLookupByLibrary.simpleMessage("Leave a comment"),
         "left": MessageLookupByLibrary.simpleMessage("Left in the store"),
+        "limitationofliabilities":
+            MessageLookupByLibrary.simpleMessage("5.Limitation of Liabilities"),
+        "limitationofliabilitiestext": MessageLookupByLibrary.simpleMessage(
+            "Our app is not liable for any damages or losses resulting from the services provided by the craftsmen. We do not guarantee the quality of the services, and any disputes must be resolved directly with the craftsman"),
         "location": MessageLookupByLibrary.simpleMessage("Your Location"),
         "locationPermissionDenied":
             MessageLookupByLibrary.simpleMessage("Location permission denied"),
@@ -165,6 +179,9 @@ class MessageLookup extends MessageLookupByLibrary {
             "It must contain at least two of:numbers,letters,or symbols"),
         "pay": MessageLookupByLibrary.simpleMessage("Pay"),
         "payment": MessageLookupByLibrary.simpleMessage("Payment"),
+        "paymentterms": MessageLookupByLibrary.simpleMessage("4.Payment Terms"),
+        "paymenttermstext": MessageLookupByLibrary.simpleMessage(
+            "Payments for services are handled through our app. You agree to pay the quoted amount for the requested services. All payments are final and non-refundable once the service has been completed."),
         "performance": MessageLookupByLibrary.simpleMessage("performance"),
         "phone": MessageLookupByLibrary.simpleMessage("Phone number"),
         "phoneValidation": MessageLookupByLibrary.simpleMessage(
@@ -178,6 +195,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "pricedetails": MessageLookupByLibrary.simpleMessage("Price details"),
         "pricesmayvary": MessageLookupByLibrary.simpleMessage(
             "(Prices may vary depending on craftsmen rates)"),
+        "providedservices":
+            MessageLookupByLibrary.simpleMessage("2.Services Provided"),
+        "providedservicestext": MessageLookupByLibrary.simpleMessage(
+            "Our app connects you with skilled craftsmen who can assist with various household repairs and maintenance tasks. We act as an intermediary platform and are not responsible for the actual services provided by the craftsmen."),
         "remember": MessageLookupByLibrary.simpleMessage("Remember me"),
         "requestStatus": MessageLookupByLibrary.simpleMessage("Request Status"),
         "requestdetails":
@@ -219,6 +240,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "street": MessageLookupByLibrary.simpleMessage("Street"),
         "submit": MessageLookupByLibrary.simpleMessage("Submit"),
         "subtotal": MessageLookupByLibrary.simpleMessage("Subtotal"),
+        "termination": MessageLookupByLibrary.simpleMessage("6.Termination"),
+        "terminationtext": MessageLookupByLibrary.simpleMessage(
+            "We reserve the right to terminate or suspend your access to our app at any time, without prior notice, if you violate these terms and conditions or engage in any conduct that we deem inappropriate or harmful."),
+        "termsandconditions":
+            MessageLookupByLibrary.simpleMessage("Terms and Conditions"),
         "termsandpolicy":
             MessageLookupByLibrary.simpleMessage(" terms & policy"),
         "totalBalance": MessageLookupByLibrary.simpleMessage("Total Balance"),
@@ -234,6 +260,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "uploadphoto":
             MessageLookupByLibrary.simpleMessage("Upload your Profile photo"),
         "userName": MessageLookupByLibrary.simpleMessage("Username"),
+        "userresponsibilities":
+            MessageLookupByLibrary.simpleMessage("3.User Responsibilities"),
+        "userresponsibilitiestext": MessageLookupByLibrary.simpleMessage(
+            "As a user, you are responsible for providing accurate information when requesting a service. You must ensure that the craftsmen have safe and reasonable access to the location where the service is needed."),
         "viewAll": MessageLookupByLibrary.simpleMessage("View All"),
         "wallet": MessageLookupByLibrary.simpleMessage("Wallet"),
         "welcome": MessageLookupByLibrary.simpleMessage("welcome"),
