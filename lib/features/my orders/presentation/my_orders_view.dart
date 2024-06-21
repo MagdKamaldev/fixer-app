@@ -6,6 +6,7 @@ import 'package:fixer/features/home/presentation/home_view/presentation/views/wi
 import 'package:fixer/features/my%20orders/data/repos/orders_repo_impl.dart';
 import 'package:fixer/features/my%20orders/manager/cubit/orders_cubit.dart';
 import 'package:fixer/features/my%20orders/presentation/order_details.dart';
+import 'package:fixer/features/my%20orders/presentation/order_details_model.dart';
 import 'package:fixer/features/my%20orders/presentation/order_item.dart';
 import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
@@ -54,13 +55,11 @@ class MyOrders extends StatelessWidget {
                                           orderid:
                                               cubit.orders[index].orderId!));
                                 },
-                                child: OrderContainerModel(
-                                  text: cubit.orders[index].total == null
-                                      ? "Unknown"
-                                      : cubit.orders[index].total.toString(),
-                                  description: "good",
-                                  backgroundpath:
-                                      "assets/images/stores_background.jpg",
+                                child: OrderDetailsModel(
+                                  craftsId: cubit.orders[index].craftsmanId!,
+                                  time: cubit.orders[index].date!,
+                                  id: cubit.orders[index].orderId!,
+                                  price: cubit.orders[index].total.toString(),
                                 ));
                           },
                         ),

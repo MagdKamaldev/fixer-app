@@ -5,10 +5,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class OrderDetailsModel extends StatelessWidget {
-  final String serviceName;
   final String price;
+  final DateTime time;
+  final int id;
+  final int craftsId;
   const OrderDetailsModel(
-      {super.key, required this.serviceName, required this.price});
+      {super.key,
+      required this.price,
+      required this.time,
+      required this.id,
+      required this.craftsId});
 
   @override
   Widget build(BuildContext context) {
@@ -31,22 +37,34 @@ class OrderDetailsModel extends StatelessWidget {
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          // Text(orderStatus,style: TextStyles.bodybold,),
-          // Text(text,style: TextStyles.body,),
+          Row(
+            children: [
+              Icon(
+                Icons.numbers,
+                size: 23.sp,
+              ),
+              horizontalSpace(5),
+              Text(
+                id.toString(),
+                style:
+                    TextStyles.smallbold.copyWith(color: ColorManager.grey),
+              ),
+            ],
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Row(
                 children: [
                   Icon(
-                    Icons.location_on_outlined,
-                    color: ColorManager.primary,
+                    Icons.build,
                     size: 23.sp,
                   ),
                   horizontalSpace(5),
                   Text(
-                    "Area",
+                    "$craftsId",
                     style:
                         TextStyles.smallbold.copyWith(color: ColorManager.grey),
                   ),
@@ -61,7 +79,7 @@ class OrderDetailsModel extends StatelessWidget {
                   ),
                   horizontalSpace(5),
                   Text(
-                    price,
+                    "$price ج.م.",
                     style:
                         TextStyles.smallbold.copyWith(color: ColorManager.grey),
                   ),
@@ -70,41 +88,42 @@ class OrderDetailsModel extends StatelessWidget {
             ],
           ),
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Icon(
-                Icons.category_outlined,
-                color: ColorManager.primary,
-                size: 23.sp,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Icon(
+                    Icons.watch,
+                    color: ColorManager.primary,
+                    size: 23.sp,
+                  ),
+                  horizontalSpace(5),
+                  Text(
+                    "${time.hour}:${time.minute}",
+                    style:
+                        TextStyles.smallbold.copyWith(color: ColorManager.grey),
+                  ),
+                ],
               ),
-              horizontalSpace(5),
-              Text(
-                "Service ",
-                style: TextStyles.small.copyWith(color: ColorManager.grey),
-              ),
-              horizontalSpace(5),
-              Text(
-                "-",
-                style: TextStyles.small.copyWith(color: ColorManager.grey),
-              ),
-              horizontalSpace(5),
-              Text(
-                serviceName,
-                style: TextStyles.small.copyWith(color: ColorManager.grey),
-              ),
-            ],
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              Icon(
-                Icons.calendar_today_outlined,
-                color: ColorManager.primary,
-                size: 23.sp,
-              ),
-              horizontalSpace(5),
-              Text(
-                "time",
-                style: TextStyles.smallbold.copyWith(color: ColorManager.grey),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Icon(
+                    Icons.calendar_today_outlined,
+                    color: ColorManager.primary,
+                    size: 23.sp,
+                  ),
+                  horizontalSpace(5),
+                  Text(
+                    time
+                        .subtract(const Duration(hours: 2))
+                        .toString()
+                        .substring(0, 10),
+                    style:
+                        TextStyles.smallbold.copyWith(color: ColorManager.grey),
+                  ),
+                ],
               ),
             ],
           )

@@ -40,9 +40,9 @@ class OrderDetails extends StatelessWidget {
                   itemCount: cubit.services.length,
                   itemBuilder: (context, index) {
                     return OrderDetailsModel(
-                      serviceName: cubit.services[index].name == null
-                          ? "Unknown"
-                          : cubit.services[index].name.toString(),
+                      craftsId: cubit.orders[index].craftsmanId!.toInt(),
+                      id: cubit.orders[index].orderId!,
+                      time: cubit.orders[index].date!,
                       price: cubit.services[index].price.toString(),
                     );
                   },
