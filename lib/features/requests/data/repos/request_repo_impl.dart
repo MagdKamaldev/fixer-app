@@ -57,10 +57,12 @@ class RequestRepoImpl implements RequestRepo {
   }
 
   @override
-  Future<Either<Failure, List<ReviewModel>>> craftsmanReviews(int craftsmanId) async{
+  Future<Either<Failure, List<ReviewModel>>> craftsmanReviews(
+      int craftsmanId) async {
     try {
       final response = await apiServices.get(
-          endPoint: "CraftsmanReviews/$craftsmanId",);
+        endPoint: "CraftsmanReviews/$craftsmanId",
+      );
 
       if (response["Reviews"] == null) {
         return Left(ServerFailure(response["Message"]));
@@ -77,5 +79,29 @@ class RequestRepoImpl implements RequestRepo {
         return Left(ServerFailure(e.toString()));
       }
     }
+  }
+
+  @override
+  Future<Either<Failure, String>> endRequest(int requestId) {
+    // TODO: implement endRequest
+    throw UnimplementedError();
+  }
+
+  @override
+  Future<Either<Failure, String>> selectCraftsman(
+      int requestId, int craftsmanId) async {
+    //  try {
+    final response = await apiServices
+        .post(endPoint: "SelectCraftsman/$requestId/$craftsmanId", data: {});
+    print(response);
+    return Right(response["Message"]);
+
+    // } catch (e) {
+    //   if (e is ServerFailure) {
+    //     return Left(ServerFailure(e.message));
+    //   } else {
+    //     return Left(ServerFailure(e.toString()));
+    //   }
+    // }
   }
 }

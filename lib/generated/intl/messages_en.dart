@@ -49,6 +49,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "allStores": MessageLookupByLibrary.simpleMessage("All stores"),
         "alreadyhaveaccount":
             MessageLookupByLibrary.simpleMessage(" Already have an account?"),
+        "amazing":
+            MessageLookupByLibrary.simpleMessage("Excellent Workmanship"),
         "area": MessageLookupByLibrary.simpleMessage("Area"),
         "availablecraftmen":
             MessageLookupByLibrary.simpleMessage("Available Craftsmen"),
@@ -86,6 +88,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "emailfield": MessageLookupByLibrary.simpleMessage("Enter your email"),
         "emptyValidation":
             MessageLookupByLibrary.simpleMessage("Field must not be empty !"),
+        "endRequest": MessageLookupByLibrary.simpleMessage("End Request"),
         "entercode":
             MessageLookupByLibrary.simpleMessage("Enter confirmation code"),
         "enteryUserName":
@@ -95,6 +98,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "enteryphonenumber":
             MessageLookupByLibrary.simpleMessage("Enter your phone number"),
         "evening": MessageLookupByLibrary.simpleMessage("Good Evening"),
+        "fair": MessageLookupByLibrary.simpleMessage("Fair Quality"),
         "field": MessageLookupByLibrary.simpleMessage("Field"),
         "floor": MessageLookupByLibrary.simpleMessage("Floor"),
         "forgot": MessageLookupByLibrary.simpleMessage("Forgot Password"),
@@ -107,6 +111,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "getstarted": MessageLookupByLibrary.simpleMessage("Get started"),
         "getstartintro": MessageLookupByLibrary.simpleMessage(
             "Browse craftsmen for repair \n and maintainance service"),
+        "good": MessageLookupByLibrary.simpleMessage("Good Craftsmanship"),
         "howwasyourexperience":
             MessageLookupByLibrary.simpleMessage("How was your service with "),
         "leavecomment": MessageLookupByLibrary.simpleMessage("Leave a comment"),
@@ -145,6 +150,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Recieve competitive bids,\n compare prices,and make \n informed decisions."),
         "onBoardingText3": MessageLookupByLibrary.simpleMessage(
             "Make hassle-free transcations \n within the app for peace of \n mind."),
+        "ongoing": MessageLookupByLibrary.simpleMessage("Request is ongoing !"),
         "or": MessageLookupByLibrary.simpleMessage("Or"),
         "orderDeatils": MessageLookupByLibrary.simpleMessage("Order Details"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
@@ -162,6 +168,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "plumbing": MessageLookupByLibrary.simpleMessage("Plumbing"),
         "plumbingDes":
             MessageLookupByLibrary.simpleMessage("Swift plumbing fixes."),
+        "poor": MessageLookupByLibrary.simpleMessage("Poor Performance"),
         "price": MessageLookupByLibrary.simpleMessage("Price"),
         "pricedetails": MessageLookupByLibrary.simpleMessage("Price details"),
         "pricesmayvary": MessageLookupByLibrary.simpleMessage(

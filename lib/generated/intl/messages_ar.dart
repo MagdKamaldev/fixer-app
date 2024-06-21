@@ -48,6 +48,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allStores": MessageLookupByLibrary.simpleMessage("كل المتاجر"),
         "alreadyhaveaccount":
             MessageLookupByLibrary.simpleMessage(" لديك حساب بالفعل ؟"),
+        "amazing": MessageLookupByLibrary.simpleMessage("جودة ممتازة"),
         "area": MessageLookupByLibrary.simpleMessage("منطقة"),
         "availablecraftmen":
             MessageLookupByLibrary.simpleMessage("الحرفيين المتاحين"),
@@ -84,6 +85,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ادخل بريدك الإلكتروني"),
         "emptyValidation":
             MessageLookupByLibrary.simpleMessage("هذا الحقل مطلوب"),
+        "endRequest": MessageLookupByLibrary.simpleMessage("إنهاء الطلب"),
         "entercode": MessageLookupByLibrary.simpleMessage("أدخل رمز التأكيد"),
         "enteryUserName":
             MessageLookupByLibrary.simpleMessage("أدخل اسم المستخدم الخاص بك"),
@@ -92,6 +94,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "enteryphonenumber":
             MessageLookupByLibrary.simpleMessage("أدخل رقم هاتفك"),
         "evening": MessageLookupByLibrary.simpleMessage("مساء الخير"),
+        "fair": MessageLookupByLibrary.simpleMessage("جودة مقبولة"),
         "field": MessageLookupByLibrary.simpleMessage("المجال"),
         "floor": MessageLookupByLibrary.simpleMessage("الطابق"),
         "forgot": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور"),
@@ -103,6 +106,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "getstarted": MessageLookupByLibrary.simpleMessage("البدء"),
         "getstartintro": MessageLookupByLibrary.simpleMessage(
             "تصفح حرفيين لخدمات الإصلاح والصيانة."),
+        "good": MessageLookupByLibrary.simpleMessage("جودة جيدة"),
         "howwasyourexperience":
             MessageLookupByLibrary.simpleMessage("كيف كانت خدمتك مع "),
         "leavecomment": MessageLookupByLibrary.simpleMessage("اترك تعليق"),
@@ -140,6 +144,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "احصل على عروض بأسعار تنافسية، وقارن الأسعار، واتخذ قرارات مستنيرة."),
         "onBoardingText3": MessageLookupByLibrary.simpleMessage(
             "قم بإجراء تحويلات خالية من \nالمتاعب داخل التطبيق لراحة البال."),
+        "ongoing": MessageLookupByLibrary.simpleMessage("الطلب جاري حاليا !"),
         "or": MessageLookupByLibrary.simpleMessage("أو"),
         "orderDeatils": MessageLookupByLibrary.simpleMessage("تفاصيل الطلب"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
@@ -157,6 +162,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "plumbing": MessageLookupByLibrary.simpleMessage("سباكة"),
         "plumbingDes":
             MessageLookupByLibrary.simpleMessage("إصلاحات السباكة السريعة."),
+        "poor": MessageLookupByLibrary.simpleMessage("جودة ضعيفة"),
         "price": MessageLookupByLibrary.simpleMessage("سعر"),
         "pricedetails": MessageLookupByLibrary.simpleMessage("تفاصيل السعر"),
         "pricesmayvary": MessageLookupByLibrary.simpleMessage(

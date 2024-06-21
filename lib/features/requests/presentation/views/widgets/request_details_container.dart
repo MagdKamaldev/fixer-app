@@ -1,13 +1,16 @@
 import 'package:fixer/core/helpers/spacing.dart';
 import 'package:fixer/core/themes/colors.dart';
 import 'package:fixer/core/themes/text_styles.dart';
+import 'package:fixer/features/requests/data/models/order_carftsmen_model.dart';
+import 'package:fixer/features/requests/manager/request%20cubit/request_cubit.dart';
 import 'package:fixer/features/requests/presentation/views/widgets/request_row_model.dart';
 import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Requestdetails extends StatelessWidget {
-  const Requestdetails({super.key});
+  final OrderCarftsmenModel model;
+  const Requestdetails({super.key, required this.model});
 
   @override
   Widget build(BuildContext context) {
@@ -32,8 +35,8 @@ class Requestdetails extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const CircleAvatar(
-                        backgroundImage: NetworkImage(
+                      CircleAvatar(
+                        backgroundImage: NetworkImage(model.profilePic ??
                             "https://th.bing.com/th?id=OIP.TctatNGs7RN-Dfc3NZf91AAAAA&w=212&h=212&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"),
                         radius: 25,
                       ),
@@ -45,7 +48,7 @@ class Requestdetails extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                "name",
+                                model.name!,
                                 style: TextStyles.body,
                               ),
                               verticalSpace(6),
@@ -58,14 +61,14 @@ class Requestdetails extends StatelessWidget {
                                   ),
                                   horizontalSpace(2),
                                   Text(
-                                    "1",
+                                    model.name!,
                                     style: TextStyles.body,
                                   ),
                                   horizontalSpace(5),
                                   InkWell(
                                     onTap: () {},
                                     child: Text(
-                                      "(200 ${S.of(context).services})",
+                                      "(${model.completedOrders} ${S.of(context).services})",
                                       style: TextStyles.small.copyWith(
                                         color: ColorManager.grey,
                                         decoration: TextDecoration.underline,
@@ -87,7 +90,7 @@ class Requestdetails extends StatelessWidget {
                         EdgeInsets.symmetric(horizontal: 10.h, vertical: 14.w),
                     child: RequestRowModel(
                         label: S.of(context).area,
-                        description: "description",
+                        description: orderLocation,
                         icon: Icons.location_on_outlined))
               ]),
         ));

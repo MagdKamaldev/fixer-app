@@ -7,7 +7,8 @@ import 'package:flutter/material.dart';
 
 class AvailableCraftmen extends StatelessWidget {
   final List<OrderCarftsmenModel> craftsmen;
-  const AvailableCraftmen({super.key, required this.craftsmen});
+  final int orderId;
+  const AvailableCraftmen({super.key, required this.craftsmen, required this.orderId});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +26,7 @@ class AvailableCraftmen extends StatelessWidget {
           child: ListView.builder(
             itemCount: craftsmen.length,
             itemBuilder: (context, index) {
-              return AvailableCraftmenCard(model: craftsmen[index]);
+              return AvailableCraftmenCard(model: craftsmen[index],orderId: orderId,);
             },
           ),
         ),

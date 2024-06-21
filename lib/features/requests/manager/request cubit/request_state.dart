@@ -45,3 +45,17 @@ final class RequestReviewsFailed extends RequestState {
 
   RequestReviewsFailed(this.message);
 }
+
+final class SelectCraftsmanLoading extends RequestState {}
+
+final class SelectCraftsmanSuccess extends RequestState {
+  final String message;
+
+  SelectCraftsmanSuccess(this.message);
+}
+
+final class SelectCraftsmanFailed extends RequestState {
+  final String message;
+
+  SelectCraftsmanFailed(this.message);
+}

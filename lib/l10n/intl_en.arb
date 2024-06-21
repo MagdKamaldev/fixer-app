@@ -146,6 +146,12 @@
   "leavecomment":"Leave a comment",
   "howwasyourexperience":"How was your service with ",
   "performance":"performance",
-  "NoReviews":" No Reviews Yet !"
+  "NoReviews":" No Reviews Yet !",
+   "endRequest":"End Request",
+   "ongoing":"Request is ongoing !",
+   "poor":"Poor Performance",
+   "fair":"Fair Quality",
+   "good":"Good Craftsmanship",
+   "amazing":"Excellent Workmanship"
 
 }

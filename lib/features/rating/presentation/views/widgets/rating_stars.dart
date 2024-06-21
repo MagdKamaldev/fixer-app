@@ -3,9 +3,14 @@ import 'package:fixer/core/themes/colors.dart';
 import 'package:flutter/material.dart';
 
 class RatingStarsRow extends StatelessWidget {
-  final VoidCallback onStarTap;
+  final int initialRating;
+  final ValueChanged<int> onRatingChanged;
 
-  const RatingStarsRow({super.key, required this.onStarTap});
+  const RatingStarsRow({
+    super.key,
+    required this.initialRating,
+    required this.onRatingChanged,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -15,10 +20,10 @@ class RatingStarsRow extends StatelessWidget {
         filledColor: Colors.amber,
         emptyColor: ColorManager.grey,
         size: 30,
-        initialRating: 1,
+        initialRating: initialRating.toDouble(),
         alignment: Alignment.center,
         onRatingChanged: (rating) {
-          onStarTap();
+          onRatingChanged(rating.toInt());
         });
   }
 }

@@ -8,4 +8,7 @@ abstract class RequestRepo {
   Future<Either<Failure, List<OrderCarftsmenModel>>> requestCraftsmen(
       int orderId, String location);
   Future<Either<Failure, List<ReviewModel>>> craftsmanReviews(int craftsmanId);
+  Future<Either<Failure, String>> selectCraftsman(int requestId,int craftsmanId);
+  Future<Either<Failure, String>> endRequest(int requestId);
+
 }

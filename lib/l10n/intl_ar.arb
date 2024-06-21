@@ -147,7 +147,13 @@
   "leavecomment":"اترك تعليق",
   "howwasyourexperience":"كيف كانت خدمتك مع ",
   "performance":"أداء",
-   "NoReviews":" لا توجد تقييمات"
+   "NoReviews":" لا توجد تقييمات",
+   "endRequest":"إنهاء الطلب",
+    "ongoing":"الطلب جاري حاليا !",
+    "poor":"جودة ضعيفة",
+   "fair":"جودة مقبولة",
+   "good":"جودة جيدة",
+   "amazing":"جودة ممتازة"
 
 
 

@@ -1529,6 +1529,66 @@ class S {
       args: [],
     );
   }
+
+  /// `End Request`
+  String get endRequest {
+    return Intl.message(
+      'End Request',
+      name: 'endRequest',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Request is ongoing !`
+  String get ongoing {
+    return Intl.message(
+      'Request is ongoing !',
+      name: 'ongoing',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Poor Performance`
+  String get poor {
+    return Intl.message(
+      'Poor Performance',
+      name: 'poor',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Fair Quality`
+  String get fair {
+    return Intl.message(
+      'Fair Quality',
+      name: 'fair',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Good Craftsmanship`
+  String get good {
+    return Intl.message(
+      'Good Craftsmanship',
+      name: 'good',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Excellent Workmanship`
+  String get amazing {
+    return Intl.message(
+      'Excellent Workmanship',
+      name: 'amazing',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
