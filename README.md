@@ -207,8 +207,13 @@ the request icon in nav bar shows the history of ongonig or done services that t
 
 | English | Arabic |
 | ------- | ------ |
-| <img src="" height="500" width="250"> | <img src="" height="500" width="250"> |
+| <img src="assets/docs/Orderview_en.jpg" height="500" width="250"> | <img src="assets/docs/Orderviews_arab.jpg" height="500" width="250"> |
 
+and when client clicks on order the order details screen appear
+
+| English | Arabic |
+| ------- | ------ |
+| <img src="assets/docs/Orderdetails_en.jpg" height="500" width="250"> | <img src="assets/docs/Orderdetails_arab.jpg" height="500" width="250"> |
 
 
 ### 5.13 stores screen 

@@ -1,5 +1,6 @@
 import 'package:fixer/core/helpers/spacing.dart';
 import 'package:fixer/core/service_locator/service_locator.dart';
+import 'package:fixer/core/themes/colors.dart';
 import 'package:fixer/features/my%20orders/data/repos/orders_repo_impl.dart';
 import 'package:fixer/features/my%20orders/manager/cubit/orders_cubit.dart';
 import 'package:fixer/features/my%20orders/presentation/order_details_model.dart';
@@ -31,7 +32,11 @@ class OrderDetails extends StatelessWidget {
               appBar: AppBar(
                 title: Text(S.of(context).orderDeatils),
                 centerTitle: true,
+                shadowColor: ColorManager.white,
+                backgroundColor: ColorManager.white,
+                surfaceTintColor: ColorManager.white,
               ),
+              backgroundColor: ColorManager.white,
               body: Padding(
                 padding:
                     const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
