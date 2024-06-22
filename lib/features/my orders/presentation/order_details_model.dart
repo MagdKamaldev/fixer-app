@@ -8,13 +8,12 @@ class OrderDetailsModel extends StatelessWidget {
   final String price;
   final DateTime time;
   final int id;
-  final int craftsId;
   const OrderDetailsModel(
       {super.key,
       required this.price,
       required this.time,
       required this.id,
-      required this.craftsId});
+     });
 
   @override
   Widget build(BuildContext context) {
@@ -56,20 +55,7 @@ class OrderDetailsModel extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Row(
-                children: [
-                  Icon(
-                    Icons.build,
-                    size: 23.sp,
-                  ),
-                  horizontalSpace(5),
-                  Text(
-                    "$craftsId",
-                    style:
-                        TextStyles.smallbold.copyWith(color: ColorManager.grey),
-                  ),
-                ],
-              ),
+             
               Row(
                 children: [
                   Icon(

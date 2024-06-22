@@ -25,20 +25,20 @@ class OrdersCubit extends Cubit<OrdersState> {
     );
   }
 
-  List<ServiceModel> services = [];
+  // List<ServiceModel> services = [];
 
-  void getOrderServices(int id) async {
-    emit(GetOrderServicesLoading());
+  // void getOrderServices(int id) async {
+  //   emit(GetOrderServicesLoading());
 
-    final result = await repo.getOrderServices(id);
-    result.fold(
-      (l) {
-        emit(GetOrderServicesFailed(l.message));
-      },
-      (r) {
-        services = r;
-        emit(GetOrderServicesSuccess(r));
-      },
-    );
-  }
+  //   final result = await repo.getOrderServices(id);
+  //   result.fold(
+  //     (l) {
+  //       emit(GetOrderServicesFailed(l.message));
+  //     },
+  //     (r) {
+  //       services = r;
+  //       emit(GetOrderServicesSuccess(r));
+  //     },
+  //   );
+  // }
 }

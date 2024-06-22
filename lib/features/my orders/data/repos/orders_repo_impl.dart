@@ -12,36 +12,36 @@ class OrdersRepoImpl implements OrdersRepo {
   final ApiServices apiServices;
   OrdersRepoImpl({required this.apiServices});
 
-  @override
-  Future<Either<Failure, List<ServiceModel>>> getOrderServices(int id) async {
-    try {
-      final response = await apiServices.get(
-        endPoint: "OrderServices/$id",
-        jwt: token == "" ? kTokenBox.get(kTokenBoxString) : token,
-      );
+  // @override
+  // Future<Either<Failure, List<ServiceModel>>> getOrderServices(int id) async {
+  //   try {
+  //     final response = await apiServices.get(
+  //       endPoint: "OrderServices/$id",
+  //       jwt: token == "" ? kTokenBox.get(kTokenBoxString) : token,
+  //     );
 
-      if (response["services"] == null ||
-          response["services"]["services"] == null) {
-        return Left(ServerFailure("No services found"));
-      }
+  //     if (response["services"] == null ||
+  //         response["services"]["services"] == null) {
+  //       return Left(ServerFailure("No services found"));
+  //     }
 
-      List<ServiceModel> services = (response["services"]["services"] as List)
-          .map((item) => ServiceModel.fromJson(item))
-          .toList();
+  //     List<ServiceModel> services = (response["services"]["services"] as List)
+  //         .map((item) => ServiceModel.fromJson(item))
+  //         .toList();
 
-      return Right(services);
-    } catch (e) {
-      if (e is ServerFailure) {
-        return Left(ServerFailure(e.message));
-      } else {
-        return Left(ServerFailure(e.toString()));
-      }
-    }
-  }
+  //     return Right(services);
+  //   } catch (e) {
+  //     if (e is ServerFailure) {
+  //       return Left(ServerFailure(e.message));
+  //     } else {
+  //       return Left(ServerFailure(e.toString()));
+  //     }
+  //   }
+  // }
 
   @override
   Future<Either<Failure, List<OrderModel>>> getOrders() async {
-    // try {
+     try {
     final response = await apiServices.get(
         endPoint: "MyOrders",
         jwt: token == "" ? kTokenBox.get(kTokenBoxString) : token);
@@ -51,12 +51,12 @@ class OrdersRepoImpl implements OrdersRepo {
         .toList();
     print(response);
     return Right(orders);
-    // } catch (e) {
-    //   if (e is ServerFailure) {
-    //     return Left(ServerFailure(e.message));
-    //   } else {
-    //     return Left(ServerFailure(e.toString()));
-    //   }
-    // }
+    } catch (e) {
+      if (e is ServerFailure) {
+        return Left(ServerFailure(e.message));
+      } else {
+        return Left(ServerFailure(e.toString()));
+      }
+    }
   }
 }

@@ -1,63 +1,44 @@
 import 'package:fixer/core/helpers/spacing.dart';
-import 'package:fixer/core/service_locator/service_locator.dart';
-import 'package:fixer/core/themes/colors.dart';
-import 'package:fixer/features/my%20orders/data/repos/orders_repo_impl.dart';
-import 'package:fixer/features/my%20orders/manager/cubit/orders_cubit.dart';
-import 'package:fixer/features/my%20orders/presentation/order_details_model.dart';
+import 'package:fixer/features/my%20orders/presentation/order_item.dart';
+import 'package:fixer/features/services/data/models/service_model.dart';
 import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 class OrderDetails extends StatelessWidget {
-  final int orderid;
-  const OrderDetails({super.key, required this.orderid});
+  final List<ServiceModel> model;
+  const OrderDetails({super.key, required this.model});
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) =>
-          OrdersCubit(getIt<OrdersRepoImpl>())..getOrderServices(orderid),
-      child: BlocBuilder<OrdersCubit, OrdersState>(
-        builder: (context, state) {
-          OrdersCubit cubit = OrdersCubit.get(context);
-          if (state is GetOrderServicesLoading) {
-            return Scaffold(
-                appBar: AppBar(
-                  title: Text(S.of(context).orderDeatils),
-                  centerTitle: true,
-                ),
-                body: const Center(child: CircularProgressIndicator()));
-          } else {
-            return Scaffold(
-              appBar: AppBar(
-                title: Text(S.of(context).orderDeatils),
-                centerTitle: true,
-                shadowColor: ColorManager.white,
-                backgroundColor: ColorManager.white,
-                surfaceTintColor: ColorManager.white,
+   return Scaffold(
+            appBar: AppBar(
+              title: Text(S.of(context).orderDeatils),
+              centerTitle: true,
+            ),
+            body: Padding(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+              child: ListView.separated(
+                separatorBuilder: (context, index) => verticalSpace(12),
+                itemCount: model.length,
+                itemBuilder: (context, index) {
+                  return OrderContainerModel(
+                    text: model[index].name == null
+                        ? "Unknown"
+                        : model[index].name.toString(),
+                    description: model[index].price.toString(),
+                    backgroundpath: "assets/images/stores_background.jpg",
+                  );
+                  // return OrderDetailsModel(
+                  //   id: orders[index].orderId!,
+                  //   time: orders[index].date!,
+    
+                  //   price: services[index].price.toString(),
+                  // );
+                },
               ),
-              backgroundColor: ColorManager.white,
-              body: Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-                child: ListView.separated(
-                  separatorBuilder: (context, index) => verticalSpace(12),
-                  itemCount: cubit.services.length,
-                  itemBuilder: (context, index) {
-                    return OrderDetailsModel(
-                      craftsId: cubit.orders[index].craftsmanId!.toInt(),
-                      id: cubit.orders[index].orderId!,
-                      time: cubit.orders[index].date!,
-                      price: cubit.services[index].price.toString(),
-                    );
-                  },
-                ),
-              ),
-            );
-          }
-        },
-      ),
-    );
+            ),
+          );
   }
 }
 
