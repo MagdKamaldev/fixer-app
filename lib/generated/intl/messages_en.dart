@@ -39,6 +39,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "accepttermsandpolicy": MessageLookupByLibrary.simpleMessage(
             "You must accept the terms and policy !"),
         "addComplain": MessageLookupByLibrary.simpleMessage("Add Complain"),
+        "additionalInfo":
+            MessageLookupByLibrary.simpleMessage("Additional Info"),
         "aditionalDirections": MessageLookupByLibrary.simpleMessage(
             "Aditional directions (options)"),
         "after40sec":

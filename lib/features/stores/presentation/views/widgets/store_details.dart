@@ -7,7 +7,6 @@ import 'package:fixer/features/stores/data/models/stores_model.dart';
 import 'package:fixer/features/stores/data/repos/stores_repo_impl.dart';
 import 'package:fixer/features/stores/manager/cubit/stores_cubit.dart';
 import 'package:fixer/features/stores/presentation/views/widgets/item_container_model.dart';
-import 'package:fixer/features/stores/presentation/views/widgets/searchbar_container.dart';
 import 'package:fixer/features/stores/presentation/views/widgets/store_stack_container.dart';
 import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
@@ -36,11 +35,7 @@ class StoreDetails extends StatelessWidget {
             StoreStackContainer(
               store: store,
             ),
-            verticalSpace(20),
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20),
-              child: SearchbarContainer(),
-            ),
+           
             verticalSpace(20),
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 20),

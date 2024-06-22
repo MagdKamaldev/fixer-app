@@ -38,6 +38,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "accepttermsandpolicy": MessageLookupByLibrary.simpleMessage(
             "يجب الموافقة على الشروط والسياسات"),
         "addComplain": MessageLookupByLibrary.simpleMessage("إضافة شكوى"),
+        "additionalInfo":
+            MessageLookupByLibrary.simpleMessage("معلومات اضافية"),
         "aditionalDirections":
             MessageLookupByLibrary.simpleMessage("اتجاهات إضافية (اختياري)"),
         "after40sec":
