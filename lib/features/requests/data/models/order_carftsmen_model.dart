@@ -5,7 +5,7 @@ class OrderCarftsmenModel {
   String? name;
   String? phone;
   dynamic profilePic;
-  double? rating;
+  dynamic rating;
   String? username;
 
   OrderCarftsmenModel({
@@ -27,7 +27,7 @@ class OrderCarftsmenModel {
       name: json['name'] as String?,
       phone: json['phone'] as String?,
       profilePic: json['profile_pic'] as dynamic,
-      rating: json['rating'] as double?,
+      rating: json['rating'] as dynamic,
       username: json['username'] as String?,
     );
   }
