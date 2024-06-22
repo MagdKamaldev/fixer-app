@@ -5,6 +5,7 @@ import 'package:fixer/core/themes/text_styles.dart';
 import 'package:fixer/features/payment/data/models/payment_model/payment_model.dart';
 import 'package:fixer/generated/l10n.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Pricedetails extends StatelessWidget {
   final PaymentModel model;
@@ -16,8 +17,8 @@ class Pricedetails extends StatelessWidget {
     return Container(
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height * 0.75,
-      padding: const EdgeInsets.all(24),
-      color: ColorManager.white,
+      // padding: const EdgeInsets.all(24),
+      color:ColorManager.white,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -29,21 +30,25 @@ class Pricedetails extends StatelessWidget {
               model.orderSummary!.craftsmanName ?? ''),
           _buildRowContainer(S.of(context).requestStatus,
               model.orderSummary!.done == true ? "Done" : "Ongoing"),
-          verticalSpace(24),
+          verticalSpace(16),
           Text(
             S.of(context).pricedetails,
             style: TextStyles.bodybold,
           ),
           verticalSpace(16),
-          Expanded(
-            child: ListView.builder(
-              itemCount: model.orderSummary!.services!.length,
-              itemBuilder: (context, index) {
-                return _buildServiceRowContainer(
-                  model.orderSummary!.services![index].name!,
-                  "${model.orderSummary!.services![index].price} ج.م.",
-                );
-              },
+          SizedBox(
+            width: 380.w,
+            height: 225.h,
+            child: Expanded(
+              child: ListView.builder(
+                itemCount: model.orderSummary!.services!.length,
+                itemBuilder: (context, index) {
+                  return _buildServiceRowContainer(
+                    model.orderSummary!.services![index].name!,
+                    "${model.orderSummary!.services![index].price} ج.م.",
+                  );
+                },
+              ),
             ),
           ),
           verticalSpace(16),
@@ -57,7 +62,7 @@ class Pricedetails extends StatelessWidget {
   Widget _buildRowContainer(String label, String value) {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
-      margin: const EdgeInsets.symmetric(vertical: 6),
+      margin: const EdgeInsets.symmetric(vertical: 3),
       decoration: BoxDecoration(
         color: ColorManager.primary,
         borderRadius: BorderRadius.circular(10),
@@ -67,11 +72,11 @@ class Pricedetails extends StatelessWidget {
         children: [
           Text(
             label,
-            style: TextStyles.bodybold.copyWith(color: ColorManager.white),
+            style: TextStyles.smallbold.copyWith(color: ColorManager.white),
           ),
           Text(
             value,
-            style: TextStyles.body.copyWith(color: ColorManager.white),
+            style: TextStyles.small.copyWith(color: ColorManager.white),
           ),
         ],
       ),
@@ -80,22 +85,36 @@ class Pricedetails extends StatelessWidget {
 
   Widget _buildServiceRowContainer(String serviceName, String price) {
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
-      margin: const EdgeInsets.symmetric(vertical: 6),
+      padding: const EdgeInsets.symmetric(vertical: 12, horizontal:16),
+      margin: const EdgeInsets.symmetric(vertical: 3),
       decoration: BoxDecoration(
-        color: ColorManager.grey,
+        color: ColorManager.white,
+        boxShadow:const [
+          BoxShadow(
+            color: ColorManager.lightblue,
+            spreadRadius: 0,
+            blurRadius: 4,
+            offset: Offset(0, 2), // changes position of shadow
+          ),
+        ],
         borderRadius: BorderRadius.circular(10),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(
-            serviceName,
-            style: TextStyles.body.copyWith(color: ColorManager.black),
+          Row(
+            children: [
+              const Icon(Icons.category_outlined,color: ColorManager.primary,size: 20,),
+              horizontalSpace(5),
+              Text(
+                serviceName,
+                style: TextStyles.body.copyWith(color: ColorManager.black),
+              ),
+            ],
           ),
           Text(
             price,
-            style: TextStyles.body.copyWith(color: ColorManager.black),
+            style: TextStyles.smallbold.copyWith(color: ColorManager.black),
           ),
         ],
       ),

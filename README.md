@@ -97,7 +97,13 @@ the client is navigated to this screen to enter his username,email and password
 | ------- | ------ |
 | <img src="assets/docs/user_sign_up_form_eng.jpg" height="500" width="250"> | <img src="assets/docs/user_sign_up_form_arab.jpg" height="500" width="250"> |
 
-### 5.4.Cleint location detail screen 
+### 5.4.terms and condition screen
+
+| English | Arabic |
+| ------- | ------ |
+| <img src="assets/docs/Termsandconditions_eng.jpg" height="500" width="250"> | <img src="assets/docs/Termsandcondtions_arab.jpg" height="500" width="250"> |
+
+### 5.5.Cleint location detail screen 
 
 Then client enters his address details or the place he wishes to recieve the service.
 
@@ -105,12 +111,12 @@ Then client enters his address details or the place he wishes to recieve the ser
 | ------- | ------ |
 | <img src="assets/docs/user_address_eng.jpg" height="500" width="250"> | <img src="assets/docs/user_address_arb.jpg" height="500" width="250"> |
 
-### 5.5.Clinet location on map selection screen 
+### 5.6.Clinet location on map selection screen 
 | English | Arabic |
 | ------- | ------ |
 | <img src="assets/docs/user_location_selection_eng.jpg" height="500" width="250"> | <img src="assets/docs/user_location_selection_arab.jpg" height="500" width="250"> |
 
-### 5.6.client homescreen
+### 5.7.client homescreen
 
 After completeing the sign up process,the cilent is then navigated to the home screen 
 
@@ -118,7 +124,7 @@ After completeing the sign up process,the cilent is then navigated to the home s
 | ------- | ------ |
 | <img src="assets/docs/HomeView_en.jpg" height="500" width="250"> | <img src="assets/docs/HomeView_arab.jpg" height="500" width="250"> |
 
-### 5.7.client request process 
+### 5.8.client request process 
 
 when teh client clicks on request now button, a pop up appears to choose between electric or plumbing category
 
@@ -161,6 +167,12 @@ after confirming the request the client is then navigated to a screen showing al
 | ------- | ------ |
 | <img src="assets/docs/Availablecraftmen_eng.jpg" height="500" width="250"> | <img src="assets/docs/Availablecraftmen_arab.jpg" height="500" width="250"> |
 
+incase there are no available craftsman this meassage will appear
+
+| English | Arabic |
+| ------- | ------ |
+| <img src="assets/docs/Noavailablecraftmen_en.jpg" height="500" width="250"> | <img src="assets/docs/Noavailablecraftmen_arab.jpg" height="500" width="250"> |
+
 incase the service is not availabe in his area this message will appear
 
 | English | Arabic |
@@ -169,7 +181,7 @@ incase the service is not availabe in his area this message will appear
 
 then he have to click on "cancel request" to return to home screen 
 
-### 5.8 call craftman
+### 5.9.call craftman
 
 when the user clicks confrim then he is navigated to a screen to all the craftman
 
@@ -177,7 +189,7 @@ when the user clicks confrim then he is navigated to a screen to all the craftma
 | ------- | ------ |
 | <img src="assets/docs/Callcraftmen_ar.jpg" height="500" width="250"> | <img src="assets/docs/Callcraftmen_ar.jpg" height="500" width="250"> |
 
-### 5.9 Ongoing service screen 
+### 5.10.Ongoing service screen 
 
 this screen appears as long as the service is still ongoing 
 
@@ -185,7 +197,7 @@ this screen appears as long as the service is still ongoing
 | ------- | ------ |
 | <img src="assets/docs/Ongoingservice_en.jpg" height="500" width="250"> | <img src="assets/docs/Ongoingservice_arab.jpg" height="500" width="250"> |
 
-### 5.10 rating craftmen screen 
+### 5.11.rating craftmen screen 
 
 after the service is done the clients rates the craftfen on his service 
 
@@ -193,13 +205,19 @@ after the service is done the clients rates the craftfen on his service
 | ------- | ------ |
 | <img src="assets/docs/Ratecraftmen_en.jpg" height="500" width="250"> | <img src="assets/docs/Ratecraftmen_arab.jpg" height="500" width="250"> |
 
-### 5.11 payment screen 
+### 5.12.payment screen 
 
 after completeing the service tha user is then navigated to the payment screen 
 
+
 | English | Arabic |
 | ------- | ------ |
-| <img src="assets/docs/Paymentprocess_en.jpg" height="500" width="250"> | <img src="assets/docs/Paymentprocess_arab.jpg" height="500" width="250"> |
+| <img src="assets/docs/PaymentScreen_en.jpg" height="500" width="250"> | <img src="assets/docs/PaymentScreen_arab.jpg" height="500" width="250"> |
+
+
+| English | Arabic |
+| ------- | ------ |
+| <img src="assets/docs/PaymentProcess_eng.jpg" height="500" width="250"> | <img src="assets/docs/PaymentProcess_ara.jpg" height="500" width="250"> |
 
 ### 5.12 client request history screen 
 
@@ -311,9 +329,3 @@ Them the craftsman is then navigated to this untill an admin approves his applic
 | English | Arabic |
 | ------- | ------ |
 | <img src="assets/docs/waiting_en.jpg" height="500" width="250"> | <img src="assets/docs/waiting_ar.jpg" height="500" width="250"> |
-
-### 7.terms and condition screen
-
-| English | Arabic |
-| ------- | ------ |
-| <img src="assets/docs/Termsandconditions_eng.jpg" height="500" width="250"> | <img src="assets/docs/Termsandcondtions_arab.jpg" height="500" width="250"> |

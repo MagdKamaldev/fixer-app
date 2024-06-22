@@ -1,4 +1,5 @@
 import 'package:fixer/core/routing/app_router.dart';
+import 'package:fixer/core/themes/colors.dart';
 import 'package:fixer/core/themes/text_styles.dart';
 import 'package:fixer/core/widgets/buttons/default_button.dart';
 import 'package:fixer/features/home/presentation/views/home_view.dart';
@@ -34,7 +35,7 @@ class PaymentView extends StatelessWidget {
               appBar: AppBar(
                 title: Text(
                   S.of(context).payment,
-                  style: TextStyles.headings,
+                  style: TextStyles.subHeadings,
                 ),
                 centerTitle: true,
                 toolbarHeight: 80,
@@ -45,13 +46,14 @@ class PaymentView extends StatelessWidget {
               appBar: AppBar(
                 title: Text(
                   S.of(context).payment,
-                  style: TextStyles.headings,
+                  style: TextStyles.subHeadingsBold,
                 ),
+                backgroundColor: ColorManager.white,
                 centerTitle: true,
-                toolbarHeight: 80,
+                toolbarHeight:80,
               ),
               body: Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.only(left: 24,right: 24,bottom: 30),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
