@@ -59,11 +59,6 @@ class OrderContainerModel extends StatelessWidget {
               ],
             ),
           ),
-          const Icon(
-            Icons.arrow_forward_ios,
-            color: ColorManager.primary,
-            size: 25,
-          )
         ],
       ),
     );

@@ -5,7 +5,14 @@ import 'package:flutter/material.dart';
 class ServicesWrapRow extends StatelessWidget {
   final List<ServiceModel> services;
   final int id;
-  const ServicesWrapRow({super.key, required this.services, required this.id});
+  final String additional;
+  final GlobalKey<FormState> formKey;
+  const ServicesWrapRow(
+      {super.key,
+      required this.services,
+      required this.id,
+      required this.additional,
+     required this.formKey});
 
   @override
   Widget build(BuildContext context) {
@@ -15,6 +22,8 @@ class ServicesWrapRow extends StatelessWidget {
       alignment: WrapAlignment.start,
       children: services
           .map((service) => ServicesContainermodel(
+               formKey: formKey,
+                additionnal: additional,
                 id: id,
                 service: service,
               ))

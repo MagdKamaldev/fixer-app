@@ -18,9 +18,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ConfirmRequestContainer extends StatelessWidget {
   final int id;
+  final String additional;
   const ConfirmRequestContainer({
     super.key,
-    required this.id,
+    required this.id, required this.additional,
   });
 
   @override
@@ -111,6 +112,7 @@ class ConfirmRequestContainer extends StatelessWidget {
                 return MaterialButton(
                   onPressed: () {
                     RequestCubit.get(context).request(
+                      additional: additional,
                       context: context,
                       services: selected.map((e) => e.name.toString()).toList(),
                       location: orderLocation.toLowerCase(),

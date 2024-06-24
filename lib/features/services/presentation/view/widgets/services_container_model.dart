@@ -1,4 +1,5 @@
 import 'package:fixer/core/helpers/spacing.dart';
+import 'package:fixer/core/networks/errors/error_snackbar.dart';
 import 'package:fixer/core/themes/colors.dart';
 import 'package:fixer/core/themes/text_styles.dart';
 import 'package:fixer/features/services/data/models/service_model.dart';
@@ -9,22 +10,33 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class ServicesContainermodel extends StatelessWidget {
   final int id;
   final ServiceModel service;
+  final String additionnal;
+  final GlobalKey<FormState> formKey;
   const ServicesContainermodel(
-      {super.key, required this.id, required this.service});
+      {super.key,
+      required this.id,
+      required this.service,
+      required this.additionnal,
+      required this.formKey});
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        showDialog(
-          context: context,
-          builder: (context) {
-            return PopUpMessage(
-              id: id,
-              service: service,
-            );
-          },
-        );
+        if (formKey.currentState!.validate()) {
+          showDialog(
+            context: context,
+            builder: (context) {
+              return PopUpMessage(
+                additional: additionnal,
+                id: id,
+                service: service,
+              );
+            },
+          );
+        } else {
+          showErrorSnackbar(context, "Please Enter Additional Info");
+        }
       },
       child: IntrinsicWidth(
         child: Container(

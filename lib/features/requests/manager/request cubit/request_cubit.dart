@@ -28,18 +28,20 @@ class RequestCubit extends Cubit<RequestState> {
 
   int? orderId;
 
-  void request(
-      {required List<String> services,
-      required String location,
-      required context}) async {
+  void request({
+    required List<String> services,
+    required String location,
+    required String additional,
+    required context,
+  }) async {
     emit(RequestLoading());
 
-    final result = await repo.request(services);
+    final result = await repo.request(services, additional, location);
     result.fold(
       (l) => emit(RequestFailed(l.message)),
       (r) {
         orderId = r;
-        requestCraftsmen(location: location, context: context);
+        requestCraftsmen(context: context);
         emit(RequestSuccess(r));
       },
     );
@@ -47,10 +49,12 @@ class RequestCubit extends Cubit<RequestState> {
 
   List<OrderCarftsmenModel> craftsmen = [];
 
-  void requestCraftsmen({required String location, required context}) async {
+  void requestCraftsmen({required context}) async {
     emit(RequestCraftsmenLoading());
 
-    final result = await repo.requestCraftsmen(orderId!, location);
+    final result = await repo.requestCraftsmen(
+      orderId!,
+    );
     result.fold((l) {
       showModalBottomSheet(
         context: context,
@@ -91,7 +95,6 @@ class RequestCubit extends Cubit<RequestState> {
     emit(SelectCraftsmanLoading());
 
     final result = await repo.selectCraftsman(orderId, craftsmanId);
-    print(orderId);
     result.fold((l) {
       emit(SelectCraftsmanFailed(l.message));
     }, (r) {

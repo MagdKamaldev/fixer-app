@@ -6,9 +6,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class RequestBody extends StatelessWidget {
   final int id;
+  final String additional;
   const RequestBody({
     super.key,
-    required this.id,
+    required this.id, required this.additional,
   });
 
   @override
@@ -26,6 +27,7 @@ class RequestBody extends StatelessWidget {
               borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(30), topRight: Radius.circular(30))),
           child: ConfirmRequestContainer(
+            additional: additional,
             id: id,
           ),
         )

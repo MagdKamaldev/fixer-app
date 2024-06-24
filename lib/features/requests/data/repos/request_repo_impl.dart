@@ -5,6 +5,7 @@ import 'package:fixer/core/networks/errors/errors.dart';
 import 'package:fixer/features/requests/data/models/order_carftsmen_model.dart';
 import 'package:fixer/features/requests/data/models/review_model.dart';
 import 'package:fixer/features/requests/data/repos/request_repo.dart';
+import 'package:fixer/features/requests/manager/request%20cubit/request_cubit.dart';
 import 'package:fixer/main.dart';
 
 class RequestRepoImpl implements RequestRepo {
@@ -12,13 +13,16 @@ class RequestRepoImpl implements RequestRepo {
 
   RequestRepoImpl({required this.apiServices});
   @override
-  Future<Either<Failure, int>> request(List<String> services) async {
+  Future<Either<Failure, int>> request(
+      List<String> services, String additional,String location) async {
     try {
       final response = await apiServices.post(
           endPoint: "request",
           data: {
             "services": services,
             "date": DateTime.now().toString(),
+            "area": orderLocation.toLowerCase(),
+            "additional": additional
           },
           jwt: token == "" ? kTokenBox.get(kTokenBoxString) : token);
 
@@ -34,11 +38,12 @@ class RequestRepoImpl implements RequestRepo {
 
   @override
   Future<Either<Failure, List<OrderCarftsmenModel>>> requestCraftsmen(
-      int orderId, String location) async {
+      int orderId, ) async {
     try {
-      final response = await apiServices.get(
-          endPoint: "craftsmenForOrder",
-          data: {"order_id": orderId, "city": location});
+      final response =
+          await apiServices.get(endPoint: "craftsmenForOrder", data: {
+        "order_id": orderId,
+      });
 
       if (response["Craftsmen"] == null) {
         return Left(ServerFailure(response["Message"]));
@@ -96,7 +101,6 @@ class RequestRepoImpl implements RequestRepo {
       return Left(ServerFailure(e.toString()));
     }
   }
-
 
   @override
   Future<Either<Failure, String>> selectCraftsman(

@@ -24,18 +24,14 @@ class CheckoutRepoImpl extends CheckoutRepo {
 
   @override
   Future<Either<Failure, PaymentModel>> getPaymentDetails(int orderId) async {
-    //try {
-    final response = await service.get(endPoint: "Payment/$orderId");
-
-    print(response);
-
-    final payment = PaymentModel.fromJson(response);
-    return Right(payment);
-
-    // } on ServerFailure catch (e) {
-    //   return Left(e);
-    // } catch (e) {
-    //   return Left(ServerFailure(e.toString()));
-    // }
+    try {
+      final response = await service.get(endPoint: "Payment/$orderId");
+      final payment = PaymentModel.fromJson(response);
+      return Right(payment);
+    } on ServerFailure catch (e) {
+      return Left(e);
+    } catch (e) {
+      return Left(ServerFailure(e.toString()));
+    }
   }
 }

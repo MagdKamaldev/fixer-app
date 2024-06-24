@@ -13,10 +13,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class PopUpMessage extends StatefulWidget {
+  final String additional;
   final int id;
   final ServiceModel service;
 
-  const PopUpMessage({super.key, required this.id, required this.service});
+  const PopUpMessage({super.key, required this.id, required this.service, required this.additional});
 
   @override
   State<PopUpMessage> createState() => _PopUpMessageState();
@@ -74,6 +75,7 @@ class _PopUpMessageState extends State<PopUpMessage> {
                         navigateTo(
                           context,
                           RequestView(
+                            additional: widget.additional,
                             id: widget.id,
                           ),
                         );

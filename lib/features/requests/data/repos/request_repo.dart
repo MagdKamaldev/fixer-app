@@ -4,9 +4,9 @@ import 'package:fixer/features/requests/data/models/order_carftsmen_model.dart';
 import 'package:fixer/features/requests/data/models/review_model.dart';
 
 abstract class RequestRepo {
-  Future<Either<Failure, int>> request(List<String> services);
+  Future<Either<Failure, int>> request(List<String> services,String additional,String location);
   Future<Either<Failure, List<OrderCarftsmenModel>>> requestCraftsmen(
-      int orderId, String location);
+      int orderId,);
   Future<Either<Failure, List<ReviewModel>>> craftsmanReviews(int craftsmanId);
   Future<Either<Failure, String>> selectCraftsman(
       int requestId, int craftsmanId);
