@@ -6,6 +6,7 @@ import 'package:fixer/core/routing/routes.dart';
 import 'package:fixer/core/service_locator/service_locator.dart';
 import 'package:fixer/core/themes/text_styles.dart';
 import 'package:fixer/features/craftsman_wallet/presentation/craftsmna_wallet_view.dart';
+import 'package:fixer/features/language/language_screen.dart';
 import 'package:fixer/features/profile/data/repos/profile_repo_impl.dart';
 import 'package:fixer/features/profile/manager/cubit/profile_cubit.dart';
 import 'package:fixer/features/user_sign_up/presentation/terms_and_conditions/terms_and_conditions.dart';
@@ -39,15 +40,15 @@ class AppDrawer extends StatelessWidget {
                       title: Row(
                         children: [
                           Text(
-                            S.of(context).complains,
+                            S.of(context).languagee,
                             style: TextStyles.lightHeadings,
                           ),
                           const Spacer(),
-                          const Icon(Icons.error_outline)
+                          const Icon(Icons.language)
                         ],
                       ),
                       onTap: () {
-                        context.pushNamed(Routes.complains);
+                        navigateTo(context, const LanguageScreen());
                       },
                     ),
                     verticalSpace(20),
@@ -102,15 +103,15 @@ class AppDrawer extends StatelessWidget {
                       title: Row(
                         children: [
                           Text(
-                            S.of(context).complains,
+                            S.of(context).languagee,
                             style: TextStyles.lightHeadings,
                           ),
                           const Spacer(),
-                          const Icon(Icons.error_outline)
+                          const Icon(Icons.language)
                         ],
                       ),
                       onTap: () {
-                        context.pushNamed(Routes.complains);
+                        navigateTo(context, const LanguageScreen());
                       },
                     ),
                     if (ProfileCubit.get(context).user?.userType == "craftsman")
@@ -129,6 +130,24 @@ class AppDrawer extends StatelessWidget {
                         ),
                         onTap: () {
                           navigateTo(context, const CraftsmanWalletScreen());
+                        },
+                      ),
+                    if (ProfileCubit.get(context).user?.userType == "client")
+                      verticalSpace(20),
+                    if (ProfileCubit.get(context).user?.userType == "client")
+                      ListTile(
+                        title: Row(
+                          children: [
+                            Text(
+                              S.of(context).complains,
+                              style: TextStyles.lightHeadings,
+                            ),
+                            const Spacer(),
+                            const Icon(Icons.error_outline)
+                          ],
+                        ),
+                        onTap: () {
+                          context.pushNamed(Routes.complains);
                         },
                       ),
                     verticalSpace(20),

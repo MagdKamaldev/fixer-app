@@ -15,7 +15,7 @@ class RoundedMessageCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 120,
+      height: 140,
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         color: ColorManager.primary100,
@@ -39,6 +39,8 @@ class RoundedMessageCard extends StatelessWidget {
           const SizedBox(height: 8),
           Text(
             message,
+            overflow: TextOverflow.ellipsis,
+            maxLines: 2,
             style: TextStyles.body.copyWith(color: ColorManager.white),
           ),
         ],

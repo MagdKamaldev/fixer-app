@@ -1,9 +1,11 @@
 import 'package:fixer/core/helpers/spacing.dart';
 import 'package:fixer/core/models/user_model.dart';
 import 'package:fixer/core/networks/errors/error_snackbar.dart';
+import 'package:fixer/core/routing/app_router.dart';
 import 'package:fixer/core/service_locator/service_locator.dart';
 import 'package:fixer/core/themes/text_styles.dart';
 import 'package:fixer/core/routing/routes.dart';
+import 'package:fixer/features/home/presentation/views/home_view.dart';
 import 'package:fixer/features/user_sign_up/data/repos/user_signup_repository_implementation.dart';
 import 'package:fixer/features/user_sign_up/manager/phone_auth_cubit/phone_auth_cubit.dart';
 import 'package:fixer/features/user_sign_up/manager/user_sign_up_cubit/user_sign_up_cubit.dart';
@@ -31,6 +33,7 @@ class _UserSignUpFirstBodyState extends State<UserSignUpFirstBody> {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController nameController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
+  final TextEditingController phoneController = TextEditingController();
   bool obscure = true;
 
   @override
@@ -43,9 +46,7 @@ class _UserSignUpFirstBodyState extends State<UserSignUpFirstBody> {
         child: BlocConsumer<UserSignUpCubit, UserSignUpState>(
           listener: (context, state) {
             if (state is UserSignUpSuccess) {
-              widget.controller!.animateToPage(2,
-                  duration: const Duration(milliseconds: 300),
-                  curve: Curves.easeIn);
+              navigateAndFinish(context, const HomeView());
             }
           },
           builder: (context, state) {
@@ -80,6 +81,19 @@ class _UserSignUpFirstBodyState extends State<UserSignUpFirstBody> {
                     textInputType: TextInputType.name,
                   ),
                   verticalSpace(15),
+                  TextContainer(text: S.of(context).phone, margin: 35),
+                  UserSignUpTextForm(
+                    validate: (value) {
+                      if (value.isEmpty) {
+                        return S.of(context).emptyValidation;
+                      }
+                    },
+                    obscure: false,
+                    controller: phoneController,
+                    text: S.of(context).phone,
+                    textInputType: TextInputType.phone,
+                  ),
+                  verticalSpace(15),
                   TextContainer(text: S.of(context).password, margin: 35),
                   verticalSpace(5),
                   UserSignUpTextForm(
@@ -106,26 +120,21 @@ class _UserSignUpFirstBodyState extends State<UserSignUpFirstBody> {
                   verticalSpace(10),
                   ButtonSignUp(
                     onGooglePressed: () {
-                      if (isAgreed && phoneNumber != "") {
+                      if (isAgreed) {
                         UserSignUpCubit.get(context).signUpWithGoogle(context);
                       } else if (!isAgreed) {
                         showErrorSnackbar(
                             context, S.of(context).accepttermsandpolicy);
-                      } else if (phoneNumber == "") {
-                        showErrorSnackbar(
-                            context, S.of(context).phoneValidation);
                       }
                     },
                     onPressed: () {
-                      if (formKey.currentState!.validate() &&
-                          isAgreed &&
-                          phoneNumber != "") {
+                      if (formKey.currentState!.validate() && isAgreed) {
                         UserSignUpCubit.get(context).userSignUp(
                             UserModel(
                               email: emailController.text,
                               name: nameController.text,
                               username: nameController.text,
-                              phone: phoneNumber,
+                              phone: phoneController.text,
                               userType: "client",
                             ),
                             passwordController.text,

@@ -10,8 +10,6 @@ class Routes {
   static const String craftsmanSignUp = '/craftsmanSignUp';
   static const String fieldOfService = '/fieldOfService';
   static const String uploadPhotos = '/uploadPhotos';
-  static const String forgetPassword = "/forgetPassword";
-  static const String resetPassword = "/resetPassword";
   static const String setUserLocation = "/setUserLocation";
   static const String craftsmanUploadImage = "/craftsmanUpload_image";
   static const String home = "/home";

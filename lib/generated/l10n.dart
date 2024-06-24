@@ -1829,6 +1829,56 @@ class S {
       args: [],
     );
   }
+
+  /// `language`
+  String get languagee {
+    return Intl.message(
+      'language',
+      name: 'languagee',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Change Language`
+  String get changeLanguage {
+    return Intl.message(
+      'Change Language',
+      name: 'changeLanguage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select Language`
+  String get selectLanguage {
+    return Intl.message(
+      'Select Language',
+      name: 'selectLanguage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Arabic`
+  String get arabic {
+    return Intl.message(
+      'Arabic',
+      name: 'arabic',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `English`
+  String get english {
+    return Intl.message(
+      'English',
+      name: 'english',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

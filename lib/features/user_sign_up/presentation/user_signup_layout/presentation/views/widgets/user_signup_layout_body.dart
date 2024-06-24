@@ -64,29 +64,12 @@ class _UserSignUpBodyState extends State<UserSignUpBody> {
                     ),
                   ),
                   verticalSpace(30),
-                  SmoothIndicatorUserSignup(controller: cubit.pageController),
-                  verticalSpace(10),
                   Container(
                     color: const Color.fromARGB(255, 255, 255, 255),
                     height: 580.h,
                     width: 400.w,
-                    child: PageView(
+                    child: UserSignUpView(
                       controller: cubit.pageController,
-                      onPageChanged: (int index) {
-                        setState(() {});
-                        cubit.pageController.animateToPage(index,
-                            duration: const Duration(milliseconds: 300),
-                            curve: Curves.easeIn);
-                      },
-                      children: [
-                        UserPhoneNumberBody(
-                          controller: cubit.pageController,
-                        ),
-                        UserSignUpView(
-                          controller: cubit.pageController,
-                        ),
-                        const UserAddressView(),
-                      ],
                     ),
                   )
                 ],

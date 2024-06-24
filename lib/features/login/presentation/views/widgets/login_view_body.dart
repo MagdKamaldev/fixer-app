@@ -8,10 +8,8 @@ import 'package:fixer/features/login/data/repos/login_repository_implementation.
 import 'package:fixer/features/login/manager/cubit/login_cubit.dart';
 import 'package:fixer/features/login/presentation/views/widgets/login_view_body_text_container.dart';
 import 'package:fixer/generated/l10n.dart';
-
 import 'package:flutter/material.dart';
 import 'package:fixer/features/login/presentation/views/widgets/login_view_body_buttons.dart';
-import 'package:fixer/features/login/presentation/views/widgets/login_view_body_forgotpass_row.dart';
 import 'package:fixer/features/login/presentation/views/widgets/login_view_body_logo.dart';
 import 'package:fixer/features/login/presentation/views/widgets/login_view_body_text_forms.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -81,9 +79,7 @@ class _LoginViewBodyState extends State<LoginViewBody> {
                 ),
               ),
             ]),
-            verticalSpace(5),
-            const ForgotPassword(),
-            verticalSpace(15),
+            verticalSpace(45),
             ButtonLogin(
               onSignInPressed: () {
                 cubit.login(

@@ -53,6 +53,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage(" Already have an account?"),
         "amazing":
             MessageLookupByLibrary.simpleMessage("Excellent Workmanship"),
+        "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
         "area": MessageLookupByLibrary.simpleMessage("Area"),
         "availablecraftmen":
             MessageLookupByLibrary.simpleMessage("Available Craftsmen"),
@@ -61,6 +62,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "camera": MessageLookupByLibrary.simpleMessage("Camera"),
         "cancelrequest": MessageLookupByLibrary.simpleMessage("Cancel Request"),
         "change": MessageLookupByLibrary.simpleMessage("Change"),
+        "changeLanguage":
+            MessageLookupByLibrary.simpleMessage("Change Language"),
         "changestoterms":
             MessageLookupByLibrary.simpleMessage("7.Changes to Terms"),
         "changestotermstext": MessageLookupByLibrary.simpleMessage(
@@ -100,6 +103,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "emptyValidation":
             MessageLookupByLibrary.simpleMessage("Field must not be empty !"),
         "endRequest": MessageLookupByLibrary.simpleMessage("End Request"),
+        "english": MessageLookupByLibrary.simpleMessage("English"),
         "entercode":
             MessageLookupByLibrary.simpleMessage("Enter confirmation code"),
         "enteryUserName":
@@ -128,6 +132,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "intoductions": MessageLookupByLibrary.simpleMessage("1.Introduction"),
         "intoductionstext": MessageLookupByLibrary.simpleMessage(
             "Welcome to our craftsman service app. By using our services, you agree to the following terms and conditions. Please read them carefully."),
+        "languagee": MessageLookupByLibrary.simpleMessage("language"),
         "leavecomment": MessageLookupByLibrary.simpleMessage("Leave a comment"),
         "left": MessageLookupByLibrary.simpleMessage("Left in the store"),
         "limitationofliabilities":
@@ -218,6 +223,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "search": MessageLookupByLibrary.simpleMessage("search"),
         "selectArea":
             MessageLookupByLibrary.simpleMessage("select your area !"),
+        "selectLanguage":
+            MessageLookupByLibrary.simpleMessage("Select Language"),
         "service": MessageLookupByLibrary.simpleMessage("Service"),
         "services": MessageLookupByLibrary.simpleMessage("Services"),
         "setHomeLocation":

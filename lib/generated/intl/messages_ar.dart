@@ -51,6 +51,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "alreadyhaveaccount":
             MessageLookupByLibrary.simpleMessage(" لديك حساب بالفعل ؟"),
         "amazing": MessageLookupByLibrary.simpleMessage("جودة ممتازة"),
+        "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
         "area": MessageLookupByLibrary.simpleMessage("منطقة"),
         "availablecraftmen":
             MessageLookupByLibrary.simpleMessage("الحرفيين المتاحين"),
@@ -59,6 +60,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "camera": MessageLookupByLibrary.simpleMessage("الكاميرا"),
         "cancelrequest": MessageLookupByLibrary.simpleMessage("إلغاء الطلب"),
         "change": MessageLookupByLibrary.simpleMessage("تغيير"),
+        "changeLanguage": MessageLookupByLibrary.simpleMessage("تغيير اللغة"),
         "changestoterms":
             MessageLookupByLibrary.simpleMessage("7. التغييرات في الشروط"),
         "changestotermstext": MessageLookupByLibrary.simpleMessage(
@@ -97,6 +99,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "emptyValidation":
             MessageLookupByLibrary.simpleMessage("هذا الحقل مطلوب"),
         "endRequest": MessageLookupByLibrary.simpleMessage("إنهاء الطلب"),
+        "english": MessageLookupByLibrary.simpleMessage("الإنجليزية"),
         "entercode": MessageLookupByLibrary.simpleMessage("أدخل رمز التأكيد"),
         "enteryUserName":
             MessageLookupByLibrary.simpleMessage("أدخل اسم المستخدم الخاص بك"),
@@ -123,6 +126,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "intoductions": MessageLookupByLibrary.simpleMessage("1. المقدمة"),
         "intoductionstext": MessageLookupByLibrary.simpleMessage(
             "مرحبًا بك في تطبيق خدمة الحرفيين لدينا. باستخدام خدماتنا، فإنك توافق على الشروط والأحكام التالية. يرجى قراءتها بعناية."),
+        "languagee": MessageLookupByLibrary.simpleMessage("اللغة"),
         "leavecomment": MessageLookupByLibrary.simpleMessage("اترك تعليق"),
         "left": MessageLookupByLibrary.simpleMessage(" باقي في المتجر"),
         "limitationofliabilities":
@@ -211,6 +215,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "برجاء الانتظار يتم مراجعة طلبك"),
         "search": MessageLookupByLibrary.simpleMessage("بحث"),
         "selectArea": MessageLookupByLibrary.simpleMessage("ادخل منطقتك !"),
+        "selectLanguage": MessageLookupByLibrary.simpleMessage("اختر اللغة"),
         "service": MessageLookupByLibrary.simpleMessage("خدمه"),
         "services": MessageLookupByLibrary.simpleMessage("خدمات"),
         "setHomeLocation":

@@ -176,6 +176,11 @@
    "terminationtext":"We reserve the right to terminate or suspend your access to our app at any time, without prior notice, if you violate these terms and conditions or engage in any conduct that we deem inappropriate or harmful.",
    "changestotermstext":"We may update these terms and conditions from time to time. Any changes will be posted on this page, and your continued use of the app signifies your acceptance of the updated terms.",
    "contactustext":"If you have any questions or concerns about these terms and conditions, please contact us at fixregypt@gmail.com.",
-   "additionalInfo":"Additional Info"
+   "additionalInfo":"Additional Info",
+   "languagee":"language",
+   "changeLanguage":"Change Language",
+   "selectLanguage":"Select Language",
+   "arabic":"Arabic",
+   "english":"English"
 
 }

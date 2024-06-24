@@ -22,10 +22,10 @@ class UserSignUpRepositoryImpelemntation implements UserSignUpRepository {
           await apiServices.post(endPoint: ApiConstants.registerClient, data: {
         "name": user.name,
         "username": user.name,
-        "email": user.email,
+        "Email": user.email,
         "password": password,
         "phone": user.phone,
-        "user_type": user.userType,
+        "user_type": "client",
       });
       final userModel = UserModel.fromJson(response["user"]);
       token = response["jwt"];
