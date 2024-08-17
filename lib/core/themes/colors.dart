@@ -8,5 +8,9 @@ class ColorManager {
   static const Color primary600 = Color(0xFF262A4F);
   static const Color black = Color(0xFF0A0B15);
   static const Color white = Color(0xFFFFFFFF);
+  static const Color greywhite = Color(0xFFF6F6F9);
   static const Color grey = Color(0xFF888787);
+  static const Color lightblue = Color(0xFFE1F1FF);
+  static const Color babyblue = Color(0xFFEFF0F4);
+  static const Color darkgrey = Color(0xFF5B5B5B);
 }

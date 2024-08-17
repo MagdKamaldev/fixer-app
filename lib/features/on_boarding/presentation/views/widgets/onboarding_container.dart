@@ -26,9 +26,7 @@ class OnBoardingContainer extends StatelessWidget {
           Container(
             alignment: Alignment.center,
             child: Text(text,
-                textAlign: TextAlign.center,
-                style:TextStyles.headings
-                    ),
+                textAlign: TextAlign.center, style: TextStyles.headings),
           )
         ],
       ),
